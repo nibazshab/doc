@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Aria2 - 多线程下载器 | DOCS</title>
+    <meta name="generator" content="VuePress 1.9.5">
+    <link rel="icon" href="https://user-images.githubusercontent.com/44338441/159110560-773788e6-c8f8-4acf-9fbe-57c12f840d00.png">
+    <meta name="description" content="">
+    <meta name="keywords" content="vuepress,theme,blog,vdoing">
+    <meta name="theme-color" content="#11a8cd">
+    
+    <link rel="preload" href="/assets/css/0.styles.7c51697c.css" as="style"><link rel="preload" href="/assets/js/app.419d4187.js" as="script"><link rel="preload" href="/assets/js/2.91bf4aae.js" as="script"><link rel="preload" href="/assets/js/6.833feb9d.js" as="script"><link rel="prefetch" href="/assets/js/10.5b7925b0.js"><link rel="prefetch" href="/assets/js/11.7c198586.js"><link rel="prefetch" href="/assets/js/12.c26151fd.js"><link rel="prefetch" href="/assets/js/13.f07c6a51.js"><link rel="prefetch" href="/assets/js/14.d9297a87.js"><link rel="prefetch" href="/assets/js/15.6975e483.js"><link rel="prefetch" href="/assets/js/3.dbaedb4f.js"><link rel="prefetch" href="/assets/js/4.0969f639.js"><link rel="prefetch" href="/assets/js/5.da3b73a1.js"><link rel="prefetch" href="/assets/js/7.04b2f185.js"><link rel="prefetch" href="/assets/js/8.38dabcd1.js"><link rel="prefetch" href="/assets/js/9.0ac05d62.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.7c51697c.css">
+  </head>
+  <body class="theme-mode-light">
+    <div id="app" data-server-rendered="true"><div class="theme-container sidebar-open have-rightmenu"><header class="navbar blur"><div title="目录" class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="https://user-images.githubusercontent.com/44338441/159110560-773788e6-c8f8-4acf-9fbe-57c12f840d00.png" alt="DOCS" class="logo"> <span class="site-name can-hide">DOCS</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">HOME</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="DOC" class="dropdown-title"><!----> <span class="title" style="display:;">DOC</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/01/" class="nav-link">VS Code - 代码编辑器</a></li><li class="dropdown-item"><!----> <a href="/pages/02/" aria-current="page" class="nav-link router-link-exact-active router-link-active">Aria2 - 多线程下载器</a></li><li class="dropdown-item"><!----> <a href="/pages/03/" class="nav-link">Stack - Hugo主题</a></li><li class="dropdown-item"><!----> <a href="/pages/04/" class="nav-link">clash - 代理工具</a></li><li class="dropdown-item"><!----> <a href="/pages/05/" class="nav-link">电脑那些事</a></li><li class="dropdown-item"><!----> <a href="/pages/06/" class="nav-link">终端指令 &amp;&amp; 正则表达式</a></li><li class="dropdown-item"><!----> <a href="/pages/07/" class="nav-link">Wallpaper 关闭自动下载</a></li><li class="dropdown-item"><!----> <a href="/pages/08/" class="nav-link">Vdoing - VuePress主题</a></li></ul></div></div><div class="nav-item"><a href="/pages/00/" class="nav-link">支持</a></div><div class="nav-item"><a href="/404.html" class="nav-link">404</a></div> <a href="https://github.com/nibazshab/nibazshab.github.io" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar-hover-trigger"></div> <aside class="sidebar" style="display:none;"><!----> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">HOME</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="DOC" class="dropdown-title"><!----> <span class="title" style="display:;">DOC</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/01/" class="nav-link">VS Code - 代码编辑器</a></li><li class="dropdown-item"><!----> <a href="/pages/02/" aria-current="page" class="nav-link router-link-exact-active router-link-active">Aria2 - 多线程下载器</a></li><li class="dropdown-item"><!----> <a href="/pages/03/" class="nav-link">Stack - Hugo主题</a></li><li class="dropdown-item"><!----> <a href="/pages/04/" class="nav-link">clash - 代理工具</a></li><li class="dropdown-item"><!----> <a href="/pages/05/" class="nav-link">电脑那些事</a></li><li class="dropdown-item"><!----> <a href="/pages/06/" class="nav-link">终端指令 &amp;&amp; 正则表达式</a></li><li class="dropdown-item"><!----> <a href="/pages/07/" class="nav-link">Wallpaper 关闭自动下载</a></li><li class="dropdown-item"><!----> <a href="/pages/08/" class="nav-link">Vdoing - VuePress主题</a></li></ul></div></div><div class="nav-item"><a href="/pages/00/" class="nav-link">支持</a></div><div class="nav-item"><a href="/404.html" class="nav-link">404</a></div> <a href="https://github.com/nibazshab/nibazshab.github.io" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>DOC</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/pages/01/" class="sidebar-link">VS Code - 代码编辑器</a></li><li><a href="/pages/02/" aria-current="page" class="active sidebar-link">Aria2 - 多线程下载器</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header level2"><a href="/pages/02/#下载" class="sidebar-link">下载</a></li><li class="sidebar-sub-header level2"><a href="/pages/02/#安装" class="sidebar-link">安装</a></li><li class="sidebar-sub-header level2"><a href="/pages/02/#配置" class="sidebar-link">配置</a></li><li class="sidebar-sub-header level2"><a href="/pages/02/#开机自启" class="sidebar-link">开机自启</a></li></ul></li><li><a href="/pages/03/" class="sidebar-link">Stack - Hugo主题</a></li><li><a href="/pages/04/" class="sidebar-link">clash - 代理工具</a></li><li><a href="/pages/05/" class="sidebar-link">电脑那些事</a></li><li><a href="/pages/06/" class="sidebar-link">终端指令 &amp;&amp; 正则表达式</a></li><li><a href="/pages/07/" class="sidebar-link">Wallpaper 关闭自动下载</a></li><li><a href="/pages/08/" class="sidebar-link">Vdoing - VuePress主题</a></li><li><a href="/pages/09/" class="sidebar-link">王者荣耀q币充值代码</a></li></ul></section></li></ul> </aside> <div><main class="page"><div class="theme-vdoing-wrapper "><div class="placeholder"></div> <!----> <div class="content-wrapper"><div class="right-menu-wrapper"><div class="right-menu-margin"><div class="right-menu-title">目录</div> <div class="right-menu-content"></div></div></div> <h1><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAABH1JREFUSA3tVl1oHFUUPmdmd2ltklqbpJDiNnXFmgbFktho7YMPNiJSSZM0+CAYSkUELVhM6YuwIPpgoOKDqOBDC0XE2CQoNtQXBUFTTcCi+Wlh1V2TQExsUzcltd3M9Tt3ZjZzZ2fT+OJTL8yeM+eee757fmeJbq//KQL8X3DUSFOcfr7cRsRtxNQMWueeVzOkaITIGqQHNg5y8+jNW9ldM7A6nTpAjuolUikAwq7CE3WcM2RRDz+XGVgN3FptU/aUSlvq9Pa3iZ1+sgAqJyyAFqkipd9dqiwHF3P65YycLWc/6sqGrvoEoIp6DOFaX5h6+dnfjkWprwqsPk0dUGq5vySwDImC10KxFHgGL1SWoc92O3eVht09qdXNH11I2SsTsJYqMWzihqGMi+A+Garf3BAuuLI5oGlULyNfyB/HYNujwktOfRrMr5t77NmevqaUopx0grnKAyvVpmwUDB4x6FPXuGvYLTDwWsejwgtgkYKPqRJg8SV6xaiZ3ZTppGneS4yfH5/66fZSDHv+QZci/+h5c5UHtpy67JUqGppM0sh0Nc1dW6/N1W5Yoqat8/TU/VnadmdeW2PLLSyh0cvxBs3KbqTmwYPpxN4do/mzE8nEpvX/UMu2Wbp74zUAK5q6WkHns7V0eWkdPbPzd3rxkTGybadYySumVzhcaJFbs5UrEkQ/+CK8gF5dnh/6ciIZ73gwQ927L1IitoxKLXYP3SjYdOrHHfTZhRRlFyrorafPk20B3HPD1y2G3qKZME5Jcf3t/HUC13/8tSd++vqFveMUTwAUxSUFI1QekR1+bIze3D9MF2aq6cPvG72CgnldWCFqyRw3lwH8ZMerjTD9ElRO7Gv44wNpC90aASqGfVlz/Rx17srQ57/UU26hkhQqUB7dBR71WmzQhHUnblGmVOEw0jhbV1n9OlXUDCIRGaNV5Jp43N516fN7JmnTHdfp7Hgy0luO4aMhtkLL8Bi3bUWYvzh5Mn1dTxrL6QmGuRhGL/TiTTxRoEdTszSaq9GR0NGA3KdkOz3hqSV3MIDhQ5IVX/Ivx3umBti2es2h4eZby7x8br1rkf7Mo90AqC8aQ3sJeNzqFRu+vSANAQe3PL7l0HGOAdwDCeZYvNKeoZp1Qfs6Aipndh86HmFRi0LAnEO47wsqM6cdfjh3jBPUzhZy7nvlUfFsamED1VQt6aISHVymXZ/B2aCtIG8AI8xfobj2d3en1wWVhOeHELKmLQ1s211s88comkv4UCwWyF787mJdYXtNfhKAXVqnKTq8QZvGAGGOfaTo5pGZ/PwbUCr5+DPr/1J92JNHr9aOl/F3iI5+O1nfybsGxoimvZ3ViWSluDITw3P37mypheDIPY0tw7+O/5ApbkYw+zpfaUVu32Pi98+defdUhEpZkRFq0aqyNh9FuL9hpYbEm6iwi0z2REd09ZmyENEbuhjDWzKvZXTqKYaBIr3tt5kuPtQBZFvEUwHt60vfCNu41XsksH9Ij1BMMz1Y0OOunHNShFIP5868g5zeXmuLwL9T4b6Q2+KejgAAAABJRU5ErkJggg==">Aria2 - 多线程下载器<!----></h1> <!----> <div class="theme-vdoing-content content__default"><h2 id="下载"><a href="#下载" class="header-anchor">#</a> 下载</h2> <p><a href="https://github.com/aria2/aria2" target="_blank" rel="noopener noreferrer">Github<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> 下载：<code>https://github.com/aria2/aria2/releases</code></p> <h2 id="安装"><a href="#安装" class="header-anchor">#</a> 安装</h2> <p>请将以下文件放于同一个文件夹内</p> <ul><li><code>aria2c.exe</code></li> <li><code>aria2.session</code></li> <li><code>aria2.conf</code></li> <li><code>aria2.vbs</code></li></ul> <h2 id="配置"><a href="#配置" class="header-anchor">#</a> 配置</h2> <details class="custom-block details"><summary>点击查看</summary> <p>这是一份 <code>aria2.conf</code> 参考</p> <div class="language-ini extra-class"><pre class="language-ini"><code><span class="token comment"># 文件保存目录</span>
+<span class="token key attr-name">dir</span><span class="token punctuation">=</span><span class="token value attr-value">${HOME}</span>
+<span class="token comment"># 从会话文件中读取下载任务</span>
+<span class="token key attr-name">input-file</span><span class="token punctuation">=</span><span class="token value attr-value">aria2.session</span>
+<span class="token comment"># 在Aria2退出时保存错误的、未完成的下载任务到会话文件</span>
+<span class="token key attr-name">save-session</span><span class="token punctuation">=</span><span class="token value attr-value">aria2.session</span>
+<span class="token comment"># 定时保存会话, 0为退出时才保存, 需1.16.1以上版本, 默认:0</span>
+<span class="token key attr-name">save-session-interval</span><span class="token punctuation">=</span><span class="token value attr-value">60</span>
+<span class="token comment"># RPC端口, 仅当默认端口被占用时修改</span>
+<span class="token key attr-name">rpc-listen-port</span><span class="token punctuation">=</span><span class="token value attr-value">6800</span>
+<span class="token comment"># 设置的RPC授权令牌, v1.18.4新增功能</span>
+<span class="token key attr-name">rpc-secret</span><span class="token punctuation">=</span><span class="token value attr-value">password</span>
+<span class="token comment"># 文件预分配方式, 能有效降低磁盘碎片, 默认:</span>
+<span class="token comment"># 预分配所需时间: none &lt; falloc ? trunc &lt; prealloc</span>
+<span class="token comment"># falloc和trunc则需要文件系统和内核支持</span>
+<span class="token comment"># NTFS建议使用falloc, EXT3/4建议trunc, MAC 下需要注释此项</span>
+<span class="token key attr-name">file-allocation</span><span class="token punctuation">=</span><span class="token value attr-value">trunc</span>
+<span class="token comment"># 最大同时下载任务数, 运行时可修改, 默认:5</span>
+<span class="token comment">#max-concurrent-downloads=5</span>
+<span class="token comment"># 启用磁盘缓存, 0为禁用缓存, 需1.16以上版本, 默认:16M</span>
+<span class="token key attr-name">disk-cache</span><span class="token punctuation">=</span><span class="token value attr-value">16M</span>
+<span class="token comment"># 断点续传</span>
+<span class="token key attr-name">continue</span><span class="token punctuation">=</span><span class="token value attr-value">true</span>
+<span class="token comment"># 同一服务器连接数, 添加时可指定, 默认:1</span>
+<span class="token comment"># 官方的aria2最高设置为16, 如果需要设置任意数值请重新编译aria2</span>
+<span class="token key attr-name">max-connection-per-server</span><span class="token punctuation">=</span><span class="token value attr-value">8</span>
+<span class="token comment"># 整体下载速度限制, 运行时可修改, 默认:0（不限制）</span>
+<span class="token comment">#max-overall-download-limit=0</span>
+<span class="token comment"># 单个任务下载速度限制, 默认:0（不限制）</span>
+<span class="token comment">#max-download-limit=0</span>
+<span class="token comment"># 整体上传速度限制, 运行时可修改, 默认:0（不限制）</span>
+<span class="token comment">#max-overall-upload-limit=0</span>
+<span class="token comment"># 单个任务上传速度限制, 默认:0（不限制）</span>
+<span class="token key attr-name">max-upload-limit</span><span class="token punctuation">=</span><span class="token value attr-value">3M</span>
+<span class="token comment"># 禁用IPv6, 默认:false</span>
+<span class="token comment"># disable-ipv6=true</span>
+<span class="token comment"># 最小文件分片大小, 添加时可指定, 取值范围1M -1024M, 默认:20M</span>
+<span class="token comment"># 假定size=10M, 文件为20MiB 则使用两个来源下载; 文件为15MiB 则使用一个来源下载</span>
+<span class="token key attr-name">min-split-size</span><span class="token punctuation">=</span><span class="token value attr-value">20M</span>
+<span class="token comment"># 单个任务最大线程数, 添加时可指定, 默认:5</span>
+<span class="token comment"># 建议同max-connection-per-server设置为相同值</span>
+<span class="token key attr-name">split</span><span class="token punctuation">=</span><span class="token value attr-value">8</span>
+<span class="token comment"># 启用RPC, 默认:false</span>
+<span class="token key attr-name">enable-rpc</span><span class="token punctuation">=</span><span class="token value attr-value">true</span>
+<span class="token comment"># 允许所有来源, 默认:false</span>
+<span class="token key attr-name">rpc-allow-origin-all</span><span class="token punctuation">=</span><span class="token value attr-value">true</span>
+<span class="token comment"># 允许外部访问, 默认:false</span>
+<span class="token key attr-name">rpc-listen-all</span><span class="token punctuation">=</span><span class="token value attr-value">true</span>
+<span class="token comment"># 启动SSL</span>
+<span class="token comment"># rpc-secure=true</span>
+<span class="token comment"># 证书文件, 如果启用SSL则需要配置证书文件, 例如用https连接aria2</span>
+<span class="token comment"># rpc-certificate=</span>
+<span class="token comment"># rpc-private-key=</span>
+<span class="token comment"># 当下载的是一个种子(以.torrent结尾)时, 自动开始BT任务, 默认:true</span>
+<span class="token key attr-name">follow-torrent</span><span class="token punctuation">=</span><span class="token value attr-value">true</span>
+<span class="token comment"># 客户端伪装, PT需要</span>
+<span class="token key attr-name">peer-id-prefix</span><span class="token punctuation">=</span><span class="token value attr-value">-TR2770-</span>
+<span class="token key attr-name">user-agent</span><span class="token punctuation">=</span><span class="token value attr-value">Transmission/2.77</span>
+<span class="token comment"># 强制保存会话, 即使任务已经完成, 默认:false</span>
+<span class="token comment"># 较新的版本开启后会在任务完成后依然保留.aria2文件</span>
+<span class="token comment">#force-save=false</span>
+<span class="token comment"># 继续之前的BT任务时, 无需再次校验, 默认:false</span>
+<span class="token key attr-name">bt-seed-unverified</span><span class="token punctuation">=</span><span class="token value attr-value">true</span>
+<span class="token comment"># 保存磁力链接元数据为种子文件(.torrent文件), 默认:false</span>
+<span class="token key attr-name">bt-save-metadata</span><span class="token punctuation">=</span><span class="token value attr-value">true</span>
+<span class="token comment"># 单个种子最大连接数, 默认:55 0表示不限制</span>
+<span class="token key attr-name">bt-max-peers</span><span class="token punctuation">=</span><span class="token value attr-value">0</span>
+<span class="token comment"># 最小做种时间, 单位:分</span>
+<span class="token comment"># seed-time = 60</span>
+<span class="token comment"># 分离做种任务</span>
+<span class="token key attr-name">bt-detach-seed-only</span><span class="token punctuation">=</span><span class="token value attr-value">true</span>
+</code></pre></div></details> <h2 id="开机自启"><a href="#开机自启" class="header-anchor">#</a> 开机自启</h2> <p>在 <code>aira2.vbs</code> 中写入以下内容</p> <div class="language-powershell extra-class"><pre class="language-powershell"><code>CreateObject<span class="token punctuation">(</span><span class="token string">&quot;WScript.Shell&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Run <span class="token string">&quot;${HOME}\aria2c.exe --conf-path=aria2.conf -D&quot;</span><span class="token punctuation">,</span>0
+</code></pre></div><p>为 <code>aria2.vbs</code> 创建一个快捷方式</p> <p>再将 <strong>快捷方式</strong> 移动到 <code>C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp\</code></p></div></div> <!----> <div class="page-edit"><!----> <!----> <!----></div> <div class="page-nav-wapper"><div class="page-nav-centre-wrap"><a href="/pages/01/" class="page-nav-centre page-nav-centre-prev"><div class="tooltip">VS Code - 代码编辑器</div></a> <a href="/pages/03/" class="page-nav-centre page-nav-centre-next"><div class="tooltip">Stack - Hugo主题</div></a></div> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/pages/01/" class="prev">VS Code - 代码编辑器</a></span> <span class="next"><a href="/pages/03/">Stack - Hugo主题</a>→
+      </span></p></div></div></div> <!----></main></div> <div class="footer"><div class="icons"><a href="https://twitter.com/nibazshab" title="Twitter" target="_blank" class="iconfont icon-twitter"></a><a href="https://music.163.com/outchain/player?type=2&amp;id=139232" title="听音乐" target="_blank" class="iconfont icon-erji"></a><a href="https://github.com/nibazshab" title="GitHub" target="_blank" class="iconfont icon-github"></a></div>
+
+  说书人叹天下旧事如潮，听书人悲欢不过一壶新茶
+  <!----></div> <div class="buttons"><div title="返回顶部" class="button blur go-to-top iconfont icon-fanhuidingbu" style="display:none;"></div></div> <!----> <!----> <!----></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.419d4187.js" defer></script><script src="/assets/js/2.91bf4aae.js" defer></script><script src="/assets/js/6.833feb9d.js" defer></script>
+  </body>
+</html>
