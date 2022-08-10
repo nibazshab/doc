@@ -58,7 +58,7 @@ export default defineUserConfig({
       },
       {
         text: "最后",
-        children: ["/END.md"],
+        children: ["/end.md"],
       }
     ]
   })
