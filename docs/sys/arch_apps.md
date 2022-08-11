@@ -48,8 +48,9 @@ archlinuxcn-keyring
 noto-font
 adobe-source-han-serif-cn-fonts
 adobe-source-han-sans-cn-fonts
-x noto-fonts-cjk
-x noto-fonts-emoji
+
+  noto-fonts-cjk
+  noto-fonts-emoji
 
 Microsoft-fonts（从Win复制而来）
 
@@ -57,12 +58,10 @@ Microsoft-fonts（从Win复制而来）
 alacritty
 
 ## Gnome 桌面环境
-xorg-server 图形化服务 
 gdm 登陆管理器
 gnome-shell 基础桌面
 gnome-backgrounds 背景图片
 gnome-control-center 设置
-gvfs 虚拟文件系统
 nautilus 文件管理器
 xdg-user-dirs-gtk 用户目录
 gnome-keyring 加密
@@ -73,8 +72,8 @@ gedit 记事本
 eog 照片
 cheese 摄像头
 gnome-tweaks 高级设置
-==gtk-engine-murrine
-==gtk-engines
+gtk-engine-murrine
+gtk-engines
 
 ## Gnome 插件
 gnome-shell-extension-clipboard-indicator 剪切板
@@ -122,8 +121,8 @@ aria2
 steam
 
 ## 虚拟机
-vmware-workstation
-==linux-headers
+  vmware-workstation
+  linux-headers
 
 ## 音乐播放器
 deadbeef-static
@@ -136,26 +135,26 @@ wps-office
 wps-office-mui-zh-cn
 
 ## 解压
-x p7zip
+  p7zip
 
 ## 终端翻译工具
-x translate-shell
+  translate-shell
 
 ## steam++
 watt-toolkit-bin
 
 ## intel 核显工具
-intel-gpu-tools
+  intel-gpu-tools
 
 ## U盘多系统工具
-ventoy-bin
+  ventoy-bin
 
-x feh - 图片查看
-x picom - 窗口透明
-x proxychains-ng - 命令行代理
-x wechat-uos - 微信
-x dingtalk-bin - 钉钉
-x pandoc-bin - 文档转换
-x rclone - 挂载云盘
-x libimobiledevice - ios
-x android-tools - android
+  feh - 图片查看
+  picom - 窗口透明
+  proxychains-ng - 命令行代理
+  wechat-uos - 微信
+  dingtalk-bin - 钉钉
+  pandoc-bin - 文档转换
+  rclone - 挂载云盘
+  libimobiledevice - ios
+  android-tools - android
