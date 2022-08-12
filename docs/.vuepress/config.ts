@@ -19,7 +19,7 @@ export default defineUserConfig({
     sidebar: [
       {
         text: "首页",
-        children: ["/README.md"],
+        children: ["/"],
       },
       {
         text: "Windows 10",
