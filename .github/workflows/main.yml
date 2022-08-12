@@ -30,10 +30,6 @@ jobs:
       run: yarn --frozen-lockfile
     - name: Build VuePress site
       run: yarn docs:build
-    - name: Add files
-      run: |
-        echo
-        cp BingSiteAuth.xml google047af25de753eab7.html docs/.vuepress/dist/
     - name: Deploy to GitHub Pages
       uses: crazy-max/ghaction-github-pages@v3.0.0
       with:
