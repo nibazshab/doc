@@ -70,7 +70,7 @@ gnome-screenshot 截屏
 gnome-shell-extensions 扩展插件
 gedit 记事本
 eog 照片
-cheese 摄像头
+  cheese 摄像头
 gnome-tweaks 高级设置
 gtk-engine-murrine
 gtk-engines
