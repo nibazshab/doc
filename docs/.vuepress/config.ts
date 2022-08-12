@@ -6,14 +6,15 @@ export default defineUserConfig({
   title: '_Wiki',
   head: [
     [
-      'link',
-      {
+      'link',{
         rel: 'icon',
         href: 'https://user-images.githubusercontent.com/44338441/159110560-773788e6-c8f8-4acf-9fbe-57c12f840d00.png'
       }
-    ],
+    ]
   ],
   theme: defaultTheme({
+    lastUpdated: 'flase',
+    contributors: 'false',
     navbar: false,
     sidebar: [
       {

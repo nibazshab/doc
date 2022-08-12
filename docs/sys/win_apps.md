@@ -1,3 +1,3 @@
 # 应用
 
-- `qq-dreamcast` - 聊天
+* `qq-dreamcast` * 聊天

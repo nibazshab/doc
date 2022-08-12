@@ -9,23 +9,17 @@
 
 打开 `steam\steamapps\workshop\appworkshop_431960.acf`
 
-```json
+```json{3,5}
 "AppWorkshop"
-{
   ...
-  "WorkshopItemsInstalled"
-  {
-      已订阅的内容
-  }
-  "WorkshopItemDetails"
-  {
-      已安装的内容
-  }
-}
+  "WorkshopItemsInstalled"    // 已订阅的内容
+    ...
+  "WorkshopItemDetails"       // 已安装的内容
+    ...
 ```
 
 ## 具体方法
 
-- 把 `WorkshopItemDetails` 中的内容复制到 `WorkshopItemsInstalled`，欺骗 steam 认为已经安装了这些内容
+* 把 `WorkshopItemDetails` 中的内容复制到 `WorkshopItemsInstalled`，欺骗 steam 认为已经安装了这些内容
 
-- 将 `WorkshopItemDetails` 和 `WorkshopItemsInstalled` 的内容全部删除，再重新订阅
+* 将 `WorkshopItemDetails` 和 `WorkshopItemsInstalled` 的内容全部删除，再重新订阅

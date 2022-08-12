@@ -28,8 +28,8 @@
 
 请将以下文件放于同一个文件夹内
 
-- `clash.exe`
-- `config.yaml`
+* `clash.exe`
+* `config.yaml`
 
 ### 代理
 
