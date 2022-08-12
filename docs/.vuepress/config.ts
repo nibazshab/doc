@@ -3,7 +3,6 @@ import { defaultTheme } from "@vuepress/theme-default";
 
 export default defineUserConfig({
   base: '/',
-  lang: 'zh-CN',
   title: '_Wiki',
   head: [
     [
