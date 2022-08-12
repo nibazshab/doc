@@ -3,6 +3,17 @@
 
 ## 终端指令
 
+
+### 分区表
+
+导出分区表\导入分区表
+
+```sh
+sfdisk -d /dev/sdb > sdb.bkp
+
+sfdisk /dev/sdb < sdb.bkp
+```
+
 ### 循环执行命令
 
 仅在当前目录查找 jpg 后缀的文件，并重命名为 001.jpg, 002.jpg...
