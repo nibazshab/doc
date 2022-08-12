@@ -1,11 +1,11 @@
 # 应用
 
-此处列出的是 __显示安装__ 的应用，也就是用户明确使用 __[``pacman``](https://wiki.archlinux.org/title/Pacman_(简体中文))__ 包管理器所安装的应用，可以使用 ``sudo pacman -Qe`` 指令进行查看
+此处列出的是 __显示安装__ 的应用，也就是用户明确使用 __[`pacman`](https://wiki.archlinux.org/title/Pacman_(简体中文))__ 包管理器所安装的应用，可以使用 `sudo pacman -Qe` 指令进行查看
 
 
 ## 系统
-``base``
-``linux``
+`base`
+`linux`
 
 ## 硬件驱动
 linux-firmware

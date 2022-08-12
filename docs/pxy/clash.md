@@ -97,7 +97,7 @@ systemctl enable clash@username
 systemctl start clash@username
 ```
 
-在 ``${HOME}/.xprofile`` 中添加
+在 `${HOME}/.xprofile` 中添加
 
 ```ini
 export http_proxy="127.0.0.1:7890"
