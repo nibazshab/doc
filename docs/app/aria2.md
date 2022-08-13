@@ -20,28 +20,24 @@
 * 支持 Metalink 3.0 版本(HTTP/FTP/BitTorrent)
 * 限制下载、上传速度
 
-::: tip 热芝士
-不支持 ed2k 协议
-:::
-
 ## 配置文件
 
 配置文件 ___aria2.conf___ 是通用的，不分操作系统，可以在任意操作系统上使用。包括但不限于 Linux, Windows, Mac, Android, BSD 等
 
 ::: details 这是一份参考，点击查看详情
-前 __5__ 行的路径需要加以修改，不要拿过来直接用，否则会导致程序出错
+前 5 行的路径需要加以修改，不要拿过来直接用，否则会导致程序出错，第 6 行是密码，请自行修改
 ```ini
 dir=/home/user/Downloads
 input-file=/home/user/.config/aria2/aria2.session
 save-session=/home/user/.config/aria2/aria2.session
 dht-file-path=/home/user/.config/aria2/dht.dat
 dht-file-path6=/home/user/.config/dht6.dat
+rpc-secret=passwd
 dht-entry-point=dht.transmissionbt.com:6881
 dht-entry-point6=dht.transmissionbt.com:6881
 user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.63 Safari/537.36 Edg/93.0.961.47
 peer-agent=Deluge 1.3.15
 peer-id-prefix=-DE13F0-
-rpc-secret=passwd
 disk-cache=64M
 file-allocation=none
 no-file-allocation-limit=64M
@@ -136,13 +132,13 @@ bt-tracker=
 
 ### 安装
 
-Arch 系的 Linux 系统（ Arch / Manjaro 等），输入如下指令即可，其他系统请参考各自的安装方法
+Arch 系的 Linux 系统（ 如 Arch / Manjaro 等），输入如下指令即可，其他系统请参考各自的安装方法
 
 ```sh
 pacman -S aria2
 ```
 
-创建 `aria2.conf`, `aria2.session`, `dht.dat`, `dht6.dat` 文件，其中 `aria2.conf` 需要写入内容，可参考上文的配置文件，另外 3 个文件可以空着
+创建 aria2.conf, aria2.session, dht.dat, dht6.dat 文件，其中 aria2.conf 需要写入内容，可参考上文的配置文件，另外 3 个文件不需要写入内容
 
 请自行将 user 更改为自己的用户名
 
@@ -178,11 +174,11 @@ WantedBy=multi-user.target
 
 请前往 [Github Release](https://github.com/aria2/aria2/releases) 下载
 
-在 C 盘创建 C:\Program Files\aria2 目录，将下载的文件解压，并把 aria2c.exe 文件拷贝到该目录下
+在 C 盘创建 `C:\Program Files\aria2` 目录，将下载的文件解压，并把 aria2c.exe 文件拷贝到该目录下
 
-在该目录下手动创建 `aria2.conf`, `aria2.session`, `dht.dat`, `dht6.dat` 文件，其中 `aria2.conf` 需要写入内容，可参考上文的配置文件，另外 3 个文件可以空着
+在该目录下手动创建 aria2.conf, aria2.session, dht.dat, dht6.dat 文件，其中 aria2.conf 需要写入内容，可参考上文的配置文件，另外 3 个文件不需要写入内容
 
-确保目录中存在以下文件
+确保上述目录中存在以下文件
 
 * aria2c.exe
 * aria2.conf
@@ -192,13 +188,40 @@ WantedBy=multi-user.target
 
 ### 启用
 
-在 C:\Program Files\aria2 目录下创建 aira2.vbs 文件并写入以下内容
+在 `C:\Program Files\aria2` 目录下创建 aira2.vbs 文件并写入以下内容
 
-```powershell
+```ps1
 CreateObject("WScript.Shell").Run "C:\Program Files\aria2c.exe --conf-path=C:\Program Files\aria2.conf -D",0
 ```
 
 双击 aira2.vbs 即可启动服务
 
-为该文件创建快捷方式，并移动快捷方式到 C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp\ 目录下即可开机自启
+为 aira2.vbs 创建快捷方式，并移动快捷方式到 `C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp\` 目录下即可实现开机自启
 
+## AriaNg
+
+[AriaNg](https://github.com/mayswind/AriaNg) 是一个现代化的 Web 前端管理工具，它使得 aria2 更易于使用。AriaNg 是纯 html & javascript 编写的，因此不需要任何编译器或运行环境。只需要将 AriaNg 放入的 Web 服务器中，然后在浏览器中打开它。AriaNg 使用响应式布局，支持任何桌面或移动设备
+
+* 纯 Html 和 Javascript，无需运行环境
+* 响应式设计，支持桌面和移动设备
+* 友好的交互界面
+  * 任务排序（按名称、大小、进度、剩余时间、下载速度等）、文件排序、bittorrent 节点排序
+  * 任务搜索
+  * 任务重试
+  * 拖拽调整任务顺序
+  * 更详细的任务信息（健康度, 连接节点客户端信息等）
+  * 根据特定文件类型或文件扩展名筛选文件（视频、音频、图片、文档、应用程序、存档文件等）
+  * 多目录任务支持树形结构显示
+  * 下载/上传速度图表
+  * 完整的支持 aria2 设置选项
+* 深色主题
+* 支持网页地址命令行 API
+* 下载完成通知
+* 多语言支持
+* 支持配置多个 aria2 RPC
+* 支持导出和导入设置
+* 节省带宽, 仅请求增量数据
+
+这里图个方便，直接使用搭建好了的现成网页 [http://aria2.net](http://aria2.net)，不放心的可以参考 [官方文档](https://github.com/mayswind/AriaNg#installation) 自己搭建
+
+打开 AriaNg 后，点击左侧的 "AriaNg 设置"，再点击上方带有 "RPC" 字样的标题，在 "Aria2 RPC 地址" 中输入 `localhost`，在 "Aria2 RPC 密钥" 中输入配置文件中 `rpc-secret=` 一行的值，随后刷新页面即可看到左下方 "Aria2 状态 " 显示绿色的 "已连接"

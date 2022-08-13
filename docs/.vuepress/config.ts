@@ -13,8 +13,8 @@ export default defineUserConfig({
     ]
   ],
   theme: defaultTheme({
-    lastUpdated: 'flase',
-    contributors: 'false',
+    lastUpdated: false,
+    contributors: false,
     navbar: false,
     sidebar: [
       {
