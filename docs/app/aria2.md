@@ -10,19 +10,19 @@
 * 支持 HTTP 代理
 * 支持 HTTP BASIC 认证
 * 支持 HTTP 代理认证
-* 支持 FTP (主动、被动模式)
-* 通过 HTTP 代理的 FTP(GET 命令行或者隧道)
+* 支持 FTP（ 主动、被动模式 ）
+* 通过 HTTP 代理的 FTP（ GET 命令行或者隧道 ）
 * 分段下载
 * 支持 Cookie
 * 可以作为守护进程运行。
 * 支持使用 fast 扩展的 BitTorrent 协议
 * 支持在多文件 torrent 中选择文件
-* 支持 Metalink 3.0 版本(HTTP/FTP/BitTorrent)
+* 支持 Metalink 3.0 版本（HTTP/FTP/BitTorrent）
 * 限制下载、上传速度
 
 ## 配置文件
 
-配置文件 ___aria2.conf___ 是通用的，不分操作系统，可以在任意操作系统上使用。包括但不限于 Linux, Windows, Mac, Android, BSD 等
+用于保存配置的文件 _aria2.conf_ 是通用的，不分操作系统，可以在任意操作系统上使用。包括但不限于 Linux, Windows, Mac, Android, BSD 等
 
 ::: details 这是一份参考，点击查看详情
 前 5 行的路径需要加以修改，不要拿过来直接用，否则会导致程序出错，第 6 行是密码，请自行修改
@@ -132,7 +132,7 @@ bt-tracker=
 
 ### 安装
 
-Arch 系的 Linux 系统（ 如 Arch / Manjaro 等），输入如下指令即可，其他系统请参考各自的安装方法
+Arch 系的 Linux 系统（ 如 Arch / Manjaro 等 ），输入如下指令即可，其他系统请参考各自的安装方法
 
 ```sh
 sudo pacman -S aria2
@@ -190,7 +190,7 @@ WantedBy=multi-user.target
 
 在 `C:\Program Files\aria2` 目录下创建 aira2.vbs 文件并写入以下内容
 
-```ps1
+```powershell
 CreateObject("WScript.Shell").Run "C:\Program Files\aria2c.exe --conf-path=C:\Program Files\aria2.conf -D",0
 ```
 
@@ -205,12 +205,12 @@ CreateObject("WScript.Shell").Run "C:\Program Files\aria2c.exe --conf-path=C:\Pr
 * 纯 Html 和 Javascript，无需运行环境
 * 响应式设计，支持桌面和移动设备
 * 友好的交互界面
-  * 任务排序（按名称、大小、进度、剩余时间、下载速度等）、文件排序、bittorrent 节点排序
+  * 任务排序（ 按名称、大小、进度、剩余时间、下载速度等 ）、文件排序、bittorrent 节点排序
   * 任务搜索
   * 任务重试
   * 拖拽调整任务顺序
-  * 更详细的任务信息（健康度, 连接节点客户端信息等）
-  * 根据特定文件类型或文件扩展名筛选文件（视频、音频、图片、文档、应用程序、存档文件等）
+  * 更详细的任务信息（ 健康度, 连接节点客户端信息等 ）
+  * 根据特定文件类型或文件扩展名筛选文件（ 视频、音频、图片、文档、应用程序、存档文件等 ）
   * 多目录任务支持树形结构显示
   * 下载/上传速度图表
   * 完整的支持 aria2 设置选项
@@ -224,4 +224,4 @@ CreateObject("WScript.Shell").Run "C:\Program Files\aria2c.exe --conf-path=C:\Pr
 
 这里图个方便，直接使用搭建好了的现成网页 [http://aria2.net](http://aria2.net)，不放心的可以参考 [官方文档](https://github.com/mayswind/AriaNg#installation) 自己搭建
 
-打开 AriaNg 后，点击左侧的 __AriaNg 设置__，再点击上方带有 __RPC__ 字样的标题，在 __Aria2 RPC 地址__ 中输入 `localhost`（服务器用户请自行更换为自己的 ip 地址），在 __Aria2 RPC 密钥__ 中输入配置文件中 `rpc-secret` 的值，随后刷新页面即可看到左下方 __Aria2 状态__ 显示绿色的 __已连接__
+打开 AriaNg 后，点击左侧的 __AriaNg 设置__，再点击上方带有 __RPC__ 字样的标题，在 __Aria2 RPC 地址__ 中输入 `localhost`（ 服务器用户请自行更换为自己的 ip 地址 ），在 __Aria2 RPC 密钥__ 中输入配置文件中 `rpc-secret` 的值，随后刷新页面即可看到左下方 __Aria2 状态__ 显示绿色的 __已连接__
