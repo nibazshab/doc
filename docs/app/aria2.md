@@ -224,4 +224,4 @@ CreateObject("WScript.Shell").Run "C:\Program Files\aria2c.exe --conf-path=C:\Pr
 
 这里图个方便，直接使用搭建好了的现成网页 [http://aria2.net](http://aria2.net)，不放心的可以参考 [官方文档](https://github.com/mayswind/AriaNg#installation) 自己搭建
 
-打开 AriaNg 后，点击左侧的 "AriaNg 设置"，再点击上方带有 "RPC" 字样的标题，在 "Aria2 RPC 地址" 中输入 `localhost`，在 "Aria2 RPC 密钥" 中输入配置文件中 `rpc-secret=` 一行的值，随后刷新页面即可看到左下方 "Aria2 状态 " 显示绿色的 "已连接"
+打开 AriaNg 后，点击左侧的 "AriaNg 设置"，再点击上方带有 "RPC" 字样的标题，在 "Aria2 RPC 地址" 中输入 `localhost`（服务器用户请自行更换为自己的 ip 地址），在 "Aria2 RPC 密钥" 中输入配置文件中 `rpc-secret=` 一行的值，随后刷新页面即可看到左下方 "Aria2 状态" 显示绿色的 "已连接"
