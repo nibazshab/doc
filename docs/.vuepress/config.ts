@@ -36,7 +36,7 @@ export default defineUserConfig({
         ],
       },
       {
-        text: "应用配置",
+        text: "奇怪的工具",
         children: [
           "/app/aria2.md",
           "/app/code.md",

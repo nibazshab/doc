@@ -128,14 +128,14 @@ bt-tracker=
 ```
 :::
 
-## Linux
+## linux
 
 ### 安装
 
 Arch 系的 Linux 系统（ 如 Arch / Manjaro 等），输入如下指令即可，其他系统请参考各自的安装方法
 
 ```sh
-pacman -S aria2
+sudo pacman -S aria2
 ```
 
 创建 aria2.conf, aria2.session, dht.dat, dht6.dat 文件，其中 aria2.conf 需要写入内容，可参考上文的配置文件，另外 3 个文件不需要写入内容
@@ -166,9 +166,9 @@ RestartSec=always
 WantedBy=multi-user.target
 ```
 
-输入 `systemctl enable --now aria2.service` 命令，将服务启动并设为开机自启
+输入 `sudo systemctl enable --now aria2.service` 命令，将服务启动并设为开机自启
 
-## Windows
+## win
 
 ### 安装
 
@@ -220,8 +220,8 @@ CreateObject("WScript.Shell").Run "C:\Program Files\aria2c.exe --conf-path=C:\Pr
 * 多语言支持
 * 支持配置多个 aria2 RPC
 * 支持导出和导入设置
-* 节省带宽, 仅请求增量数据
+* 节省带宽，仅请求增量数据
 
 这里图个方便，直接使用搭建好了的现成网页 [http://aria2.net](http://aria2.net)，不放心的可以参考 [官方文档](https://github.com/mayswind/AriaNg#installation) 自己搭建
 
-打开 AriaNg 后，点击左侧的 "AriaNg 设置"，再点击上方带有 "RPC" 字样的标题，在 "Aria2 RPC 地址" 中输入 `localhost`（服务器用户请自行更换为自己的 ip 地址），在 "Aria2 RPC 密钥" 中输入配置文件中 `rpc-secret=` 一行的值，随后刷新页面即可看到左下方 "Aria2 状态" 显示绿色的 "已连接"
+打开 AriaNg 后，点击左侧的 __AriaNg 设置__，再点击上方带有 __RPC__ 字样的标题，在 __Aria2 RPC 地址__ 中输入 `localhost`（服务器用户请自行更换为自己的 ip 地址），在 __Aria2 RPC 密钥__ 中输入配置文件中 `rpc-secret` 的值，随后刷新页面即可看到左下方 __Aria2 状态__ 显示绿色的 __已连接__
