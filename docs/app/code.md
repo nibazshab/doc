@@ -1,5 +1,7 @@
 # Visual Studio Code
 
+<br><br>
+
 ## 是什么
 
 [Visual Studio Code](https://github.com/Microsoft/vscode)（ 简称 VS Code ）是一款由微软开发且跨平台的免费源代码编辑器。该软件支持语法高亮、代码自动补全（ 又称 IntelliSense ）、代码重构功能，并且内置了命令行工具和 Git 版本控制系统。用户可以更改主题和键盘快捷方式实现个性化设置，也可以通过内置的扩展程序商店安装扩展以拓展软件功能
