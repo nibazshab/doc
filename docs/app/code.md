@@ -38,8 +38,8 @@ yay -S visual-studio-code-bin
 
 ## 扩展推荐
 
+* Chinese - 中文语言包
 * Github Light Theme - 模仿 Github 的亮色主题
 * Atom One Dark Theme - Atom 上的 One Dark 暗色主题
-* Chinese - 中文语言包
 * Cdoe Runner - 在右上角添加一个快速运行代码的按钮
 * GitHub Copilot - GitHub AI 编程助手

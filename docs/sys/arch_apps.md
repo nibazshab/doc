@@ -36,9 +36,9 @@ nvidia-settings
 lib32-nvidia-utils
 
 ## 开机引导
-grub
-efibootmgr
-os-prober
+  grub
+  efibootmgr
+  os-prober
 
 ## aur 助手
 yay
