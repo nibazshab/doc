@@ -1,6 +1,6 @@
 # Visual Studio Code
 
-<br><br>
+<br>
 
 ## 是什么
 
@@ -26,7 +26,7 @@ yay -S visual-studio-code-bin
 
 此处安装的是微软官方的专有版本
 
-::: tip 不同版本介绍
+::: tip 版本介绍
 * Code - OSS 官方源码编译的开源版本
 * Visual Studio Code 微软官方的专有版本
 * VSCodium 社区驱动的开源版本
@@ -38,8 +38,9 @@ yay -S visual-studio-code-bin
 
 ## 扩展推荐
 
-* Chinese - 中文语言包
-* Github Light Theme - 模仿 Github 的亮色主题
-* Atom One Dark Theme - Atom 上的 One Dark 暗色主题
-* Cdoe Runner - 在右上角添加一个快速运行代码的按钮
-* GitHub Copilot - GitHub AI 编程助手
+| 名称 | 介绍 |
+| --- | --- |
+| Github Light Theme | 模仿 Github 的亮色主题 |
+| Atom One Dark Theme | Atom 上的 One Dark 暗色主题 |
+| Cdoe Runner | 添加一个运行代码的按钮 |
+| GitHub Copilot | GitHub AI 编程助手 |

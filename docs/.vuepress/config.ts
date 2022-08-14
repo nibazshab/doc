@@ -43,12 +43,6 @@ export default defineUserConfig({
         ],
       },
       {
-        text: "代理",
-        children: [
-          "/pxy/clash.md",
-        ],
-      },
-      {
         text: "小技巧",
         children: [
           "/tip/steam_wallpaper.md",

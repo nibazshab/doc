@@ -1,160 +1,187 @@
-# 应用
+# 软件包
 
-此处列出的是 __显示安装__ 的应用，也就是用户明确使用 __[`pacman`](https://wiki.archlinux.org/title/Pacman_(简体中文))__ 包管理器所安装的应用，可以使用 `sudo pacman -Qe` 指令进行查看
+<br>
 
+## 概述
 
-## 系统
-`base`
-`linux`
+Arch Linux 中的软件包是通过 makepkg 工具以及存储在 PKGBUILD 文件中的信息编译的。运行 `makepkg` 时，系统将自动在当前目录下搜索 PKGBUILD 文件,然后根据 PKGBUILD 把软件源码重新打包。成功编译后得到的二进制文件，以及可以得到的其他信息如包的版本信息和依赖关系等，都将被打包到 name.pkg.tar.zst 文件里，可以通过 `pacman -Up <package file>` 进行安装。
 
-## 硬件驱动
-linux-firmware
+一个 Arch 软件包仅仅是一个使用 zstd 压缩的 tar 压缩包，或者叫 __tarball__。它包含了以下由 makepkg 生成的文件：
 
-## 编译工具
-base-devel
+* 要安装的二进制文件
+* `.PKGINFO`：包含所有 pacman 处理软件包的元数据，依赖等等
+* `.BUILDINFO`：包含可复现编译需要的信息，仅在 pacman 5.1 及之后编译的软件包中。请参阅 [BUILDINFO](https://man.archlinux.org/man/BUILDINFO.5)
+* `.MTREE`：包含了文件的哈希值与时间戳. pacman 能够根据这些储存在本地数据库的信息校验软件包的完整性
+* `.INSTALL`：可选的文件，可以用来在安装/升级/删除操作之后运行命令（ 本文件只有在 PKGBUILD 中制定才会存在 ）
+* `.Changelog`：一个可选的文件，保存了包管理员描述软件更新的日志（ 不是所有包中都存在 ）
 
-## 编辑器
-vim
-nano
+## 我的软件包
 
-## 网络管理
-dhcpcd
-networkmanager
+此处所列出来的包是 __显示安装__ 的应用，也就是用户明确使用 `pacman -S` 所安装的应用，可以在终端中使用 `pacman -Qe` 指令进行查看
 
-## intel 编码固件
-intel-ucode
+::: tip PS：
+杠掉的包是我没有安装的，仅作为记录
 
-## intel 核显驱动
-mesa
-lib32-mesa
-vulkan-intel
-lib32-vulkan-intel
+其中 `base-devel` 和 `fcitx5-im` 是软件包组，它们是一个组合，包含了一些基本的软件包。如 `base-devel` 包含了一些基本的编译工具，`fcitx5-im` 包含了一些 fcitx 输入法的框架
+:::
 
-## nvidia 独显驱动
-nvidia
-nvidia-settings
-lib32-nvidia-utils
+### 基础
 
-## 开机引导
-  grub
-  efibootmgr
-  os-prober
+| 名称 | 介绍 |
+| ---- | ---- |
+| base | 基础系统 |
+| linux | 内核 |
+| linux-firmware | 固件驱动 |
+| base-devel | 编译工具包 |
+| vim, nano | 编辑器 |
+| dhcpcd | DHCP 管理 |
+| networkmanager | 网络管理 |
+| intel-ucode | intel 微码固件 |
 
-## aur 助手
-yay
-archlinuxcn-keyring
+### 开机引导
 
-## 字体
-noto-font
-adobe-source-han-serif-cn-fonts
-adobe-source-han-sans-cn-fonts
+| 名称 | 介绍 |
+| ---- | ---- |
+| ~~grub~~ | 引导 |
+| ~~efibootmgr~~ | |
+| ~~os-prober~~ | 检测 win |
+| ~~refind~~ | 引导 |
 
-  noto-fonts-cjk
-  noto-fonts-emoji
+PS：建议使用 systemd-boot 引导
 
-Microsoft-fonts（从Win复制而来）
+### aur
 
-## 终端
-alacritty
+| 名称 | 介绍 |
+| ---- | ---- |
+| archlinuxcn-keyring | CN 密钥 |
+| yay | aur 助手 |
 
-## Gnome 桌面环境
-gdm 登陆管理器
-gnome-shell 基础桌面
-gnome-backgrounds 背景图片
-gnome-control-center 设置
-nautilus 文件管理器
-xdg-user-dirs-gtk 用户目录
-gnome-keyring 加密
-gnome-system-monitor 任务管理器
-gnome-screenshot 截屏
-gnome-shell-extensions 扩展插件
-gedit 记事本
-eog 照片
-  cheese 摄像头
-gnome-tweaks 高级设置
-gtk-engine-murrine
-gtk-engines
+### 显卡驱动
 
-## Gnome 插件
-gnome-shell-extension-clipboard-indicator 剪切板
-gnome-shell-extension-appindicator 应用托盘
-gnome-shell-extension-lunar-calendar 农历
-gnome-shell-extension-dash-to-dock 底栏
+| 名称 | 介绍 |
+| ---- | ---- |
+| lib32-mesa | intel 核显驱动 |
+| vulkan-intel | |
+| lib32-vulkan-intel | |
+| nvidia | nvdia 独显驱动 |
+| lib32-nvidia-utils | |
+| nvidia-settings | |
 
-## Zsh
-zsh
-oh-my-zsh-git
-zsh-autosuggestions
-zsh-syntax-highlighting
+### Shell
 
-## 输入法
-fcitx5-im
-fcitx5-chinese-addons
+| 名称 | 介绍 |
+| ---- | ---- |
+| zsh | shell |
+| zsh-autosuggestions | 自动补全插件 |
+| zsh-syntax-highlighting | 语法高亮插件 |
+| oh-my-zsh-git | 主题框架 |
 
-## 浏览器
-microsoft-edge-stable-bin
+### 字体
 
-## 艺术
-neofetch
-tree
-sl
-cmatrix
+| 名称 | 介绍 |
+| ---- | ---- |
+| adobe-source-han-sans-otc-fonts | 思源黑体 |
+| adobe-source-han-serif-otc-fonts | 思源宋体 |
+| ~~noto-fonts-emoji~~ | 表情 |
 
-## 电源管理工具
-tlp
-tlp-rdw
+PS：可以考虑复制 Windows 的系统字体使用
 
-## QQ
-icalingua++
+### Gnome 桌面环境
 
-## 代理
-v2ray
-v2raya
+| 名称 | 介绍 |
+| ---- | ---- |
+| alacritty | 终端 |
+| gdm | 登陆管理器 |
+| gnome-keyring | 密钥环 |
+| gnome-shell | 基础桌面 |
+| gnome-backgrounds | 壁纸 |
+| gnome-control-center | 设置 |
+| nautilus | 文件管理器 |
+| xdg-user-dirs-gtk | 用户目录 |
+| gnome-system-monitor | 任务管理器 |
+| gnome-screenshot | 截屏 |
 
-## 代码工具
-visual-studio-code-bin
+### Gnome 桌面插件
 
-## 下载器
-aria2
+| 名称 | 介绍 |
+| ---- | ---- |
+| gnome-tweaks | 高级设置 |
+| gtk-engine-murrine | |
+| gtk-engines | |
+| gnome-shell-extensions | 扩展 |
+| gnome-shell-extension-appindicator | 应用托盘  |
+| gnome-shell-extension-clipboard-indicator | 剪切板 |
+| gnome-shell-extension-dash-to-dock | Dock 栏 |
+| ~~gnome-shell-extension-lunar-calendar~~ | 农历 |
 
-## 游戏
-steam
+PS: 源里的 deadbeef 无法播放 mp3，建议前往 [官方下载地址](hhttps://sourceforge.net/projects/deadbeef/files/travis/linux/1.9.1/deadbeef-static-1.9.1-1-x86_64.pkg.tar.xz/download) 下载安装
 
-## 虚拟机
-  vmware-workstation
-  linux-headers
+### 输入法
 
-## 音乐播放器
-deadbeef-static
+| 名称 | 介绍 |
+| ---- | ---- |
+| fcitx5-im | 输入法框架 |
+| fcitx5-chinese-addons | 中文输入法 |
 
-## 视频播放器
-mpv
+### 桌面小工具
 
-## 办公套件
-wps-office
-wps-office-mui-zh-cn
+| 名称 | 介绍 |
+| ---- | ---- |
+| gedit | 记事本 |
+| eog | 照片 |
+| mpv | 视频 |
+| deadbeef-static | 本地音乐 |
+| ~~cheese~~ | 相机 |
 
-## 解压
-  p7zip
+### 常用工具
 
-## 终端翻译工具
-  translate-shell
+| 名称 | 介绍 |
+| ---- | ---- |
+| microsoft-edge-stable-bin | 浏览器 |
+| icalingua++ | QQ |
+| steam | 游戏 |
+| watt-toolkit-bin | steam 工具箱 |
+| visual-studio-code-bin | 代码编辑器 |
+| wps-office | 办公套件 |
+| wps-office-mui-zh-cn |  |
+| ~~vmware-workstation~~ | 虚拟机 |
+| ~~linux-headers~~ | |
 
-## steam++
-watt-toolkit-bin
+### 其他
 
-## intel 核显工具
-  intel-gpu-tools
+| 名称 | 介绍 |
+| ---- | ---- |
+| tlp-rdw | 功耗管理 |
+| v2raya | 代理 |
+| v2ray | |
+| aria2 | 下载器 |
+| ~~feh~~ | 图片 |
+| ~~picom~~ | 窗口透明 |
+| ~~proxychains-ng~~ | 命令行代理 |
+| ~~pandoc-bin~~ | 文档转换 |
+| ~~rclone~~ | 云盘挂载 |
+| ~~ventoy-bin~~ | u 盘引导 |
 
-## U盘多系统工具
-  ventoy-bin
+### 手机
 
-  feh - 图片查看
-  picom - 窗口透明
-  proxychains-ng - 命令行代理
-  wechat-uos - 微信
-  dingtalk-bin - 钉钉
-  pandoc-bin - 文档转换
-  rclone - 挂载云盘
-  libimobiledevice - ios
-  android-tools - android
+| 名称 | 介绍 |
+| ---- | ---- |
+| ~~libimobiledevice~~ | ios |
+| ~~android-tools~~ | android |
+
+### 终端工具
+
+| 名称 | 介绍 |
+| ---- | ---- |
+| neofetch | 系统信息 |
+| tree | 目录树 |
+| ~~p7zip~~ | 7z 解压缩 |
+| ~~translate-shell~~ | 翻译程序 |
+| ~~intel-gpu-tools~~ | 核显负载信息 |
+
+### ASCII
+
+| 名称 | 介绍 |
+| ---- | ---- |
+| sl | 小火车 |
+| cmatrix | 代码屏幕 |

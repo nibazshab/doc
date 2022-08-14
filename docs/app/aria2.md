@@ -163,7 +163,7 @@ After=network.target
 User=user
 ExecStart=/usr/bin/aria2c --conf-path=/home/user/.config/aria2/aria2.conf &
 ExecStop=/bin/kill $MAINPID
-RestartSec=always
+RestartSec=on-abort
 [Install]
 WantedBy=multi-user.target
 ```
