@@ -7,24 +7,27 @@
 :::
 
 
-::: warning 导出分区表文件
+::: warning 导入分区表文件
 `sfdisk /dev/sdb < sdb.bkp`
 :::
 
 ::: danger 仅在当前目录查找 jpg 后缀的文件，并重命名为 001.jpg, 002.jpg...
-`i=1`  
-`for FILE in $(find -maxdepth 1 -name "*.jpg")`  
-`do`  
-`mv $FILE $(printf "%0.3d.jpg" $i)`  
-`let i=i+1`  
-`done`
+```sh
+i=1
+for FILE in $(find -maxdepth 1 -name "*.jpg")
+do
+mv $FILE $(printf "%0.3d.jpg" $i)
+let i=i+1
+done
 :::
 
 ::: tip 无限循环
-`for ((;;))`
-`do`
-`your command`
-`done`
+```sh
+for ((;;))
+do 
+  <command>
+done
+```
 :::
 
 ::: warning 获取当前目录下所有文件名，包括含有空格的名称，保存到 a.txt
@@ -71,6 +74,6 @@
 
 | 正则表达式 | 匹配结果 |
 | ---- | ---- |
-| ^.*(a|b).*\n | 包含 a 或 b 的行 |
+| ^.*(a\|b).*\n | 包含 a 或 b 的行 |
 | [^]{3}$` | 每行末尾的 3 个字符 |
 | ^[^]{3}` | 每行开头的 3 个字符 |
