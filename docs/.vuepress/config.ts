@@ -33,21 +33,25 @@ export default defineUserConfig({
         children: [
           "/sys/arch.md",
           "/sys/arch_install.md",
-          "/sys/arch_apps.md",
+          "/sys/arch_package.md",
         ],
       },
       {
         text: "Windows 10",
         children: [
           "/sys/win.md",
-          "/sys/win_apps.md",
         ],
       },
       {
-        text: "小技巧",
+        text: "热芝士",
+        children: [
+          "/tip/commad.md",
+        ],
+      },
+      {
+        text: "游戏/软件相关",
         children: [
           "/tip/steam_wallpaper.md",
-          "/tip/cmd.md",
           "/tip/nong.md",
         ],
       },
