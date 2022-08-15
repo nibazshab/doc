@@ -22,24 +22,24 @@ export default defineUserConfig({
         children: ["/"],
       },
       {
-        text: "Windows 10",
+        text: "奇怪的工具",
         children: [
-          "/sys/win.md",
-          "/sys/win_apps.md",
+          "/app/aria2.md",
+          "/app/code.md",
         ],
       },
       {
         text: "Arch Linux",
         children: [
-          "/sys/linux.md",
+          "/sys/arch.md",
           "/sys/arch_apps.md",
         ],
       },
       {
-        text: "奇怪的工具",
+        text: "Windows 10",
         children: [
-          "/app/aria2.md",
-          "/app/code.md",
+          "/sys/win.md",
+          "/sys/win_apps.md",
         ],
       },
       {
