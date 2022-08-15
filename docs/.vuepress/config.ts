@@ -32,6 +32,7 @@ export default defineUserConfig({
         text: "Arch Linux",
         children: [
           "/sys/arch.md",
+          "/sys/arch-linux.md",
           "/sys/arch_apps.md",
         ],
       },
