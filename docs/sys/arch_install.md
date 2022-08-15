@@ -137,7 +137,7 @@ btrfs subvolume create /mnt/@swap
 
 取消 `/mnt` 的挂载，输入 `umount /mnt`
 
-## 挂载
+## 6. 挂载
 
 首先挂载根目录
 
@@ -155,10 +155,10 @@ mount -t btrfs -o subvol=/@swap /dev/nvme0n1p2 /mnt/swap
 mount /dev/nvme0n1p1 /mnt/boot
 ```
 
-## 6. 安装基本系统
+## 7. 安装基本系统
 
 ::: tip 提示
-从此处开始，如有不清楚软件包的作用的，可以查看另一篇文章：[软件包](/sys/arch_apps.md)，[软件包](/sys/arch_apps.html)
+从此处开始，如有不清楚软件包的作用的，可以查看另一篇文章：[软件包](/sys/arch_apps.md)
 :::
 
 输入 `pacstrap /mnt base base-devel linux linux-firmware` 安装基础软件包
@@ -167,13 +167,13 @@ mount /dev/nvme0n1p1 /mnt/boot
 
 输入 `genfstab -U /mnt >> /mnt/etc/fstab` 生成 fstab 文件
 
-## 7. 配置系统
+## 8. 配置系统
 
 进入刚刚安装的系统，`arch-chroot /mnt`
 
 安装几个需要的软件包，`pacman -S dhcpcd networkmanager vim`
 
-### 7.1. 创建 swapflie
+### 8.1. 创建 swapflie
 
 ```sh
 chattr +C /swap
@@ -185,9 +185,9 @@ mkswap /swap/swapfile
 swapon /swap/swapfile
 ```
 
-### 7.2. 修改 fstab
+### 8.2. 修改 fstab
 
-输入 'echo "/swapfile none swap defaults 0 0" >> /etc/fstab' 将 swapfile 添加到 fstab 文件中
+输入 'echo /swapfile none swap defaults 0 0 >> /etc/fstab' 将 swapfile 添加到 fstab 文件中
 
 输入 `vim /etc/fstab`，将所有行的 `subvolid=xxx` 删除，并检查 `/@swap` 是否带有 `compress=zstd:3` 参数，如有请将它删除，最终该文件应大致如下所示
 
@@ -207,7 +207,7 @@ UUID=979aa7ec-8842-4e22-8bfc-4c8aed3de56d	/swap     	btrfs     	rw,relatime,ssd,
 /swap/swapfile      				        none      	swap      	defaults  	0 0
 ```
 
-### 7.3. 校准时间
+### 8.3. 校准时间
 
 输入 `ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime` 将时区设置为上海时区
 输入 `timedatectl set-ntp true` 启用网络时间同步
@@ -217,7 +217,7 @@ UUID=979aa7ec-8842-4e22-8bfc-4c8aed3de56d	/swap     	btrfs     	rw,relatime,ssd,
 如果电脑上有 windows 系统，则可能会导致时间不准确，将 windows 时间设置为 CST 时间即可解决
 :::
 
-### 7.4. 设置 locale 和 主机名
+### 8.4. 设置 locale 和 主机名
 
 输入 `vim /etc/locale.gen`，找到 `en_US.UTF-8 UTF-8` 和 `zh_CN.UTF-8 UTF-8`，将前面的 # 井号删除，保存并退出
 
@@ -235,19 +235,19 @@ UUID=979aa7ec-8842-4e22-8bfc-4c8aed3de56d	/swap     	btrfs     	rw,relatime,ssd,
 127.0.1.1    macos.localdomain    macos
 ```
 
-### 7.5. 为 root 用户添加密码
+### 8.5. 为 root 用户添加密码
 
 输入 `passwd`，随后输入想为 root 用户设置的密码，密码无回显，正常输入回车即可
 
-### 7.6. 安装微码文件
+### 8.6. 安装微码文件
 
-intel cpu 输入 `pacman -S intel-ucode`
+__intel cpu__ 输入 `pacman -S intel-ucode`
 
-amd cpu 输入 `pacman -S amd-ucode`
+__amd cpu__ 输入 `pacman -S amd-ucode`
 
-### 7.7. 使用 systemd-boot 引导
+### 8.7. 使用 systemd-boot 引导
 
-使用 bootctl 将 systemd-boot 安装到 /boot 目录
+使用 bootctl 将 systemd-boot 安装到 `/boot` 目录
 
 ```sh
 bootctl --path=/boot install
@@ -274,6 +274,10 @@ console-mode max
 editor no
 ```
 
+> * `timeout` 等待时间，单位为秒
+> * `console-mode` 控制台界面大小
+> * `editor` 是否启用内核参数编辑器
+
 输入 `blkid -s PARTUUID -o value /dev/nvme0n1p2` 查看系统分区的 UUID
 
 创建 `/boot/loader/entries/arch.conf` 文件并写入相关内容，添加以 btrfs 子卷作为根分区的引导项，最终应大致如下所示
@@ -286,12 +290,12 @@ options        root=PARTUUID=b4e38594-773b-a845-98f6-3a72a08db6d9 rw rootflags=s
 ```
 
 ::: tip PS：
-bootctl __Windows Boot Manager__（ `\EFI\Microsoft\Boot\Bootmgfw.efi` ），__EFI Shell__（ `\shellx64.efi` ）和 __EFI Default Loader__（ `\EFI\Boot\bootx64.efi` ）增加启动选项
+bootctl 会为 __Windows Boot Manager__（ `\EFI\Microsoft\Boot\Bootmgfw.efi` ），__EFI Shell__（ `\shellx64.efi` ）和 __EFI Default Loader__（ `\EFI\Boot\bootx64.efi` ）增加启动选项
 
-bootctl 会在 /boot/loader/entries/*.conf 搜索启动选项，一个文件中只能包含一个启动选项
+bootctl 会在 `/boot/loader/entries/*.conf` 搜索启动选项，一个文件中只能包含一个启动选项
 :::
 
-## 8. 重启
+## 9. 重启
 
 输入以下指令，退回安装镜像环境，取消挂载，重启到刚刚安装好的系统
 
@@ -301,7 +305,7 @@ umount -R /mnt
 reboot
 ```
 
-## 9. 再次连接网络
+## 10. 再次连接网络
 
 输入 root 回车，再输入之前为 root 用户设置的密码，进入系统
 
@@ -314,7 +318,7 @@ PS：有线网络会自动连接，无线网络需要手动连接
 
 输入 `nmtui` 进入网络管理页面并连接 wifi
 
-## 10. 准备普通用户账户
+## 11. 准备普通用户账户
 
 输入 `useradd -m -G wheel -s /bin/bash pig` 创建普通用户 `pig`，用户名称可自定义，不要包含空格等特殊字符
 
@@ -322,7 +326,7 @@ PS：有线网络会自动连接，无线网络需要手动连接
 
 输入 `EDITOR=vim visudo`，找到 `#%wheel ALL=(ALL) ALL` 行，将前面的 # 井号删除，保存并退出
 
-## 11. archlinuxcn 源和 32 位支持
+## 12. archlinuxcn 源和 32 位支持
 
 编辑 `/etc/pacman.conf` 文件，找到 `[multilib]` 一节，将这两行前面的 # 井号删除，并在文件结尾处添加 archlinuxcn 源，同样选一个即可
 
@@ -337,25 +341,15 @@ Server = https://mirrors.bfsu.edu.cn/archlinuxcn/$arch
 
 输入 `pacman -S yay` 安装 aur 助手
 
-## 12. 显卡驱动
+## 13. 显卡驱动
 
-### 12.1. intel 核显
+### 13.1. intel 核显
 
 输入 `pacman -S lib32-mesa vulkan-intel lib32-vulkan-intel`
 
-### 12.2. nvidia 独显
+### 13.2. nvidia 独显
 
 输入 `pacman -S nvidia lib32-nvidia-utils nvidia-settings`
-
-
-## 13. 图形化环境
-
-输入以下指令，安装 Gnome 桌面环境
-
-```sh
-pacman -S alactirry gdm gnome-keyring gnome-shell gnome-backgrounds gnome-control-center nautilus xdg-user-dirs-gtk gnome-system-monitor gnome-screenshot
-systemctl enable gdm.service
-```
 
 ## 14. 中文字体
 
@@ -393,3 +387,16 @@ pacman -S adobe-source-han-sans-otc-fonts adobe-source-han-serif-otc-fonts
 ```
 
 输入 `fc-cache -fv` 刷新字体缓存
+
+## 15. 图形化环境
+
+输入以下指令，安装 Gnome 桌面环境
+
+```sh
+pacman -S alactirry gdm gnome-keyring gnome-shell gnome-backgrounds gnome-control-center nautilus xdg-user-dirs-gtk gnome-system-monitor gnome-screenshot
+systemctl enable gdm.service
+```
+
+## 欢迎使用
+
+至此，欢迎使用 Arch Linux ❤️
