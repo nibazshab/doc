@@ -22,20 +22,11 @@ done
 :::
 
 ::: tip 无限循环
-```sh
-for ((;;))
-do 
-  <command>
-done
-```
+`for ((;;)); do; <command>; done`
 :::
 
-::: warning 获取当前目录下所有文件名，包括含有空格的名称，保存到 a.txt
-`IFS_old=$IFS;IFS=$'\n'`  
-`for FILE in $(ls)`  
-`do echo $FILE >> a.txt`  
-`done`  
-`IFS=$IFS_old`
+::: warning 读取带空格的文件名
+`IFS_old=$IFS; IFS=$'\n'; <command>; IFS=$IFS_old`
 :::
 
 ::: danger 防止 a 进程随终端被关闭，并记录日志
@@ -46,24 +37,32 @@ done
 `rclone mount od:/ /mnt/od --cache-dir /tmp/od --vfs-cache-mode writes`
 :::
 
-::: warning 使用 rsync 把 /mnt/od 中的文件同步到 /mnt/gd 中，并限制速率 800k/s
-`rsync -avzP --bwlimit=800 /mnt/od mnt/gd`
+::: warning 文件同步
+rsync -avzP --bwlimit=100 /path/a /path/b
+| rsync 参数 | 作用 |
+| ---- | ---- |
+| -a | 同步所有元数据 |
+| -v | 打印详细信息 |
+| -z | 启用压缩 |
+| -P | 显示进展，允许中断 |
+| --exclude= | 排除指定文件 |
+| --bwlimit= | 限制传输速率，单位 kb/s |
 :::
 
-::: danger 指定 80 端口运行 a
-`./a --port 80`
+| <command> 参数 | 作用 |
+| ---- | ---- |
+| `--port 80` | 指定 80 端口运行 |
+
+::: tip 行首添加内容
+`sed -i "s/^/<code>&/g" file`
 :::
 
-::: tip 在 a.txt 行首添加内容 b
-`sed -i "s/^/b&/g" a.txt`
+::: warning 行尾添加内容
+`sed -i "s/$/&<code>/g" file`
 :::
 
-::: warning 在 a.txt 行尾添加内容 b
-`sed -i "s/$/&b/g" a.txt`
-:::
-
-::: danger 删除行尾 3 个字符
-`sed -i 's/.\{5\}$//' a.txt`
+::: danger 删除行尾 5 个字符
+`sed -i 's/.\{5\}$//' file`
 :::
 
 <br>

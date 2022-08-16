@@ -51,8 +51,8 @@ export default defineUserConfig({
       {
         text: "游戏/软件相关",
         children: [
-          "/tip/steam_wallpaper.md",
-          "/tip/nong.md",
+          "/van/mobile_game.md",
+          "/van/stean_wallpaper.md",
         ],
       },
       {
