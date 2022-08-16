@@ -15,3 +15,11 @@
 `https://pay.qq.com/h5/index.shtml?m=buy&c=game&dialog=0&midasApiVersion=5&transactionid=CC8E5656-EEC9-4ADD-865E-D4D81C258D691558348901265&dh=1&pf=mds_storeopen_qb-_mds_default_v1_0_0.navgame_v1.0-android&appid=1450002258&zoneid=(区号+1010)&n=(点卷数量)&as=1&aid=&wxAppid2=wx951bdcac522929b6&u=(游戏qq号)`
 
 填写完毕后，充值人在 qq 内点击该链接，即可为被充值人充值
+
+
+
+## 过实名认证
+
+::: details 仅用于保卫萝卜2，内容搜集自网络
+110105197001137135 张民
+:::
