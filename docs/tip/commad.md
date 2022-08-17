@@ -19,6 +19,7 @@ do
 mv $FILE $(printf "%0.3d.jpg" $i)
 let i=i+1
 done
+```
 :::
 
 ::: tip 无限循环
