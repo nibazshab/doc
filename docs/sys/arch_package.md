@@ -115,7 +115,7 @@ PS：可以考虑复制 Windows 的系统字体使用
 
 | 名称 | 介绍 | 名称 | 介绍 |
 | - | - | - | - |
-| gnome-shell-extension-appindicator | 应用托盘  | gnome-shell-extension-lunar-calendar | 农历日历 |
+| gnome-shell-extension-appindicator | 应用托盘 | gnome-shell-extension-lunar-calendar | 农历日历 |
 | gnome-shell-extension-clipboard-indicator | 剪切板 | | |
 | gnome-shell-extension-dash-to-dock | Dock 栏 | | |
 
@@ -155,12 +155,13 @@ PS: 源里的 deadbeef 无法播放 mp3，建议前往 [官方下载地址](hhtt
 
 | 名称 | 介绍 | 名称 | 介绍 |
 | - | - | - | - |
-| tlp-rdw | 功耗管理 | feh | 图片查看 |
+| | | feh | 图片查看 |
 | v2raya | 代理 | picom | 窗口透明 |
 | v2ray | | proxychains-ng | 命令行代理 |
 | aria2 | 下载器 | pandoc-bin | 文档格式转换 |
 | | | rclone | 云盘挂载 |
-| | |  ventoy-bin | u 盘引导 |
+| | | ventoy-bin | u 盘引导 |
+| | | tlp-rdw | 功耗管理 |
 
 ### 虚拟机
 
