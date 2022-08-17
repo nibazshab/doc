@@ -2,78 +2,68 @@
 
 <br>
 
-::: tip 导出分区表文件
-`sfdisk -d /dev/sdb > sdb.bkp`
-:::
+导出分区表文件
 
+sfdisk -d /dev/sdb > sdb.bkp
 
-::: warning 导入分区表文件
-`sfdisk /dev/sdb < sdb.bkp`
-:::
+导入分区表文件
 
-::: danger 仅在当前目录查找 jpg 后缀的文件，并重命名为 001.jpg, 002.jpg...
-```sh
+sfdisk /dev/sdb < sdb.bkp
+
+仅在当前目录查找 jpg 后缀的文件，并重命名为 001.jpg, 002.jpg...
+
 i=1
 for FILE in $(find -maxdepth 1 -name "*.jpg")
 do
 mv $FILE $(printf "%0.3d.jpg" $i)
 let i=i+1
 done
-```
-:::
 
-::: tip 无限循环
-`for ((;;)); do; <command>; done`
-:::
+无限循环
 
-::: warning 读取带空格的文件名
-`IFS_old=$IFS; IFS=$'\n'; <command>; IFS=$IFS_old`
-:::
+for ((;;))
+do 
+  <command>
+done
 
-::: danger 防止 a 进程随终端被关闭，并记录日志
-`nohup ./a > ~/log 2>&1 & ; disown`
-:::
+获取当前目录下所有文件名，包括含有空格的名称，保存到 a.txt
 
-::: tip 利用 rclone 把 onedrive 挂载为本地目录，并设置缓存目录
-`rclone mount od:/ /mnt/od --cache-dir /tmp/od --vfs-cache-mode writes`
-:::
+IFS_old=$IFS;IFS=$'\n'
+for FILE in $(ls)
+do echo $FILE >> a.txt
+done
+IFS=$IFS_old
 
-::: warning 文件同步
-rsync -avzP --bwlimit=100 /path/a /path/b
-| rsync 参数 | 作用 |
-| ---- | ---- |
-| -a | 同步所有元数据 |
-| -v | 打印详细信息 |
-| -z | 启用压缩 |
-| -P | 显示进展，允许中断 |
-| --exclude= | 排除指定文件 |
-| --bwlimit= | 限制传输速率，单位 kb/s |
-:::
+后台运行指令，并记录日志
 
-| <command> 参数 | 作用 |
-| ---- | ---- |
-| `--port 80` | 指定 80 端口运行 |
+nohup <command> > ~/log 2>&1 & ; disown
 
-::: tip 行首添加内容
-`sed -i "s/^/<code>&/g" file`
-:::
+利用 rclone 把 onedrive 挂载为本地目录，并设置缓存目录
 
-::: warning 行尾添加内容
-`sed -i "s/$/&<code>/g" file`
-:::
+rclone mount od:/ /mnt/od --cache-dir /tmp/od --vfs-cache-mode writes
 
-::: danger 删除行尾 5 个字符
-`sed -i 's/.\{5\}$//' file`
-:::
+使用 rsync 把 /mnt/od 中的文件同步到 /mnt/gd 中，并限制速率 800k/s
 
-<br>
+rsync -avzP --bwlimit=800 /mnt/od mnt/gd
 
----
+指定 80 端口运行 a
 
-<br>
+./a --port 80
+
+在 a.txt 行首添加内容 b
+
+sed -i "s/^/b&/g" a.txt
+
+在 a.txt 行尾添加内容 b
+
+sed -i "s/$/&b/g" a.txt
+
+删除行尾 3 个字符
+
+sed -i 's/.\{5\}$//' a.txt
 
 | 正则表达式 | 匹配结果 |
-| ---- | ---- |
-| ^.*(a\|b).*\n | 包含 a 或 b 的行 |
+| - | - |
+| ^.(a\|b).\n |	包含 a 或 b 的行 |
 | [^]{3}$` | 每行末尾的 3 个字符 |
-| ^[^]{3}` | 每行开头的 3 个字符 |
+|^[^]{3}` |	每行开头的 3 个字符 |
