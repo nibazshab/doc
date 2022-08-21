@@ -2,6 +2,10 @@
 
 <br>
 
+::: details 等待上一条的指令完成
+`wait`
+:::
+
 ::: details 导出分区表文件
 `sfdisk -d /dev/sdb > sdb.bkp`
 :::
@@ -19,8 +23,8 @@
 :::
 
 ::: details 无限重复指令
-`for ((;;)); do`  
-&ensp;&ensp;&ensp;&ensp;`<command>`  
+`while true; do`
+&ensp;&ensp;&ensp;&ensp;`<command>` 
 `done`
 :::
 
