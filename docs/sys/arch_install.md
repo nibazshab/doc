@@ -3,7 +3,7 @@
 <br>
 
 :::warning 声明
-本文的内容是从一个空的硬盘上安装 Arch Linux 系统，已经在硬盘上安装了其他操作系统的，请自行判断哪些步骤不需要进行
+本文的内容是从一个空的硬盘上安装 Arch Linux 系统，如果已经在硬盘上安装了其他操作系统，请自行判断哪些步骤不需要进行
 
 如有需要请参考 [官方安装指南](https://wiki.archlinux.org/title/Installation_guide_(简体中文))
 :::
@@ -397,7 +397,13 @@ pacman -S alactirry gdm gnome-keyring gnome-shell gnome-backgrounds gnome-contro
 systemctl enable --now gdm.service
 ```
 
-接着用 `pig` 普通账号登陆
+接着用 [步骤11](#11-准备普通用户账户) 创建的 `pig` 普通账号登陆
+
+### 15.1 挂起后无法唤醒
+
+使用 intel cpu 并为触摸板加载了 intel_lpss_pci 模块的电脑，在休眠/睡眠后可能会出现黑屏、无法唤醒的情况，可以正常唤醒的用户请略过此步骤
+
+编辑 `/etc/mkinitcpio.conf` 文件，将 `intel_lpss_pci` 添加到 `MODULES=()` 里，使用 `sudo mkinitcpio -P` 命令重新生成内核即可修复无法唤醒的问题
 
 
 ## 16. 常用软件及扩展
@@ -412,11 +418,7 @@ yay -S gnome-tweaks gtk-engine-murrine gtk-engines gnome-shell-extensions
 
 ## 17. 中文输入法
 
-输入以下指令，安装中文输入法
-
-```sh
-yay -S fcitx5-im fcitx5-chinese-addons
-```
+输入 `yay -S fcitx5-im fcitx5-chinese-addons`，安装中文输入法
 
 在 `/etc/environment` 文件中添加以下内容
 
@@ -426,14 +428,5 @@ QT_IM_MODULE=fcitx5
 XMODIFIERS=@im=fcitx5
 ```
 
-输入 `fcitx5-configtool` 打开输入法设置
+输入 `fcitx5-configtool` 打开输入法设置，可以自定义的内容很多，也可使用默认配置
 
-## 题外话
-
-使用 IntelCPU 并为触摸板加载了 intel_lpss_pci 模块的笔记本电脑，在休眠/睡眠后可能会出现黑屏、无法唤醒的情况。通过编辑 `/etc/mkinitcpio.conf`，将 `intel_lpss_pci` 添加到 `MODULES=()` 括号里，再使用 `sudo mkinitcpio -P` 重新生成内核即可解决
-
-<br>
-
-## 欢迎使用
-
-至此，欢迎使用 Arch Linux ❤️
