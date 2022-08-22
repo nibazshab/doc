@@ -428,6 +428,10 @@ XMODIFIERS=@im=fcitx5
 
 输入 `fcitx5-configtool` 打开输入法设置
 
+## 题外话
+
+使用 IntelCPU 并为触摸板加载了 intel_lpss_pci 模块的笔记本电脑，在休眠/睡眠后可能会出现黑屏、无法唤醒的情况。通过编辑 `/etc/mkinitcpio.conf`，将 `intel_lpss_pci` 添加到 `MODULES=()` 括号里，再使用 `sudo mkinitcpio -P` 重新生成内核即可解决
+
 <br>
 
 ## 欢迎使用
