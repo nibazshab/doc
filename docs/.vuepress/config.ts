@@ -1,6 +1,6 @@
-import { defineUserConfig } from "vuepress"
+import { defineUserConfig } from "vuepress";
 import { defaultTheme } from "@vuepress/theme-default";
-import { siteMap } from "@vuepress/vuepress-plugin-sitemap";
+import { sitemapPlugin } from "vuepress-plugin-sitemap2";
 
 export default defineUserConfig({
   theme: defaultTheme({
@@ -63,7 +63,7 @@ export default defineUserConfig({
     ]
   ],
   plugins: [
-    siteMap({
+    sitemapPlugin({
       hostname: 'https://nibazshab.github.io'
     }),
   ],

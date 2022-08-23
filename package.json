@@ -1,6 +1,6 @@
 {
-  "name": "doc",
-  "version": "1",
+  "name": "wiki",
+  "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
@@ -9,6 +9,6 @@
   },
   "devDependencies": {
     "vuepress": "^2.0.0-beta.49",
-    "vuepress-plugin-sitemap": "^2.3.1"
+    "vuepress-plugin-sitemap2": "^2.0.0-beta.91"
   }
 }
