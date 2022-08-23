@@ -157,7 +157,7 @@ touch aria2.conf aria2.session dht.dat dht6.dat
 
 ```ini
 [Unit]
-Description= Aria2
+Description=Aria2
 After=network.target
 [Service]
 User=user

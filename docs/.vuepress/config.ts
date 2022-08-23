@@ -68,7 +68,7 @@ export default defineUserConfig({
       hostname: 'https://nibazshab.github.io'
     }),
     shikiPlugin({
-      theme: 'nord'
+      theme: 'github-dark'
     })
   ]
 })
