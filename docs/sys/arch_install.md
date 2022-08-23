@@ -241,11 +241,9 @@ UUID=979aa7ec-8842-4e22-8bfc-4c8aed3de56d	/swap     	btrfs     	rw,relatime,ssd,
 
 ### 8.6. 安装微码文件
 
-__intel cpu__ 输入 `pacman -S intel-ucode`
+使用 intel cpu 的用户输入 `pacman -S intel-ucode`，使用 amd cpu 的用户输入 `pacman -S amd-ucode`
 
-__amd cpu__ 输入 `pacman -S amd-ucode`
-
-### 8.7. 使用 systemd-boot 引导
+### 8.7. systemd-boot 引导
 
 使用 bootctl 将 systemd-boot 安装到 `/boot` 目录
 
@@ -318,7 +316,7 @@ PS：有线网络会自动连接，无线网络需要手动连接
 
 输入 `nmtui` 进入网络管理页面并连接 wifi
 
-## 11. 准备普通用户账户
+## 11. 准备普通用户
 
 输入 `useradd -m -G wheel -s /bin/bash pig` 创建普通用户 `pig`，用户名称可自定义，不要包含空格等特殊字符
 
@@ -397,7 +395,7 @@ pacman -S alactirry gdm gnome-keyring gnome-shell gnome-backgrounds gnome-contro
 systemctl enable --now gdm.service
 ```
 
-接着用 [步骤11](#_11-准备普通用户账户) 创建的 `pig` 普通账号登陆
+接着用 [步骤11](#_11-准备普通用户) 创建的 `pig` 普通账号登陆
 
 ### 15.1 挂起后无法唤醒
 
