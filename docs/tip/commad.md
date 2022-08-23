@@ -23,13 +23,13 @@
 :::
 
 ::: details 无限重复指令
-`while true; do`
-&ensp;&ensp;&ensp;&ensp;`<command>` 
+`while true; do`  
+&ensp;&ensp;&ensp;&ensp;`<command>`  
 `done`
 :::
 
 ::: details 获取当前目录下所有文件名
-`IFS_old=$IFS;IFS=$'\n'`  
+`IFS_old=$IFS;IFS=$"\n"`  
 `for file in $(ls); do`  
 &ensp;&ensp;&ensp;&ensp;`echo $file`  
 `done`  
@@ -37,7 +37,7 @@
 :::
 
 ::: details 后台运行指令，记录日志
-`nohup <command> > ~/log 2>&1 &; disown`
+`nohup <command> > log 2>&1 &; disown`
 :::
 
 ::: details rclone 挂载云盘为本地目录，并设置缓存路径
@@ -61,7 +61,7 @@
 :::
 
 ::: details 删除文件行尾的 5 个字符
-`sed -i 's/.\{5\}$//' file`
+`sed -i "s/.\{5\}$//" file`
 :::
 
 <br>
