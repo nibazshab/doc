@@ -1,6 +1,7 @@
 import { defineUserConfig } from 'vuepress';
 import { defaultTheme } from '@vuepress/theme-default';
 import { sitemapPlugin } from 'vuepress-plugin-sitemap2';
+import { shikiPlugin } from '@vuepress/plugin-shiki';
 
 export default defineUserConfig({
   theme: defaultTheme({
@@ -66,5 +67,8 @@ export default defineUserConfig({
     sitemapPlugin({
       hostname: 'https://nibazshab.github.io'
     }),
-  ],
+    shikiPlugin({
+      theme: 'nord'
+    })
+  ]
 })
