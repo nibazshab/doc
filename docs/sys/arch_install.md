@@ -397,7 +397,7 @@ pacman -S alactirry gdm gnome-keyring gnome-shell gnome-backgrounds gnome-contro
 systemctl enable --now gdm.service
 ```
 
-接着用 [步骤11](#11-准备普通用户账户) 创建的 `pig` 普通账号登陆
+接着用 [步骤11](#_11-准备普通用户账户) 创建的 `pig` 普通账号登陆
 
 ### 15.1 挂起后无法唤醒
 
