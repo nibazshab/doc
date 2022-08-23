@@ -17,7 +17,7 @@ jobs:
     - name: Setup Node.js environment
       uses: actions/setup-node@v3.4.1
     - name: package.json
-      run: yarn install
+      run: yarn
     - name: Build VuePress site
       run: yarn docs:build
     - name: Deploy to GitHub Pages

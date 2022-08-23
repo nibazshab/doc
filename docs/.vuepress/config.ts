@@ -1,6 +1,6 @@
-import { defineUserConfig } from "vuepress";
-import { defaultTheme } from "@vuepress/theme-default";
-import { sitemapPlugin } from "vuepress-plugin-sitemap2";
+import { defineUserConfig } from 'vuepress';
+import { defaultTheme } from '@vuepress/theme-default';
+import { sitemapPlugin } from 'vuepress-plugin-sitemap2';
 
 export default defineUserConfig({
   theme: defaultTheme({
@@ -9,46 +9,46 @@ export default defineUserConfig({
     navbar: false,
     sidebar: [
       {
-        text: "首页",
-        children: ["/"],
+        text: '首页',
+        children: ['/'],
       },
       {
-        text: "奇怪的工具",
+        text: '奇怪的工具',
         children: [
-          "/app/aria2.md",
-          "/app/code.md",
+          '/app/aria2.md',
+          '/app/code.md',
         ],
       },
       {
-        text: "Arch Linux",
+        text: 'Arch Linux',
         children: [
-          "/sys/arch.md",
-          "/sys/arch_install.md",
-          "/sys/arch_package.md",
+          '/sys/arch.md',
+          '/sys/arch_install.md',
+          '/sys/arch_package.md',
         ],
       },
       {
-        text: "Windows 10",
+        text: 'Windows 10',
         children: [
-          "/sys/win.md",
+          '/sys/win.md',
         ],
       },
       {
-        text: "热芝士",
+        text: '热芝士',
         children: [
-          "/tip/commad.md",
+          '/tip/commad.md',
         ],
       },
       {
-        text: "游戏/软件相关",
+        text: '游戏/软件相关',
         children: [
-          "/van/mobile_game.md",
-          "/van/steam_wallpaper.md",
+          '/van/mobile_game.md',
+          '/van/steam_wallpaper.md',
         ],
       },
       {
-        text: "最后",
-        children: ["/end.md"],
+        text: '最后',
+        children: ['/end.md'],
       }
     ]
   }),
