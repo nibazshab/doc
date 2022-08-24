@@ -38,6 +38,7 @@ export default defineUserConfig({
         text: '热芝士',
         children: [
           '/tip/commad.md',
+          '/tip/linux.md',
         ],
       },
       {
