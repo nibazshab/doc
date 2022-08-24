@@ -20,7 +20,3 @@
 > * `WorkshopItemDetails` 已订阅的内容
 
 在电脑上登陆过别的 steam 账号之后，steam 会自动将该账号的 wallpaper engine 所订阅的创意工坊的内容添加到 WorkshopItemDetails 中，导致 WorkshopItemDetails 与 WorkshopItemsInstalled 的内容不匹配，因此只需要把 WorkshopItemDetails 的内容复制到 WorkshopItemsInstalled，让两者的内容相同
-
----
-
-通过运行 wallpaper engine 提供的修复下载程序解决，运行 `steam/steamapps/common/wallpaper_engine/bin/steamredownloadfixer32.exe` 程序，在选项卡里一直选择 __是__，运行结束后重新启动 steam
