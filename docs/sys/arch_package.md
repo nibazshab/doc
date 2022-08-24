@@ -61,7 +61,6 @@ PS：建议使用 systemd-boot 引导
 | 名称 | 介绍 | 名称 | 介绍 |
 | - | - | - | - |
 | vulkan-intel | intel 核显驱动 | | |
-| lib32-vulkan-intel | | | |
 | lib32-mesa | | | |
 | nvidia | nvdia 独显驱动 | | |
 | lib32-nvidia-utils | | | |
