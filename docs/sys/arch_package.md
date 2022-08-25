@@ -147,6 +147,7 @@ PS: 源里的 deadbeef 无法播放 mp3，建议前往 [官方下载地址](http
 | visual-studio-code-bin | 代码编辑器 | | |
 | wps-office | 办公套件 | | |
 | wps-office-mui-zh-cn | | | |
+| dingtalk-bin | 钉钉 | | |
 
 ### 其他
 
@@ -171,7 +172,6 @@ PS: 源里的 deadbeef 无法播放 mp3，建议前往 [官方下载地址](http
 
 | 名称 | 介绍 | 名称 | 介绍 |
 | - | - | - | - |
-| | | libimobiledevice | ios |
 | | | android-tools | android |
 
 ### 终端工具
