@@ -135,8 +135,7 @@ PS：可以考虑复制 Windows 的系统字体使用
 | mpv | 视频 | | |
 | deadbeef-static | 本地音乐 | | |
 
-
-PS: 源里的 deadbeef 无法播放 mp3，建议前往 [官方下载地址](hhttps://sourceforge.net/projects/deadbeef/files/travis/linux/1.9.1/deadbeef-static-1.9.1-1-x86_64.pkg.tar.xz/download) 下载安装
+PS: 源里的 deadbeef 无法播放 mp3，建议前往 [官方下载地址](https://sourceforge.net/projects/deadbeef/files/travis/linux) 下载 pkg.tar.xz 安装
 
 ### 常用软件
 
