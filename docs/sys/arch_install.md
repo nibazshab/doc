@@ -343,7 +343,7 @@ Server = https://mirrors.bfsu.edu.cn/archlinuxcn/$arch
 
 ### 13.1. intel 核显
 
-输入 `pacman -S lib32-mesa vulkan-intel lib32-vulkan-intel`
+输入 `pacman -S vulkan-intel lib32-mesa`
 
 ### 13.2. nvidia 独显
 
