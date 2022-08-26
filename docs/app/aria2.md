@@ -27,7 +27,7 @@
 用于保存配置的文件 _aria2.conf_ 是通用的，不分操作系统，可以在任意操作系统上使用。包括但不限于 Linux, Windows, Mac, Android, BSD 等
 
 ::: details 这是一份参考，点击查看详情
-下方内容需要加以修改，不要拿过来直接用，否则会导致程序出错，已关闭 ipv6
+下方内容需要加以修改，不要拿过来直接用，否则会导致程序出错，此处已关闭使用 ipv6
 ```ini
 enable-rpc=true
 rpc-allow-origin-all=true
