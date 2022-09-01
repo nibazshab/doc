@@ -147,8 +147,8 @@ PS: 源里的 deadbeef 无法播放 mp3，建议前往 [官方下载地址](http
 | visual-studio-code-bin | 代码编辑器 | | |
 | wps-office | 办公套件 | | |
 | wps-office-mui-zh-cn | | | |
-| dingtalk-bin | 钉钉 | | |
-| wemeet-bin | 腾讯会议 | | |
+| | | dingtalk-bin | 钉钉 |
+| | | wemeet-bin | 腾讯会议 |
 
 ### 其他
 
@@ -166,8 +166,8 @@ PS: 源里的 deadbeef 无法播放 mp3，建议前往 [官方下载地址](http
 
 | 名称 | 介绍 | 名称 | 介绍 |
 | - | - | - | - |
-| | | vmware-workstation | vmware |
-| | | linux-headers | |
+| vmware-workstation | vmware | | |
+| linux-headers | | | |
 
 ### 手机
 
