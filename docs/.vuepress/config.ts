@@ -66,7 +66,7 @@ export default defineUserConfig({
   ],
   plugins: [
     sitemapPlugin({
-      hostname: 'https://nibazshab.github.io'
+      hostname: 'https://www.atri.ml'
     }),
     shikiPlugin({
       theme: 'github-dark'
