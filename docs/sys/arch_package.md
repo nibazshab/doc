@@ -166,8 +166,10 @@ PS: 源里的 deadbeef 无法播放 mp3，建议前往 [官方下载地址](http
 
 | 名称 | 介绍 | 名称 | 介绍 |
 | - | - | - | - |
-| vmware-workstation | vmware | | |
-| linux-headers | | | |
+| | | linux-headers | 系统头文件 |
+| | | vmware-workstation | vmware |
+| | | virtualbox | virtualbox |
+| | | virtualbox-host-modules-arch | |
 
 ### 手机
 
