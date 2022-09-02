@@ -12,7 +12,7 @@
 menuentry "gentoo" {
   set isofile='/gentoo.iso'
   loopback loop $isofile
-  linux (loop)/boot/gentoo init=/linuxrc dokeymap docache passwd=<PASSWD> dosshd looptype=squashfs loop=/image.squashfs cdroot isoboot=$isofile
+  linux (loop)/boot/gentoo init=/linuxrc dokeymap docache dosshd looptype=squashfs loop=/image.squashfs cdroot isoboot=$isofile
   initrd (loop)/boot/gentoo.igz
 }
 ```
