@@ -39,7 +39,7 @@ yay -S visual-studio-code-bin
 ## 扩展推荐
 
 | 名称 | 介绍 |
-| --- | --- |
+|-|-|
 | Github Light Theme | 模仿 Github 的亮色主题 |
 | Atom One Dark Theme | Atom 上的 One Dark 暗色主题 |
 | Cdoe Runner | 添加一个运行代码的按钮 |
