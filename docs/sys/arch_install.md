@@ -171,7 +171,7 @@ mount /dev/nvme0n1p1 /mnt/boot
 
 进入刚刚安装的系统，`arch-chroot /mnt`
 
-安装几个需要的软件包，`pacman -S dhcpcd networkmanager vim`
+安装几个需要的软件包，`pacman -S networkmanager vim`
 
 ### 8.1. 创建 swapflie
 
