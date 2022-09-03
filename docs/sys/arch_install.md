@@ -227,7 +227,7 @@ UUID=979aa7ec-8842-4e22-8bfc-4c8aed3de56d	/swap     	btrfs     	rw,relatime,ssd,
 
 输入 `echo macos > /etc/hostname` 设置想为主机取的主机名，不要包含空格等特殊字符，此处设为 macos
 
-在 `etc/hosts` 文件中添加主机名和本机地址，如下所示
+在 `/etc/hosts` 文件中添加主机名和本机地址，如下所示
 
 ```sh
 127.0.0.1    localhost
