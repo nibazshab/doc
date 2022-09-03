@@ -17,3 +17,25 @@ menuentry "Gentoo LiveCD" {
 }
 ```
 :::
+
+::: details steam 中文乱码
+1. 安装 steam 支持的中文字体 `wqy-zenhei`
+
+2. fontconfig
+复制 windows 的字体到 `/usr/share/fonts/win`，创建 `/opt/steam_fonts.conf` 文件，写入如下内容
+```ini
+<?xml version="1.0"?>
+<!DOCTYPE fontconfig SYSTEM "fonts.dtd">
+<fontconfig>
+<dir>/usr/share/fonts/win</dir>
+</fontconfig>
+```
+打开 steam 快捷方式（ /usr/share/applications/steam.desktop ），在每个 Exec 后面都添加 `env FONTCONFIG_FILE=/opt/steam_fonts.conf` 参数
+```ini
+Exec=env FONTCONFIG_FILE=/opt/steam_fonts.conf /usr/bin/steam-runtime %U
+Exec=env FONTCONFIG_FILE=/opt/steam_fonts.conf steam steam://store
+Exec=env FONTCONFIG_FILE=/opt/steam_fonts.conf steam steam://url/SteamIDControlPage
+...
+```
+:::
+
