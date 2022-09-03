@@ -135,7 +135,7 @@ bt-tracker=
 ```
 :::
 
-## linux
+## Linux
 
 ### 安装
 
@@ -175,7 +175,7 @@ WantedBy=multi-user.target
 
 输入 `sudo systemctl enable --now aria2.service` 命令，将服务启动并设为开机自启
 
-## win
+## Windows
 
 ### 安装
 
