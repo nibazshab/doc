@@ -308,7 +308,6 @@ reboot
 输入 root 回车，再输入之前为 root 用户设置的密码，进入系统
 
 ```sh
-systemctl enable --now dhcpcd.servic
 systemctl enable --now NetworkManager.servic
 ```
 
