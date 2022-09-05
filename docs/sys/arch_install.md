@@ -22,7 +22,7 @@
 安装镜像中默认开启的 reflector 服务会自动更新 pacman 软件源，或许它是个很好用的工具，但因为一些特殊的网络原因，它并不能带来更好的体验
 
 ```shell
-systemctl stop reflector.service
+> systemctl stop reflector.service
 ```
 
 ## 2. 连接网络
@@ -32,21 +32,21 @@ systemctl stop reflector.service
 无线网络使用 iwctl 来进行连接，首先进入 iwd 模式，然后查看网卡的名称，输入如下指令
 
 ```shell
-iwctl
-device list
+> iwctl
+> device list
 ```
 
 这里假设网卡的名称是 wlan0，继续输入如下指令
 
 ```shell
-station wlan0 scan
-station wlan0 get-networks
+> station wlan0 scan
+> station wlan0 get-networks
 ```
 
 这里可以看到扫描出来的所有的无线网络，中文名称的网络无法正常显示和连接，请连接一个英文名称的网络
 
 ```shell
-station wlan0 connect <网络名称>
+> station wlan0 connect <网络名称>
 ```
 
 接着输入密码，密码回显为 * 星号，输入完成后按下回车键，随后输入 `exit` 命令退出 iwd 模式
@@ -60,7 +60,7 @@ station wlan0 connect <网络名称>
 输入如下指令，如正常返回数据信息，则连接成功
 
 ```shell
-ping -c 5 www.baidu.com
+> ping -c 5 www.baidu.com
 ```
 
 ## 3. 确定系统时间
@@ -68,7 +68,7 @@ ping -c 5 www.baidu.com
 在 linux 系统中，准确的时间是很关键的，它决定了一些程序能否正常运行
 
 ```shell
-timedatectl set-ntp true
+> timedatectl set-ntp true
 ```
 
 输入 `timedatectl` 命令，检查时间是否正确
@@ -91,7 +91,7 @@ Server = https://mirrors.tuna.tsinghua.edu.cn/archlinux/$repo/os/$arch
 
 输入 lsblk 查看硬盘信息，得到以下信息
 
-```shell
+```ini
 NAME        MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS
 nvme0n1     259:0    0 953.9G  0 disk
 ```
@@ -106,7 +106,7 @@ PS：可以考虑保留一些空间供 windows 系统使用
 
 再次输入 `lsblk` 查看硬盘信息，得到以下信息
 
-```shell
+```s
 NAME        MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS
 nvme0n1     259:0    0 953.9G  0 disk
 ├─nvme0n1p1 259:1    0   300M  0 part
