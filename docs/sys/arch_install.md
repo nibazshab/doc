@@ -192,7 +192,7 @@ nvme0n1     259:0    0 953.9G  0 disk
 
 ```ini
 # /dev/nvme0n1p1
-UUID=0591-3783				      	        /boot     	vfat      	rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=ascii,shortname=mixed,utf8,errors=remount-ro	0 2
+UUID=0591-3783				      	/boot     	vfat      	rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=ascii,shortname=mixed,utf8,errors=remount-ro	0 2
 
 # /dev/nvme0n1p2
 UUID=979aa7ec-8842-4e22-8bfc-4c8aed3de56d	/         	btrfs     	rw,relatime,compress=zstd:3,ssd,space_cache=v2,subvol=/@	0 0
@@ -203,7 +203,7 @@ UUID=979aa7ec-8842-4e22-8bfc-4c8aed3de56d	/home     	btrfs     	rw,relatime,comp
 # /dev/nvme0n1p2
 UUID=979aa7ec-8842-4e22-8bfc-4c8aed3de56d	/swap     	btrfs     	rw,relatime,ssd,space_cache=v2,subvol=/@swap	0 0
 
-/swap/swapfile      				        none      	swap      	defaults  	0 0
+/swap/swapfile      				none      	swap      	defaults  	0 0
 ```
 
 ### 8.3. 校准时间
