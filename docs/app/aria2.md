@@ -141,7 +141,7 @@ bt-tracker=
 
 Arch 系的 Linux 系统（ 如 Arch / Manjaro 等 ），输入如下指令即可，其他系统请参考各自的安装方法
 
-```sh
+```shell
 sudo pacman -S aria2
 ```
 
@@ -149,7 +149,7 @@ sudo pacman -S aria2
 
 请自行将 user 更改为自己的用户名
 
-```sh
+```shell
 cd /home/user/.config/aria2/
 touch aria2.conf aria2.session dht.dat
 ```
