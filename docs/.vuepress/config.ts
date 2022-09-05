@@ -45,8 +45,9 @@ export default defineUserConfig({
         text: '游戏/软件相关',
         children: [
           '/van/mobile_game.md',
+          '/van/steam_fonts.md',
           '/van/steam_wallpaper.md',
-          '/van/steam_fonts.md'
+
         ],
       },
       {
