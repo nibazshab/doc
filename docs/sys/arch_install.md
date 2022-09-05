@@ -68,20 +68,19 @@ ping -c 5 www.baidu.com
 在 linux 系统中，准确的时间是很关键的，它决定了一些程序能否正常运行
 
 ```sh
-timedatectl set-timezone Asia/Shanghai
 timedatectl set-ntp true
 ```
 
-输入 `timedaectl` 命令，检查时间是否正确
+输入 `timedatectl` 命令，检查时间是否正确
 
 ## 4. 设置国内 pacman 源
 
 输入 `vim /etc/pacman.d/mirrorlist` 编辑 pacman 源列表，将中国的源添加到最前面，推荐以下几个源，选一个即可
 
-```sh
+```ini
+Server = https://mirrors.bfsu.edu.cn/archlinux/$repo/os/$arch
 Server = https://mirrors.ustc.edu.cn/archlinux/$repo/os/$arch
 Server = https://mirrors.tuna.tsinghua.edu.cn/archlinux/$repo/os/$arch
-Server = https://mirrors.bfsu.edu.cn/archlinux/$repo/os/$arch
 ```
 
 输入 `pacman -Syyy` 同步源
@@ -187,7 +186,7 @@ swapon /swap/swapfile
 
 ### 8.2. 修改 fstab
 
-输入 'echo /swapfile none swap defaults 0 0 >> /etc/fstab' 将 swapfile 添加到 fstab 文件中
+输入 `echo /swapfile none swap defaults 0 0 >> /etc/fstab` 将 swapfile 添加到 fstab 文件中
 
 输入 `vim /etc/fstab`，将所有行的 `subvolid=xxx` 删除，并检查 `/@swap` 是否带有 `compress=zstd:3` 参数，如有请将它删除，最终该文件应大致如下所示
 
@@ -210,7 +209,6 @@ UUID=979aa7ec-8842-4e22-8bfc-4c8aed3de56d	/swap     	btrfs     	rw,relatime,ssd,
 ### 8.3. 校准时间
 
 输入 `ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime` 将时区设置为上海时区
-输入 `timedatectl set-ntp true` 启用网络时间同步
 输入 `hwclock --systohc` 校准硬件时间
 
 ::: tip PS：
@@ -329,9 +327,9 @@ PS：有线网络会自动连接，无线网络需要手动连接
 
 ```sh
 [archlinuxcn]
+Server = https://mirrors.bfsu.edu.cn/archlinuxcn/$arch
 Server = https://mirrors.ustc.edu.cn/archlinuxcn/$arch
 Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch
-Server = https://mirrors.bfsu.edu.cn/archlinuxcn/$arch
 ```
 
 输入 `pacman -S archlinuxcn-keyring` 安装 archlinuxcn 源的密钥环，再输入 `pacman -Syyy` 同步源
