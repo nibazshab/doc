@@ -46,6 +46,7 @@ export default defineUserConfig({
         children: [
           '/van/mobile_game.md',
           '/van/steam_wallpaper.md',
+          '/van/steam_fonts.md'
         ],
       },
       {

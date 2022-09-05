@@ -332,7 +332,7 @@ Server = https://mirrors.ustc.edu.cn/archlinuxcn/$arch
 Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch
 ```
 
-输入 `pacman -S archlinuxcn-keyring` 安装 archlinuxcn 源的密钥环，再输入 `pacman -Syyy` 同步源
+输入 `pacman -S archlinuxcn-keyring` 安装密钥环，再输入 `pacman -Syyy` 同步
 
 输入 `pacman -S yay` 安装 aur 助手
 
