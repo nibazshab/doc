@@ -2,6 +2,12 @@
 
 <br>
 
+
+
+::: details 重设磁盘的读写权限
+`mount -o rw,remount /dev/sdb1`
+:::
+
 ::: details 等待上一条的指令完成
 `wait`
 :::

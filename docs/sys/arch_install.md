@@ -3,7 +3,7 @@
 <br>
 
 :::warning 声明
-本文的内容是从一个空的硬盘上安装 uefi 引导的 Arch Linux 系统，如已经在硬盘上安装了其他操作系统，或使用 bios 引导，请自行判断哪些步骤需要调整
+本文的内容是从一个空的硬盘上安装 uefi 启动的 Arch Linux 系统，如已经在硬盘上安装了其他操作系统，或使用 bios 启动，请自行判断哪些步骤需要调整
 
 如有需要请参考 [官方安装指南](https://wiki.archlinux.org/title/Installation_guide_(简体中文))
 :::
@@ -65,7 +65,7 @@
 
 ## 3. 确定系统时间
 
-在 linux 系统中，准确的时间是很关键的，它决定了一些程序能否正常运行
+在 Linux 系统中，准确的时间是很关键的，它决定了一些程序能否正常运行
 
 ```shell
 > timedatectl set-ntp true
@@ -100,9 +100,9 @@ PS：如果是 sata 硬盘，则显示 `sda`，nvme 硬盘则显示 `nvme0n1`
 
 输入 `cfdisk /dev/nvme0n1` 进行分区，分区页面是很简单的英文，通过 ↑，↓，←，→ 移动光标，回车键确认
 
-分一个 300m 的分区，设为 `EFI System` 类型，再分一个 linux 系统分区，设为 `Linux filesystem` 类型，剩下的空间全部分给 linux 系统分区，选择 `[Write]` 写入，随后退出
+分一个 300m 的分区，设为 `EFI System` 类型，再分一个 Linux 系统分区，设为 `Linux filesystem` 类型，剩下的空间全部分给 Linux 系统分区，选择 `[Write]` 写入，随后退出
 
-PS：可以考虑保留一些空间供 windows 系统使用
+PS：可以考虑保留一些空间供 Windows 系统使用
 
 再次输入 `lsblk` 查看硬盘信息，得到以下信息
 
@@ -119,7 +119,7 @@ nvme0n1     259:0    0 953.9G  0 disk
 
 > * `-F32` 指定分区格式化为 fat32 格式
 
-输入 `mkfs.btrfs /dev/nvm0n1p2` 格式化 linux 系统分区为 [btrfs 文件系统](https://zh.wikipedia.org/wiki/Btrfs)
+输入 `mkfs.btrfs /dev/nvm0n1p2` 格式化 Linux 系统分区为 [btrfs 文件系统](https://zh.wikipedia.org/wiki/Btrfs)
 
 将 btrfs 分区挂载到 `/mnt` 目录，`mount -t btrfs -o compress=zstd /dev/nvme0n1p2 /mnt`
 
@@ -209,10 +209,11 @@ UUID=979aa7ec-8842-4e22-8bfc-4c8aed3de56d	/swap     	btrfs     	rw,relatime,ssd,
 ### 8.3. 校准时间
 
 输入 `ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime` 将时区设置为上海时区
+
 输入 `hwclock --systohc` 校准硬件时间
 
 ::: tip PS：
-如果电脑上有 windows 系统，则可能会导致时间不准确，将 windows 时间设置为 CST 时间即可解决
+如果电脑上有 Windows 系统，则可能会导致时间相差 8 小时等问题，将 Windows 设为 UTC 硬件时间即可
 :::
 
 ### 8.4. 设置 locale 和 主机名
@@ -241,7 +242,7 @@ UUID=979aa7ec-8842-4e22-8bfc-4c8aed3de56d	/swap     	btrfs     	rw,relatime,ssd,
 
 使用 intel cpu 的用户输入 `pacman -S intel-ucode`，使用 amd cpu 的用户输入 `pacman -S amd-ucode`
 
-### 8.7. systemd-boot 引导
+## 9. systemd-boot 引导
 
 使用 bootctl 将 systemd-boot 安装到 `/boot` 目录
 
