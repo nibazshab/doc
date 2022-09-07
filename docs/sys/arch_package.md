@@ -73,9 +73,9 @@ PS：建议使用 systemd-boot 引导
 | 名称 | 介绍 | 名称 | 介绍 |
 |-|-|-|-|
 | zsh | shell |||
-| zsh-autosuggestions | 自动补全插件 |||
-| zsh-syntax-highlighting | 语法高亮插件 |||
-| oh-my-zsh-git | 主题框架 |||
+||| zsh-autosuggestions | 自动补全插件 |
+||| zsh-syntax-highlighting | 语法高亮插件 |
+||| oh-my-zsh-git | 主题框架 |
 
 ### 字体
 
