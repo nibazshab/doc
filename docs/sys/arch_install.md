@@ -3,7 +3,7 @@
 <br>
 
 :::warning 声明
-本文的内容是从一个空的硬盘上安装 Arch Linux 系统，如果已经在硬盘上安装了其他操作系统，请自行判断哪些步骤不需要进行
+本文的内容是从一个空的硬盘上安装 uefi 引导的 Arch Linux 系统，如已经在硬盘上安装了其他操作系统，或使用 bios 引导，请自行判断哪些步骤需要调整
 
 如有需要请参考 [官方安装指南](https://wiki.archlinux.org/title/Installation_guide_(简体中文))
 :::
@@ -14,7 +14,7 @@
 
 * 下载系统 iso 镜像
 * 制作启动 u 盘
-* 确认 uefi 启动方式（ 启动方式为 bios 的请另找教程 ）
+* 确认 uefi 启动方式
 * 从 u 盘进入系统
 
 ## 1. 关闭 reflcetor 服务
