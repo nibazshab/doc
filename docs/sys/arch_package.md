@@ -29,13 +29,11 @@ Arch Linux 中的软件包是通过 makepkg 工具以及存储在 PKGBUILD 文�
 
 | 名称 | 介绍 | 名称 | 介绍 |
 |-|-|-|-|
-| base | 基础系统 |||
-| linux | 内核 |||
-||| linux-lts | 长期支持的内核 |
+| base | 基础系统 |dhcpcd | DHCP 管理 |
+| linux | 内核 | linux-lts | 长期支持的内核 |
 | linux-firmware | 固件驱动 |||
 | base-devel | 编译工具包 |||
 | vim, nano | 编辑器 |||
-||| dhcpcd | DHCP 管理 |
 | networkmanager | 网络管理 |||
 | nm-connection-editor | 高级网络配置 |||
 | rp-pppoe | pppoe 拨号 |||
@@ -73,8 +71,7 @@ PS：建议使用 systemd-boot 引导
 
 | 名称 | 介绍 | 名称 | 介绍 |
 |-|-|-|-|
-| zsh | shell |||
-||| zsh-autosuggestions | 自动补全插件 |
+| zsh | shell| zsh-autosuggestions | 自动补全插件 |
 ||| zsh-syntax-highlighting | 语法高亮插件 |
 ||| oh-my-zsh-git | 主题框架 |
 
