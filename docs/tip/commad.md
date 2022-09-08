@@ -2,8 +2,6 @@
 
 <br>
 
-
-
 ::: details 重设磁盘的读写权限
 `mount -o rw,remount /dev/sdb1`
 :::

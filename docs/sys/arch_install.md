@@ -401,7 +401,6 @@ Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch
 
 编辑 `/etc/mkinitcpio.conf` 文件，将 `intel_lpss_pci` 添加到 `MODULES=()` 里，使用 `sudo mkinitcpio -P` 命令重新生成内核即可修复无法唤醒的问题
 
-
 ## 18. 常用软件及扩展
 
 输入 `yay -S gedit eog mpv`，安装记事本、图片查看器、视频播放器
@@ -419,9 +418,10 @@ Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch
 在 `/etc/environment` 文件中添加以下内容
 
 ```ini
+XMODIFIERS=@im=fcitx5
 GTK_IM_MODULE=fcitx5
 QT_IM_MODULE=fcitx5
-XMODIFIERS=@im=fcitx5
+SDL_IM_MODULE=fcitx5
 ```
 
 输入 `fcitx5-configtool` 打开输入法设置，可以自定义的内容很多，也可使用默认配置

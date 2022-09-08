@@ -121,7 +121,6 @@ PS：可以考虑复制 Windows 的系统字体使用
 | gnome-shell-extension-clipboard-indicator | 剪切板 |||
 | gnome-shell-extension-dash-to-dock | Dock 栏 |||
 
-
 ### 输入法
 
 | 名称 | 介绍 | 名称 | 介绍 |
