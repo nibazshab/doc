@@ -393,7 +393,7 @@ Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch
 > systemctl enable --now gdm.service
 ```
 
-接着用 [步骤11](#_11-准备普通用户) 创建的 `pig` 普通账号登陆
+接着用 [#13. 准备普通用户](#_13-准备普通用户) 创建的 `pig` 账号登陆
 
 ### 17.1 挂起后无法唤醒
 
