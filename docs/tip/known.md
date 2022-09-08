@@ -41,3 +41,4 @@ NAME                                TYPE     TTL     TARGET
 www                                 CNAME    3600    username.github.io
 _GITHUB-PAGES-CHALLENGE-USERNAME    TXT      3600    xxxxxxxxxxxxxxxxxx
 ```
+:::
