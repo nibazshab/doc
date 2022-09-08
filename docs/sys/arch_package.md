@@ -144,13 +144,11 @@ PS: 源里的 deadbeef 无法播放 mp3，建议前往 [官方下载地址](http
 | 名称 | 介绍 | 名称 | 介绍 |
 |-|-|-|-|
 | microsoft-edge-stable-bin | 浏览器 | watt-toolkit-bin | steam 工具箱 |
-| icalingua++ | QQ |||
-| steam | 游戏 |||
+| icalingua++ | QQ | dingtalk-bin | 钉钉 |
+| steam | 游戏 | wemeet-bin | 腾讯会议 |
 | visual-studio-code-bin | 代码编辑器 |||
 | wps-office | 办公套件 |||
 | wps-office-mui-zh-cn ||||
-||| dingtalk-bin | 钉钉 |
-||| wemeet-bin | 腾讯会议 |
 
 ### 其他
 
