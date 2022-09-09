@@ -389,7 +389,7 @@ Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch
 输入以下指令，安装 Gnome 桌面环境
 
 ```shell
-> pacman -S alactirry gdm gnome-keyring gnome-shell gnome-backgrounds gnome-control-center nautilus xdg-user-dirs-gtk gnome-system-monitor gnome-screenshot
+> pacman -S alactirry gdm gnome-keyring gnome-shell gnome-backgrounds gnome-control-center nautilus xdg-user-dirs-gtk gnome-system-monitor
 > systemctl enable --now gdm.service
 ```
 
