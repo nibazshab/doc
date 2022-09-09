@@ -30,15 +30,3 @@ menuentry 'Gentoo LiveCD' {
 }
 ```
 :::
-
-::: details dns 解析 github pages
-```dns
-NAME                                TYPE     TTL     TARGET
-@                                   A        3600    185.199.108.153
-@                                   A        3600    185.199.109.153
-@                                   A        3600    185.199.110.153
-@                                   A        3600    185.199.111.153
-www                                 CNAME    3600    username.github.io
-_GITHUB-PAGES-CHALLENGE-USERNAME    TXT      3600    xxxxxxxxxxxxxxxxxx
-```
-:::
