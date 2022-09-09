@@ -48,10 +48,10 @@
 
 在 `/etc/mkinitcpio.d/` 中的所有 preset 文件中，将 `PRESETS=('default' 'fallback')` 修改为 `PRESETS=('default')`
 
-移除 fallback 镜像 rm /boot/*-fallback.img
+移除 fallback 镜像 `rm /boot/*-fallback.img`
 
 重新生成引导
 
-::: danger
+::: danger 警告
 如果默认镜像启动失败，禁止 fallback 镜像生成将会失去进入系统的另一个选项。进行此操作前，请确保有一个可用于救援的可引导安装介质
 :::

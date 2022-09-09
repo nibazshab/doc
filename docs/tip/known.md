@@ -30,3 +30,16 @@ menuentry 'Gentoo LiveCD' {
 }
 ```
 :::
+
+::: details dns 解析 github pages
+在域名的 DNS 解析服务中添加如下记录
+```ini
+NAME                                TYPE     TTL     TARGET
+@                                   A        3600    185.199.108.153
+@                                   A        3600    185.199.109.153
+@                                   A        3600    185.199.110.153
+@                                   A        3600    185.199.111.153
+www                                 CNAME    3600    username.github.io
+_GITHUB-PAGES-CHALLENGE-USERNAME    TXT      3600    xxxxxxxxxxxxxxxxxx
+```
+:::
