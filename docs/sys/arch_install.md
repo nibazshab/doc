@@ -2,7 +2,7 @@
 
 <br>
 
-:::warning 声明
+::: warning 声明
 本文的内容是从一个空的硬盘上安装 uefi 启动的 Arch Linux 系统，如已经在硬盘上安装了其他操作系统，或使用 bios 启动，请自行判断哪些步骤需要调整
 
 如有需要请参考 [官方安装指南](https://wiki.archlinux.org/title/Installation_guide_(简体中文))
@@ -395,15 +395,13 @@ Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch
 
 接着用 [#13. 准备普通用户](#_13-准备普通用户) 创建的 `pig` 账号登陆
 
-### 17.1 挂起后无法唤醒
-
-使用 intel cpu 并为触摸板加载了 intel_lpss_pci 模块的电脑，在休眠/睡眠后可能会出现黑屏、无法唤醒的情况，可以正常唤醒的用户请略过此步骤
-
-编辑 `/etc/mkinitcpio.conf` 文件，将 `intel_lpss_pci` 添加到 `MODULES=()` 里，使用 `sudo mkinitcpio -P` 命令重新生成内核即可修复无法唤醒的问题
-
 ## 18. 常用软件及扩展
 
+### 18.1. 常用软件
+
 输入 `yay -S gedit eog mpv`，安装记事本、图片查看器、视频播放器
+
+### 18.2. 扩展
 
 输入如下指令，安装高级设置、插件工具
 
@@ -413,9 +411,9 @@ Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch
 
 ## 19. 中文输入法
 
-输入 `yay -S fcitx5-im fcitx5-chinese-addons`，安装中文输入法
+输入 `yay -S fcitx5-im fcitx5-chinese-addons`，安装 fcitx5 输入法框架以及中文输入法
 
-在 `/etc/environment` 文件中添加以下内容
+在 `/etc/environment` 文件中添加以下环境变量
 
 ```ini
 XMODIFIERS=@im=fcitx5
