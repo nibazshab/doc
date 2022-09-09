@@ -99,7 +99,6 @@ PS：可以考虑复制 Windows 的系统字体使用
 | nautilus | 文件管理器 |||
 | xdg-user-dirs-gtk | 用户目录 |||
 | gnome-system-monitor | 任务管理器 |||
-| gnome-screenshot | 截屏 |||
 
 ### Gnome 高级设置
 
