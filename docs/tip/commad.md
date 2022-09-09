@@ -2,6 +2,13 @@
 
 <br>
 
+::: details grub 安装
+MBR：`grub-install --target=i386-pc /dev/sdb`
+GPT：`grub-install --target=x86_64-efi --efi-directory=/boot/EFI --bootloader-id=GRUB`
+
+`grub-mkconfig > /boot/grub/grub.cfg`
+:::
+
 ::: details 重设磁盘的读写权限
 `mount -o rw,remount /dev/sdb1`
 :::
