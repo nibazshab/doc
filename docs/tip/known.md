@@ -50,7 +50,7 @@ _GITHUB-PAGES-CHALLENGE-USERNAME    TXT      3600    xxxxxxxxxxxxxxxxxx
 ::: details typecho 上传目录无法写入, 请手动将安装目录下的 /usr/uploads 目录的权限设置为可写然后继续升级
 检查 php-fpm 和 nginx 用户是否一致
 
-检查 目录权限和所有者与上述用户是否一致
+检查 目录权限和所有者与上述是否正确
 
 查看 `php-fpm.service`，把 `ProtectSystem=full` 行注释掉
 :::
