@@ -75,7 +75,5 @@ export default defineUserConfig({
       theme: 'github-dark'
     })
   ],
-  markdown: {
-      lineNumbers: false
-  }
+  markdown.code.preWrapper: false
 })
