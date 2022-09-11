@@ -74,6 +74,5 @@ export default defineUserConfig({
     shikiPlugin({
       theme: 'github-dark'
     })
-  ],
-  lineNumbers: false,
+  ]
 })
