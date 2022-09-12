@@ -167,6 +167,7 @@ PS: 源里的 deadbeef 无法播放 mp3，建议前往 [官方下载地址](http
 ||| vmware-workstation | vmware |
 ||| virtualbox | virtualbox |
 ||| virtualbox-host-modules-arch ||
+| gnome-boxes | gnome盒子 |||
 
 ### 手机
 
