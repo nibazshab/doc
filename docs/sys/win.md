@@ -10,4 +10,6 @@ utf-8 语言环境
 
 qq-dreamcast
 
+foobox-cn
+
 将硬件时间视为 UTC 时间：`Reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsUniversal /t REG_DWORD /d 1`
