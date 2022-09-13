@@ -2,6 +2,10 @@
 
 <br>
 
+::: details ssh keys 生成
+`ssh-keygen -t rsa`
+:::
+
 ::: details grub 安装
 MBR：`grub-install --target=i386-pc /dev/sdb`
 
