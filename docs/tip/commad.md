@@ -5,7 +5,7 @@
 ::: details nobody 用户执行指令
 用于不想创建普通用户，又不能以 root 用户进行的情况
 
-`su nobody -s /bin/bash -c '<command>'
+`su nobody -s /bin/bash -c '<command>'`
 :::
 
 ::: details ssh keys 生成
