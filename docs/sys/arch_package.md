@@ -158,6 +158,7 @@ PS: 源里的 deadbeef 无法播放 mp3，建议前往 [官方下载地址](http
 ||| ventoy-bin | u 盘引导 |
 ||| tlp-rdw | 功耗管理 |
 ||| ldr-translate-gtk | 截图翻译工具 |
+||| ntfs-3g | ntfs硬盘挂载 |
 
 ### 虚拟机
 
