@@ -153,7 +153,7 @@ PS: 源里的 deadbeef 无法播放 mp3，建议前往 [官方下载地址](http
 | aria2 | 下载器 | feh | 图片查看 |
 | v2raya | 代理 | picom | 窗口透明 |
 | v2ray || proxychains-ng | 命令行代理 |
-||| pandoc-bin | 文档格式转换 |
+| fuse2 | fuse 依赖 | pandoc-bin | 文档格式转换 |
 ||| rclone | 云盘挂载 |
 ||| ventoy-bin | u 盘引导 |
 ||| tlp-rdw | 功耗管理 |
