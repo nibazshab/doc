@@ -13,6 +13,11 @@
 5. `package.json` 生产 VuePress 2 所需依赖的配置文件
 6. `.gitignore` 用于 Git 忽略的文件
 
+本仓库包含以下分支：
+
+* `main` 仓库的主分支，用于存放文档等原始文件
+* `gh-pages` 用于存放 VuePress 2 生成的静态网页
+
 ## 维护者
 
 [@NibaZShab](https://github.com/nibazshab)
