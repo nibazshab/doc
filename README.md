@@ -6,12 +6,12 @@
 
 本仓库包含以下内容：
 
-1. __.github/workflows__ 用于 GitHub Actions 的配置文件
-2. __docs__ 存放 VuePress 2 资源的目录
-3. __README.md__ 本仓库的说明文件
-4. __LICENSE__ 本仓库使用的许可证
-5. __package.json__ 生产 VuePress 2 所需依赖的配置文件
-6. __.gitignore__ 用于 Git 忽略的文件
+1. `.github/workflows` 用于 GitHub Actions 的配置文件
+2. `docs` 存放 VuePress 2 资源的目录
+3. `README.md` 本仓库的说明文件
+4. `LICENSE` 本仓库使用的许可证
+5. `package.json` 生产 VuePress 2 所需依赖的配置文件
+6. `.gitignore` 用于 Git 忽略的文件
 
 ## 维护者
 
