@@ -1,4 +1,4 @@
-# Wiki
+# README
 
 [![](https://img.shields.io/badge/nibazshab-wiki-9cf?style=flat-square&logo=appveyor)](https://github.com/nibazshab/wiki)
 
