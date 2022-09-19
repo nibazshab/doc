@@ -1,3 +1,4 @@
+---
 sidebarDepth: 0
 ---
 
