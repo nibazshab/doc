@@ -1,7 +1,3 @@
----
-sidebarDepth: 0
----
-
 # Steam 亚洲字体乱码
 
 <br>
