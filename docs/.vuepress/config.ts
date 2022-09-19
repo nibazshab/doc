@@ -59,6 +59,7 @@ export default defineUserConfig({
   }),
   base: '/',
   title: '_Wiki',
+  sidebarDepth: 0,
   head: [
     [
       'link',{
