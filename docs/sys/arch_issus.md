@@ -1,7 +1,3 @@
----
-sidebarDepth: 0
----
-
 # 疑难杂症
 
 <br>

@@ -8,6 +8,7 @@ export default defineUserConfig({
     lastUpdated: false,
     contributors: false,
     navbar: false,
+    sidebarDepth: 0,
     sidebar: [
       {
         text: '首页',
@@ -59,7 +60,6 @@ export default defineUserConfig({
   }),
   base: '/',
   title: '_Wiki',
-  sidebarDepth: 0,
   head: [
     [
       'link',{
