@@ -1,23 +1,32 @@
 name: CI/CD
+
 on:
   push:
     branches:
     - main
+
 env:
   TZ: Asia/Shanghai
+
 jobs:
+
   build:
-    name: VUEPRESS2
+    name: Web Site
     runs-on: macos-latest
     steps:
+
     - name: checkout
       uses: actions/checkout@v2.4.2
+
     - name: Setup Node.js environment
       uses: actions/setup-node@v3.4.1
+
     - name: Add Dependencies
       run: yarn add -D vuepress@next vuepress-plugin-sitemap2@next @vuepress/plugin-shiki@next
+
     - name: Build VuePress site
       run: yarn docs:build
+
     - name: Deploy to GitHub Pages
       uses: crazy-max/ghaction-github-pages@v3.0.0
       with:
