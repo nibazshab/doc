@@ -23,12 +23,7 @@
 ==> WARNING: Possibly missing firmware for module: qed
 ```
 
-如果在生成默认 initramfs 镜像时出现这些或类似的消息，则如警告所述，可能需要安装其他固件。大多数常见的固件文件可以通过安装 `linux-firmware` 来获取。对于其他的固件软件包，可以尝试在软件包仓库中搜索固件模块的名字获取
-
-此外，如果消息仅在生成 fallback initramfs 镜像时出现，则有以下选项
-
-* 如果没有使用受影响的硬件，则可以安全地忽略这些警告
-* 安装缺少的固件。聚合包 `mkinitcpio-firmware` 包括绝大部分的固件。或者，手动安装所需的固件包
+如果在生成默认 initramfs 镜像时出现这些或类似的消息，则如警告所述，可能需要安装其他固件。大多数常见的固件文件可以通过安装 `linux-firmware` 来获取。对于其他的固件软件包，可以尝试在软件包仓库中搜索固件模块的名字获取。聚合包 `mkinitcpio-firmware` 包括绝大部分的固件，或者手动安装所需的固件包
 
 | 常见模块名 | 固件包名 |
 |-|-|
@@ -44,6 +39,9 @@
 | wd719x | wd719x-firmware |
 | xhci_pci | upd72020x-fw |
 
+此外，如果消息仅在生成 fallback initramfs 镜像时出现，则
+
+* 如果没有使用受影响的硬件，则可以安全地忽略这些警告
 * 想去掉警告，又不想浪费磁盘空间在不需要的固件包上，可以禁止 fallback 镜像的生成
 
 在 `/etc/mkinitcpio.d/` 中的所有 preset 文件中，将 `PRESETS=('default' 'fallback')` 修改为 `PRESETS=('default')`
