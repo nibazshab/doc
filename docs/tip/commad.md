@@ -4,7 +4,9 @@
 
 ::: details screen 后台会话
 `screen -dmS <session_name>  <command>` 创建一个新的 screen 会话并在后台运行
+
 `screen -ls` 查看 screen 会话
+
 `screen -r <session>` 进入 screen 会话
 :::
 
