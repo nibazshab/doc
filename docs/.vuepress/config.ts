@@ -19,6 +19,7 @@ export default defineUserConfig({
         children: [
           '/app/aria2.md',
           '/app/code.md',
+          '/app/minecraft.md',
         ],
       },
       {
