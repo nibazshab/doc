@@ -2,6 +2,13 @@
 
 <br>
 
+::: details systemd service 工作目录参数
+```
+[Service]
+WorkingDirectory=/path
+```
+:::
+
 ::: details ssh ls 没有颜色
 设置 LS_COLORS
 ```shell

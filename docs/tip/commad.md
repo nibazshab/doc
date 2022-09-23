@@ -2,6 +2,11 @@
 
 <br>
 
+::: details screen 后台会话
+`screen -d -m <command>` 创建一个新的 screen 并在后台运行
+`screen -ls` 查看 screen 会话
+:::
+
 ::: details nobody 用户执行指令
 用于不想创建普通用户，又不能以 root 用户进行的情况
 
