@@ -5,6 +5,7 @@
 ::: details screen 后台会话
 `screen -d -m <command>` 创建一个新的 screen 并在后台运行
 `screen -ls` 查看 screen 会话
+`screen -r <session>` 进入 screen 会话
 :::
 
 ::: details nobody 用户执行指令
