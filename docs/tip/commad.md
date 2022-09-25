@@ -2,6 +2,12 @@
 
 <br>
 
+::: details flac 和 wav 转换 
+flac to wav：`flac -d <file>.flac`
+
+wav to flac：`flac -s --compression-level-5 <file>.wav`
+:::
+
 ::: details screen 后台会话
 `screen -dmS <session_name>  <command>` 创建一个新的 screen 会话并在后台运行
 
