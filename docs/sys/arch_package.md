@@ -31,8 +31,7 @@ pkgrel=1
 arch=('x86_64')
 license=('custom')
 package() {
-  cd $srcdir/$pkgname-$pkgver
-  make DESTDIR=$pkgdir install
+  echo 'Hello World' > $pkgdir/bin/test
 }
 ```
 :::
