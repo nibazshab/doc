@@ -27,7 +27,7 @@ pkgrel=1
 arch=('x86_64')
 license=('custom')
 package() {
-  echo 'Hello World' > $pkgdir/bin/test
+  echo 'Hello World' > $pkgdir/usr/bin/test
 }
 ```
 :::
@@ -36,7 +36,7 @@ package() {
 
 ## 记录
 
-此处所列出来的包是 __显示安装__ 的应用，也就是用户明确使用 `pacman` 所安装的应用，可以在终端中使用 `pacman -Qqe` 指令进行查看，可使用 --asdeps 与 --asexplicit 参数更改包的显隐状态
+此处所列出来的包是 __显示安装__ 的应用，也就是用户明确使用 `pacman` 所安装的应用，可以在终端中使用 `pacman -Qqe` 指令进行查看，可使用 `--asdeps` 与 `--asexplicit` 参数更改包的显隐状态
 
 ::: tip PS：
 左侧表格中的是我个人已安装的软件包，右侧表格中的是仅作记录的软件包，
