@@ -2,13 +2,21 @@
 
 <br>
 
+::: details typecho 上传目录无法写入, 请手动将安装目录下的 usr/uploads 目录的权限设置为可写然后继续升级
+检查 php-fpm 和 nginx 用户是否一致
+
+检查目录权限和所有者与上述是否正确
+
+查看 `php-fpm.service`，把 `ProtectSystem=full` 行注释掉
+:::
+
 ::: details Minecraft 服务器
 配置文件 `server.properties`，地图种子参数 `level-seed=`
 
 地图目录 `world`
 :::
 
-::: details systemd service 工作目录参数
+::: details systemd service 设置工作目录参数
 ```
 [Service]
 WorkingDirectory=/path
@@ -58,12 +66,4 @@ NAME                                TYPE     TTL     TARGET
 www                                 CNAME    3600    username.github.io
 _GITHUB-PAGES-CHALLENGE-USERNAME    TXT      3600    xxxxxxxxxxxxxxxxxx
 ```
-:::
-
-::: details typecho 上传目录无法写入, 请手动将安装目录下的 usr/uploads 目录的权限设置为可写然后继续升级
-检查 php-fpm 和 nginx 用户是否一致
-
-检查目录权限和所有者与上述是否正确
-
-查看 `php-fpm.service`，把 `ProtectSystem=full` 行注释掉
 :::

@@ -3,9 +3,9 @@
 <br>
 
 ::: details flac 和 wav 转换 
-flac to wav：`flac -d <file>.flac`
+flac 转 wav `flac -d <file>.flac`
 
-wav to flac：`flac -s --compression-level-5 <file>.wav`
+wav 转 flac `flac -s --compression-level-5 <file>.wav`
 :::
 
 ::: details screen 后台会话
@@ -13,25 +13,23 @@ wav to flac：`flac -s --compression-level-5 <file>.wav`
 
 `screen -ls` 查看 screen 会话
 
-`screen -r <session>` 进入 screen 会话
+`screen -r <session_name>` 进入 screen 会话
 :::
 
-::: details nobody 用户执行指令
+::: details 普通用户执行指令
 用于不想创建普通用户，又不能以 root 用户进行的情况
 
 `su nobody -s /bin/bash -c '<command>'`
 :::
 
 ::: details ssh keys 生成
-ed25519 较 rsa 速度快，且安全性更高，更为先进
-
 `ssh-keygen -t ed25519`
 :::
 
-::: details grub 安装
-MBR：`grub-install --target=i386-pc /dev/sdb`
+::: details grub 引导部署
+MBR分区表 `grub-install --target=i386-pc /dev/sdb`
 
-GPT：`grub-install --target=x86_64-efi --efi-directory=/boot/EFI --bootloader-id=GRUB`
+GPT分区表 `grub-install --target=x86_64-efi --efi-directory=/boot/EFI --bootloader-id=GRUB`
 
 `grub-mkconfig > /boot/grub/grub.cfg`
 :::
@@ -44,12 +42,10 @@ GPT：`grub-install --target=x86_64-efi --efi-directory=/boot/EFI --bootloader-i
 `wait`
 :::
 
-::: details 导出分区表文件
-`sfdisk -d /dev/sdb > sdb.bkp`
-:::
+::: details 使用分区表文件
+导出分区表文件 `sfdisk -d /dev/sdb > sdb.bkp`
 
-::: details 导入分区表文件
-`sfdisk /dev/sdb < sdb.bkp`
+导入分区表文件 `sfdisk /dev/sdb < sdb.bkp`
 :::
 
 ::: details 查找 jpg 文件，重命名为 001.jpg, 002.jpg...
