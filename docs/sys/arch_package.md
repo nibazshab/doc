@@ -4,13 +4,13 @@
 
 ## 概述
 
-Arch Linux 中的软件包是通过 makepkg 工具以及存储在 PKGBUILD 文件中的信息编译的。运行 `makepkg` 时，系统将自动在当前目录下搜索 PKGBUILD 文件,然后根据 PKGBUILD 把软件源码重新打包。成功编译后得到的二进制文件，以及可以得到的其他信息如包的版本信息和依赖关系等，都将被打包到 name.pkg.tar.zst 文件里，可以通过 `pacman -Up <package file>` 进行安装
+Arch Linux 中的软件包是通过 makepkg 工具以及存储在 PKGBUILD 文件中的信息编译的。运行 `makepkg` 时，系统将自动在当前目录下搜索 PKGBUILD 文件,然后根据 PKGBUILD 把软件源码重新打包。成功编译后得到的二进制文件，以及可以得到的其他信息如包的版本信息和依赖关系等，都将被打包到 name.pkg.tar.zst 文件里，可以通过 `pacman -U <package file>` 进行安装
 
 一个 Arch 软件包仅仅是一个使用 zstd 压缩的 tar 压缩包，或者叫 tarball。它包含了以下由 makepkg 生成的文件
 
 * 要安装的二进制文件
 * `.PKGINFO`：包含所有 pacman 处理软件包的元数据，依赖等等
-* `.BUILDINFO`：包含可复现编译需要的信息，仅在 pacman 5.1 及之后编译的软件包中 请参阅 [BUILDINFO](https://man.archlinux.org/man/BUILDINFO.5)
+* `.BUILDINFO`：包含了可复现编译所需要的信息，仅在 pacman 5.1 及之后编译的软件包中，请参阅 [BUILDINFO](https://man.archlinux.org/man/BUILDINFO.5)
 * `.MTREE`：包含了文件的哈希值与时间戳. pacman 能够根据这些储存在本地数据库的信息校验软件包的完整性
 * `.INSTALL`：可选的文件，可以用来在安装/升级/删除操作之后运行命令（ 本文件只有在 PKGBUILD 中制定才会存在 ）
 * `.Changelog`：一个可选的文件，保存了包管理员描述软件更新的日志（ 不是所有包中都存在 ）
