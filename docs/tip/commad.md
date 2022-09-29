@@ -2,6 +2,10 @@
 
 <br>
 
+::: details ssh 长传文件
+`scp -r /file username@remotehost:/path`
+:::
+
 ::: details flac 和 wav 转换 
 flac 转 wav `flac -d <file>.flac`
 
