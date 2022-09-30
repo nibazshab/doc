@@ -10,12 +10,6 @@
 查看 `php-fpm.service`，把 `ProtectSystem=full` 行注释掉
 :::
 
-::: details Minecraft 服务器
-配置文件 `server.properties`，地图种子参数 `level-seed=`
-
-地图目录 `world`
-:::
-
 ::: details systemd service 设置工作目录参数
 ```
 [Service]
