@@ -2,7 +2,7 @@
 
 <br>
 
-::: details ssh 长传文件
+::: details ssh 上传文件
 `scp -r /file username@remotehost:/path`
 :::
 
