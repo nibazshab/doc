@@ -328,7 +328,7 @@ PS：有线网络会自动连接，无线网络需要手动连接
 
 ## 14. archlinuxcn 源和 32 位支持
 
-编辑 `/etc/pacman.conf` 文件，找到 `[multilib]` 一节，将这两行前面的 `#` 删除，并在文件结尾处添加 archlinuxcn 源，在下列源列表中选一个即可
+编辑 `/etc/pacman.conf` 文件，找到 `[multilib]` 一节，将这两行前面的 `#` 删除（ 不需要 32 位库可以跳过此步骤 ），并在文件结尾处添加 archlinuxcn 源，在下列源列表中选一个即可
 
 ```ini
 [archlinuxcn]
