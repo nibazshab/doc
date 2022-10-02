@@ -28,7 +28,7 @@ arch=('x86_64')
 license=('custom')
 package() {
   mkdir -p $pkgdir/usr/bin
-  echo 'Hello World' > $pkgdir/usr/bin/test
+  echo 'echo Hello World' > $pkgdir/usr/bin/test
 }
 ```
 :::
