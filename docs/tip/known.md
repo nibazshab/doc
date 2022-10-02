@@ -2,7 +2,7 @@
 
 <br>
 
-::: details typecho 上传目录无法写入, 请手动将安装目录下的 usr/uploads 目录的权限设置为可写然后继续升级
+::: details typecho 上传目录无法写入，请手动将安装目录下的 usr/uploads 目录的权限设置为可写然后继续升级
 检查 php-fpm 和 nginx 用户是否一致
 
 检查目录权限和所有者与上述是否正确

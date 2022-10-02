@@ -3,7 +3,7 @@
 <br>
 
 ::: details ssh 上传文件
-`scp -r /file username@remotehost:/path`
+`scp /file username@remotehost:/path`
 :::
 
 ::: details flac 和 wav 转换 
