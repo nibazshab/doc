@@ -29,6 +29,7 @@ license=('custom')
 package() {
   mkdir -p $pkgdir/usr/bin
   echo 'echo Hello World' > $pkgdir/usr/bin/test
+  chmod +x $pkgdir/usr/bin/test
 }
 ```
 :::
