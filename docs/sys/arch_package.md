@@ -27,6 +27,7 @@ pkgrel=1
 arch=('x86_64')
 license=('custom')
 package() {
+  mkdir -p $pkgdir/usr/bin
   echo 'Hello World' > $pkgdir/usr/bin/test
 }
 ```
@@ -80,9 +81,9 @@ PS：建议使用 systemd-boot 引导
 | 名称 | 介绍 | 名称 | 介绍 |
 |-|-|-|-|
 | vulkan-intel | intel 核显驱动 |||
-| lib32-mesa ||||
+| mesa ||||
 | nvidia | nvdia 独显驱动 |||
-| lib32-nvidia-utils ||||
+| nvidia-prime ||||
 | nvidia-settings ||||
 :::
 
@@ -159,8 +160,8 @@ PS: 源里的 deadbeef 无法播放 mp3，建议前往 [官方下载地址](http
 |-|-|-|-|
 | microsoft-edge-stable-bin | 浏览器 | watt-toolkit-bin | steam 工具箱 |
 | icalingua++ | QQ | dingtalk-bin | 钉钉 |
-| steam | 游戏 | wemeet-bin | 腾讯会议 |
-| visual-studio-code-bin | 代码编辑器 |||
+| flatpak | 通用软件源 | wemeet-bin | 腾讯会议 |
+| visual-studio-code-bin | 代码编辑器 | steam | 游戏平台 |
 | wps-office | 办公套件 |||
 | wps-office-mui-zh-cn ||||
 :::
@@ -201,7 +202,7 @@ PS: 源里的 deadbeef 无法播放 mp3，建议前往 [官方下载地址](http
 |-|-|-|-|
 | neofetch | 系统信息 | p7zip | 7z 解压缩 |
 | tree | 目录树 | translate-shell | 终端翻译工具 |
-||| intel-gpu-tools | intel 核显负载信息 |
+| dust | 内存占用查看 | intel-gpu-tools | intel 核显负载信息 |
 :::
 
 ::: details ASCII 艺术
