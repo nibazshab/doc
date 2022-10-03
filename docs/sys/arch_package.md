@@ -134,8 +134,7 @@ PS：可以考虑复制 Windows 的系统字体使用
 | 名称 | 介绍 | 名称 | 介绍 |
 |-|-|-|-|
 | gnome-shell-extension-appindicator | 应用托盘 | gnome-shell-extension-lunar-calendar | 农历日历 |
-| gnome-shell-extension-clipboard-indicator | 剪切板 |||
-| gnome-shell-extension-dash-to-dock | Dock 栏 |||
+| gnome-shell-extension-dash-to-dock | Dock 栏 | gnome-shell-extension-clipboard-indicator | 剪切板 |
 :::
 
 ::: details 输入法
