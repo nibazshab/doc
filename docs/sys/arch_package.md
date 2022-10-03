@@ -179,7 +179,6 @@ PS: 源里的 deadbeef 无法播放 mp3，建议前往 [官方下载地址](http
 ||| tlp-rdw | 功耗管理 |
 ||| ldr-translate-gtk | 截图翻译工具 |
 ||| ntfs-3g | ntfs硬盘挂载 |
-||| screen | 终端后台分离 |
 :::
 
 ::: details 虚拟机
@@ -201,9 +200,11 @@ PS: 源里的 deadbeef 无法播放 mp3，建议前往 [官方下载地址](http
 ::: details 终端工具
 | 名称 | 介绍 | 名称 | 介绍 |
 |-|-|-|-|
-| neofetch | 系统信息 | p7zip | 7z 解压缩 |
+| uwufetch | 系统信息 | neofetch | 系统信息 |
 | tree | 目录树 | translate-shell | 终端翻译工具 |
 | dust | 内存占用查看 | intel-gpu-tools | intel 核显负载信息 |
+||| screen | 终端后台分离 |
+||| p7zip | 7z 解压缩 |
 :::
 
 ::: details ASCII 艺术
