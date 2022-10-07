@@ -53,7 +53,7 @@ package() {
 | linux | 内核 | linux-lts | 长期支持的内核 |
 | linux-firmware | 固件驱动 |||
 | __base-devel:__ archlinux-keyring autoconf automake binutils bison fakeroot file findutils flex gawk gcc gettext grep groff gzip libtool m4 make pacman patch pkgconf sed sudo texinfo which | 编译工具包 |||
-| vim, nano | 编辑器 |||
+| vim | 编辑器 |||
 | networkmanager | 网络管理 |||
 | nm-connection-editor | 高级网络配置 |||
 | rp-pppoe | pppoe 拨号 |||
@@ -202,7 +202,7 @@ PS: 源里的 deadbeef 无法播放 mp3，建议前往 [官方下载地址](http
 | uwufetch | 系统信息 | neofetch | 系统信息 |
 | tree | 目录树 | translate-shell | 终端翻译工具 |
 | dust | 内存占用查看 | intel-gpu-tools | intel 核显负载信息 |
-||| screen | 终端后台分离 |
+| nano | 文本编辑器 | screen | 终端后台分离 |
 ||| p7zip | 7z 解压缩 |
 :::
 
