@@ -6,6 +6,12 @@
 此处将记录一些在安装/使用过程中遇到的问题，以及解决方案。内容收集自网络和 Arch Wiki，皆由本人测试可用，但无法保证适用于所有人
 :::
 
+## Gnome 以 x11 运行在 nvidia 显卡中
+
+创建一个符号链接来强制使用 wayland 运行桌面环境
+
+`sudo ln -s /dev/null /etc/udev/rules.d/61-gdm.rules`
+
 ## 桌面环境挂起后无法唤醒
 
 使用 intel cpu 并为触摸板加载了 intel_lpss_pci 模块的电脑，在休眠/睡眠后可能会出现黑屏、无法唤醒的情况
