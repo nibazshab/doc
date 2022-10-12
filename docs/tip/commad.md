@@ -2,6 +2,11 @@
 
 <br>
 
+::: details make install 指定路径安装
+`DESTDIR=/path make install`
+`INSTALL_PATH=/path make install`
+:::
+
 ::: details vim 自动缩进
 `set pastetoggle=<F9>` 设置 f9 为开关自动缩进的快捷键
 `set paste` 关闭自动缩进
