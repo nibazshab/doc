@@ -3,7 +3,9 @@
 <br>
 
 ::: details nginx 配置伪静态
-在配置文件的 `server` 模块中的 `location /` 模块内，添加 `try_files $uri $uri/ /index.php?$args;`
+在配置文件的 `server` 模块中的 `location / {}` 模块内，添加
+
+`try_files $uri $uri/ /index.php?$args;`
 :::
 
 ::: details typecho 上传目录无法写入，请手动将安装目录下的 usr/uploads 目录的权限设置为可写然后继续升级
