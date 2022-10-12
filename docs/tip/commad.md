@@ -4,6 +4,7 @@
 
 ::: details make install 指定路径安装
 `DESTDIR=/path make install`
+
 `INSTALL_PATH=/path make install`
 :::
 
