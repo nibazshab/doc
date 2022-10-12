@@ -25,7 +25,6 @@ pkgname=test
 pkgver=1
 pkgrel=1
 arch=('x86_64')
-license=('custom')
 package() {
   mkdir -p $pkgdir/usr/bin
   echo 'echo Hello World' > $pkgdir/usr/bin/test
