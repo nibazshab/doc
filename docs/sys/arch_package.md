@@ -177,6 +177,7 @@ PS: 源里的 deadbeef 无法播放 mp3，建议前往 [官方下载地址](http
 ||| tlp-rdw | 功耗管理 |
 ||| ldr-translate-gtk | 截图翻译工具 |
 ||| ntfs-3g | ntfs硬盘挂载 |
+||| cool-retro-term | 复古终端 |
 
 PS: 不再建议使用 ntfs-3g，建议使用 linux 5.15 以来的 [ntfs3](https://wiki.archlinux.org/title/NTFS) 内核模块
 :::
