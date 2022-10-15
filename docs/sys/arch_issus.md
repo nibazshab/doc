@@ -1,10 +1,15 @@
-# 疑难杂症
+# ISSUS
 
 <br>
 
 ::: warning 声明
-此处将记录一些在安装/使用过程中遇到的问题，以及解决方案。内容收集自网络和 Arch Wiki，皆由本人测试可用，但无法保证适用于所有人
+此处将记录一些在安装/使用过程中遇到的问题，一些有助于优化体验的东西，以及相应的方案。内容收集自网络和 Arch Wiki，皆由本人测试可用，但无法保证适用于所有人
 :::
+
+
+## 开启内核级显示模式设置
+
+参见 [ArchWiki KMS](https://wiki.archlinux.org/title/Kernel_mode_setting)
 
 ## Gnome 以 x11 运行在 nvidia 显卡中
 
