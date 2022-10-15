@@ -50,7 +50,7 @@
 * 如果没有使用受影响的硬件，则可以安全地忽略这些警告
 * 想去掉警告，又不想浪费磁盘空间在不需要的固件包上，可以禁止 fallback 镜像的生成
 
-在 `/etc/mkinitcpio.d/` 中的所有 preset 文件中，将 `PRESETS=('default' 'fallback')` 修改为 `PRESETS=('default')`，移除 fallback 镜像 `rm /boot/*-fallback.img`，并重新生成系统引导
+在 `/etc/mkinitcpio.d/` 目录下的所有 preset 文件中，将 `PRESETS=('default' 'fallback')` 修改为 `PRESETS=('default')`，移除 fallback 镜像 `rm /boot/*-fallback.img`，并重新生成系统引导
 
 ::: danger 警告
 如果默认镜像启动失败，禁止 fallback 镜像生成将会失去进入系统的另一个选项。进行此操作前，请确保有一个可用于救援的可引导安装介质

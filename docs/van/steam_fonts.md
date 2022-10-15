@@ -2,9 +2,27 @@
 
 <br>
 
+::: tip 使用 Flathub / Flatpak 安装 Steam 可以解决许多在客户端面临的问题
+```shell
+> flatpak --user remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+> flatpak --user install flathub com.valvesoftware.Steam
+> flatpak run com.valvesoftware.Steam
+```
+
+目前 Flatpak 应用还不支持主题。并且你不能通过 `optirun/primusrun` 来运行游戏，更多细节详见 [Issue#869](https://github.com/flatpak/flatpak/issues/869)
+
+默认情况下通过 Flatpak 安装的 Steam 不会有访问你的家目录的权限，并且由于安全问题，强行忽略此权限限制会导致 Steam 无法运行。不过，你可以自由地在家目录之外添加一个目录。如果你想添加一个外部库，你可以运行下面的命令来添加
+
+```shell
+> flatpak --user override com.valvesoftware.Steam --filesystem=/path/to/directory
+```
+
+启动使用 Flakpak 安装的 steam 可能会发出警告有关安装 `steam-devices` 软件包的信息，此包暂不存在，可通过安装 [game-devices-udev](https://aur.archlinux.org/packages/game-devices-udev) 来解决
+:::
+
 ## 安装支持的字体
 
-尝试安装 lib32-fontconfig ttf-liberation 和 wqy-zenhei（ 亚洲字体 ），然后重新启动 Steam 以查看问题是否已解决
+尝试安装 `lib32-fontconfig` `ttf-liberation` 和 `wqy-zenhei`（ 亚洲字体 ），然后重新启动 Steam 以查看问题是否已解决
 
 PS：当 Steam 找不到 Arial 字体时，font-config 喜欢回到 Helvetica 位图字体。Steam 无法正确呈现此位图字体以及可能的其他位图字体，因此，删除有问题的字体或禁用位图字体很可能会在不安装 Arial 或 ArialBold 字体的情况下解决问题。用于代替 Arial 的字体可以通过 `fc-match -v Arial` 命令找到
 
