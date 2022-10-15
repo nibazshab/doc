@@ -1,4 +1,4 @@
-# ISSUS
+# issus
 
 <br>
 
@@ -9,13 +9,43 @@
 
 ## 开启内核级显示模式设置
 
-参见 [ArchWiki KMS](https://wiki.archlinux.org/title/Kernel_mode_setting)
+KMS 通常是在 initramfs stage 之后开始初始化，但是你也可以在 initramfs 的阶段启用
+
+将视频驱动模块加入 `/etc/mkinitcpio.conf` 的 `MODULES=()`，使用 `sudo mkinitcpio -P` 命令重新生成内核
+
+* AMD GPU 加入 `amdgpu`，老的 ATI 驱动加入 `radeon`
+* Intel GPU 加入 `i915`
+* 对于 nvidia 驱动的 `nvidia nvidia_modeset nvidia_uvm nvidia_drm`，详见 [NVIDIA#DRM kernel mode setting](https://wiki.archlinux.org/title/NVIDIA#DRM_kernel_mode_setting)
+
+为了避免更新 NVIDIA 驱动之后忘了更新 initramfs，建议使用 Pacman Hooks 自动生成新内核，将以下内容添加到 `/etc/pacman.d/hooks/nvidia.hook`
+
+```ini
+[Trigger]
+Operation=Install
+Operation=Upgrade
+Operation=Remove
+Type=Package
+Target=nvidia
+Target=linux
+# Change the linux part above and in the Exec line if a different kernel is used
+
+[Action]
+Description=Update NVIDIA module in initcpio
+Depends=mkinitcpio
+When=PostTransaction
+NeedsTargets
+Exec=/bin/sh -c 'while read -r trg; do case $trg in linux) exit 0; esac; done; /usr/bin/mkinitcpio -P'
+```
+
+[参阅](https://wiki.archlinux.org/title/Kernel_mode_setting#Early_KMS_start)
 
 ## Gnome 以 x11 运行在 nvidia 显卡中
 
 创建一个符号链接来强制使用 wayland 运行桌面环境
 
 `sudo ln -s /dev/null /etc/udev/rules.d/61-gdm.rules`
+
+[参阅](https://wiki.archlinux.org/title/GDM#Wayland_and_the_proprietary_NVIDIA_driver)
 
 ## 桌面环境挂起后无法唤醒
 
@@ -60,3 +90,5 @@
 ::: danger 警告
 如果默认镜像启动失败，禁止 fallback 镜像生成将会失去进入系统的另一个选项。进行此操作前，请确保有一个可用于救援的可引导安装介质
 :::
+
+[参阅](https://wiki.archlinux.org/title/Mkinitcpio#Possibly_missing_firmware_for_module_XXXX)

@@ -1,8 +1,8 @@
-# Steam 亚洲字体乱码
+# Steam
 
 <br>
 
-## 使用 Flathub / Flatpak 安装可解决许多问题
+## 使用 Flatpak 安装可避免许多毛病
 
 ```shell
 > flatpak --user remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
@@ -20,13 +20,17 @@
 
 启动使用 Flakpak 安装的 steam 可能会发出警告有关安装 `steam-devices` 软件包的信息，此包暂不存在，可通过安装 [game-devices-udev](https://aur.archlinux.org/packages/game-devices-udev) 来解决
 
-## 安装支持的字体
+[参阅](https://wiki.archlinux.org/title/Steam)
+
+## 亚洲字体乱码
+
+### 安装支持的字体
 
 尝试安装 `lib32-fontconfig` `ttf-liberation` 和 `wqy-zenhei`（ 亚洲字体 ），然后重新启动 Steam 以查看问题是否已解决
 
 PS：当 Steam 找不到 Arial 字体时，font-config 喜欢回到 Helvetica 位图字体。Steam 无法正确呈现此位图字体以及可能的其他位图字体，因此，删除有问题的字体或禁用位图字体很可能会在不安装 Arial 或 ArialBold 字体的情况下解决问题。用于代替 Arial 的字体可以通过 `fc-match -v Arial` 命令找到
 
-## 使用 fontconfig
+### 使用 fontconfig
 
 如上述方法未解决问题，尝试使用 fontconfig 为 Steam 指定字体
 
