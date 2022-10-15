@@ -2,7 +2,7 @@
 
 <br>
 
-## 使用 Flathub / Flatpak 安装 Steam 可以解决许多在客户端面临的问题
+## 使用 Flathub / Flatpak 安装可解决许多问题
 
 ```shell
 > flatpak --user remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
@@ -19,7 +19,6 @@
 ```
 
 启动使用 Flakpak 安装的 steam 可能会发出警告有关安装 `steam-devices` 软件包的信息，此包暂不存在，可通过安装 [game-devices-udev](https://aur.archlinux.org/packages/game-devices-udev) 来解决
-:::
 
 ## 安装支持的字体
 
