@@ -2,8 +2,12 @@
 
 <br>
 
+::: details sftp 下载链接
+`sftp://user:password@host/path`
+:::
+
 ::: details 搜索文本内容
-grep -r -n 'abc' .
+`grep -r -n 'abc' .`
 :::
 
 ::: details make install 指定路径安装
@@ -21,7 +25,7 @@ grep -r -n 'abc' .
 :::
 
 ::: details ssh 上传文件
-`scp /file username@remotehost:/path`
+`scp /file username@host:/path`
 :::
 
 ::: details flac 和 wav 转换 
