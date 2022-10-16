@@ -2,6 +2,10 @@
 
 <br>
 
+::: details 搜索文本内容
+grep -r -n 'abc' .
+:::
+
 ::: details make install 指定路径安装
 `DESTDIR=/path make install`
 
