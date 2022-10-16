@@ -42,7 +42,7 @@ package() {
 ::: tip PS：
 左侧表格中的是我个人已安装的软件包，右侧表格中的是仅作记录的软件包，
 
-其中加粗的内容 `base-devel` 和 `fcitx5-im` 是软件包组，它们是一个组合，包含了很多个的软件包。如 `base-devel` 包含了一些基本的编译工具，`fcitx5-im` 包含了 fcitx 输入法的框架
+其中加粗的内容 `base-devel` 和 `fcitx5-im` 是软件包组，它们是一个组合，包含了很多个的软件包
 :::
 
 ::: details 基础
@@ -134,6 +134,7 @@ PS：可以考虑复制 Windows 的系统字体使用
 |-|-|-|-|
 | gnome-shell-extension-appindicator | 应用托盘 | gnome-shell-extension-lunar-calendar | 农历日历 |
 | gnome-shell-extension-dash-to-dock | Dock 栏 | gnome-shell-extension-clipboard-indicator | 剪切板 |
+| gnome-shell-extension-runcat | CPU 指示器 |||
 :::
 
 ::: details 输入法
