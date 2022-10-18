@@ -12,6 +12,8 @@
 
 目前 Flatpak 应用还不支持主题，并且不能通过 `optirun/primusrun` 来运行游戏，更多细节详见 [Issue#869](https://github.com/flatpak/flatpak/issues/869)
 
+> 经过测试，可通过 com.valvesoftware.Steam.desktop 中的 `Exec` 项使用 `prime-run` 参数调用 nvidia 显卡
+
 默认情况下通过 Flatpak 安装的 Steam 不会有访问你的家目录的权限，并且由于安全问题，强行忽略此权限限制会导致 Steam 无法运行。不过，你可以自由地在家目录之外添加一个目录。如果你想添加一个外部库，你可以运行下面的命令来添加
 
 ```shell
