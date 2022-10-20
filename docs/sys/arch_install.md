@@ -343,13 +343,15 @@ Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch
 
 ## 15. 显卡驱动
 
+上一步骤中没有开启 multilib 仓库的，请忽视下列带有 `lib32` 字样的包
+
 ### 15.1. intel 核显
 
-输入 `pacman -S vulkan-intel lib32-mesa`
+输入 `pacman -S vulkan-intel mesa lib32-mesa`
 
 ### 15.2. nvidia 独显
 
-输入 `pacman -S nvidia lib32-nvidia-utils nvidia-settings`
+输入 `pacman -S nvidia nvidia-prime nvidia-settings lib32-nvidia-utils`
 
 ## 16. 中文字体
 

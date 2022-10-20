@@ -45,7 +45,15 @@ package() {
 其中加粗的内容 `base-devel` 和 `fcitx5-im` 是软件包组，它们是一个组合，包含了很多个的软件包
 :::
 
-::: details 基础
+
+| 名称 | 介绍 | 名称 | 介绍 | 名称 | 介绍 |
+|-|-|-|-|-|-|
+|abcdefg|bcdefgh|cdefghi|defghij|efghijk|fghijkl|
+|ghijklm|hijklmn|ijklmno|jklmnop|klmnopq|lmnopqr|
+|mnopqrs|nopqrst|opqrstu|pqrstuv|qrstuvw|rstuvwx|
+|abcdefghijklmnopq|bcdefghijklmnopqr|cdefghijklmnopqrs|defghijklmnopqrst|efghijklmnopqrstu|fghijklmnopqrstuv|
+
+
 | 名称 | 介绍 | 名称 | 介绍 |
 |-|-|-|-|
 | base | 基础系统 |dhcpcd | DHCP 管理 |
@@ -57,58 +65,22 @@ package() {
 | nm-connection-editor | 高级网络配置 |||
 | rp-pppoe | pppoe 拨号 |||
 | intel-ucode | intel 微码固件 |||
-:::
-
-::: details 开机引导
-| 名称 | 介绍 | 名称 | 介绍 |
-|-|-|-|-|
 ||| grub | 引导 |
 ||| efibootmgr ||
 ||| os-prober | 检测 win |
 ||| refind | 引导 |
-
-PS：建议使用 systemd-boot 引导
-:::
-
-::: details AUR
-| 名称 | 介绍 | 名称 | 介绍 |
-|-|-|-|-|
 | archlinuxcn-keyring | CN 源密钥环 |||
 | yay | aur 助手 |||
-:::
-
-::: details 显卡驱动
-| 名称 | 介绍 | 名称 | 介绍 |
-|-|-|-|-|
 | vulkan-intel | intel 核显驱动 |||
 | mesa ||||
 | nvidia | nvdia 独显驱动 |||
 | nvidia-prime ||||
 | nvidia-settings ||||
-:::
-
-::: details Shell
-| 名称 | 介绍 | 名称 | 介绍 |
-|-|-|-|-|
 | zsh | shell| zsh-autosuggestions | 自动补全插件 |
 ||| zsh-syntax-highlighting | 语法高亮插件 |
 ||| oh-my-zsh-git | 主题框架 |
-:::
-
-::: details 字体
-| 名称 | 介绍 | 名称 | 介绍 |
-|-|-|-|-|
 | adobe-source-han-sans-otc-fonts | 思源黑体 | noto-fonts-emoji | emoji 表情 |
 | adobe-source-han-serif-otc-fonts | 思源宋体 |||
-
-在安装思源 cjk 全集后，如出现部分文字显示为日文异形字体，可参看 [Arch Linux Localization #修正简体中文显示为异体（日文）字形](https://wiki.archlinux.org/title/Localization_(简体中文)/Simplified_Chinese_(简体中文)#修正简体中文显示为异体（日文）字形) 进行解决。
-
-PS：可以考虑复制 Windows 的系统字体使用
-:::
-
-::: details Gnome 桌面环境
-| 名称 | 介绍 | 名称 | 介绍 |
-|-|-|-|-|
 | alacritty | 终端 |||
 | gdm | 登陆管理器 |||
 | gnome-keyring | 密钥环 |||
@@ -118,57 +90,25 @@ PS：可以考虑复制 Windows 的系统字体使用
 | nautilus | 文件管理器 |||
 | xdg-user-dirs-gtk | 用户目录 |||
 | gnome-system-monitor | 任务管理器 |||
-:::
-
-::: details Gnome 高级设置
-| 名称 | 介绍 | 名称 | 介绍 |
-|-|-|-|-|
 | gnome-tweaks | 优化 |||
 | gtk-engine-murrine ||||
 | gtk-engines ||||
 | gnome-shell-extensions | 扩展 |||
-:::
-
-::: details Gnome 扩展
-| 名称 | 介绍 | 名称 | 介绍 |
-|-|-|-|-|
 | gnome-shell-extension-appindicator | 应用托盘 | gnome-shell-extension-lunar-calendar | 农历日历 |
 | gnome-shell-extension-dash-to-dock | Dock 栏 | gnome-shell-extension-clipboard-indicator | 剪切板 |
 | gnome-shell-extension-runcat | CPU 指示器 |||
-:::
-
-::: details 输入法
-| 名称 | 介绍 | 名称 | 介绍 |
-|-|-|-|-|
 | __fcitx5-im:__ fcitx5 fcitx5-configtool fcitx5-gtk fcitx5-qt | 输入法框架 | fcitx5-material-color | 主题 |
 | fcitx5-chinese-addons | 中文输入法 |||
-:::
-
-::: details 桌面日常工具
-| 名称 | 介绍 | 名称 | 介绍 |
-|-|-|-|-|
 | gedit | 记事本 | cheese | 相机 |
 | eog | 照片 | evince | 文档 |
 | mpv | 视频 |||
 | deadbeef-static | 本地音乐 |||
-
-PS: 源里的 deadbeef 无法播放 mp3，建议前往 [官方下载地址](https://sourceforge.net/projects/deadbeef/files/travis/linux) 下载 pkg.tar.xz 安装
-:::
-
-::: details 常用软件
-| 名称 | 介绍 | 名称 | 介绍 |
-|-|-|-|-|
 | microsoft-edge-stable-bin | 浏览器 | watt-toolkit-bin | steam 工具箱 |
 | icalingua++ | QQ | dingtalk-bin | 钉钉 |
 | flatpak | 通用软件源 | wemeet-bin | 腾讯会议 |
 | visual-studio-code-bin | 代码编辑器 | steam | 游戏平台 |
 | wps-office | 办公套件 |||
 | wps-office-mui-zh-cn ||||
-:::
-
-::: details 其他
-| 名称 | 介绍 | 名称 | 介绍 |
-|-|-|-|-|
 | aria2 | 下载器 | feh | 图片查看 |
 | v2raya | 代理 | picom | 窗口透明 |
 | v2ray || proxychains-ng | 命令行代理 |
@@ -178,47 +118,20 @@ PS: 源里的 deadbeef 无法播放 mp3，建议前往 [官方下载地址](http
 | sigil | 电子书工具 | tlp-rdw | 功耗管理 |
 |cool-retro-term | 复古终端 | ldr-translate-gtk | 截图翻译工具 |
 ||| ntfs-3g | ntfs硬盘挂载 |
-
-PS: 不再建议使用 ntfs-3g，建议使用 linux 5.15 以来的 [ntfs3](https://wiki.archlinux.org/title/NTFS) 内核模块
-:::
-
-::: details 虚拟机
-| 名称 | 介绍 | 名称 | 介绍 |
-|-|-|-|-|
 ||| linux-headers | 系统头文件 |
 ||| vmware-workstation | vmware |
 ||| virtualbox | virtualbox |
 ||| virtualbox-host-modules-arch ||
 ||| gnome-boxes | gnome盒子 |
-:::
-
-::: details 手机
-| 名称 | 介绍 | 名称 | 介绍 |
-|-|-|-|-|
 ||| android-tools | android |
-:::
-
-::: details 终端工具
-| 名称 | 介绍 | 名称 | 介绍 |
-|-|-|-|-|
 | uwufetch | 系统信息 | neofetch | 系统信息 |
 | tree | 目录树 | translate-shell | 终端翻译工具 |
 | dust | 内存占用查看 | intel-gpu-tools | intel 核显负载信息 |
 ||| screen | 终端后台分离 |
+||| htop | 系统监控 |
 ||| p7zip | 7z 解压缩 |
 ||| nano | 文本编辑器 |
-:::
-
-::: details 环境
-| 名称 | 介绍 | 名称 | 介绍 |
-|-|-|-|-|
 ||| fuse2 | 环境 |
 ||| jdk-openjdk | 环境 |
-:::
-
-::: details ASCII 艺术
-| 名称 | 介绍 | 名称 | 介绍 |
-|-|-|-|-|
 ||| sl | 小火车 |
 ||| cmatrix | 代码屏幕 |
-:::
