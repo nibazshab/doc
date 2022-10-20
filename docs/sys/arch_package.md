@@ -37,101 +37,62 @@ package() {
 
 ## 记录
 
-此处所列出来的包是 __显示安装__ 的应用，也就是用户明确使用 `pacman` 所安装的应用，可以在终端中使用 `pacman -Qqe` 指令进行查看，可使用 `--asdeps` 与 `--asexplicit` 参数更改包的显隐状态
+此处所列出来的包是 __显性安装__ 的应用，也就是用户明确使用 `pacman` 所安装的应用，可以在终端中使用 `pacman -Qqe` 指令进行查看，可使用 `--asdeps` 与 `--asexplicit` 参数更改包的显隐状态
 
-::: tip PS：
-左侧表格中的是我个人已安装的软件包，右侧表格中的是仅作记录的软件包，
+上表格中的是我个人已显性安装的软件包，下表格中的是仅作记录或隐性的软件包
 
-其中加粗的内容 `base-devel` 和 `fcitx5-im` 是软件包组，它们是一个组合，包含了很多个的软件包
-:::
-
-
-| 名称 | 介绍 | 名称 | 介绍 | 名称 | 介绍 |
-|-|-|-|-|-|-|
-|abcdefg|bcdefgh|cdefghi|defghij|efghijk|fghijkl|
-|ghijklm|hijklmn|ijklmno|jklmnop|klmnopq|lmnopqr|
-|mnopqrs|nopqrst|opqrstu|pqrstuv|qrstuvw|rstuvwx|
-|abcdefghijklmnopq|bcdefghijklmnopqr|cdefghijklmnopqrs|defghijklmnopqrst|efghijklmnopqrstu|fghijklmnopqrstuv|
-
-
-| 名称 | 介绍 | 名称 | 介绍 |
+|名称|介绍|名称|介绍|
 |-|-|-|-|
-| base | 基础系统 |dhcpcd | DHCP 管理 |
-| linux | 内核 | linux-lts | 长期支持的内核 |
-| linux-firmware | 固件驱动 |||
-| __base-devel:__ archlinux-keyring autoconf automake binutils bison fakeroot file findutils flex gawk gcc gettext grep groff gzip libtool m4 make pacman patch pkgconf sed sudo texinfo which | 编译工具包 |||
-| vim | 编辑器 |||
-| networkmanager | 网络管理 |||
-| nm-connection-editor | 高级网络配置 |||
-| rp-pppoe | pppoe 拨号 |||
-| intel-ucode | intel 微码固件 |||
-||| grub | 引导 |
-||| efibootmgr ||
-||| os-prober | 检测 win |
-||| refind | 引导 |
-| archlinuxcn-keyring | CN 源密钥环 |||
-| yay | aur 助手 |||
-| vulkan-intel | intel 核显驱动 |||
-| mesa ||||
-| nvidia | nvdia 独显驱动 |||
-| nvidia-prime ||||
-| nvidia-settings ||||
-| zsh | shell| zsh-autosuggestions | 自动补全插件 |
-||| zsh-syntax-highlighting | 语法高亮插件 |
-||| oh-my-zsh-git | 主题框架 |
-| adobe-source-han-sans-otc-fonts | 思源黑体 | noto-fonts-emoji | emoji 表情 |
-| adobe-source-han-serif-otc-fonts | 思源宋体 |||
-| alacritty | 终端 |||
-| gdm | 登陆管理器 |||
-| gnome-keyring | 密钥环 |||
-| gnome-shell | 基础桌面 |||
-| gnome-backgrounds | 壁纸 |||
-| gnome-control-center | 设置 |||
-| nautilus | 文件管理器 |||
-| xdg-user-dirs-gtk | 用户目录 |||
-| gnome-system-monitor | 任务管理器 |||
-| gnome-tweaks | 优化 |||
-| gtk-engine-murrine ||||
-| gtk-engines ||||
-| gnome-shell-extensions | 扩展 |||
-| gnome-shell-extension-appindicator | 应用托盘 | gnome-shell-extension-lunar-calendar | 农历日历 |
-| gnome-shell-extension-dash-to-dock | Dock 栏 | gnome-shell-extension-clipboard-indicator | 剪切板 |
-| gnome-shell-extension-runcat | CPU 指示器 |||
-| __fcitx5-im:__ fcitx5 fcitx5-configtool fcitx5-gtk fcitx5-qt | 输入法框架 | fcitx5-material-color | 主题 |
-| fcitx5-chinese-addons | 中文输入法 |||
-| gedit | 记事本 | cheese | 相机 |
-| eog | 照片 | evince | 文档 |
-| mpv | 视频 |||
-| deadbeef-static | 本地音乐 |||
-| microsoft-edge-stable-bin | 浏览器 | watt-toolkit-bin | steam 工具箱 |
-| icalingua++ | QQ | dingtalk-bin | 钉钉 |
-| flatpak | 通用软件源 | wemeet-bin | 腾讯会议 |
-| visual-studio-code-bin | 代码编辑器 | steam | 游戏平台 |
-| wps-office | 办公套件 |||
-| wps-office-mui-zh-cn ||||
-| aria2 | 下载器 | feh | 图片查看 |
-| v2raya | 代理 | picom | 窗口透明 |
-| v2ray || proxychains-ng | 命令行代理 |
-||| pandoc-bin | 文档格式转换 |
-||| rclone | 云盘挂载 |
-| game-devices-udev | steam设备 | ventoy-bin | u 盘引导 |
-| sigil | 电子书工具 | tlp-rdw | 功耗管理 |
-|cool-retro-term | 复古终端 | ldr-translate-gtk | 截图翻译工具 |
-||| ntfs-3g | ntfs硬盘挂载 |
-||| linux-headers | 系统头文件 |
-||| vmware-workstation | vmware |
-||| virtualbox | virtualbox |
-||| virtualbox-host-modules-arch ||
-||| gnome-boxes | gnome盒子 |
-||| android-tools | android |
-| uwufetch | 系统信息 | neofetch | 系统信息 |
-| tree | 目录树 | translate-shell | 终端翻译工具 |
-| dust | 内存占用查看 | intel-gpu-tools | intel 核显负载信息 |
-||| screen | 终端后台分离 |
-||| htop | 系统监控 |
-||| p7zip | 7z 解压缩 |
-||| nano | 文本编辑器 |
-||| fuse2 | 环境 |
-||| jdk-openjdk | 环境 |
-||| sl | 小火车 |
-||| cmatrix | 代码屏幕 |
+|base|基础系统|linux|内核|
+|archlinux-keyring autoconf automake binutils bison fakeroot file findutils flex gawk gcc gettext grep groff gzip libtool m4 make pacman patch pkgconf sed sudo texinfo which|编译工具包|vim|文本编辑器|
+|networkmanager|网络管理器|nm-connection-editor|网络高级管理器|
+|rp-pppoe|拨号工具|intel-ucode|cpu 微码|
+|linux-firmware|驱动固件|archlinuxcn-keyring|cn 仓库密钥|
+|yay|AUR 安装器|vulkan-intel|vulkan 驱动|
+|mesa|OpenGL 库|nvidia|NVIDIA 驱动|
+|nvidia-prime|primusrun|nvidia-settings|NVIDIA 设置|
+|zsh|shell|adobe-source-han-sans-otc-fonts|思源黑体|
+|adobe-source-han-serif-otc-fonts|思源宋体|alacrity|终端|
+|gdm|桌面管理器|gnome-keyring|gnome 密钥|
+|gnome-shell|桌面环境|gnome-backgrounds|gnome 背景|
+|gnome-control-center|gnome 控制中心|nautilus|文件管理器|
+|xdg-user-dirs-gtk|用户目录|gnome-system-monitor|系统监视器|
+|gnome-tweaks|gnome 调整器|gnome-shell-extensions|gnome 扩展|
+|gtk-engines|gtk 引擎|gtk-engine-murrine|gtk 引擎|
+|gnome-shell-extension-appindicator|托盘扩展|gnome-shell-extension-dash-to-dock|dock 扩展|
+|gnome-shell-extension-runcat|cpu 占用扩展|fcitx5 fcitx5-configtool fcitx5-gtk fcitx5-qt|输入法|
+|fcitx5-material-color|输入法主题|fcitx5-chinese-addons|中文扩展|
+|gedit|记事本|eog|图片查看器|
+|mpv|视频播放器|deadbeef-static|音乐播放器|
+|microsoft-edge-stable-bin|Edge 浏览器|icalingua++|QQ|
+|flatpak|通用软件包管理器|visual-studio-code-bin|VSCode|
+|wps-office|WPS|wps-office-mui-zh-cn|WPS 中文语言包|
+|aria2|下载工具|v2ray|代理|
+|v2raya|代理客户端|game-devices-udev|游戏手柄驱动|
+|sigil|epub 编辑器|cool-retro-term|复古终端|
+|uwufetch|系统信息|tree|目录树|
+|dust|磁盘占用|||
+
+|名称|介绍|名称|介绍|
+|-|-|-|-|
+|dhcpcd|DHCP 客户端|linux-lts|LTS 内核|
+|grub|引导程序|efibootmgr|EFI 管理器|
+|os-prober|win引导扩展|refind|引导程序|
+|oh-my-zsh-git|zsh 框架|zsh-autosuggestions|自动补全插件|
+|zsh-syntax-highlighting|语法高亮插件|noto-fonts-emoji|emoji 表情|
+|gnome-shell-extension-lunar-calendar|农历日历扩展|gnome-shell-extension-clipboard-indicator|剪贴板扩展|
+|fcitx5-material-color|输入法主题|cheese|摄像头|evince|文档查看器|
+|watt-toolkit-bin|Steam 工具箱|dingtalk|钉钉|
+|wemeet-bin|腾讯会议|feh|图片查看器|
+|picom|窗口透明渲染器|pandoc-bin|文档转换器|
+|rclone|云盘挂载工具|ventoy-bin|U盘 iso 引导|
+|tlp-rdw|电源管理|ldr-translate-gtk|翻译|
+|ntfs-3g|NTFS 驱动|linux-headers|内核头文件|
+|vmware-workstation|VMware|virtualbox|VirtualBox|
+|virtualbox-host-modules-arch|VirtualBox 扩展|intel-gpu-tools|Intel 显卡工具|
+gnome-boxes|虚拟机|android-tools|adb|
+|neofetch|系统信息|translate-shell|翻译|
+|screen|终端多开|htop|进程管理|
+|p7zip|压缩工具|nano|文本编辑器|
+|fuse2|fuse2 库|jdk-openjdk|Java 库|
+|sl|火车|cmatrix|流动代码屏|
