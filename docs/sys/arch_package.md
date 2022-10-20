@@ -60,8 +60,8 @@ package() {
 |gnome-tweaks|gnome 调整器|gnome-shell-extensions|gnome 扩展|
 |gtk-engines|gtk 引擎|gtk-engine-murrine|gtk 引擎|
 |gnome-shell-extension-appindicator|托盘扩展|gnome-shell-extension-dash-to-dock|dock 扩展|
-|gnome-shell-extension-runcat|cpu 占用扩展|fcitx5 fcitx5-configtool fcitx5-gtk fcitx5-qt|输入法|
-|fcitx5-material-color|输入法主题|fcitx5-chinese-addons|中文扩展|
+|gnome-shell-extension-runcat|cpu 占用扩展|fcitx5-material-color|输入法主题|
+|fcitx5 fcitx5-configtool fcitx5-gtk fcitx5-qt|输入法|fcitx5-chinese-addons|中文扩展|
 |gedit|记事本|eog|图片查看器|
 |mpv|视频播放器|deadbeef-static|音乐播放器|
 |microsoft-edge-stable-bin|Edge 浏览器|icalingua++|QQ|
