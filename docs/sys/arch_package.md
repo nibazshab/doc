@@ -172,8 +172,8 @@ PS: 源里的 deadbeef 无法播放 mp3，建议前往 [官方下载地址](http
 | aria2 | 下载器 | feh | 图片查看 |
 | v2raya | 代理 | picom | 窗口透明 |
 | v2ray || proxychains-ng | 命令行代理 |
-| fuse2 | 运行库 | pandoc-bin | 文档格式转换 |
-| jdk-openjdk | JAVA环境 | rclone | 云盘挂载 |
+||| pandoc-bin | 文档格式转换 |
+||| rclone | 云盘挂载 |
 | game-devices-udev | steam设备 | ventoy-bin | u 盘引导 |
 | sigil | 电子书工具 | tlp-rdw | 功耗管理 |
 |cool-retro-term | 复古终端 | ldr-translate-gtk | 截图翻译工具 |
@@ -204,8 +204,16 @@ PS: 不再建议使用 ntfs-3g，建议使用 linux 5.15 以来的 [ntfs3](https
 | uwufetch | 系统信息 | neofetch | 系统信息 |
 | tree | 目录树 | translate-shell | 终端翻译工具 |
 | dust | 内存占用查看 | intel-gpu-tools | intel 核显负载信息 |
-| nano | 文本编辑器 | screen | 终端后台分离 |
+||| screen | 终端后台分离 |
 ||| p7zip | 7z 解压缩 |
+||| nano | 文本编辑器 |
+:::
+
+::: details 环境
+| 名称 | 介绍 | 名称 | 介绍 |
+|-|-|-|-|
+||| fuse2 | 环境 |
+||| jdk-openjdk | 环境 |
 :::
 
 ::: details ASCII 艺术
