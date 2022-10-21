@@ -52,7 +52,7 @@ package() {
 |mesa|OpenGL 库|nvidia|NVIDIA 驱动|
 |nvidia-prime|primusrun|nvidia-settings|NVIDIA 设置|
 |zsh|shell|adobe-source-han-sans-otc-fonts|思源黑体|
-|adobe-source-han-serif-otc-fonts|思源宋体|alacrity|终端|
+|adobe-source-han-serif-otc-fonts|思源宋体|alacritty|终端|
 |gdm|桌面管理器|gnome-keyring|gnome 密钥|
 |gnome-shell|桌面环境|gnome-backgrounds|gnome 背景|
 |gnome-control-center|gnome 控制中心|nautilus|文件管理器|
