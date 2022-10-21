@@ -130,6 +130,12 @@ GPT分区表 `grub-install --target=x86_64-efi --efi-directory=/boot/EFI --bootl
 
 <br>
 
+|VIM指令|功能|
+|-|-|
+|:sort|字母表顺序排序每一行|
+
+<br>
+
 |正则表达式|匹配结果|
 |-|-|
 | ^.\*(a\|b).*\n | 包含 a 或 b 的行 |
