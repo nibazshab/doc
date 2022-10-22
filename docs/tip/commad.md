@@ -122,13 +122,13 @@ GPT分区表 `grub-install --target=x86_64-efi --efi-directory=/boot/EFI --bootl
 
 <br>
 
-|VIM指令|功能|
-|-|-|
-|sort|字母表顺序排序每一行|
-|set pastetoggle=\<F9>|设置 f9 为开关自动缩进的快捷键|
-|set paste|关闭自动缩进|
-|set nopaste|开启自动缩进|
-:::
+VIM 指令|功能
+-|-
+sort|字母表顺序排序每一行
+set pastetoggle=\<F9>|设置 f9 为开关自动缩进的快捷键
+set paste|关闭自动缩进
+set nopaste|开启自动缩进
+test|s
 
 <br>
 
