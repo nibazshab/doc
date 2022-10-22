@@ -24,6 +24,16 @@
 
 [参阅](https://wiki.archlinux.org/title/Steam)
 
+## Bottles 集成
+
+如果使用 Flatpak 安装了 Bottles，你可以在 Steam 中使用它来运行 Windows 游戏
+
+```shell
+> flatpak override --user com.usebottles.bottles --filesystem=~/.var/app/com.valvesoftware.Steam/data/Steam
+```
+
+[参阅](https://docs.usebottles.com/flatpak/cant-enable-steam-proton-manager)
+
 ## 亚洲字体乱码
 
 ### 安装支持的字体
