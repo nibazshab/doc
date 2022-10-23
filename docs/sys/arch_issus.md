@@ -17,6 +17,8 @@
 
 关闭左上角活动概览 `gsettings set org.gnome.desktop.interface enable-hot-corners false`
 
+主题配置文件 gnome-shell.css 中的 `#panel {` 模块中的 `background-color` 的值修改为 `rgba(0,0,0,0.45)` 可以使面板透明
+
 ## 开启内核级显示模式设置
 
 KMS 通常是在 initramfs stage 之后开始初始化，但是你也可以在 initramfs 的阶段启用
