@@ -60,7 +60,7 @@ xdg-user-dirs-gtk|用户目录|gnome-system-monitor|系统监视器
 gnome-tweaks|GNOME 调整器|gnome-shell-extensions|GNOME 扩展
 gtk-engines|GTK 引擎|gtk-engine-murrine|GTK 引擎
 gnome-shell-extension-appindicator|托盘扩展|gnome-shell-extension-dash-to-dock|DOCK 扩展
-gnome-shell-extension-runcat|CPU 占用扩展|gnome-shell-extension-just-perfection-desktop|UI 扩展
+gnome-shell-extension-just-perfection-desktop|UI 扩展|dust|磁盘占用
 fcitx5 fcitx5-configtool fcitx5-gtk fcitx5-qt|输入法|fcitx5-chinese-addons|中文扩展
 gedit|记事本|eog|图片查看器
 mpv|视频播放器|deadbeef-static|音乐播放器
@@ -71,7 +71,6 @@ aria2|下载工具|v2ray|代理
 v2raya|代理客户端|game-devices-udev|游戏手柄驱动
 sigil|EPUB 编辑器|cool-retro-term|复古终端
 uwufetch|系统信息|tree|目录树
-dust|磁盘占用
 
 名称|介绍|名称|介绍
 -|-|-|-
@@ -82,6 +81,7 @@ oh-my-zsh-git|ZSH 框架|zsh-autosuggestions|自动补全插件
 zsh-syntax-highlighting|语法高亮插件|noto-fonts-emoji|EMOJI 表情
 gnome-shell-extension-lunar-calendar|农历日历扩展|gnome-shell-extension-clipboard-indicator|剪贴板扩展
 gnome-shell-extension-sound-output-device-chooser|音频输出扩展|gnome-shell-extension-vitals|系统监视器扩展
+gnome-shell-extension-runcat|CPU 占用扩展|gnome-shell-extension-openweather|天气扩展
 fcitx5-material-color|输入法主题|cheese|摄像头|evince|文档查看器
 watt-toolkit-bin|STEAM 工具箱|dingtalk|钉钉
 wemeet-bin|腾讯会议|feh|图片查看器

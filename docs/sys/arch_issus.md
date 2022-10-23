@@ -3,9 +3,19 @@
 <br>
 
 ::: warning 声明
-此处将记录一些在安装/使用过程中遇到的问题，一些有助于优化体验的东西，以及相应的方案。内容收集自网络和 Arch Wiki，皆由本人测试可用，但无法保证适用于所有人
+此处将记录一些在安装/使用过程中遇到的问题和一些有助于提高体验的东西。内容收集自网络和 Arch Wiki，皆由本人测试可用，但无法保证适用于所有人
 :::
 
+## Gnome Desktop Extension
+
+* drive-menu
+* user-theme
+* appindicatorsupport
+* dash-to-dock
+* just-perfection-desktop
+* logomenu
+
+关闭左上角活动概览 `gsettings set org.gnome.desktop.interface enable-hot-corners false`
 
 ## 开启内核级显示模式设置
 
