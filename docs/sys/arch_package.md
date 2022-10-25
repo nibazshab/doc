@@ -61,7 +61,7 @@ gnome-tweaks|GNOME 调整器|gnome-shell-extensions|GNOME 扩展
 gtk-engines|GTK 引擎|gtk-engine-murrine|GTK 引擎
 gnome-shell-extension-appindicator|托盘扩展|gnome-shell-extension-dash-to-dock|DOCK 扩展
 gnome-shell-extension-just-perfection-desktop|UI 扩展|dust|磁盘占用
-fcitx5 fcitx5-configtool fcitx5-gtk fcitx5-qt|输入法|fcitx5-chinese-addons|中文扩展
+fcitx5 fcitx5-configtool fcitx5-gtk fcitx5-qt|输入法|fcitx5-rime|RIME 扩展
 gedit|记事本|eog|图片查看器
 mpv|视频播放器|deadbeef-static|音乐播放器
 microsoft-edge-stable-bin|EDGE 浏览器|icalingua++|QQ
@@ -97,3 +97,4 @@ screen|终端多开|htop|进程管理
 p7zip|压缩工具|nano|文本编辑器
 fuse2|FUSE2 库|jdk-openjdk|JAVA 库
 sl|火车|cmatrix|流动代码屏
+fcitx5-chinese-addons|中文扩展
