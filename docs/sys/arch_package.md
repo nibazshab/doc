@@ -63,7 +63,8 @@ gnome-shell-extension-appindicator|托盘扩展|gnome-shell-extension-dash-to-do
 gnome-shell-extension-just-perfection-desktop|UI 扩展|dust|磁盘占用
 fcitx5 fcitx5-configtool fcitx5-gtk fcitx5-qt|输入法|fcitx5-rime|RIME 扩展
 gedit|记事本|eog|图片查看器
-mpv|视频播放器|deadbeef-static|音乐播放器
+mpv|视频播放器|deadbeef|音乐播放器
+libmad|MP3 解码器|mpg123|MP3 解码器
 microsoft-edge-stable-bin|EDGE 浏览器|icalingua++|QQ
 flatpak|通用软件包管理器|visual-studio-code-bin|VS CODE
 wps-office|WPS|wps-office-mui-zh-cn|WPS 中文语言包
