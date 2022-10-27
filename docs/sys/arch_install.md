@@ -392,27 +392,22 @@ Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch
 
 ## 17. 图形化环境
 
-输入以下指令，安装 Gnome 桌面环境
+输入以下指令，安装 Gnome 桌面环境，并删除不需要的包（ 可选 ）
 
 ```shell
-> pacman -S alactirry gdm gnome-keyring gnome-shell gnome-backgrounds gnome-control-center nautilus xdg-user-dirs-gtk gnome-system-monitor
+> pacman -S alactirry mpv gnome
+> pacman -Rs gnome-terminal gnome-music gnome-maps gnome-weather gnome-photos gnome-clocks gnome-calculator gnome-calendar gnome-contacts gnome-software gnome-user-docs gnome-user-share cheese epiphany yelp simple-scan gnome-video-effects file-roller tracker-extract baobab totem evince
 > systemctl enable --now gdm.service
 ```
 
 接着用 [#13. 准备普通用户](#_13-准备普通用户) 创建的 `pig` 账号登陆
 
-## 18. 常用软件及扩展
-
-### 18.1. 常用软件
-
-输入 `yay -S gedit eog mpv`，安装记事本、图片查看器、视频播放器
-
-### 18.2. 扩展
+## 18. 安装 Gnome 插件
 
 输入如下指令，安装高级设置、插件工具
 
 ```shell
-> yay -S gnome-tweaks gtk-engine-murrine gtk-engines gnome-shell-extensions
+> yay -S gnome-tweaks gtk-engine-murrine gtk-engines
 ```
 
 ## 19. 中文输入法

@@ -53,16 +53,11 @@ mesa|OPENGL 库|nvidia|NVIDIA 驱动
 nvidia-prime|PRIMUS RUN|nvidia-settings|NVIDIA 设置
 zsh|SHELL|adobe-source-han-sans-otc-fonts|思源黑体
 adobe-source-han-serif-otc-fonts|思源宋体|alacritty|终端
-gdm|桌面管理器|gnome-keyring|GNOME 密钥
-gnome-shell|桌面环境|gnome-backgrounds|GNOME 背景
-gnome-control-center|GNOME 控制中心|nautilus|文件管理器
-xdg-user-dirs-gtk|用户目录|gnome-system-monitor|系统监视器
-gnome-tweaks|GNOME 调整器|gnome-shell-extensions|GNOME 扩展
+eog gdm gedit gnome-backgrounds gnome-characters gnome-color-manager gnome-control-center gnome-disk-utility gnome-font-viewer gnome-keyring gnome-logs gnome-menus gnome-remote-desktop gnome-session gnome-settings-daemon gnome-shell gnome-shell-extensions gnome-system-monitor grilo-plugins gvfs gvfs-afc gvfs-goa gvfs-google gvfs-gphoto2 gvfs-mtp gvfs-nfs gvfs-smb malcontent mutter nautilus orca rygel tracker3-miners xdg-user-dirs-gtk gnome-boxes noto-fonts-emoji|GNOME 包组|gnome-tweaks|GNOME 调整器
 gtk-engines|GTK 引擎|gtk-engine-murrine|GTK 引擎
 gnome-shell-extension-appindicator|托盘扩展|gnome-shell-extension-dash-to-dock|DOCK 扩展
 gnome-shell-extension-just-perfection-desktop|UI 扩展|dust|磁盘占用
 fcitx5 fcitx5-configtool fcitx5-gtk fcitx5-qt|输入法|fcitx5-rime|RIME 扩展
-gedit|记事本|eog|图片查看器
 mpv|视频播放器|deadbeef|音乐播放器
 libmad|MP3 解码器|mpg123|MP3 解码器
 microsoft-edge-stable-bin|EDGE 浏览器|icalingua++|QQ
@@ -79,7 +74,7 @@ dhcpcd|DHCP 客户端|linux-lts|LTS 内核
 grub|引导程序|efibootmgr|EFI 管理器
 os-prober|GRUB WIN 扩展|refind|引导程序
 oh-my-zsh-git|ZSH 框架|zsh-autosuggestions|自动补全插件
-zsh-syntax-highlighting|语法高亮插件|noto-fonts-emoji|EMOJI 表情
+zsh-syntax-highlighting|语法高亮插件|fcitx5-chinese-addons|中文扩展
 gnome-shell-extension-lunar-calendar|农历日历扩展|gnome-shell-extension-clipboard-indicator|剪贴板扩展
 gnome-shell-extension-sound-output-device-chooser|音频输出扩展|gnome-shell-extension-vitals|系统监视器扩展
 gnome-shell-extension-runcat|CPU 占用扩展|gnome-shell-extension-openweather|天气扩展
@@ -98,4 +93,3 @@ screen|终端多开|htop|进程管理
 p7zip|压缩工具|nano|文本编辑器
 fuse2|FUSE2 库|jdk-openjdk|JAVA 库
 sl|火车|cmatrix|流动代码屏
-fcitx5-chinese-addons|中文扩展

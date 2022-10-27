@@ -8,16 +8,14 @@
 
 ## Gnome Desktop Extension
 
-* drive-menu
-* user-theme
 * appindicatorsupport
 * dash-to-dock
+* drive-menu
 * just-perfection-desktop
 * logomenu
+* user-theme
 
-关闭左上角活动概览 `gsettings set org.gnome.desktop.interface enable-hot-corners false`
-
-主题配置文件 gnome-shell.css 中的 `#panel {` 模块中的 `background-color` 的值修改为 `rgba(0,0,0,0.45)` 可以使面板透明
+主题配置文件 gnome-shell.css 中的 `#panel {` 模块中的 `background-color` 的值修改为 `rgba(0,0,0,0.45)` 可以使面板透明，修改主题的方法见 [GDM](https://wiki.archlinux.org/title/GDM)
 
 ## 开启内核级显示模式设置
 
