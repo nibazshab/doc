@@ -101,3 +101,60 @@ www                                 CNAME    3600    username.github.io
 _GITHUB-PAGES-CHALLENGE-USERNAME    TXT      3600    xxxxxxxxxxxxxxxxxx
 ```
 </question-answer>
+
+<details>
+<summary>#### systemd service 设置工作目录参数</summary>
+<question-answer>
+
+```ini
+[Service]
+WorkingDirectory=/path
+```
+</question-answer>
+</details>
+
+<details>
+<summary>#### systemd service 设置工作目录参数</summary>
+<question-answer>
+`[Service]`
+`WorkingDirectory=/path`
+</question-answer>
+</details>
+
+<details>
+<summary>#### systemd service 设置工作目录参数</summary>
+
+<question-answer>
+
+```ini
+[Service]
+WorkingDirectory=/path
+```
+</question-answer>
+</details>
+
+<details>
+<summary>#### systemd service 设置工作目录参数</summary>
+
+<question-answer>
+
+```ini
+[Service]
+WorkingDirectory=/path
+```
+</question-answer>
+
+</details>
+
+<details>
+<summary>#### systemd service 设置工作目录参数</summary>
+<br>
+<question-answer>
+
+```ini
+[Service]
+WorkingDirectory=/path
+```
+</question-answer>
+
+</details>
