@@ -60,7 +60,7 @@ GPT分区表 `grub-install --target=x86_64-efi --efi-directory=/boot/EFI --bootl
 `wait`
 :::
 
-::: details 使用分区表文件
+::: details 操作分区表文件
 导出分区表文件 `sfdisk -d /dev/sdb > sdb.bkp`
 
 导入分区表文件 `sfdisk /dev/sdb < sdb.bkp`

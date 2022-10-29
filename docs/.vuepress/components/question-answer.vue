@@ -21,14 +21,14 @@ export default {
   padding: 0 20px;
   margin: 10px 0 0 0;
   border-radius: 5px;
-  background-color: #e7eaed;
+  background-color: #eeeeee;
   position: relative;
 }
 #triangle {
   position: absolute;
   top: -15px;
   border: 7px solid transparent;
-  border-bottom: 7px solid #e7eaed;
+  border-bottom: 7px solid #eeeeee;
   width: 0;
   height: 0;
 }
