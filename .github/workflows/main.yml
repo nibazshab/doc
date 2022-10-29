@@ -22,7 +22,7 @@ jobs:
       uses: actions/setup-node@v3.4.1
 
     - name: Add Dependencies
-      run: yarn add -D vuepress@next vuepress-plugin-sitemap2@next @vuepress/plugin-shiki@next
+      run: yarn add -D vuepress@next vuepress-plugin-sitemap2@next @vuepress/plugin-shiki@next @vuepress/plugin-register-components@next
 
     - name: Build VuePress site
       run: yarn docs:build

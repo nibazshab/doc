@@ -2,6 +2,9 @@ import { defineUserConfig } from 'vuepress';
 import { defaultTheme } from '@vuepress/theme-default';
 import { sitemapPlugin } from 'vuepress-plugin-sitemap2';
 import { shikiPlugin } from '@vuepress/plugin-shiki';
+import { registerComponentsPlugin } from '@vuepress/plugin-register-components';
+import { getDirname, path } from '@vuepress/utils';
+const __dirname = getDirname(import.meta.url);
 
 export default defineUserConfig({
   theme: defaultTheme({
@@ -74,6 +77,9 @@ export default defineUserConfig({
     }),
     shikiPlugin({
       theme: 'github-dark'
-    })
+    }),
+    registerComponentsPlugin({
+      componentsDir: path.resolve(__dirname, './components'),
+    }),
   ]
 })
