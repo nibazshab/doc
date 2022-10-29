@@ -45,9 +45,9 @@ wav 转 flac `flac -s --compression-level-5 <file>.wav`
 :::
 
 ::: details grub 引导部署
-MBR分区表 `grub-install --target=i386-pc /dev/sdb`
+MBR 分区表 / GPT 分区表
 
-GPT分区表 `grub-install --target=x86_64-efi --efi-directory=/boot/EFI --bootloader-id=GRUB`
+`grub-install --target=i386-pc /dev/sdb` / `grub-install --target=x86_64-efi --efi-directory=/boot/EFI --bootloader-id=GRUB`
 
 `grub-mkconfig > /boot/grub/grub.cfg`
 :::
@@ -110,10 +110,6 @@ GPT分区表 `grub-install --target=x86_64-efi --efi-directory=/boot/EFI --bootl
 
 ::: details 在文件行尾添加内容
 `sed -i "s/$/&<text>/g" file`
-:::
-
-::: details 删除文件行尾的 5 个字符
-`sed -i "s/.\{5\}$//" file`
 :::
 
 <br>

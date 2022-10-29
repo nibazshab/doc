@@ -2,64 +2,28 @@
 
 <br>
 
-#### nginx 配置伪静态
-<br>
-<question-answer>
+::: details nginx 配置伪静态
+在配置文件的 `server` 模块中的 `location / {}` 模块内，添加 `try_files $uri $uri/ /index.php?$args;`
+:::
 
-在配置文件的 `server` 模块中的 `location / {}` 模块内，添加
+::: details typecho 上传目录无法写入，请手动将安装目录下的 usr/uploads 目录的权限设置为可写然后继续升级
+检查 php-fpm 和 nginx 用户是否一致，把 `php-fpm.service` 的 `ProtectSystem=full` 行注释掉
+:::
 
-`try_files $uri $uri/ /index.php?$args;`
-</question-answer>
-
-#### typecho 上传目录无法写入，请手动将安装目录下的 usr/uploads 目录的权限设置为可写然后继续升级
-<br>
-<question-answer>
-
-检查 php-fpm 和 nginx 用户是否一致
-
-检查目录权限和所有者与上述是否正确
-
-查看 `php-fpm.service`，把 `ProtectSystem=full` 行注释掉
-
-</question-answer>
-
-#### typecho 上传目录无法写入，请手动将安装目录下的 usr/uploads 目录的权限设置为可写然后继续升级
-
-<question-answer>
-
-检查 php-fpm 和 nginx 用户是否一致
-
-检查目录权限和所有者与上述是否正确
-
-查看 php-fpm.service，注释掉 ProtectSystem=full 行
-
-</question-answer>
-
-#### systemd service 设置工作目录参数
-
-<question-answer>
-
+::: details systemd service 设置工作目录参数
 ```ini
 [Service]
 WorkingDirectory=/path
 ```
-</question-answer>
+:::
 
-#### ssh ls 没有颜色
-
-<question-answer>
-
-设置 LS_COLORS
+::: details 设置 LS_COLORS 解决 ssh 的 ls 没有颜色
 ```ini
 LS_COLORS = 'LS_COLORS=no=00:fi=00:di=01;33:ln=01;36:pi=40;33:so=01;35:bd=40;33;01:cd=40;33;01:or=01;05;37;41:mi=01;05;37;41:ex=01;35:*.cmd=01;35:*.exe=01;35:*.com=01;35:*.btm=01;35:*.bat=01;35:*.sh=01;35:*.csh=01;35:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.gz=01;31:*.bz2=01;31:*.bz=01;31:*.tz=01;31:*.rpm=01;31:*.cpio=01;31:*.jpg=01;35:*.gif=01;35:*.bmp=01;35:*.xbm=01;35:*.xpm=01;35:*.png=01;35:*.tif=01;35:'
 ```
-</question-answer>
+:::
 
-#### grub 引导 arch.iso
-
-<question-answer>
-
-在 `/boot/grub/grub.cfg` 中添加
+::: details grub 引导 arch.iso
 ```ini
 menuentry 'Arch LiveCD' {
     set isofile=/arch.iso
@@ -69,13 +33,9 @@ menuentry 'Arch LiveCD' {
     initrd (lo0)/arch/boot/x86_64/initramfs-linux.img
 }
 ```
-</question-answer>
+:::
 
-#### grub 引导 gentoo.iso
-
-<question-answer>
-
-在 `/boot/grub/grub.cfg` 中添加
+::: details grub 引导 gentoo.iso
 ```ini
 menuentry 'Gentoo LiveCD' {
   set isofile=/gentoo.iso
@@ -84,13 +44,9 @@ menuentry 'Gentoo LiveCD' {
   initrd (loop)/boot/gentoo.igz
 }
 ```
-</question-answer>
+:::
 
-#### dns 解析 github pages
-
-<question-answer>
-
-在域名的 DNS 解析服务中添加
+::: details dns 解析 github pages
 ```ini
 NAME                                TYPE     TTL     TARGET
 @                                   A        3600    185.199.108.153
@@ -100,61 +56,4 @@ NAME                                TYPE     TTL     TARGET
 www                                 CNAME    3600    username.github.io
 _GITHUB-PAGES-CHALLENGE-USERNAME    TXT      3600    xxxxxxxxxxxxxxxxxx
 ```
-</question-answer>
-
-<details>
-<summary>#### systemd service 设置工作目录参数</summary>
-<question-answer>
-
-```ini
-[Service]
-WorkingDirectory=/path
-```
-</question-answer>
-</details>
-
-<details>
-<summary>#### systemd service 设置工作目录参数</summary>
-<question-answer>
-`[Service]`
-`WorkingDirectory=/path`
-</question-answer>
-</details>
-
-<details>
-<summary>#### systemd service 设置工作目录参数</summary>
-
-<question-answer>
-
-```ini
-[Service]
-WorkingDirectory=/path
-```
-</question-answer>
-</details>
-
-<details>
-<summary>#### systemd service 设置工作目录参数</summary>
-
-<question-answer>
-
-```ini
-[Service]
-WorkingDirectory=/path
-```
-</question-answer>
-
-</details>
-
-<details>
-<summary>#### systemd service 设置工作目录参数</summary>
-<br>
-<question-answer>
-
-```ini
-[Service]
-WorkingDirectory=/path
-```
-</question-answer>
-
-</details>
+:::
