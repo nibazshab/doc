@@ -101,11 +101,3 @@ www                                 CNAME    3600    username.github.io
 _GITHUB-PAGES-CHALLENGE-USERNAME    TXT      3600    xxxxxxxxxxxxxxxxxx
 ```
 </question-answer>
-
-<CodeGroup v-if="your expect condition">
-test
-  tets
-     tets
-  sdad
-test
-</CodeGroup>
