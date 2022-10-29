@@ -33,7 +33,7 @@ package() {
 ```
 :::
 
-[ArchWiki_PKGBUILD](https://wiki.archlinux.org/title/PKGBUILD)，[官方 PKGBUILD 示例](https://gitlab.archlinux.org/pacman/pacman/raw/master/proto/PKGBUILD.proto)
+[ArchWiki PKGBUILD](https://wiki.archlinux.org/title/PKGBUILD)，[官方 PKGBUILD 示例](https://gitlab.archlinux.org/pacman/pacman/raw/master/proto/PKGBUILD.proto)
 
 ## 记录
 
