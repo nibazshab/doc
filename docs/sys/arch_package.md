@@ -44,7 +44,7 @@ package() {
 名称|介绍|名称|介绍
 -|-|-|-
 base|基础系统|linux|内核
-archlinux-keyring autoconf automake binutils bison fakeroot file findutils flex gawk gcc gettext grep groff gzip libtool m4 make pacman patch pkgconf sed sudo texinfo which|编译工具包|vim|文本编辑器
+archlinux-keyring autoconf automake binutils bison fakeroot file findutils flex gawk gcc gettext grep groff gzip libtool m4 make pacman patch pkgconf sed sudo texinfo which|BASE-DEVEL 编译包组|vim|文本编辑器
 networkmanager|网络管理器|nm-connection-editor|网络高级管理器
 rp-pppoe|拨号工具|intel-ucode|CPU 微码
 linux-firmware|驱动固件|archlinuxcn-keyring|ARCH CN 仓库密钥
@@ -53,11 +53,11 @@ mesa|OPENGL 库|nvidia|NVIDIA 驱动
 nvidia-prime|PRIMUS RUN|nvidia-settings|NVIDIA 设置
 zsh|SHELL|adobe-source-han-sans-otc-fonts|思源黑体
 adobe-source-han-serif-otc-fonts|思源宋体|alacritty|终端
-eog gdm gedit gnome-backgrounds gnome-characters gnome-color-manager gnome-control-center gnome-disk-utility gnome-font-viewer gnome-keyring gnome-logs gnome-menus gnome-remote-desktop gnome-session gnome-settings-daemon gnome-shell gnome-shell-extensions gnome-system-monitor grilo-plugins gvfs gvfs-afc gvfs-goa gvfs-google gvfs-gphoto2 gvfs-mtp gvfs-nfs gvfs-smb malcontent mutter nautilus orca rygel tracker3-miners xdg-user-dirs-gtk gnome-boxes noto-fonts-emoji|GNOME 包组|gnome-tweaks|GNOME 调整器
+eog gdm gedit gnome-backgrounds gnome-characters gnome-color-manager gnome-control-center gnome-disk-utility gnome-font-viewer gnome-keyring gnome-logs gnome-menus gnome-remote-desktop gnome-session gnome-settings-daemon gnome-shell gnome-shell-extensions gnome-system-monitor grilo-plugins gvfs gvfs-afc gvfs-goa gvfs-google gvfs-gphoto2 gvfs-mtp gvfs-nfs gvfs-smb malcontent mutter nautilus orca rygel tracker3-miners xdg-user-dirs-gtk gnome-boxes noto-fonts-emoji|GNOME 桌面包组|gnome-tweaks|GNOME 调整器
 gtk-engines|GTK 引擎|gtk-engine-murrine|GTK 引擎
 gnome-shell-extension-appindicator|托盘扩展|gnome-shell-extension-dash-to-dock|DOCK 扩展
 gnome-shell-extension-just-perfection-desktop|UI 扩展|dust|磁盘占用
-fcitx5 fcitx5-configtool fcitx5-gtk fcitx5-qt|输入法|fcitx5-rime|RIME 扩展
+fcitx5 fcitx5-configtool fcitx5-gtk fcitx5-qt|FCITX5-IM 输入法包组|fcitx5-rime|FCITX5 RIME 扩展
 mpv|视频播放器|deadbeef|音乐播放器
 libmad|MP3 解码器|mpg123|MP3 解码器
 microsoft-edge-stable-bin|EDGE 浏览器|icalingua++|QQ
