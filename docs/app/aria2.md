@@ -162,7 +162,7 @@ Description=Aria2
 After=network.target
 [Service]
 User=user
-ExecStart=/usr/bin/aria2c --conf-path=$HOME/.config/aria2/aria2.conf &
+ExecStart=/usr/bin/aria2c --conf-path=${HOME}/.config/aria2/aria2.conf &
 ExecStop=/bin/kill $MAINPID
 RestartSec=on-abort
 [Install]
