@@ -2,19 +2,26 @@
 
 <br>
 
-::: details nginx 配置伪静态
+## nginx 配置伪静态
+
+<question-answer>
 在配置文件的 `server` 模块中的 `location / {}` 模块内，添加
 
 `try_files $uri $uri/ /index.php?$args;`
-:::
+</question-answer>
 
-::: details typecho 上传目录无法写入，请手动将安装目录下的 usr/uploads 目录的权限设置为可写然后继续升级
+
+### typecho 上传目录无法写入，请手动将安装目录下的 usr/uploads 目录的权限设置为可写然后继续升级
+
+<question-answer>
+
 检查 php-fpm 和 nginx 用户是否一致
 
 检查目录权限和所有者与上述是否正确
 
 查看 `php-fpm.service`，把 `ProtectSystem=full` 行注释掉
-:::
+
+</question-answer>
 
 ::: details systemd service 设置工作目录参数
 ```ini
