@@ -2,18 +2,16 @@
 
 <br>
 
+::: details ffmpeg 快速转换
+`ffmpeg -i input.avi -c:v copy -c:a copy output.mp4`
+:::
+
 ::: details sftp 下载链接
 `sftp://user:password@host/path`
 :::
 
 ::: details 搜索文本内容
-`grep -r -n 'abc' .`
-:::
-
-::: details make install 指定路径安装
-`DESTDIR=/path make install`
-
-`INSTALL_PATH=/path make install`
+`grep -r -n 'abc' /path`
 :::
 
 ::: details ssh 上传文件
@@ -131,7 +129,7 @@ set nopaste|开启自动缩进
 -|-
 ^.\*(a\|b).*\n|包含 a 或 b 的行
 ^.\{5\}|每行开头的 5 个字符
-.\{5\}$||每行末尾的 5 个字符
+.\{5\}$|每行末尾的 5 个字符
 \v[^\x00-\xff]+|非 ASCII 字符
 \d|数字
 \s\+$|行末空白字符
