@@ -53,7 +53,7 @@ mesa|OPENGL 库|nvidia|NVIDIA 驱动
 nvidia-prime|PRIMUS RUN|nvidia-settings|NVIDIA 设置
 zsh|SHELL|adobe-source-han-sans-otc-fonts|思源黑体
 adobe-source-han-serif-otc-fonts|思源宋体|alacritty|终端
-eog gdm gedit gnome-backgrounds gnome-characters gnome-color-manager gnome-control-center gnome-disk-utility gnome-font-viewer gnome-keyring gnome-logs gnome-menus gnome-remote-desktop gnome-session gnome-settings-daemon gnome-shell gnome-shell-extensions gnome-system-monitor grilo-plugins gvfs gvfs-afc gvfs-goa gvfs-google gvfs-gphoto2 gvfs-mtp gvfs-nfs gvfs-smb malcontent mutter nautilus orca rygel tracker3-miners xdg-user-dirs-gtk gnome-boxes noto-fonts-emoji|GNOME 桌面包组|gnome-tweaks|GNOME 调整器
+noto-fonts-emoji|GNOME 桌面包组|gnome-tweaks|GNOME 调整器
 gtk-engines|GTK 引擎|gtk-engine-murrine|GTK 引擎
 gnome-shell-extension-appindicator|托盘扩展|gnome-shell-extension-dash-to-dock|DOCK 扩展
 gnome-shell-extension-just-perfection-desktop|UI 扩展|dust|磁盘占用

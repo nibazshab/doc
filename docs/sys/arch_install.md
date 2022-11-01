@@ -396,7 +396,7 @@ Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch
 
 ```shell
 > pacman -S alactirry mpv gnome
-> pacman -Rs gnome-terminal gnome-music gnome-maps gnome-weather gnome-photos gnome-clocks gnome-calculator gnome-calendar gnome-contacts gnome-software gnome-user-docs gnome-user-share cheese epiphany yelp simple-scan gnome-video-effects file-roller tracker-extract baobab totem evince
+> pacman -Rs gnome-console gnome-music gnome-maps gnome-weather gnome-photos gnome-clocks gnome-calculator gnome-calendar gnome-contacts gnome-software gnome-user-docs gnome-user-share cheese epiphany yelp simple-scan gnome-video-effects file-roller baobab totem evince sushi
 > systemctl enable --now gdm.service
 ```
 
