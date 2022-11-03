@@ -248,10 +248,11 @@ UUID=979aa7ec-8842-4e22-8bfc-4c8aed3de56d    /swap    btrfs    rw,relatime,ssd,s
 
 ## 10. systemd-boot 引导
 
-使用 bootctl 将 systemd-boot 安装到 `/boot` 目录
+使用 bootctl 将 systemd-boot 安装到 `/boot` 目录，并开启自动更新引导
 
 ```shell
 > bootctl --path=/boot install
+> systemctl status systemd-boot-update.service
 ```
 
 创建 `/etc/pacman.d/hooks/100-systemd-boot.hook` 文件并写入如下内容，以实现随着 systemd-boot 的升级而更新引导管理器
