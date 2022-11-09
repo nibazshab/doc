@@ -64,7 +64,7 @@ MBR 分区表 / GPT 分区表
 导入分区表文件 `sfdisk /dev/sdb < sdb.bkp`
 :::
 
-::: details 查找 jpg 文件，重命名为 001.jpg, 002.jpg...
+::: details 查找 jpg 文件，重命名为 001.jpg、002.jpg...
 `i=1`  
 `for file in $(find -name "*.jpg"); do`  
 &ensp;&ensp;&ensp;&ensp;`mv $file $(printf "%0.3d.jpg" $i)`  

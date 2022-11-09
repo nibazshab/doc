@@ -1,4 +1,4 @@
-# Issus
+# 自我的救赎
 
 <br>
 
@@ -15,13 +15,13 @@
 * logomenu
 * user-theme
 
-主题配置文件 gnome-shell.css 中的 `#panel {` 模块中的 `background-color` 的值修改为 `rgba(0,0,0,0.5)` 可以使面板透明，修改主题的方法见 [GDM](https://wiki.archlinux.org/title/GDM)
+主题配置文件 gnome-shell.css 中的 #panel { 模块中的 background-color 的值修改为 `rgba(0,0,0,0.5)` 可以使面板透明，修改主题的方法见 [GDM](https://wiki.archlinux.org/title/GDM)
 
 ## 开启内核级显示模式设置
 
 KMS 通常是在 initramfs stage 之后开始初始化，但是你也可以在 initramfs 的阶段启用
 
-将视频驱动模块加入 `/etc/mkinitcpio.conf` 的 `MODULES=()`，使用 `sudo mkinitcpio -P` 命令重新生成内核
+将视频驱动模块加入 `/etc/mkinitcpio.conf` 的 MODULES=()，使用 `sudo mkinitcpio -P` 命令重新生成内核
 
 * AMD GPU 加入 `amdgpu`，老的 ATI 驱动加入 `radeon`
 * Intel GPU 加入 `i915`
@@ -37,7 +37,6 @@ Operation=Remove
 Type=Package
 Target=nvidia
 Target=linux
-# Change the linux part above and in the Exec line if a different kernel is used
 
 [Action]
 Description=Update NVIDIA module in initcpio
@@ -61,7 +60,7 @@ Exec=/bin/sh -c 'while read -r trg; do case $trg in linux) exit 0; esac; done; /
 
 使用 intel cpu 并为触摸板加载了 intel_lpss_pci 模块的电脑，在休眠/睡眠后可能会出现黑屏、无法唤醒的情况
 
-编辑 `/etc/mkinitcpio.conf` 文件，将 `intel_lpss_pci` 添加到 `MODULES=()` 里，使用 `sudo mkinitcpio -P` 命令重新生成内核即可修复无法唤醒的问题
+编辑 `/etc/mkinitcpio.conf` 文件，将 `intel_lpss_pci` 添加到 MODULES=() 里，使用 `sudo mkinitcpio -P` 命令重新生成内核即可修复无法唤醒的问题
 
 ## Possibly missing firmware for module XXXX
 

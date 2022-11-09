@@ -25,10 +25,9 @@ export default defineUserConfig({
       {
         text: 'Arch Linux',
         children: [
-          '/sys/arch_info.md',
           '/sys/arch_install.md',
-          '/sys/arch_issus.md',
           '/sys/arch_package.md',
+          '/sys/arch_issus.md',
         ],
       },
       {

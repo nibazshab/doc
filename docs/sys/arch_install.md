@@ -9,17 +9,12 @@ sidebarDepth: 2
 ::: warning 声明
 本文的内容是从一个空的硬盘上安装 uefi 启动的 Arch Linux 系统，如已经在硬盘上安装了其他操作系统，或使用 bios 启动，请自行判断哪些步骤需要调整
 
-如有需要请参考 [官方安装指南](https://wiki.archlinux.org/title/Installation_guide_(简体中文))
+如有需要请参考 [官方安装指南](https://wiki.archlinux.org/title/Installation_guide)
 :::
 
 ## 准备阶段
 
-以下几个步骤直接略过，不多做描述
-
-* 下载系统 iso 镜像
-* 制作启动 u 盘
-* 确认 uefi 启动方式
-* 从 u 盘进入系统
+下载镜像、制作启动盘、确认启动方式等步骤略过，不做描述
 
 ## 1. 关闭 reflcetor 服务
 
@@ -69,7 +64,7 @@ sidebarDepth: 2
 
 ## 3. 确定系统时间
 
-在 Linux 系统中，准确的时间是很关键的，它决定了一些程序能否正常运行
+在 Linux 系统中，准确的时间是很关键的，它决定了很多东西能否正常运行
 
 ```shell
 > timedatectl set-ntp true
@@ -265,7 +260,7 @@ Target = systemd
 [Action]
 Description = Gracefully upgrading systemd-boot...
 When = PostTransaction
-Exec = /usr/bin/systemctl restart systemd-boot-update.service]
+Exec = /usr/bin/systemctl restart systemd-boot-update.service
 ```
 
 编辑 `/boot/loader/loader.conf` 文件，写入如下内容
