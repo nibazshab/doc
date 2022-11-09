@@ -94,4 +94,4 @@ p7zip|压缩工具|nano|文本编辑器
 fuse2|FUSE2 库|jdk-openjdk|JAVA 库
 sl|火车|cmatrix|流动代码屏
 cool-retro-term|复古终端|gimp|图像编辑器
-obs-studio|录屏
+obs-studio|录屏|orca|视力障碍屏幕阅读器

@@ -254,17 +254,18 @@ UUID=979aa7ec-8842-4e22-8bfc-4c8aed3de56d    /swap    btrfs    rw,relatime,ssd,s
 > bootctl --path=/boot install
 ```
 
-创建 `/etc/pacman.d/hooks/100-systemd-boot.hook` 文件并写入如下内容，以实现随着 systemd-boot 的升级而更新引导管理器
+创建 `/etc/pacman.d/hooks/95-systemd-boot.hook` 文件并写入如下内容，以实现随着 systemd-boot 的升级而更新引导管理器
 
 ```ini
 [Trigger]
 Type = Package
 Operation = Upgrade
 Target = systemd
+
 [Action]
-Description = Updating systemd-boot
+Description = Gracefully upgrading systemd-boot...
 When = PostTransaction
-Exec = /usr/bin/bootctl update
+Exec = /usr/bin/systemctl restart systemd-boot-update.service]
 ```
 
 编辑 `/boot/loader/loader.conf` 文件，写入如下内容
