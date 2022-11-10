@@ -47,7 +47,7 @@ MBR 分区表 / GPT 分区表
 
 `grub-install --target=i386-pc /dev/sdb` / `grub-install --target=x86_64-efi --efi-directory=/boot/EFI --bootloader-id=GRUB`
 
-`grub-mkconfig > /boot/grub/grub.cfg`
+`grub-mkconfig -o /boot/grub/grub.cfg`
 :::
 
 ::: details 重设磁盘的读写权限

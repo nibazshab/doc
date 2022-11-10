@@ -155,10 +155,6 @@ nvme0n1     259:0    0 953.9G  0 disk
 
 ## 7. 安装基本系统
 
-::: tip 提示
-从此处开始，如有不清楚软件包的作用的，可以查看另一篇文章：[软件包](/sys/arch_apps.md)
-:::
-
 输入 `pacstrap /mnt base base-devel linux linux-firmware` 安装基础软件包
 
 此处如果有报错，请尝试输入 `pacman -Syyy` 和 `pacman -S archlinux-keyring`，然后再次安装基础软件包
