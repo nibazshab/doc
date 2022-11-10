@@ -2,15 +2,13 @@
 
 <br>
 
-## 实名认证
-
 ::: details 仅供测试或交流学习使用，内容来自网络
 张民 110105197001137135
 :::
 
-## 王者荣耀 q 币充点券
+---
 
-仅限安卓 qq 区游戏号可用（ 微信区没有测试过，请自行测试是否可用 ）
+王者荣耀 q 币充点券，仅限安卓 qq 区游戏号可用
 
 > https://pay.qq.com/h5/index.shtml?m=buy&c=game&dialog=0&midasApiVersion=5&transactionid=CC8E5656-EEC9-4ADD-865E-D4D81C258D691558348901265&dh=1&pf=mds_storeopen_qb-_mds_default_v1_0_0.navgame_v1.0-android&appid=1450002258&zoneid=(区号+1010)&n=(点卷数量)&as=1&aid=&wxAppid2=wx951bdcac522929b6&u=(游戏qq号)
 
@@ -18,7 +16,7 @@
 * (点卷数量) - 填写要充值的点卷数量，例如 10 点券，则填写 10
 * (游戏 qq 号) - 填写游戏账号拥有人的 qq 号，例如游戏账号是用张三的 qq 号 66600000 注册的，则填写 66600000
 
-::: details 示例（ 示例账号与本人无关 ）
+::: details 示例
 * 大区：手q 153 区
 * 点券：10
 * 游戏 qq 号：66600000

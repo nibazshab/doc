@@ -16,7 +16,7 @@
   { ... }
 ```
 
-> * `WorkshopItemsInstalled` 当前电脑上已安装的内容
-> * `WorkshopItemDetails` 已订阅的内容
+* `WorkshopItemsInstalled` 当前电脑上已安装的内容
+* `WorkshopItemDetails` 已订阅的内容
 
-在电脑上登陆过别的 steam 账号之后，steam 会自动将该账号的 wallpaper engine 所订阅的创意工坊的内容添加到 WorkshopItemDetails 中，导致 WorkshopItemDetails 与 WorkshopItemsInstalled 的内容不匹配，因此只需要把 WorkshopItemDetails 的内容复制到 WorkshopItemsInstalled，让两者的内容相同
+在电脑上登陆过别的 steam 账号之后，steam 会自动将该账号的 wallpaper engine 所订阅的创意工坊的内容添加到 WorkshopItemDetails 中，导致两者的内容不匹配，因此只需要把 WorkshopItemsInstalled 的内容替换掉 WorkshopItemDetails 即可

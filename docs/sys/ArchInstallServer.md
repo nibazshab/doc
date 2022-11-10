@@ -2,7 +2,7 @@
 
 <br>
 
-腾讯云并不能直接安装 Arch Linux，这里使用一个特殊的方法，先安装一个别的的 Linux 系统，然后将这个系统整个替换安装为 Arch Linux
+腾讯云并不能直接安装 Arch Linux，这里使用一个特殊的方法，先安装一个别的的 Linux 系统，然后整个替换为 Arch Linux
 
 ## 1. 下载 ISO 镜像文件
 
@@ -33,7 +33,7 @@ menuentry 'Arch LiveCD' {
 
 ## 3. 重启并启动 Arch LiveCD
 
-打开腾讯云控制台，选择 VNC 登录，然后重启服务器，选择刚才添加的 Arch LiveCD 启动项，进入 Arch LiveCD 系统
+打开腾讯云控制台，然后选择 VNC 登录，输入 `reboot` 重启，在引导界面选择刚才添加的 Arch LiveCD 启动项，进入 Arch LiveCD 系统
 
 ## 4. 使用 SSH 连接服务器
 
@@ -121,7 +121,7 @@ menuentry 'Arch LiveCD' {
 
 # systemd-networkd 网络配置
 > nano /etc/systemd/network/10-eth0.network
-# 写入以下内容
+
 [Match]
 Name=ens5
 [Network]
@@ -131,8 +131,7 @@ DHCP=ipv4
 > systemctl enable sshd
 > systemctl enable systemd-networkd
 
-# 重启
+# 退出，重启
 > exit
-> umount /mnt
 > reboot
 ```
