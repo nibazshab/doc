@@ -5,8 +5,8 @@ import { shikiPlugin } from '@vuepress/plugin-shiki';
 
 export default defineUserConfig({
   theme: defaultTheme({
-    prev: false,
-    next: false,
+    prev: '',
+    next: '',
     lastUpdated: false,
     contributors: false,
     navbar: false,
