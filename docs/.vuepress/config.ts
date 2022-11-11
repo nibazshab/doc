@@ -14,39 +14,39 @@ export default defineUserConfig({
       {
         text: '奇怪的工具',
         children: [
-          '/app/Aria2.md',
-          '/app/VisualStudioCode.md',
-          '/app/Minecraft.md',
+          '/SUN/Aria2.md',
+          '/SUN/VisualStudioCode.md',
+          '/SUN/Minecraft.md',
+          '/SUN/Steam.md',
+          '/SUN/WallpaperEngine.md',
+        ],
+      },
+      {
+        text: 'Cloud Server',
+        children: [
+          '/WED/SystemInstall.md',
         ],
       },
       {
         text: 'Arch Linux',
         children: [
-          '/sys/ArchInstall.md',
-          '/sys/ArchInstallServer.md',
-          '/sys/ArchPackage.md',
-          '/sys/ArchIssus.md',
-        ],
-      },
-      {
-        text: 'Windows 10',
-        children: [
-          '/sys/Windows.md',
+          '/MON/ArchInstall.md',
+          '/MON/ArchPackage.md',
+          '/MON/ArchIssus.md',
         ],
       },
       {
         text: '热芝士',
         children: [
-          '/tip/CMD.md',
-          '/tip/Note.md',
+          '/TUE/CMD.md',
+          '/TUE/Note.md',
+          '/TUE/Trash.md',
         ],
       },
       {
-        text: '游戏/软件相关',
+        text: 'Windows',
         children: [
-          '/van/Steam.md',
-          '/van/WallpaperEngine.md',
-          '/van/Trash.md',
+          '/MON/Windows.md',
         ],
       },
       {

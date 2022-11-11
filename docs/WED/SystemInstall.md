@@ -1,8 +1,8 @@
-# 腾讯云安装记录
+# 腾讯云安装 Arch Linux 系统
 
 <br>
 
-腾讯云并不能直接安装 Arch Linux，这里使用一个特殊的方法，先安装一个别的的 Linux 系统，然后整个替换为 Arch Linux
+腾讯云服务器并不能直接安装 Arch Linux，但由于 Linux 操作系统一切皆文件的特性，可以使用一个特殊的方法，先在官方镜像中安装 Debian GNU/Linux 操作系统，然后整个替换为 Arch Linux
 
 ## 1. 下载 ISO 镜像文件
 
@@ -69,7 +69,7 @@ menuentry 'Arch LiveCD' {
 
 ## 8. 安装 Arch Linux
 
-```shell
+````shell
 # 配置腾讯云内网软件源
 > echo 'Server = https://mirrors.bfsu.edu.cn/archlinux/$repo/os/$arch' > /etc/pacman.d/mirrorlist
 
@@ -122,10 +122,12 @@ menuentry 'Arch LiveCD' {
 # systemd-networkd 网络配置
 > nano /etc/systemd/network/10-eth0.network
 
+```ini
 [Match]
 Name=ens5
 [Network]
 DHCP=ipv4
+```
 
 # 开启相关服务
 > systemctl enable sshd
@@ -134,4 +136,4 @@ DHCP=ipv4
 # 退出，重启
 > exit
 > reboot
-```
+````

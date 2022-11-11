@@ -4,7 +4,7 @@
 
 ## 是什么
 
-[Visual Studio Code](https://github.com/Microsoft/vscode)（ 简称 VS Code ）是一款由微软开发且跨平台的免费源代码编辑器。该软件支持语法高亮、代码自动补全（ 又称 IntelliSense ）、代码重构功能，并且内置了命令行工具和 Git 版本控制系统。用户可以更改主题和键盘快捷方式实现个性化设置，也可以通过内置的扩展程序商店安装扩展以拓展软件功能
+[Visual Studio Code](https://code.visualstudio.com)（ 简称 VS Code ）是一款由微软开发且跨平台的免费源代码编辑器。该软件支持语法高亮、代码自动补全（ 又称 IntelliSense ）、代码重构功能，并且内置了命令行工具和 Git 版本控制系统。用户可以更改主题和键盘快捷方式实现个性化设置，也可以通过内置的扩展程序商店安装扩展以拓展软件功能
 
 Visual Studio Code 默认支持非常多的编程语言，包括 JavaScript、TypeScript、CSS 和 HTML；也可以通过下载扩展支持 Python、C/C++、Java 和 Go 在内的其他语言。支持功能包括语法高亮、括号补全、代码折叠和代码片段；对于部分语言，可以使用 IntelliSense。Visual Studio Code 也支持调试 Node.js 程序。和 GitHub 的 Atom 一样，Visual Studio Code 也基于 Electron 框架构建
 

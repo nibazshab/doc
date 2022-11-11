@@ -4,8 +4,9 @@
 
 如果对此站感觉良好，可以
 
-* 打开 Github，给 _[nibazshab](https://github.com/nibazshab)_ 点个 Follow
-* 打开 Github，给 _[此项目](https://github.com/nibazshab/wiki)_ 点个 Star
+* 打开 Github，给 [站长](https://github.com/nibazshab) 点个 Follow
+* 打开 Github，给 [此网站](https://github.com/nibazshab/wiki) 点个 Star
+* 
 
 <br>
 
