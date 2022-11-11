@@ -69,7 +69,7 @@ menuentry 'Arch LiveCD' {
 
 ## 8. 安装 Arch Linux
 
-````shell
+```shell
 # 配置腾讯云内网软件源
 > echo 'Server = https://mirrors.bfsu.edu.cn/archlinux/$repo/os/$arch' > /etc/pacman.d/mirrorlist
 
@@ -122,12 +122,10 @@ menuentry 'Arch LiveCD' {
 # systemd-networkd 网络配置
 > nano /etc/systemd/network/10-eth0.network
 
-```ini
 [Match]
 Name=ens5
 [Network]
 DHCP=ipv4
-```
 
 # 开启相关服务
 > systemctl enable sshd
@@ -136,4 +134,4 @@ DHCP=ipv4
 # 退出，重启
 > exit
 > reboot
-````
+```

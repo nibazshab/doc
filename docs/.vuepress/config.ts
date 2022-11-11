@@ -22,7 +22,7 @@ export default defineUserConfig({
         ],
       },
       {
-        text: 'Cloud Server',
+        text: 'Server',
         children: [
           '/WED/SystemInstall.md',
         ],
@@ -36,17 +36,17 @@ export default defineUserConfig({
         ],
       },
       {
+        text: 'Windows',
+        children: [
+          '/MON/Windows.md',
+        ],
+      },
+      {
         text: '热芝士',
         children: [
           '/TUE/CMD.md',
           '/TUE/Note.md',
           '/TUE/Trash.md',
-        ],
-      },
-      {
-        text: 'Windows',
-        children: [
-          '/MON/Windows.md',
         ],
       },
       {
