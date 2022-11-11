@@ -27,6 +27,7 @@ jobs:
         yarn add -D vuepress@next
         yarn add -D vuepress-plugin-sitemap2@next
         yarn add -D @vuepress/plugin-shiki@next
+        yarn add -D @vuepress/plugin-google-analytics@next
 
     - name: Build VuePress site
       run: yarn docs:build

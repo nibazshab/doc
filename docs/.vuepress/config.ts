@@ -2,15 +2,10 @@ import { defineUserConfig } from 'vuepress';
 import { defaultTheme } from '@vuepress/theme-default';
 import { sitemapPlugin } from 'vuepress-plugin-sitemap2';
 import { shikiPlugin } from '@vuepress/plugin-shiki';
+import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics';
 
 export default defineUserConfig({
   theme: defaultTheme({
-    prev: '',
-    next: '',
-    lastUpdated: false,
-    contributors: false,
-    navbar: false,
-    sidebarDepth: 0,
     sidebar: [
       {
         text: '首页',
@@ -58,24 +53,24 @@ export default defineUserConfig({
         text: '最后',
         children: ['/end.md'],
       }
-    ]
+    ],
+    lastUpdated: false,
+    contributors: false,
+    navbar: false,
+    sidebarDepth: 0
   }),
   base: '/',
   title: '_Wiki',
-  head: [
-    [
-      'link',{
-        rel: 'icon',
-        href: 'https://user-images.githubusercontent.com/44338441/159110560-773788e6-c8f8-4acf-9fbe-57c12f840d00.png'
-      }
-    ]
-  ],
+  head: [['link', {rel: 'icon', href: '/favicon.ico'}]],
   plugins: [
     sitemapPlugin({
       hostname: 'https://www.atri.ml'
     }),
     shikiPlugin({
       theme: 'github-dark'
+    }),
+    googleAnalyticsPlugin({
+      id: 'G-770W6J0TQD'
     })
   ]
 })
