@@ -38,5 +38,6 @@ jobs:
         path: dist
     - name: Deploy to GitHub Pages
       uses: crazy-max/ghaction-github-pages@v3.1.0
+      with:
         target_branch: gh-pages
         build_dir: dist
