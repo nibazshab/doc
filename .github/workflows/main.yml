@@ -12,8 +12,6 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v2.5.0
-    - name: Setup Node.js
-      uses: actions/setup-node@v3.5.1
     - name: Setup Deps
       run: |
         echo
@@ -38,8 +36,7 @@ jobs:
       with:
         name: www.atri.ml
         path: dist
-    - name: Deploy to gh-pages
-      uses: JamesIves/github-pages-deploy-action@v4.4.1
-      with:
-        branch: gh-pages
-        folder: dist
+    - name: Deploy to GitHub Pages
+      uses: crazy-max/ghaction-github-pages@v3.1.0
+        target_branch: gh-pages
+        build_dir: dist
