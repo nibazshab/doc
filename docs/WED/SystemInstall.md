@@ -2,15 +2,17 @@
 
 <br>
 
-腾讯云服务器并不能直接安装 Arch Linux，但由于 Linux 操作系统一切皆文件的特性，可以使用一个特殊的方法，先在官方镜像中安装 Debian GNU/Linux 操作系统，然后整个替换为 Arch Linux
+腾讯云服务器并不能直接安装 Arch Linux，但由于 Linux 操作系统一切皆文件的特性，这里使用一个特殊的方法，先在官方镜像中安装 Debian GNU/Linux 操作系统，然后整个替换为 Arch Linux
+
+参考 [官方替换指南](https://wiki.archlinux.org/title/Install_Arch_Linux_from_existing_Linux)
 
 ## 1. 下载 ISO 镜像文件
 
-鉴于腾讯软件源里的 Arch 镜像许久未曾更新，这里从北外镜像站下载镜像文件，或者从任意一个更新及时的站点下载都可，直接用服务器下载，免去了下载到本地再上传的麻烦
+鉴于腾讯软件源里的 Arch 镜像许久未曾更新，这里从网易镜像站下载镜像文件，直接用服务器下载，免去了下载到本地再上传的麻烦
 
 ```shell
 > cd /
-> wget -O arch.iso https://mirrors.bfsu.edu.cn/archlinux/iso/latest/archlinux-x86_64.iso
+> wget -O arch.iso http://mirrors.163.com/archlinux/iso/latest/archlinux-x86_64.iso
 ```
 
 ## 2. 修改 Grub 引导项
@@ -120,7 +122,7 @@ menuentry 'Arch LiveCD' {
 > grub-mkconfig -o /boot/grub/grub.cfg
 
 # systemd-networkd 网络配置
-> nano /etc/systemd/network/10-eth0.network
+> nano /etc/systemd/network/20-wired.network
 
 [Match]
 Name=ens5

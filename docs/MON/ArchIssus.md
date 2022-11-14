@@ -13,7 +13,7 @@
 * logomenu
 * user-theme
 
-主题配置文件 gnome-shell.css 中的 #panel 模块中的 `background-color` 的值修改为 `rgba(0,0,0,0.5)` 可以使面板透明，修改主题的方法见 [GDM](https://wiki.archlinux.org/title/GDM)
+主题配置文件 gnome-shell.css 中的 #panel 模块中的 `background-color` 的值修改为 `rgba(0,0,0,0.8)` 可以使面板透明，修改主题的方法见 [GDM](https://wiki.archlinux.org/title/GDM)
 
 ## 开启内核级显示模式设置
 
