@@ -48,7 +48,13 @@ menuentry 'Arch LiveCD' {
 > ssh root@<ip>
 ```
 
-## 5. 硬盘
+## 5. 关闭 reflcetor
+
+```shell
+> systemctl stop reflector
+```
+
+## 6. 硬盘
 
 ```shell
 # 格式化硬盘
@@ -58,7 +64,7 @@ menuentry 'Arch LiveCD' {
 > mount /dev/vda1 /mnt
 ```
 
-## 6. 安装 Arch Linux
+## 7. 安装 Arch Linux
 
 ```shell
 # 配置腾讯云内网软件源
