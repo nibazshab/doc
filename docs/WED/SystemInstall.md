@@ -11,8 +11,7 @@
 鉴于腾讯软件源里的 Arch 镜像许久未曾更新，这里从网易镜像站下载镜像文件，直接用服务器下载，免去了下载到本地再上传的麻烦
 
 ```shell
-> cd /
-> wget -O arch.iso http://mirrors.163.com/archlinux/iso/latest/archlinux-x86_64.iso
+> wget -O /arch.iso http://mirrors.163.com/archlinux/iso/latest/archlinux-x86_64.iso
 ```
 
 ## 2. 修改 Grub 引导项
