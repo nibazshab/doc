@@ -45,35 +45,25 @@ menuentry 'Arch LiveCD' {
 # 设置密码
 > passwd
 
-# 开启 ssh 服务
-> systemctl start sshd
-
 # 连接服务器
 > ssh root@<ip>
 ```
 
-## 5. 挂载硬盘
+## 5. 硬盘
 
 ```shell
-# 重设硬盘读写权限
-> mount -o rw,remount /dev/vda1
+# 格式化硬盘
+> mkfs.ext4 /dev/vda1
 
-# 挂载 /mnt 目录
+# 挂载硬盘到 /mnt 目录
 > mount /dev/vda1 /mnt
 ```
 
-## 7. 删除原有系统
-
-```shell
-> cd /mnt
-> rm -rf *
-```
-
-## 8. 安装 Arch Linux
+## 6. 安装 Arch Linux
 
 ```shell
 # 配置腾讯云内网软件源
-> echo 'Server = https://mirrors.bfsu.edu.cn/archlinux/$repo/os/$arch' > /etc/pacman.d/mirrorlist
+> echo 'Server = http://mirrors.tencentyun.com/archlinux/$repo/os/$arch' > /etc/pacman.d/mirrorlist
 
 # 安装基本系统
 > pacstrap /mnt base linux-lts

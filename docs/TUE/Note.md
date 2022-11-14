@@ -2,6 +2,10 @@
 
 <br>
 
+::: details ssh 密钥权限
+对 .ssh 目录设置 700 权限，对 id_rsa 文件设置 600 权限
+:::
+
 ::: details nginx 配置伪静态
 在配置文件的 `server` 模块中的 `location / {}` 模块内，添加 `try_files $uri $uri/ /index.php?$args;`
 :::
