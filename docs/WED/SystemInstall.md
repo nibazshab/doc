@@ -93,12 +93,12 @@ menuentry 'Arch LiveCD' {
 > echo 'LANG=C.UTF-8' > /etc/locale.conf
 
 # 设置主机名
-> echo 'server' > /etc/hostname
+> echo 'osx' > /etc/hostname
 
 # 配置 hosts
 > echo '127.0.0.1 localhost' >> /etc/hosts
 > echo '::1 localhost' >> /etc/hosts
-> echo '127.0.1.1 server.localdomain server' >> /etc/hosts
+> echo '127.0.1.1 osx.localdomain osx' >> /etc/hosts
 
 # 配置 DNS 解析
 > echo 'nameserver 183.60.83.19' >> /etc/resolv.conf
