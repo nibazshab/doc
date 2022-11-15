@@ -2,7 +2,7 @@
 
 <br>
 
-腾讯云服务器并不能直接安装 Arch Linux，但由于 Linux 操作系统一切皆文件的特性，这里使用一个特殊的方法，先在官方镜像中安装 Debian GNU/Linux 操作系统，然后整个替换为 Arch Linux
+腾讯云服务器并不能直接安装 Arch Linux，但由于腾讯云提供 VNC 服务，因此可以通过 Grub 引导 Arch Linux ISO 镜像来安装 Arch Linux 系统
 
 参考 [官方替换指南](https://wiki.archlinux.org/title/Install_Arch_Linux_from_existing_Linux)
 
