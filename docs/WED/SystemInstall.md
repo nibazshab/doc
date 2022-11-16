@@ -67,7 +67,7 @@ menuentry 'Arch LiveCD' {
 ## 7. 安装 Arch Linux
 
 ```shell
-# 配置腾讯云内网软件源
+# 配置腾讯内网软件源
 > echo 'Server = http://mirrors.tencentyun.com/archlinux/$repo/os/$arch' > /etc/pacman.d/mirrorlist
 
 # 安装基本系统
