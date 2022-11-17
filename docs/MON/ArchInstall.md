@@ -409,10 +409,10 @@ Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch
 在 `/etc/environment` 文件中添加以下环境变量
 
 ```ini
-XMODIFIERS=@im=fcitx5
-GTK_IM_MODULE=fcitx5
-QT_IM_MODULE=fcitx5
-SDL_IM_MODULE=fcitx5
+XMODIFIERS=@im=fcitx
+GTK_IM_MODULE=fcitx
+QT_IM_MODULE=fcitx
+SDL_IM_MODULE=fcitx
 ```
 
 输入 `fcitx5-configtool` 打开输入法设置，可以自定义的内容很多，也可使用默认配置
