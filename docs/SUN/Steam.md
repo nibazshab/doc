@@ -6,7 +6,7 @@
 
 [Steam](https://store.steampowered.com) 是 Valve 公司推出的著名游戏分发平台，对于 Linux 平台，Steam 官方只提供对 Ubuntu LTS 版本的支持
 
-Value 公司发行的 Steam Deck 掌机使用基于 Arch Linux 所开发的 SteamOS 3.0 系统
+Value 公司发行的 Steam Deck 掌机使用基于 Arch Linux 所开发的 SteamOS 3 系统
 
 ## 安装
 
@@ -29,6 +29,14 @@ Value 公司发行的 Steam Deck 掌机使用基于 Arch Linux 所开发的 Stea
 ```
 
 启动使用 Flakpak 安装的 steam 可能会发出警告有关安装 `steam-devices` 软件包的信息，此包暂不存在，可通过安装 Aur 的 `game-devices-udev` 来解决
+
+## 运行非 steam 平台 exe 游戏
+
+1. 点击 Steam 左下角 __添加游戏__
+2. 点击 __添加非 Steam 游戏__
+3. 选择游戏的 exe 文件
+4. 点击 __添加选定的程序__
+5. 在 __属性 - 兼容性__ 中勾选 __强制使用特定 Steam Play 兼容性工具__
 
 ## Bottles 集成
 
