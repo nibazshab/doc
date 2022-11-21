@@ -38,15 +38,20 @@ Value 公司发行的 Steam Deck 掌机使用基于 Arch Linux 所开发的 Stea
 4. 点击 __添加选定的程序__
 5. 在 __属性 - 兼容性__ 中勾选 __强制使用特定 Steam Play 兼容性工具__
 
+## 开启 Steam Deck UI
+
+1. 打开 Steam 安装目录，找到 package 文件夹
+2. 进入 package 目录，创建一个名为 beta 的文件
+3. 在 beta 文件中写入 `steampal_stable_9a24a2bf68596b860cb6710d9ea307a76c29a04d`，保存退出
+4. 在 Steam 的启动指令后面添加 `-gamepadui` 参数
+
 ## Bottles 集成
 
-如果使用 Flatpak 安装了 Bottles，你可以在 Steam 中使用它来运行 Windows 游戏
+如果使用 Flatpak 安装了 Bottles，你可以在 Steam 中使用它来运行 Windows 游戏，[参阅](https://docs.usebottles.com/flatpak/cant-enable-steam-proton-manager)
 
 ```shell
 > flatpak override --user com.usebottles.bottles --filesystem=~/.var/app/com.valvesoftware.Steam/data/Steam
 ```
-
-[参阅](https://docs.usebottles.com/flatpak/cant-enable-steam-proton-manager)
 
 ## 亚洲字体乱码
 
