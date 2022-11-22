@@ -66,6 +66,7 @@ wps-office|WPS|wps-office-mui-zh-cn|WPS 中文语言包
 aria2|下载工具|v2ray|代理
 v2raya|代理客户端|game-devices-udev|游戏手柄驱动
 sigil|EPUB 编辑器|tree|目录树
+jpegoptim|jpeg压缩工具|optipng|png压缩工具
 
 
 名称|介绍|名称|介绍
