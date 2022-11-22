@@ -8,14 +8,13 @@
 
 ## 配置文件
 
-::: details 这是一份参考，点击查看详情
-请根据个人需要进行更改，此处已关闭使用 ipv6
+::: details 这是一份参考，已禁用 ipv6，请根据个人需要进行修改
 ```ini
 enable-rpc=true
 rpc-allow-origin-all=true
 rpc-listen-all=true
 rpc-listen-port=6800
-rpc-secret=passwd
+rpc-secret=password
 rpc-max-request-size=10M
 #rpc-secure=false
 #rpc-certificate=
