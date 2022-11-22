@@ -2,6 +2,10 @@
 
 <br>
 
+::: details 批量压缩 jpeg 图片
+`find -name '*.jpg' | xargs jpegoptim --strip-all --all-progressive -o -f --max=50%`
+:::
+
 ::: details ffmpeg 快速转换
 `ffmpeg -i input.avi -c:v copy -c:a copy output.mp4`
 :::
