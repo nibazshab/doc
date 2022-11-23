@@ -2,15 +2,11 @@
 
 <br>
 
-::: details ssh 密钥权限
-对 .ssh 目录设置 700 权限，对 id_rsa 文件设置 600 权限
-:::
-
 ::: details nginx 配置伪静态
 在配置文件的 `server` 模块中的 `location / {}` 模块内，添加 `try_files $uri $uri/ /index.php?$args;`
 :::
 
-::: details typecho 上传目录无法写入，请手动将安装目录下的 usr/uploads 目录的权限设置为可写然后继续升级
+::: details typecho 上传目录无法写入，将安装目录下的 usr/uploads 目录的权限设置为可写
 检查 php-fpm 和 nginx 用户是否一致，把 `php-fpm.service` 的 `ProtectSystem=full` 行注释掉
 :::
 

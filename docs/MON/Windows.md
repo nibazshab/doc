@@ -14,6 +14,6 @@
 
 将硬件时间视为 UTC 时间：`Reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsUniversal /t REG_DWORD /d 1`
 
-:::  details 测试
+::: details 测试
 [[toc]]
 :::

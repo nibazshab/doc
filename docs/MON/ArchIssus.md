@@ -6,24 +6,26 @@
 
 ## Gnome Desktop Extension
 
-* appindicatorsupport
-* dash-to-dock
-* drive-menu
-* just-perfection-desktop
-* logomenu
-* user-theme
+扩展|介绍
+-|-
+appindicatorsupport|任务栏应用托盘
+dash-to-dock|DOCK 栏
+drive-menu|在任务栏提供一个快捷卸载外接设备的图标
+just-perfection-desktop|修改界面样式
+logomenu|更改左上角活动菜单图标
+user-theme|主题
 
-主题配置文件 gnome-shell.css 中的 #panel 模块中的 `background-color` 的值修改为 `rgba(0,0,0,0.8)` 可以使面板透明，修改主题的方法见 [GDM](https://wiki.archlinux.org/title/GDM)
+将主题配置文件 gnome-shell.css 中 #panel 模块里的 `background-color` 的值修改为 `rgba(0,0,0,0.6)` 可以使面板透明，具体的方法见 [GDM](https://wiki.archlinux.org/title/GDM)
 
 ## 开启内核级显示模式设置
 
-KMS 通常是在 initramfs stage 之后开始初始化，但是你也可以在 initramfs 的阶段启用
+KMS 通常是在 initramfs stage 之后开始初始化，但是也可以在 initramfs 的阶段启用
 
-将视频驱动模块加入 `/etc/mkinitcpio.conf` 的 MODULES=()，使用 `sudo mkinitcpio -P` 命令重新生成内核
+将视频驱动模块加入 `/etc/mkinitcpio.conf` 的 MODULES= 里，使用 `mkinitcpio -P` 命令重新生成内核
 
 * AMD GPU 加入 `amdgpu`，老的 ATI 驱动加入 `radeon`
 * Intel GPU 加入 `i915`
-* 对于 nvidia 驱动的 `nvidia nvidia_modeset nvidia_uvm nvidia_drm`，详见 [NVIDIA#DRM kernel mode setting](https://wiki.archlinux.org/title/NVIDIA#DRM_kernel_mode_setting)
+* 对于 NVIDIA 驱动的 `nvidia nvidia_modeset nvidia_uvm nvidia_drm`，详见 [NVIDIA#DRM kernel mode setting](https://wiki.archlinux.org/title/NVIDIA#DRM_kernel_mode_setting)
 
 为了避免更新 NVIDIA 驱动之后忘了更新 initramfs，建议使用 Pacman Hooks 自动生成新内核，将以下内容添加到 `/etc/pacman.d/hooks/nvidia.hook`
 
@@ -50,15 +52,15 @@ Exec=/bin/sh -c 'while read -r trg; do case $trg in linux) exit 0; esac; done; /
 
 创建一个符号链接来强制使用 wayland 运行桌面环境
 
-`sudo ln -s /dev/null /etc/udev/rules.d/61-gdm.rules`
+`ln -s /dev/null /etc/udev/rules.d/61-gdm.rules`
 
 [参阅](https://wiki.archlinux.org/title/GDM#Wayland_and_the_proprietary_NVIDIA_driver)
 
 ## 桌面环境挂起后无法唤醒
 
-使用 intel cpu 并为触摸板加载了 intel_lpss_pci 模块的电脑，在休眠/睡眠后可能会出现黑屏、无法唤醒的情况
+使用 Intel CPU 并为触摸板加载了 intel_lpss_pci 模块的电脑，在休眠/睡眠后可能会出现黑屏、无法唤醒的情况
 
-编辑 `/etc/mkinitcpio.conf` 文件，将 `intel_lpss_pci` 添加到 MODULES=() 里，使用 `sudo mkinitcpio -P` 命令重新生成内核即可修复无法唤醒的问题
+将 `intel_lpss_pci` 添加到 `/etc/mkinitcpio.conf` 的 MODULES= 里，使用 `mkinitcpio -P` 命令重新生成内核
 
 ## Possibly missing firmware for module XXXX
 
@@ -73,7 +75,8 @@ Exec=/bin/sh -c 'while read -r trg; do case $trg in linux) exit 0; esac; done; /
 
 如果在生成默认 initramfs 镜像时出现这些或类似的消息，则如警告所述，可能需要安装其他固件。大多数常见的固件文件可以通过安装 `linux-firmware` 来获取。对于其他的固件软件包，可以尝试在软件包仓库中搜索固件模块的名字获取。聚合包 `mkinitcpio-firmware` 包括绝大部分的固件，或者手动安装所需的固件包
 
-常见模块名|固件包名
+::: details 常见模块与对应固件包
+模块名|固件包名
 -|-
 aic94xx|aic94xx-firmware
 bfa|linux-firmware-qlogic
@@ -86,16 +89,8 @@ qla1280|linux-firmware-qlogic
 qla2xxx|linux-firmware-qlogic
 wd719x|wd719x-firmware
 xhci_pci|upd72020x-fw
-
-此外，如果消息仅在生成 fallback initramfs 镜像时出现，则
-
-* 如果没有使用受影响的硬件，则可以安全地忽略这些警告
-* 想去掉警告，又不想浪费磁盘空间在不需要的固件包上，可以禁止 fallback 镜像的生成
-
-在 `/etc/mkinitcpio.d/` 目录下的所有 preset 文件中，将 `PRESETS=('default' 'fallback')` 修改为 `PRESETS=('default')`，移除 fallback 镜像 `rm /boot/*-fallback.img`，并重新生成系统引导
-
-::: danger 警告
-如果默认镜像启动失败，禁止 fallback 镜像生成将会失去进入系统的另一个选项。进行此操作前，请确保有一个可用于救援的可引导安装介质
 :::
+
+如果消息仅在生成 fallback initramfs 镜像时出现，可以禁止 fallback 镜像的生成，在 `/etc/mkinitcpio.d/` 目录下的 linux.preset 文件中，将 PRESETS= 里的 fallback 移除，并重新生成系统引导
 
 [参阅](https://wiki.archlinux.org/title/Mkinitcpio#Possibly_missing_firmware_for_module_XXXX)
