@@ -23,12 +23,12 @@ jobs:
         yarn add -D @vuepress/plugin-shiki@next
         yarn add -D @vuepress/plugin-google-analytics@next
     - name: Build with VuePress
-      run: yarn docs:build
+      run: yarn doc:build
     - name: Upload Artifact
       uses: actions/upload-artifact@v3
       with:
         name: www.atri.ml
-        path: docs/.vuepress/dist
+        path: doc/.vuepress/dist
 
   deploy:
     needs: build

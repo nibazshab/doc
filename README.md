@@ -12,7 +12,7 @@
 本仓库分支包含以下内容：
 
 * `.github/workflows` 用于 GitHub Actions 的配置文件
-* `docs` 存放 VuePress 2 资源的目录
+* `doc` 存放 VuePress 2 资源的目录
 * `.gitignore` 用于 Git 忽略的文件
 * `LICENSE` 本仓库使用的许可证
 * `README.md` 本仓库的说明文件
