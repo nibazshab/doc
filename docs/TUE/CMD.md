@@ -2,15 +2,6 @@
 
 <br>
 
-
-
-
-
-
-
-
-
-
 ::: details 批量压缩 jpeg 图片
 `find -name '*.jpg' | xargs jpegoptim --strip-all --all-progressive -o -f --max=50%`
 :::

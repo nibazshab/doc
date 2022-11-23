@@ -2,7 +2,7 @@
 
 <br>
 
-此处将记录一些在安装/使用过程中遇到的问题和一些有助于提高体验的东西。内容收集自网络和 Arch Wiki，皆由本人测试可用，但无法保证适用于所有人
+此处将记录一些在安装 / 使用过程中遇到的问题和一些有助于提高体验的东西。内容收集自网络和 Arch Wiki，皆由本人测试可用，但无法保证适用于所有人
 
 ## Gnome Desktop Extension
 
@@ -48,7 +48,7 @@ Exec=/bin/sh -c 'while read -r trg; do case $trg in linux) exit 0; esac; done; /
 
 [参阅](https://wiki.archlinux.org/title/Kernel_mode_setting#Early_KMS_start)
 
-## Gnome 以 x11 运行在 nvidia 显卡中
+## Gnome 以 x11 运行在 NVIDIA GPU
 
 创建一个符号链接来强制使用 wayland 运行桌面环境
 
@@ -70,13 +70,11 @@ Exec=/bin/sh -c 'while read -r trg; do case $trg in linux) exit 0; esac; done; /
 ==> WARNING: Possibly missing firmware for module: xhci_pci
 ==> WARNING: Possibly missing firmware for module: aic94xx
 ==> WARNING: Possibly missing firmware for module: bfa
-==> WARNING: Possibly missing firmware for module: qed
 ```
 
 如果在生成默认 initramfs 镜像时出现这些或类似的消息，则如警告所述，可能需要安装其他固件。大多数常见的固件文件可以通过安装 `linux-firmware` 来获取。对于其他的固件软件包，可以尝试在软件包仓库中搜索固件模块的名字获取。聚合包 `mkinitcpio-firmware` 包括绝大部分的固件，或者手动安装所需的固件包
 
-::: details 常见模块与对应固件包
-模块名|固件包名
+常见模块|固件包名
 -|-
 aic94xx|aic94xx-firmware
 bfa|linux-firmware-qlogic
@@ -89,8 +87,7 @@ qla1280|linux-firmware-qlogic
 qla2xxx|linux-firmware-qlogic
 wd719x|wd719x-firmware
 xhci_pci|upd72020x-fw
-:::
 
-如果消息仅在生成 fallback initramfs 镜像时出现，可以禁止 fallback 镜像的生成，在 `/etc/mkinitcpio.d/` 目录下的 linux.preset 文件中，将 PRESETS= 里的 fallback 移除，并重新生成系统引导
+如果消息仅在生成 fallback initramfs 镜像时出现，可以禁止 fallback 镜像的生成，在 `/etc/mkinitcpio.d` 目录下的 linux.preset 文件中，将 PRESETS= 里的 fallback 移除，并重新生成系统引导
 
 [参阅](https://wiki.archlinux.org/title/Mkinitcpio#Possibly_missing_firmware_for_module_XXXX)
