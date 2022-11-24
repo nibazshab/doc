@@ -22,9 +22,9 @@ export default defineUserConfig({
         ],
       },
       {
-        text: 'Server',
+        text: 'Virtual Private Server',
         children: [
-          '/WED/SystemInstall.md',
+          '/WED/VpsSysteml.md',
         ],
       },
       {

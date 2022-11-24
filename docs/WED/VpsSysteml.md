@@ -100,11 +100,6 @@ menuentry 'Arch LiveCD' {
 # 设置主机名
 > echo 'osx' > /etc/hostname
 
-# 配置 hosts
-> echo '127.0.0.1 localhost' >> /etc/hosts
-> echo '::1 localhost' >> /etc/hosts
-> echo '127.0.1.1 osx.localdomain osx' >> /etc/hosts
-
 # 配置 DNS 解析
 > echo 'nameserver 183.60.83.19' >> /etc/resolv.conf
 > echo 'nameserver 183.60.82.98' >> /etc/resolv.conf
