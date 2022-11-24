@@ -8,7 +8,7 @@
 
 ## 1. 下载 ISO 镜像文件
 
-鉴于腾讯软件源里的 Arch 镜像许久未曾更新，这里从网易镜像站下载镜像文件，直接用服务器下载，免去了下载到本地再上传的麻烦
+鉴于腾讯软件源里的 Arch 镜像许久未曾更新，这里从网易镜像站下载
 
 ```shell
 > wget -O /arch.iso http://mirrors.163.com/archlinux/iso/latest/archlinux-x86_64.iso
@@ -79,17 +79,17 @@ menuentry 'Arch LiveCD' {
 # 进入新系统
 > arch-chroot /mnt
 
-# 安装基本软件
-> pacman -S openssh nano grub intel-ucode
+# 安装基本软件包
+> pacman -S openssh grub nano intel-ucode
 
-# 设置时区
+# 设置上海时区
 > ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 
-# 同步时间
+# 同步硬件时间
 > hwclock --systohc
 
 # 设置本地化语言
-> echo 'zh_CN.UTF-8 UTF-8' >> /etc/locale.gen
+> echo 'zh_CN.UTF-8 UTF-8' > /etc/locale.gen
 
 # 生成 locale
 > locale-gen
@@ -98,11 +98,10 @@ menuentry 'Arch LiveCD' {
 > echo 'LANG=C.UTF-8' > /etc/locale.conf
 
 # 设置主机名
-> echo 'osx' > /etc/hostname
+> echo 'os' > /etc/hostname
 
-# 配置 DNS 解析
-> echo 'nameserver 183.60.83.19' >> /etc/resolv.conf
-> echo 'nameserver 183.60.82.98' >> /etc/resolv.conf
+# 配置 DNS 解析主机
+> echo 'nameserver 183.60.82.98' > /etc/resolv.conf
 
 # 设置 root 密码
 > passwd
@@ -111,7 +110,7 @@ menuentry 'Arch LiveCD' {
 > grub-install --target=i386-pc /dev/vda
 > grub-mkconfig -o /boot/grub/grub.cfg
 
-# systemd-networkd 网络配置
+# 网络配置
 > nano /etc/systemd/network/20-wired.network
 
 [Match]
@@ -120,8 +119,7 @@ Name=ens5
 DHCP=ipv4
 
 # 开启相关服务
-> systemctl enable sshd
-> systemctl enable systemd-networkd
+> systemctl enable sshd systemd-networkd
 
 # 退出，重启
 > exit
