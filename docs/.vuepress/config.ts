@@ -12,7 +12,7 @@ export default defineUserConfig({
         children: ['/'],
       },
       {
-        text: '奇怪的工具',
+        text: '奇怪的东西',
         children: [
           '/SUN/Aria2.md',
           '/SUN/VisualStudioCode.md',
