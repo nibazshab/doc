@@ -64,9 +64,9 @@ dht-listen-port=6881
 enable-dht=true
 enable-dht6=false
 #bt-external-ip=
-dht-file-path=${HOME}/.config/aria2/dht.dat
+#dht-file-path=${HOME}/.config/aria2/dht.dat
 #dht-file-path6=${HOME}/.config/aria2/dht6.dat
-dht-entry-point=dht.transmissionbt.com:6881
+#dht-entry-point=dht.transmissionbt.com:6881
 #dht-entry-point6=dht.transmissionbt.com:6881
 bt-enable-lpd=true
 enable-peer-exchange=true
@@ -90,7 +90,7 @@ bt-remove-unselected-file=true
 bt-force-encryption=true
 bt-detach-seed-only=true
 
-user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.5112.81 Safari/537.36
+user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36
 peer-agent=Deluge 1.3.15
 peer-id-prefix=-DE13F0-
 
@@ -152,10 +152,10 @@ WantedBy=multi-user.target
 
 请前往 [Github Release](https://github.com/aria2/aria2/releases) 下载压缩包
 
-创建 `C:\Program Files\aria2` 目录，将压缩包解压后得到的 aria2c.exe 文件拷贝到该目录下，并在该目录下手动创建 aria2.conf、aria2.session、dht.dat、aira2.vbs 文件，其中 aria2.conf 的内容可参考上文的配置文件，aira2.vbs 的内容如下
+创建 `C:\aria2` 目录，将压缩包解压后得到的 aria2c.exe 文件拷贝到该目录下，并在该目录下手动创建 aria2.conf、aria2.session、dht.dat、aira2.vbs 文件，其中 aria2.conf 的内容可参考上文的配置文件，aira2.vbs 的内容如下
 
 ```powershell
-CreateObject("WScript.Shell").Run "C:\Program Files\aria2c.exe --conf-path=C:\Program Files\aria2.conf -D",0
+CreateObject("WScript.Shell").Run "C:\aria2\aria2c.exe --conf-path=C:\aria2\aria2.conf -D",0
 ```
 
 为 aira2.vbs 创建快捷方式，双击快捷方式即可启动，移动快捷方式到 `C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp` 目录下即可实现开机自启

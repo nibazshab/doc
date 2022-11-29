@@ -14,6 +14,10 @@
 
 将硬件时间视为 UTC 时间：`Reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsUniversal /t REG_DWORD /d 1`
 
+## Win+Shift+S 截图保存路径
+
+`C:\Users\93610\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\TempState\ScreenClip`
+
 ::: details 测试
 [[toc]]
 :::
