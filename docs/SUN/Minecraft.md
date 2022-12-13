@@ -22,23 +22,23 @@
 
 以下是一些常见指令，更多信息请查看 [Minecraft Multiverse-Core 插件百科](https://mineplugin.org/Multiverse-Core)
 
-* /mv help - 查看帮助列表传送去别的世界
-* /mv list - 查看已有世界列表
-* /mv info - 查看当前世界信息
-* /mv tp 世界名 - 传送到指定世界
-* /mv tp 玩家名 世界名 - 将某玩家传送到指定世界
-* /mv spawn - 回到出生点
-* /mv setspawn - 设置本世界出生点
-* /mv create 世界名 世界类型 -s 世界种子 - 创造一个新世界
-  * /mv create 世界名 normal - 普通
-  * /mv create 世界名 normal -t flat - 超平坦
-  * /mv create 世界名 normal -t largebiomes - 大型生物群落
-  * /mv create 世界名 nether - 创建地狱世界
-  * /mv create 世界名 end - 创建末地世界
-* /mv unload 世界名 - 卸载一个世界，不删除配置信息
-* /mv remove 世界名 - 卸载一个世界，删除配置信息
-* /mv delete 世界名 - 删除一个世界，并删除世界的文件夹
-* /mv import 世界名 世界类型 - 导入一个世界
+* `/mv help` 查看帮助列表传送去别的世界
+* `/mv list` 查看已有世界列表
+* `/mv info` 查看当前世界信息
+* `/mv tp 世界名` 传送到指定世界
+* `/mv tp 玩家名 世界名` 将某玩家传送到指定世界
+* `/mv spawn` 回到出生点
+* `/mv setspawn` 设置本世界出生点
+* `/mv create 世界名 世界类型 -s 世界种子` 创造一个新世界
+  * `/mv create 世界名 normal` 普通
+  * `/mv create 世界名 normal -t flat` 超平坦
+  * `/mv create 世界名 normal -t largebiomes` 大型生物群落
+  * `/mv create 世界名 nether` 创建地狱世界
+  * `/mv create 世界名 end` 创建末地世界
+* `/mv unload 世界名` 卸载一个世界，不删除配置信息
+* `/mv remove 世界名` 卸载一个世界，删除配置信息
+* `/mv delete 世界名` 删除一个世界，并删除世界的文件夹
+* `/mv import 世界名 世界类型` 导入一个世界
 
 ### 权限管理插件
 

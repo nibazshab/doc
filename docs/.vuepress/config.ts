@@ -12,7 +12,7 @@ export default defineUserConfig({
         children: ['/'],
       },
       {
-        text: '奇怪的东西',
+        text: '难以名状的',
         children: [
           '/SUN/Aria2.md',
           '/SUN/VisualStudioCode.md',
@@ -22,16 +22,11 @@ export default defineUserConfig({
         ],
       },
       {
-        text: 'Virtual Private Server',
-        children: [
-          '/WED/VpsSysteml.md',
-        ],
-      },
-      {
         text: 'Arch Linux',
         children: [
           '/MON/ArchInstall.md',
           '/MON/ArchPackage.md',
+          '/MON/VpsSysteml.md',
           '/MON/ArchIssus.md',
         ],
       },
@@ -42,7 +37,7 @@ export default defineUserConfig({
         ],
       },
       {
-        text: '热芝士',
+        text: '热的芝士',
         children: [
           '/TUE/CMD.md',
           '/TUE/Note.md',

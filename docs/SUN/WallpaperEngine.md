@@ -19,4 +19,4 @@
 * `WorkshopItemsInstalled` 当前电脑上已安装的内容
 * `WorkshopItemDetails` 已订阅的内容
 
-在电脑上登陆过别的 Steam 账号之后，Steam 会自动将该账号的 Wallpaper 所订阅的创意工坊的内容添加到 WorkshopItemDetails 中，导致两者的内容不匹配，因此只需要把 WorkshopItemsInstalled 的内容替换掉 WorkshopItemDetails 的即可
+在电脑上登陆过别的 Steam 账号之后，Steam 会自动将该账号的 Wallpaper 所订阅的创意工坊的内容添加到 WorkshopItemDetails 中，导致两者的内容不匹配，只需把 WorkshopItemsInstalled 的内容复制替换到 WorkshopItemDetails 中即可

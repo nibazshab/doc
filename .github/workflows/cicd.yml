@@ -1,15 +1,11 @@
 name: CI/CD
-
 on:
   push:
     branches:
     - main
-
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
 jobs:
-
   build:
     runs-on: macos-latest
     steps:
@@ -29,7 +25,6 @@ jobs:
       with:
         name: www.atri.ml
         path: docs/.vuepress/dist
-
   deploy:
     needs: build
     runs-on: macos-latest
