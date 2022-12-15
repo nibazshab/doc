@@ -8,10 +8,10 @@
 
 ## 1. 下载 ISO 镜像文件
 
-鉴于腾讯软件源里的 Arch 镜像许久未曾更新，这里从网易镜像站下载
+因为是腾讯云的服务器，故直接从腾讯内网下载镜像，减少公网流量消耗
 
 ```shell
-> wget -O /arch.iso http://mirrors.163.com/archlinux/iso/latest/archlinux-x86_64.iso
+> wget -O /arch.iso http://mirrors.tencentyun.com/archlinux/iso/latest/archlinux-x86_64.iso
 ```
 
 ## 2. 修改 Grub 引导项
@@ -70,17 +70,14 @@ menuentry 'Arch LiveCD' {
 # 配置腾讯内网软件源
 > echo 'Server = http://mirrors.tencentyun.com/archlinux/$repo/os/$arch' > /etc/pacman.d/mirrorlist
 
-# 安装基本系统
-> pacstrap /mnt base linux-lts
+# 安装系统内核软件包
+> pacstrap /mnt base linux-lts intel-ucode openssh nano grub
 
 # 生成 fstab 文件
 > genfstab -U /mnt >> /mnt/etc/fstab
 
-# 进入新系统
+# 进入 chroot 系统
 > arch-chroot /mnt
-
-# 安装基本软件包
-> pacman -S openssh grub nano intel-ucode
 
 # 设置上海时区
 > ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
@@ -88,29 +85,20 @@ menuentry 'Arch LiveCD' {
 # 同步硬件时间
 > hwclock --systohc
 
-# 设置本地化语言
+# 加载语言环境
 > echo 'zh_CN.UTF-8 UTF-8' > /etc/locale.gen
-
-# 生成 locale
 > locale-gen
 
 # 设置系统语言
 > echo 'LANG=C.UTF-8' > /etc/locale.conf
 
 # 设置主机名
-> echo 'os' > /etc/hostname
-
-# 配置 DNS 解析主机
-> echo 'nameserver 183.60.82.98' > /etc/resolv.conf
+> echo 'vps' > /etc/hostname
 
 # 设置 root 密码
 > passwd
 
-# 生成 GRUB 引导
-> grub-install --target=i386-pc /dev/vda
-> grub-mkconfig -o /boot/grub/grub.cfg
-
-# 网络配置
+# 写入网络配置文件
 > nano /etc/systemd/network/20-wired.network
 
 [Match]
@@ -118,10 +106,19 @@ Name=ens5
 [Network]
 DHCP=ipv4
 
-# 开启相关服务
+# 开启 ssh 和 net 服务
 > systemctl enable sshd systemd-networkd
 
-# 退出，重启
+# 生成 GRUB 引导
+> grub-install --target=i386-pc /dev/vda
+> grub-mkconfig -o /boot/grub/grub.cfg
+
+# 退出 chroot 系统
 > exit
+
+# 配置 DNS 解析主机
+> echo 'nameserver 183.60.82.98' > /mnt/etc/resolv.conf
+
+# 重启
 > reboot
 ```
