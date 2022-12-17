@@ -82,9 +82,6 @@ menuentry 'Arch LiveCD' {
 # 设置上海时区
 > ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 
-# 同步硬件时间
-> hwclock --systohc
-
 # 加载语言环境
 > echo 'zh_CN.UTF-8 UTF-8' > /etc/locale.gen
 > locale-gen

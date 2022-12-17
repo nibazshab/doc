@@ -6,7 +6,7 @@
 
 设置 -> 高级系统设置 -> 视觉效果 -> 启用「平滑屏幕字体边缘」「显示缩略图」「显示亚透明的选择长方形」「在窗口下显示阴影」
 
-### utf-8 语言环境
+#
 
 ### qq-dreamcast
 
@@ -17,6 +17,14 @@
 ## Win+Shift+S 截图保存路径
 
 `C:\Users\93610\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\TempState\ScreenClip`
+
+## NVIDIA 控制面板闪退
+
+`C:\ProgramData\NVIDIA Corporation\Drs` 目录下，将 nvdrsdb0.bin nvdrsdb1.bin 等文件删除
+
+## UTC 硬件时间
+
+## utf-8 语言环境
 
 ::: details 测试
 [[toc]]

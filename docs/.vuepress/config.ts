@@ -25,6 +25,7 @@ export default defineUserConfig({
         text: 'Arch Linux',
         children: [
           '/MON/ArchInstall.md',
+          '/MON/ArchGUIInstall.md',
           '/MON/ArchPackage.md',
           '/MON/VpsSysteml.md',
           '/MON/ArchIssus.md',
@@ -49,7 +50,7 @@ export default defineUserConfig({
         children: ['/end.md'],
       }
     ],
-    lastUpdated: false,
+    lastUpdated: true,
     contributors: false,
     navbar: false,
     sidebarDepth: 0

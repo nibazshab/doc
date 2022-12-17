@@ -2,19 +2,19 @@
 sidebarDepth: 2
 ---
 
-# 安装记录
+# Arch Linux 安装指南 1
 
 <br>
 
 ::: warning 声明
-本文的内容是从一个空的硬盘上安装 uefi 启动的 Arch Linux 系统，如已经在硬盘上安装了其他操作系统，或使用 bios 启动，请自行判断哪些步骤需要调整
+本文需要 UEFI 启动环境，Btrfs 文件系统，完整的硬盘空间，如有差异请自行调整
 
 如有需要请参考 [官方安装指南](https://wiki.archlinux.org/title/Installation_guide)
 :::
 
 ## 准备阶段
 
-下载镜像、制作启动盘、确认启动方式等步骤略过，不做描述
+下载镜像、制作启动盘、确认 efi 启动方式等步骤略过，不做描述
 
 ## 1. 关闭 reflcetor 服务
 
@@ -26,55 +26,47 @@ sidebarDepth: 2
 
 ## 2. 连接网络
 
-### 2.1. 无线网络
+### 2.1. 有线与无线网络
 
-无线网络使用 iwctl 来进行连接，首先进入 iwd 模式，然后查看网卡的名称，输入如下指令
+正常情况下，系统会自动连接有线网络
+
+无线网络使用 iwctl 来进行连接，首先输入如下指令进入 iwd 模式，并查看无线网卡的名称
 
 ```shell
 > iwctl
 > device list
 ```
 
-这里假设网卡的名称是 wlan0，继续输入如下指令
+假设查看到的无线网卡名称是 `wlan0`，继续输入如下指令扫描无线网络
 
 ```shell
 > station wlan0 scan
 > station wlan0 get-networks
 ```
 
-这里可以看到扫描出来的所有的无线网络，中文名称的网络无法正常显示和连接，请连接一个英文名称的网络
+中文名称的网络无法正常显示和连接，请连接英文名称的网络
 
 ```shell
 > station wlan0 connect <网络名称>
 ```
 
-接着输入密码，密码回显为 * 星号，输入完成后按下回车键，随后输入 `exit` 命令退出 iwd 模式
+接着输入密码以连接，密码回显为 `*`，输入 `exit` 退出 iwd 模式
 
-### 2.2. 有线网络
+### 2.2 测试网络连接
 
-正常情况下，系统会自动连接网络
+输入 `ping -c 4 baidu.com`，测试是否成功连上网络
 
-### 2.3 测试网络连接
+## 3. 校准时间
 
-输入如下指令，如正常返回数据信息，则连接成功
-
-```shell
-> ping -c 5 www.baidu.com
-```
-
-## 3. 确定系统时间
-
-在 Linux 系统中，准确的时间是很关键的，它决定了很多东西能否正常运行
+准确的时间是至关重要的，它决定了很多东西能否正常运行，输入如下指令查看
 
 ```shell
-> timedatectl set-ntp true
+> timedatectl status
 ```
 
-输入 `timedatectl` 命令，检查时间是否正确
+## 4. 设置镜像软件源
 
-## 4. 设置国内 pacman 源
-
-输入 `vim /etc/pacman.d/mirrorlist` 编辑 pacman 源列表，将中国的源添加到最前面，推荐以下几个源，选一个即可
+输入 `vim /etc/pacman.d/mirrorlist` 编辑 pacman 软件源，将镜像软件源添加到最前面，推荐以下几个源，选一个即可
 
 ```ini
 Server = https://mirrors.bfsu.edu.cn/archlinux/$repo/os/$arch
@@ -82,26 +74,20 @@ Server = https://mirrors.ustc.edu.cn/archlinux/$repo/os/$arch
 Server = https://mirrors.tuna.tsinghua.edu.cn/archlinux/$repo/os/$arch
 ```
 
-输入 `pacman -Syyy` 同步源
+输入 `pacman -Syy` 同步
 
-## 5. 硬盘分区与格式化
+## 5. 硬盘分区格式化
 
 ### 5.1. 分区
 
-输入 lsblk 查看硬盘信息，得到以下信息
+输入 `lsblk` 查看硬盘信息，`NAME` 即为硬盘的名称
 
 ```ini
 NAME        MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS
 nvme0n1     259:0    0 953.9G  0 disk
 ```
 
-注：如果是 sata 硬盘，则显示 `sda`，nvme 硬盘则显示 `nvme0n1`
-
-输入 `cfdisk /dev/nvme0n1` 进行分区，分区页面是很简单的英文，通过 `↑`，`↓`，`←`，`→` 移动光标，`↵` 确认
-
-分一个 300m 的分区，设为 `EFI System` 类型，再分一个 Linux 系统分区，设为 `Linux filesystem` 类型，剩下的空间全部分给 Linux 系统分区，选择 `[Write]` 写入，随后退出
-
-注：可以考虑保留一些空间供 Windows 系统使用
+输入 `cfdisk /dev/nvme0n1` 对硬盘进行分区，首先分出 300M 的 efi 分区，设为 `EFI System` 类型，剩下的空间全部分给系统分区，设为 `Linux filesystem` 类型，选择 `[Write]` 写入，退出
 
 再次输入 `lsblk` 查看硬盘信息，得到以下信息
 
@@ -114,18 +100,16 @@ nvme0n1     259:0    0 953.9G  0 disk
 
 ### 5.2. 格式化
 
-输入 `mkfs.vfat -F32 /dev/nvme0n1p1` 格式化 efi 分区
+输入如下指令，格式化 efi 分区为 fat32 格式，格式化系统分区为 btrfs 格式
 
-> * `-F32` 指定分区格式化为 fat32 格式
+```shell
+mkfs.vfat -F32 /dev/nvme0n1p1
+mkfs.btrfs /dev/nvm0n1p2
+```
 
-输入 `mkfs.btrfs /dev/nvm0n1p2` 格式化 Linux 系统分区为 [btrfs 文件系统](https://zh.wikipedia.org/wiki/Btrfs)
+## 6. 子卷与挂载
 
-将 btrfs 分区挂载到 `/mnt` 目录，`mount -t btrfs -o compress=zstd /dev/nvme0n1p2 /mnt`
-
-> * `-t` 指定挂载类型
-> * `-o compress=zstd` 指定挂载参数，并开启 btrfs 透明压缩
-
-创建 3 个 btrfs 子卷，输入如下指令
+输入 `mount -t btrfs -o compress=zstd /dev/nvme0n1p2 /mnt` 将 btrfs 分区挂载到 `/mnt` 目录，输入如下指令创建 3 个 btrfs 子卷
 
 ```shell
 > btrfs subvolume create /mnt/@
@@ -133,19 +117,13 @@ nvme0n1     259:0    0 953.9G  0 disk
 > btrfs subvolume create /mnt/@swap
 ```
 
-取消 `/mnt` 的挂载，输入 `umount /mnt`
-
-## 6. 挂载
-
-首先挂载根目录
+输入 `umount /mnt` 取消 btrfs 分区的挂载，并将btrfs @ 子卷挂载为根目录
 
 ```shell
 > mount -t btrfs -o subvol=/@,compress=zstd /dev/nvme0n1p2 /mnt
 ```
 
-输入 `mkdir -p /mnt/home /mnt/swap /mnt/boot` 创建相关目录
-
-继续挂载
+输入 `mkdir -p /mnt/home /mnt/swap /mnt/boot` 创建相关目录，将 btrfs @home 子卷挂载为家目录，btrfs @swap 子卷挂载为 swap 目录，将 efi 分区挂载为 boot 目录
 
 ```shell
 > mount -t btrfs -o subvol=/@home,compress=zstd /dev/nvme0n1p2 /mnt/home
@@ -155,35 +133,30 @@ nvme0n1     259:0    0 953.9G  0 disk
 
 ## 7. 安装基本系统
 
-输入 `pacstrap /mnt base base-devel linux linux-firmware` 安装基础软件包
+输入 `pacstrap /mnt base base-devel linux linux-firmware` 安装基础环境，基础开发包，内核，固件包，输入 `pacman -S networkmanager vim` 安装网络管理工具，文本编辑器
 
-此处如果有报错，请尝试输入 `pacman -Syyy` 和 `pacman -S archlinux-keyring`，然后再次安装基础软件包
-
-输入 `genfstab -U /mnt >> /mnt/etc/fstab` 生成 fstab 文件
+此处如果报错，请尝试输入 `pacman -Syy archlinux-keyring` 修复
 
 ## 8. 配置系统
 
-进入刚刚安装的系统，`arch-chroot /mnt`
+输入 `genfstab -U /mnt >> /mnt/etc/fstab` 生成 fstab 文件，输入 `echo os > /mnt/etc/hostname` 设置主机名，此处设为 `os`
 
-安装几个需要的软件包，`pacman -S networkmanager vim`
+输入 `arch-chroot /mnt` 进入基本系统
 
-### 8.1. 创建 swapflie
+### 8.1. 交换文件支持
 
 ```shell
 > chattr +C /swap
 > truncate -s 0 /swap/swapfile
-> chattr +C /swap/swapfile
 > fallocate -l 2G /swap/swapfile
 > chmod 0600 /swap/swapfile
 > mkswap /swap/swapfile
 > swapon /swap/swapfile
 ```
 
-### 8.2. 修改 fstab
+### 8.2. 修改 fstab 文件
 
-输入 `echo /swapfile none swap defaults 0 0 >> /etc/fstab` 将 swapfile 添加到 fstab 文件中
-
-输入 `vim /etc/fstab`，将所有行的 `subvolid=xxx` 删除，并检查 `/@swap` 是否带有 `compress=zstd:3` 参数，如有请将它删除，最终该文件应大致如下所示
+输入 `vim /etc/fstab`，在最后面加上 `/swap/swapfile none swap defaults 0 0 >> /etc/fstab`，并将所有的 `subvolid=` 项删除，最终应大致如下所示
 
 ```ini
 # /dev/nvme0n1p1
@@ -201,49 +174,47 @@ UUID=979aa7ec-8842-4e22-8bfc-4c8aed3de56d    /swap    btrfs    rw,relatime,ssd,s
 /swap/swapfile                               none     swap     defaults 0 0
 ```
 
-### 8.3. 校准时间
+### 8.3. 设置上海时区
 
-输入 `ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime` 将时区设置为上海时区
+输入 `ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime` 将时区设置为上海时区，输入 `hwclock --systohc` 校准硬件时间
 
-输入 `hwclock --systohc` 校准硬件时间
+### 8.4. 设置语言环境
 
-> 如果电脑上有 Windows 系统，则可能会导致时间相差 8 小时等问题，将 Windows 设为 UTC 硬件时间即可
+输入 `sed "s/#zh_CN.UTF-8/zh_CN.UTF-8/" /etc/locale.gen`、`sed "s/#en_US.UTF-8/en_US.UTF-8/" /etc/locale.gen` 和 `locale-gen`，生成中文和英文语言环境
 
-### 8.4. 设置 locale 和 主机名
+输入 `echo LANG=en_US.UTF-8 > /etc/locale.conf` 将系统语言设置为英语（ __暂时__ 不要设为中文，会导致 tty 乱码，后续图形化配置完成后可设为中文 ）
 
-输入 `vim /etc/locale.gen`，找到 `en_US.UTF-8 UTF-8` 和 `zh_CN.UTF-8 UTF-8`，将前面的 `#` 删除，保存并退出
+## 9. 设置 root 密码
 
-输入 `locale-gen`，生成 locale
+输入 `passwd root`，随后输入 root 用户的密码，密码无回显，正常输入回车即可
 
-输入 `echo LANG=en_US.UTF-8 > /etc/locale.conf` 将系统语言设置为英语（ 此处 __暂时__ 不要设为中文，会导致 tty 乱码影响正常使用，后续配置好图形页面后可设为中文 ）
+## 10. 安装微码文件
 
-输入 `echo macos > /etc/hostname` 设置想为主机取的主机名，不要包含空格等特殊字符，此处设为 macos
+使用 Intel CPU 的用户输入 `pacman -S intel-ucode`，使用 AMD CPU 的用户输入 `pacman -S amd-ucode`
 
-在 `/etc/hosts` 文件中添加主机名和本机地址，如下所示
+## 11. 添加引导
+
+输入 `bootctl --path=/boot install` 将 systemd-boot 引导安装到 `/boot` 目录
+
+编辑 `/boot/loader/loader.conf` 文件，写入如下内容
 
 ```ini
-127.0.0.1    localhost
-::1          localhost
-127.0.1.1    macos.localdomain    macos
+timeout 5
+console-mode max
+editor no
 ```
 
-### 8.5. 为 root 用户添加密码
+输入 `blkid -s PARTUUID -o value /dev/nvme0n1p2` 查看系统分区的 PARTUUID，创建 `/boot/loader/entries/arch.conf` 文件并写入相关内容，添加以 btrfs 子卷作为根分区的引导项，最终应大致如下所示，此处获取的 PARTUUID 为 `b4e38594-773b-a845-98f6-3a72a08db6d9`
 
-输入 `passwd`，随后输入想为 root 用户设置的密码，密码无回显，正常输入回车即可
-
-## 9. 安装微码文件
-
-使用 intel cpu 的用户输入 `pacman -S intel-ucode`，使用 amd cpu 的用户输入 `pacman -S amd-ucode`
-
-## 10. systemd-boot 引导
-
-使用 bootctl 将 systemd-boot 安装到 `/boot` 目录
-
-```shell
-> bootctl --path=/boot install
+```ini
+title      Arch Linux
+linux      /vmlinuz-linux
+initrd     /intel-ucode.img
+initrd     /initramfs-linux.img
+options    root=PARTUUID=b4e38594-773b-a845-98f6-3a72a08db6d9 rw rootflags=subvol=/@
 ```
 
-创建 `/etc/pacman.d/hooks/95-systemd-boot.hook` 文件并写入如下内容，以实现随着 systemd-boot 的升级而更新引导管理器
+创建 `/etc/pacman.d/hooks/95-systemd-boot.hook` 文件并写入如下内容
 
 ```ini
 [Trigger]
@@ -257,158 +228,13 @@ When = PostTransaction
 Exec = /usr/bin/systemctl restart systemd-boot-update.service
 ```
 
-编辑 `/boot/loader/loader.conf` 文件，写入如下内容
+## 12. 结束安装
 
-```ini
-timeout 10
-console-mode max
-editor no
-```
-
-> * `timeout` 等待时间，单位为秒
-> * `console-mode` 控制台界面大小
-> * `editor` 是否启用内核参数编辑器
-
-输入 `blkid -s PARTUUID -o value /dev/nvme0n1p2` 查看系统分区的 UUID
-
-创建 `/boot/loader/entries/arch.conf` 文件并写入相关内容，添加以 btrfs 子卷作为根分区的引导项，最终应大致如下所示
-
-```ini
-title      Arch Linux
-linux      /vmlinuz-linux
-initrd     /intel-ucode.img
-initrd     /initramfs-linux.img
-options    root=PARTUUID=b4e38594-773b-a845-98f6-3a72a08db6d9 rw rootflags=subvol=/@
-```
-
-> bootctl 会为 __Windows Boot Manager__（ `\EFI\Microsoft\Boot\Bootmgfw.efi` ），__EFI Shell__（ `\shellx64.efi` ）和 __EFI Default Loader__（ `\EFI\Boot\bootx64.efi` ）增加启动选项
-> bootctl 会在 `/boot/loader/entries/*.conf` 搜索启动选项，一个文件中只能包含一个启动选项
-
-## 11. 重启
-
-输入以下指令，退回安装镜像环境，取消挂载，重启到刚刚安装好的系统，重启的时候请拔掉 u 盘，以免再次进入安装环境
+输入以下指令，启用网络服务，退回安装环境，取消挂载，重启
 
 ```shell
+> systemctl enable NetworkManager.service
 > exit
 > umount -R /mnt
 > reboot
 ```
-
-## 12. 再次连接网络
-
-输入 root 回车，再输入之前为 root 用户设置的密码，进入系统
-
-```shell
-> systemctl enable --now NetworkManager.service
-```
-
-注：有线网络会自动连接，无线网络需要手动连接
-
-输入 `nmtui` 进入网络管理页面并连接 wifi
-
-## 13. 准备普通用户
-
-输入 `useradd -m -G wheel -s /bin/bash pig` 创建普通用户 `pig`，用户名称可自定义，不要包含空格等特殊字符
-
-输入 `passwd pig`，为用户 `pig` 设置密码
-
-输入 `EDITOR=vim visudo`，找到 `#%wheel ALL=(ALL) ALL` 行，将前面的 `#` 删除，保存并退出
-
-## 14. archlinuxcn 源和 32 位支持
-
-编辑 `/etc/pacman.conf` 文件，找到 `[multilib]` 一节，将这两行前面的 `#` 删除（ 不需要 32 位库可以跳过此步骤 ），并在文件结尾处添加 archlinuxcn 源，在下列源列表中选一个即可
-
-```ini
-[archlinuxcn]
-Server = https://mirrors.bfsu.edu.cn/archlinuxcn/$arch
-Server = https://mirrors.ustc.edu.cn/archlinuxcn/$arch
-Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch
-```
-
-输入 `pacman -S archlinuxcn-keyring` 安装密钥环，再输入 `pacman -Syyy` 同步
-
-输入 `pacman -S yay` 安装 aur 助手
-
-## 15. 显卡驱动
-
-上一步骤中没有开启 multilib 仓库的，请忽视下列带有 `lib32` 字样的包
-
-### 15.1. intel 核显
-
-输入 `pacman -S vulkan-intel mesa lib32-mesa`
-
-### 15.2. nvidia 独显
-
-输入 `pacman -S nvidia nvidia-prime nvidia-settings lib32-nvidia-utils`
-
-## 16. 中文字体
-
-输入以下指令，安装中文字体
-
-```shell
-> pacman -S adobe-source-han-sans-otc-fonts adobe-source-han-serif-otc-fonts
-```
-
-创建 `/etc/fonts/conf.d/64-language-selector-prefer.conf` 文件，写入以下内容
-
-```xml
-<?xml version="1.0"?>
-<!DOCTYPE fontconfig SYSTEM "fonts.dtd">
-<fontconfig>
-  <alias>
-    <family>sans-serif</family>
-    <prefer>
-      <family>Source Han Sans SC</family>
-      <family>Source Han Sans TC</family>
-      <family>Source Han Sans HW</family>
-      <family>Source Han Sans K</family>
-    </prefer>
-  </alias>
-  <alias>
-    <family>monospace</family>
-    <prefer>
-      <family>Source Han Sans SC</family>
-      <family>Source Han Sans TC</family>
-      <family>Source Han Sans HW</family>
-      <family>Source Han Sans K</family>
-    </prefer>
-  </alias>
-</fontconfig>
-```
-
-输入 `fc-cache -fv` 刷新字体缓存
-
-## 17. 图形化环境
-
-输入以下指令，安装 Gnome 桌面环境，并删除不需要的包（ 可选 ）
-
-```shell
-> pacman -S alactirry mpv gnome
-> pacman -Rs gnome-console gnome-music gnome-maps gnome-weather gnome-photos gnome-clocks gnome-calculator gnome-calendar gnome-contacts gnome-software gnome-user-docs gnome-user-share cheese epiphany yelp simple-scan gnome-video-effects file-roller baobab totem evince sushi
-> systemctl enable --now gdm.service
-```
-
-接着用 [#13. 准备普通用户](#_13-准备普通用户) 创建的 `pig` 账号登陆
-
-## 18. 安装 Gnome 插件
-
-输入如下指令，安装高级设置、插件工具
-
-```shell
-> yay -S gnome-tweaks gtk-engine-murrine gtk-engines
-```
-
-## 19. 中文输入法
-
-输入 `yay -S fcitx5-im fcitx5-chinese-addons`，安装 fcitx5 输入法框架以及中文输入法
-
-在 `/etc/environment` 文件中添加以下环境变量
-
-```ini
-XMODIFIERS=@im=fcitx
-GTK_IM_MODULE=fcitx
-QT_IM_MODULE=fcitx
-SDL_IM_MODULE=fcitx
-```
-
-输入 `fcitx5-configtool` 打开输入法设置，可以自定义的内容很多，也可使用默认配置
