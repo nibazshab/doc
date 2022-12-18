@@ -1,4 +1,4 @@
-# 腾讯云安装 Arch Linux 系统
+# 安装指南 腾讯云服务器篇
 
 <br>
 
@@ -11,7 +11,7 @@
 因为是腾讯云的服务器，故直接从腾讯内网下载镜像，减少公网流量消耗
 
 ```shell
-> wget -O /arch.iso http://mirrors.tencentyun.com/archlinux/iso/latest/archlinux-x86_64.iso
+> wget http://mirrors.tencentyun.com/archlinux/iso/latest/archlinux-x86_64.iso -O /arch.iso
 ```
 
 ## 2. 修改 Grub 引导项
@@ -32,7 +32,7 @@ menuentry 'Arch LiveCD' {
 }
 ```
 
-## 3. 重启并启动 Arch LiveCD
+## 3. 重启并进入 Arch LiveCD
 
 打开腾讯云控制台，然后选择 VNC 登录，输入 `reboot` 重启，在引导界面选择刚才添加的 Arch LiveCD 启动项，进入 Arch LiveCD 系统
 
@@ -68,13 +68,16 @@ menuentry 'Arch LiveCD' {
 
 ```shell
 # 配置腾讯内网软件源
-> echo 'Server = http://mirrors.tencentyun.com/archlinux/$repo/os/$arch' > /etc/pacman.d/mirrorlist
+> echo Server = http://mirrors.tencentyun.com/archlinux/$repo/os/$arch > /etc/pacman.d/mirrorlist
 
 # 安装系统内核软件包
 > pacstrap /mnt base linux-lts intel-ucode openssh nano grub
 
 # 生成 fstab 文件
 > genfstab -U /mnt >> /mnt/etc/fstab
+
+# 配置 DNS 解析主机
+> echo nameserver 183.60.82.98 > /mnt/etc/resolv.conf
 
 # 进入 chroot 系统
 > arch-chroot /mnt
@@ -83,14 +86,14 @@ menuentry 'Arch LiveCD' {
 > ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 
 # 加载语言环境
-> echo 'zh_CN.UTF-8 UTF-8' > /etc/locale.gen
+> echo zh_CN.UTF-8 UTF-8 > /etc/locale.gen
 > locale-gen
 
 # 设置系统语言
-> echo 'LANG=C.UTF-8' > /etc/locale.conf
+> echo LANG=zh_CN.UTF-8 > /etc/locale.conf
 
 # 设置主机名
-> echo 'vps' > /etc/hostname
+> echo vps > /etc/hostname
 
 # 设置 root 密码
 > passwd
@@ -110,12 +113,7 @@ DHCP=ipv4
 > grub-install --target=i386-pc /dev/vda
 > grub-mkconfig -o /boot/grub/grub.cfg
 
-# 退出 chroot 系统
-> exit
-
-# 配置 DNS 解析主机
-> echo 'nameserver 183.60.82.98' > /mnt/etc/resolv.conf
-
 # 重启
+> exit
 > reboot
 ```

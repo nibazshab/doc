@@ -4,7 +4,7 @@
 
 此处将记录一些在安装 / 使用过程中遇到的问题和一些有助于提高体验的东西。内容收集自网络和 Arch Wiki，皆由本人测试可用，但无法保证适用于所有人
 
-## Gnome Desktop Extension
+## GNOME Desktop Extension
 
 扩展|介绍
 -|-
@@ -48,7 +48,7 @@ Exec=/bin/sh -c 'while read -r trg; do case $trg in linux) exit 0; esac; done; /
 
 [参阅](https://wiki.archlinux.org/title/Kernel_mode_setting#Early_KMS_start)
 
-## Gnome 以 x11 运行在 NVIDIA GPU
+## GNOME 以 x11 运行在 NVIDIA GPU
 
 创建一个符号链接来强制使用 wayland 运行桌面环境
 

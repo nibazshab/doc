@@ -50,7 +50,7 @@ export default defineUserConfig({
         children: ['/end.md'],
       }
     ],
-    lastUpdated: true,
+    lastUpdated: false,
     contributors: false,
     navbar: false,
     sidebarDepth: 0

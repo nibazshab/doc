@@ -2,12 +2,12 @@
 sidebarDepth: 2
 ---
 
-# Arch Linux 安装指南 1
+# 安装指南 基础篇
 
 <br>
 
 ::: warning 声明
-本文需要 UEFI 启动环境，Btrfs 文件系统，完整的硬盘空间，如有差异请自行调整
+本文将要使用 UEFI 启动环境、Btrfs 文件系统、完整的硬盘空间，需要掌握基本的 Linux 知识、了解 VIM 编辑器的基本使用，以及至关重要的自行搜索并解决问题的能力
 
 如有需要请参考 [官方安装指南](https://wiki.archlinux.org/title/Installation_guide)
 :::
@@ -18,7 +18,7 @@ sidebarDepth: 2
 
 ## 1. 关闭 reflcetor 服务
 
-安装镜像中默认开启的 reflector 服务会自动更新 pacman 软件源，或许它是个很好用的工具，但因为一些特殊的网络原因，它并不能带来更好的体验
+安装镜像中默认启动的 reflector 服务会自动更新 pacman 软件源，或许它是个很好用的工具，但因为一些特殊的网络原因，它并不能带来更好的体验
 
 ```shell
 > systemctl stop reflector.service
@@ -30,14 +30,14 @@ sidebarDepth: 2
 
 正常情况下，系统会自动连接有线网络
 
-无线网络使用 iwctl 来进行连接，首先输入如下指令进入 iwd 模式，并查看无线网卡的名称
+无线网络使用 iwctl 来进行连接，输入如下指令进入 iwd 模式，并查看无线网卡的名称
 
 ```shell
 > iwctl
 > device list
 ```
 
-假设查看到的无线网卡名称是 `wlan0`，继续输入如下指令扫描无线网络
+假设查看的无线网卡名称为 `wlan0`，输入如下指令扫描无线网络
 
 ```shell
 > station wlan0 scan
@@ -50,9 +50,9 @@ sidebarDepth: 2
 > station wlan0 connect <网络名称>
 ```
 
-接着输入密码以连接，密码回显为 `*`，输入 `exit` 退出 iwd 模式
+接着输入该网络密码，密码回显为 `*`，输入 `exit` 退出 iwd 模式
 
-### 2.2 测试网络连接
+### 2.2. 测试网络连接
 
 输入 `ping -c 4 baidu.com`，测试是否成功连上网络
 
@@ -66,7 +66,7 @@ sidebarDepth: 2
 
 ## 4. 设置镜像软件源
 
-输入 `vim /etc/pacman.d/mirrorlist` 编辑 pacman 软件源，将镜像软件源添加到最前面，推荐以下几个源，选一个即可
+输入 `vim /etc/pacman.d/mirrorlist` 编辑 pacman 镜像配置文件，将镜像软件源添加到最前面，推荐以下几个源，选一个即可
 
 ```ini
 Server = https://mirrors.bfsu.edu.cn/archlinux/$repo/os/$arch
@@ -76,7 +76,7 @@ Server = https://mirrors.tuna.tsinghua.edu.cn/archlinux/$repo/os/$arch
 
 输入 `pacman -Syy` 同步
 
-## 5. 硬盘分区格式化
+## 5. 硬盘分区与格式化
 
 ### 5.1. 分区
 
@@ -87,7 +87,7 @@ NAME        MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS
 nvme0n1     259:0    0 953.9G  0 disk
 ```
 
-输入 `cfdisk /dev/nvme0n1` 对硬盘进行分区，首先分出 300M 的 efi 分区，设为 `EFI System` 类型，剩下的空间全部分给系统分区，设为 `Linux filesystem` 类型，选择 `[Write]` 写入，退出
+输入 `cfdisk /dev/nvme0n1` 进入硬盘分区页面，首先分出 300M 的 efi 分区，设为 `EFI System` 类型，剩下的空间全部分给系统分区，设为 `Linux filesystem` 类型，选择 `[Write]` 保存，退出
 
 再次输入 `lsblk` 查看硬盘信息，得到以下信息
 
@@ -103,8 +103,8 @@ nvme0n1     259:0    0 953.9G  0 disk
 输入如下指令，格式化 efi 分区为 fat32 格式，格式化系统分区为 btrfs 格式
 
 ```shell
-mkfs.vfat -F32 /dev/nvme0n1p1
-mkfs.btrfs /dev/nvm0n1p2
+> mkfs.vfat -F32 /dev/nvme0n1p1
+> mkfs.btrfs /dev/nvm0n1p2
 ```
 
 ## 6. 子卷与挂载
@@ -123,7 +123,7 @@ mkfs.btrfs /dev/nvm0n1p2
 > mount -t btrfs -o subvol=/@,compress=zstd /dev/nvme0n1p2 /mnt
 ```
 
-输入 `mkdir -p /mnt/home /mnt/swap /mnt/boot` 创建相关目录，将 btrfs @home 子卷挂载为家目录，btrfs @swap 子卷挂载为 swap 目录，将 efi 分区挂载为 boot 目录
+输入 `mkdir -p /mnt/home /mnt/swap /mnt/boot` 创建 home swap boot 目录，将 btrfs @home 子卷挂载为家目录，btrfs @swap 子卷挂载为 swap 目录，将 efi 分区挂载为 boot 目录
 
 ```shell
 > mount -t btrfs -o subvol=/@home,compress=zstd /dev/nvme0n1p2 /mnt/home
@@ -133,7 +133,7 @@ mkfs.btrfs /dev/nvm0n1p2
 
 ## 7. 安装基本系统
 
-输入 `pacstrap /mnt base base-devel linux linux-firmware` 安装基础环境，基础开发包，内核，固件包，输入 `pacman -S networkmanager vim` 安装网络管理工具，文本编辑器
+输入 `pacstrap /mnt base base-devel linux linux-firmware` 安装基础环境、基础开发包、内核、固件包，输入 `pacstrap /mnt networkmanager vim` 安装网络管理工具、文本编辑器
 
 此处如果报错，请尝试输入 `pacman -Syy archlinux-keyring` 修复
 
@@ -143,7 +143,9 @@ mkfs.btrfs /dev/nvm0n1p2
 
 输入 `arch-chroot /mnt` 进入基本系统
 
-### 8.1. 交换文件支持
+### 8.1. 交换空间支持
+
+输入如下指令，创建交换文件并启用交换空间，大小设为 2G
 
 ```shell
 > chattr +C /swap
@@ -156,7 +158,7 @@ mkfs.btrfs /dev/nvm0n1p2
 
 ### 8.2. 修改 fstab 文件
 
-输入 `vim /etc/fstab`，在最后面加上 `/swap/swapfile none swap defaults 0 0 >> /etc/fstab`，并将所有的 `subvolid=` 项删除，最终应大致如下所示
+输入 `vim /etc/fstab`，在末尾加上 `/swap/swapfile none swap defaults 0 0 >> /etc/fstab`，并将所有的 `subvolid=` 项删除，最终应大致如下所示
 
 ```ini
 # /dev/nvme0n1p1
@@ -180,13 +182,13 @@ UUID=979aa7ec-8842-4e22-8bfc-4c8aed3de56d    /swap    btrfs    rw,relatime,ssd,s
 
 ### 8.4. 设置语言环境
 
-输入 `sed "s/#zh_CN.UTF-8/zh_CN.UTF-8/" /etc/locale.gen`、`sed "s/#en_US.UTF-8/en_US.UTF-8/" /etc/locale.gen` 和 `locale-gen`，生成中文和英文语言环境
+输入 `sed -i s/#zh_CN.UTF-8/zh_CN.UTF-8/ /etc/locale.gen`、`sed -i s/#en_US.UTF-8/en_US.UTF-8/ /etc/locale.gen` 和 `locale-gen`，生成中文和英文语言环境
 
-输入 `echo LANG=en_US.UTF-8 > /etc/locale.conf` 将系统语言设置为英语（ __暂时__ 不要设为中文，会导致 tty 乱码，后续图形化配置完成后可设为中文 ）
+输入 `echo LANG=en_US.UTF-8 > /etc/locale.conf` 将系统语言设置为英语，暂时不要设为中文，会导致 tty 乱码，后续图形化配置完成后可改为中文
 
-## 9. 设置 root 密码
+## 9. 设置 root 用户密码
 
-输入 `passwd root`，随后输入 root 用户的密码，密码无回显，正常输入回车即可
+输入 `passwd root` 为 root 超级用户设置密码，输入密码时无回显
 
 ## 10. 安装微码文件
 
@@ -196,7 +198,7 @@ UUID=979aa7ec-8842-4e22-8bfc-4c8aed3de56d    /swap    btrfs    rw,relatime,ssd,s
 
 输入 `bootctl --path=/boot install` 将 systemd-boot 引导安装到 `/boot` 目录
 
-编辑 `/boot/loader/loader.conf` 文件，写入如下内容
+创建 `/boot/loader/loader.conf` 文件并写入如下内容
 
 ```ini
 timeout 5
@@ -204,7 +206,7 @@ console-mode max
 editor no
 ```
 
-输入 `blkid -s PARTUUID -o value /dev/nvme0n1p2` 查看系统分区的 PARTUUID，创建 `/boot/loader/entries/arch.conf` 文件并写入相关内容，添加以 btrfs 子卷作为根分区的引导项，最终应大致如下所示，此处获取的 PARTUUID 为 `b4e38594-773b-a845-98f6-3a72a08db6d9`
+输入 `blkid -s PARTUUID -o value /dev/nvme0n1p2` 查看系统分区的 PARTUUID，假设此处获取的 PARTUUID 为 `b4e38594-773b-a845-98f6-3a72a08db6d9`，创建 `/boot/loader/entries/arch.conf` 文件并写入如下内容
 
 ```ini
 title      Arch Linux
