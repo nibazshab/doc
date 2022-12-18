@@ -182,7 +182,13 @@ UUID=979aa7ec-8842-4e22-8bfc-4c8aed3de56d    /swap    btrfs    rw,relatime,ssd,s
 
 ### 8.4. 设置语言环境
 
-输入 `sed -i s/#zh_CN.UTF-8/zh_CN.UTF-8/ /etc/locale.gen`、`sed -i s/#en_US.UTF-8/en_US.UTF-8/ /etc/locale.gen` 和 `locale-gen`，生成中文和英文语言环境
+输入如下指令，生成中文和英文语言环境
+
+```shell
+> sed -i s/#zh_CN.UTF-8/zh_CN.UTF-8/ /etc/locale.gen
+> sed -i s/#en_US.UTF-8/en_US.UTF-8/ /etc/locale.gen
+locale-gen
+```
 
 输入 `echo LANG=en_US.UTF-8 > /etc/locale.conf` 将系统语言设置为英语，暂时不要设为中文，会导致 tty 乱码，后续图形化配置完成后可改为中文
 
@@ -194,7 +200,7 @@ UUID=979aa7ec-8842-4e22-8bfc-4c8aed3de56d    /swap    btrfs    rw,relatime,ssd,s
 
 使用 Intel CPU 的用户输入 `pacman -S intel-ucode`，使用 AMD CPU 的用户输入 `pacman -S amd-ucode`
 
-## 11. 添加引导
+## 11. 添加开机引导
 
 输入 `bootctl --path=/boot install` 将 systemd-boot 引导安装到 `/boot` 目录
 
@@ -230,9 +236,9 @@ When = PostTransaction
 Exec = /usr/bin/systemctl restart systemd-boot-update.service
 ```
 
-## 12. 结束安装
+## 12. 收尾
 
-输入以下指令，启用网络服务，退回安装环境，取消挂载，重启
+输入以下指令，启用网络服务，退回安装环境，取消所有分区的挂载，重启
 
 ```shell
 > systemctl enable NetworkManager.service
