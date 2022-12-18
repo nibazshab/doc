@@ -26,9 +26,8 @@ export default defineUserConfig({
         children: [
           '/MON/ArchInstall.md',
           '/MON/ArchGUIInstall.md',
-          '/MON/ArchPackage.md',
-          '/MON/VpsSysteml.md',
           '/MON/ArchIssus.md',
+          '/MON/VpsSysteml.md',
         ],
       },
       {

@@ -187,7 +187,7 @@ UUID=979aa7ec-8842-4e22-8bfc-4c8aed3de56d    /swap    btrfs    rw,relatime,ssd,s
 ```shell
 > sed -i s/#zh_CN.UTF-8/zh_CN.UTF-8/ /etc/locale.gen
 > sed -i s/#en_US.UTF-8/en_US.UTF-8/ /etc/locale.gen
-locale-gen
+> locale-gen
 ```
 
 输入 `echo LANG=en_US.UTF-8 > /etc/locale.conf` 将系统语言设置为英语，暂时不要设为中文，会导致 tty 乱码，后续图形化配置完成后可改为中文
