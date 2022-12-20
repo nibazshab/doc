@@ -122,7 +122,7 @@ bt-tracker=
 
 Arch 系的 Linux 系统，直接使用包管理器安装 `aria2` 即可，其他请参考各自的安装方法，或手动编译安装
 
-在 `$HOME/.config/aria2` 目录下创建 aria2.conf、aria2.session、dht.dat 文件，其中 aria2.conf 的内容参考 (配置文件)[##配置文件]
+在 `$HOME/.config/aria2` 目录下创建 aria2.conf、aria2.session、dht.dat 文件，其中 aria2.conf 的内容参考 [配置文件](##配置文件)
 
 ```shell
 > cd $HOME/.config/aria2
@@ -151,9 +151,9 @@ WantedBy=multi-user.target
 
 ### Windows
 
-请前往 [Github Release](https://github.com/aria2/aria2/releases) 下载压缩包
+请前往 [Github Release](https://github.com/aria2/aria2/releases) 下载 win-64bit-build1 压缩包
 
-在 `%USERPROFILE%` 目录下创建 aria2 文件夹，将压缩包内的 aria2c.exe 文件解压此处，并在手动创建 aria2.conf、aria2.session、dht.dat、aira2.vbs 文件，其中 aria2.conf 的内容参考 (配置文件)[#配置文件]，aira2.vbs 的内容如下
+在 `%USERPROFILE%` 目录下创建 aria2 文件夹，将压缩包内的 aria2c.exe 文件解压到此处，并手动创建 aria2.conf、aria2.session、dht.dat、aira2.vbs 文件，其中 aria2.conf 的内容参考 [配置文件](#配置文件)，aira2.vbs 的内容如下
 
 ```powershell
 CreateObject("WScript.Shell").Run "%USERPROFILE%\aria2\aria2c.exe --conf-path=%USERPROFILE%\aria2\aria2.conf -D",0
