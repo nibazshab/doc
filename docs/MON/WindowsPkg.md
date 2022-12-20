@@ -22,7 +22,7 @@
 
 ## Win+Shift+S 截图保存路径
 
-`C:\Users\User\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\TempState\ScreenClip`
+`%LOCALAPPDATA%\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\TempState\ScreenClip`
 
 ## 软件
 
