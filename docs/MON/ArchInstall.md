@@ -28,9 +28,7 @@ sidebarDepth: 2
 
 ### 2.1. 有线与无线网络
 
-正常情况下，系统会自动连接有线网络
-
-无线网络使用 iwctl 来进行连接，输入如下指令进入 iwd 模式，并查看无线网卡的名称
+正常情况下，系统会自动连接有线网络，无线网络使用 iwctl 来进行连接，输入如下指令进入 iwd 模式，并查看无线网卡的名称
 
 ```shell
 > iwctl
@@ -236,7 +234,7 @@ When = PostTransaction
 Exec = /usr/bin/systemctl restart systemd-boot-update.service
 ```
 
-## 12. 收尾
+## 12. 完成安装
 
 输入以下指令，启用网络服务，退回安装环境，取消所有分区的挂载，重启
 

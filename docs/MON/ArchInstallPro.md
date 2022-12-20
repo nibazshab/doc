@@ -16,15 +16,17 @@ sidebarDepth: 2
 
 ## 13. 连接网络
 
-正常情况下，系统会自动连接有线网络
-
-无线网络使用 NetworkManager 连接，输入 `nmtui` 进入网络管理页面进行连接
+正常情况下，系统会自动连接有线网络，无线网络使用 NetworkManager 连接，输入 `nmtui` 进入网络管理页面进行连接
 
 ## 14. 添加普通用户
 
 输入 `useradd -m -G wheel -s /bin/bash atri` 创建普通用户，此处创建为 `atri`，输入 `passwd atri`，为 atri 用户设置密码
 
-输入 `sed 's/# %wheel ALL=(ALL:ALL) ALL/%wheel ALL=(ALL:ALL) ALL/' /etc/sudoers` 为普通用户启用 sudo
+输入如下指令为普通用户启用 sudo
+
+```shell
+> sed 's/# %wheel ALL=(ALL:ALL) ALL/%wheel ALL=(ALL:ALL) ALL/' /etc/sudoers
+```
 
 ## 15. 可选步骤
 

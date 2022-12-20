@@ -25,9 +25,9 @@ export default defineUserConfig({
         text: 'Arch Linux',
         children: [
           '/MON/ArchInstall.md',
-          '/MON/ArchGUIInstall.md',
+          '/MON/ArchInstallPro.md',
           '/MON/ArchIssus.md',
-          '/MON/VpsSysteml.md',
+          '/MON/ArchInstallVPS.md',
         ],
       },
       {
@@ -37,7 +37,7 @@ export default defineUserConfig({
         ],
       },
       {
-        text: '热的芝士',
+        text: '热的芝士饼',
         children: [
           '/TUE/CMD.md',
           '/TUE/Note.md',
