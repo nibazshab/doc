@@ -141,7 +141,7 @@ nvme0n1     259:0    0 953.9G  0 disk
 
 输入 `genfstab -U /mnt >> /mnt/etc/fstab` 生成 fstab 文件，输入 `echo os > /mnt/etc/hostname` 设置主机名，此处设为 `os`
 
-输入 `arch-chroot /mnt` 进入基本系统
+输入 `arch-chroot /mnt` 进入 chroot 环境
 
 ### 8.1. 交换空间支持
 

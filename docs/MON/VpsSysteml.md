@@ -18,7 +18,7 @@ sidebarDepth: 2
 > wget http://mirrors.tencentyun.com/archlinux/iso/latest/archlinux-x86_64.iso -O /arch.iso
 ```
 
-## 2. 修改 Grub 引导项
+## 2. 添加 Grub 引导项
 
 ```shell
 > vim /boot/grub/grub.cfg
@@ -58,7 +58,7 @@ menuentry 'Arch LiveCD' {
 > systemctl stop reflector
 ```
 
-## 6. 硬盘
+## 6. 硬盘格式化与挂载
 
 ```shell
 # 格式化硬盘
@@ -83,7 +83,7 @@ menuentry 'Arch LiveCD' {
 # 配置 DNS 解析主机
 > echo nameserver 183.60.82.98 > /mnt/etc/resolv.conf
 
-# 进入 chroot 系统
+# 进入 chroot 环境
 > arch-chroot /mnt
 
 # 设置上海时区

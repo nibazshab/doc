@@ -116,9 +116,11 @@ bt-tracker=
 ```
 :::
 
-## 安装 - Linux
+## 安装与启动
 
-Arch 系的 Linux 系统（ 如 Arch / Manjaro 等 ），直接使用包管理器安装 aria2 即可，其他系统请参考各自的安装方法，或手动编译安装
+### Linux
+
+Arch 系的 Linux 系统，直接使用包管理器安装 `aria2` 即可，其他请参考各自的安装方法，或手动编译安装
 
 在 `$HOME/.config/aria2` 目录下创建 aria2.conf、aria2.session、dht.dat 文件，其中 aria2.conf 的内容可参考上文的配置文件
 
@@ -147,7 +149,7 @@ WantedBy=multi-user.target
 > systemctl enable --user --now aria2.service
 ```
 
-## 安装 - Windows
+### Windows
 
 请前往 [Github Release](https://github.com/aria2/aria2/releases) 下载压缩包
 
@@ -157,12 +159,12 @@ WantedBy=multi-user.target
 CreateObject("WScript.Shell").Run "C:\aria2\aria2c.exe --conf-path=C:\aria2\aria2.conf -D",0
 ```
 
-为 aira2.vbs 创建快捷方式，双击快捷方式即可启动，移动快捷方式到 `C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp` 目录下即可实现开机自启
+为 aira2.vbs 创建快捷方式，双击快捷方式即可启动，将移动快捷方式到 `C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp` 目录下即可实现开机自启
 
 ## AriaNg
 
 [AriaNg](https://github.com/mayswind/AriaNg) 是一个现代化的 Web 前端管理工具，它使得 aria2 更易于使用。AriaNg 是纯 html & javascript 编写的，因此不需要任何编译器或运行环境。只需要将 AriaNg 放入的 Web 服务器中，然后在浏览器中打开它。AriaNg 使用响应式布局，支持任何桌面或移动设备
 
-> 这里图个方便，直接使用搭建好了的现成网页 [http://aria2.net](http://aria2.net)，不放心的可以参考 [官方文档](https://github.com/mayswind/AriaNg#installation) 自己搭建
+现在提供三种版本，[单文件版](https://github.com/mayswind/AriaNg/releases)、[标准版](https://github.com/mayswind/AriaNg-DailyBuild)、[桌面版](https://github.com/mayswind/AriaNg-Native/releases)
 
-在 AriaNg 页面，点击左侧的 AriaNg 设置，再点击上方带有 RPC 字样的标题，在 Aria2 RPC 地址中输入 localhost（ 服务器填写自己的公网 ip 地址 ），在 Aria2 RPC 密钥中输入配置文件中 rpc-secret 的值，随后刷新页面即可看到左下方 Aria2 状态显示绿色的已连接
+打开 AriaNg 页面，点击 `AriaNg 设置` - `RPC`，在 `Aria2 RPC 地址` 中输入自己的 ip 地址，在 `Aria2 RPC 密钥` 中输入自己的配置文件中 rpc-secret 项的值，刷新页面即可看到左下方 `Aria2 状态` 显示绿色的已连接
