@@ -1,5 +1,7 @@
 # 常用系统变量
 
+<br>
+
 变量名|变量值
 -|-
 %APPDATA%|C:\Users\Username\AppData\Roaming
@@ -13,16 +15,13 @@
 %PROGRAMFILES%|C:\Program Files
 %PROGRAMFILES(X86)%|C:\Program Files (x86)
 %ALLUSERSPROFILE%|C:\ProgramData
-%CommonProgramFiles%|C:\Program Files\Common Files
-%CommonProgramFiles(x86)%|C:\Program Files (x86)\Common Files
-%CommonProgramW6432%|C:\Program Files\Common Files
+%COMMONPROGRAMW6432%|C:\Program Files\Common Files
 %COMPUTERNAME%|Hostname
-%ComSpec%|C:\WINDOWS\system32\cmd.exe
+%COMSPEC%|C:\WINDOWS\system32\cmd.exe
 %HOMEDRIVE%|C:
-%HOMEPATH%|\Users\Username
-%LOGONSERVER%|\\MicrosoftAccount
+%LOGONSERVER%|\\\MicrosoftAccount
 %OS%|Windows_NT
-%ProgramW6432%|C:\Program Files
+%PROGRAMW6432%|C:\Program Files
 %PUBLIC%|C:\Users\Public
 %TEMP%|C:\Users\Username\AppData\Local\Temp
 %TMP%|C:\Users\Username\AppData\Local\Temp

@@ -34,7 +34,7 @@ export default defineUserConfig({
         text: 'Windows',
         children: [
           '/MON/WindowsEnv.md',
-          '/MON/WindowsPkg.md',
+          '/MON/WindowsDo.md',
         ],
       },
       {
