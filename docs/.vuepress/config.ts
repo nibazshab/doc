@@ -12,6 +12,14 @@ export default defineUserConfig({
         children: ['/'],
       },
       {
+        text: '热的芝士饼',
+        children: [
+          '/TUE/CMD.md',
+          '/TUE/Note.md',
+          '/TUE/Trash.md',
+        ],
+      },
+      {
         text: '难以名状的',
         children: [
           '/SUN/Aria2.md',
@@ -34,14 +42,6 @@ export default defineUserConfig({
         text: 'Windows',
         children: [
           '/MON/Windows.md',
-        ],
-      },
-      {
-        text: '热的芝士饼',
-        children: [
-          '/TUE/CMD.md',
-          '/TUE/Note.md',
-          '/TUE/Trash.md',
         ],
       },
       {
