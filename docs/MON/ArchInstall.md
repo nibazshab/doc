@@ -7,7 +7,7 @@ sidebarDepth: 2
 <br>
 
 ::: warning 声明
-本文将要使用 UEFI 启动环境、Btrfs 文件系统、完整的硬盘空间，需要掌握基本的 Linux 知识、了解 VIM 编辑器的基本使用，以及至关重要的自行搜索并解决问题的能力
+本文使用 UEFI 启动环境、Btrfs 文件系统、完整的硬盘空间，需要掌握基本的 Linux 知识、了解 VIM 编辑器的简单使用，以及至关重要的自行搜索并解决问题的能力
 
 如有需要请参考 [官方安装指南](https://wiki.archlinux.org/title/Installation_guide)
 :::
@@ -183,8 +183,8 @@ UUID=979aa7ec-8842-4e22-8bfc-4c8aed3de56d    /swap    btrfs    rw,relatime,ssd,s
 输入如下指令，生成中文和英文语言环境
 
 ```shell
-> sed -i s/#zh_CN.UTF-8/zh_CN.UTF-8/ /etc/locale.gen
-> sed -i s/#en_US.UTF-8/en_US.UTF-8/ /etc/locale.gen
+> sed -i 's/#zh_CN.UTF-8/zh_CN.UTF-8/' /etc/locale.gen
+> sed -i 's/#en_US.UTF-8/en_US.UTF-8/' /etc/locale.gen
 > locale-gen
 ```
 
@@ -198,7 +198,7 @@ UUID=979aa7ec-8842-4e22-8bfc-4c8aed3de56d    /swap    btrfs    rw,relatime,ssd,s
 
 使用 Intel CPU 的用户输入 `pacman -S intel-ucode`，使用 AMD CPU 的用户输入 `pacman -S amd-ucode`
 
-## 11. 添加开机引导
+## 11. 开机引导
 
 输入 `bootctl --path=/boot install` 将 systemd-boot 引导安装到 `/boot` 目录
 

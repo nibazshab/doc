@@ -24,7 +24,7 @@ sidebarDepth: 2
 > vim /boot/grub/grub.cfg
 ```
 
-在 `### END /etc/grub.d/10_linux ###` 下面添加一个新的启动项，内容如下
+在 `### END /etc/grub.d/10_linux ###` 后添加一个新的启动项，内容如下
 
 ```ini
 menuentry 'Arch LiveCD' {

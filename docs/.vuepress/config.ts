@@ -22,19 +22,19 @@ export default defineUserConfig({
         ],
       },
       {
+        text: 'Windows',
+        children: [
+          '/MON/WindowsEnv.md',
+          '/MON/WindowsIssus.md',
+        ],
+      },
+      {
         text: 'Arch Linux',
         children: [
           '/MON/ArchInstall.md',
           '/MON/ArchInstallPro.md',
           '/MON/ArchIssus.md',
           '/MON/ArchInstallVPS.md',
-        ],
-      },
-      {
-        text: 'Windows',
-        children: [
-          '/MON/WindowsEnv.md',
-          '/MON/WindowsDo.md',
         ],
       },
       {

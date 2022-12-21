@@ -22,7 +22,7 @@ Value 公司发行的 Steam Deck 掌机使用基于 Arch Linux 所开发的 Stea
 > flatpak run com.valvesoftware.Steam
 ```
 
-默认情况下通过 Flatpak 安装的 Steam 不会有访问你的家目录的权限，并且由于安全问题，强行忽略此权限限制会导致 Steam 无法运行。不过，你可以自由地在家目录之外添加一个目录。如果你想添加一个外部库，你可以运行下面的命令来添加
+默认情况下通过 Flatpak 安装的 Steam 不会有访问你的家目录的权限，并且由于安全问题，强行忽略此权限限制会导致 Steam 无法运行。不过，你可以自由地在家目录之外添加一个目录。如果你想添加一个外部库，你可以运行如下命令来添加
 
 ```shell
 > flatpak --user override com.valvesoftware.Steam --filesystem=/path/to/directory
