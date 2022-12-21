@@ -45,10 +45,6 @@ export default defineUserConfig({
           '/TUE/Trash.md',
         ],
       },
-      {
-        text: '最后',
-        children: ['/end.md'],
-      }
     ],
     lastUpdated: false,
     contributors: false,
