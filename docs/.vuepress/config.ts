@@ -22,19 +22,18 @@ export default defineUserConfig({
         ],
       },
       {
-        text: 'Windows',
-        children: [
-          '/MON/WindowsEnv.md',
-          '/MON/WindowsIssus.md',
-        ],
-      },
-      {
         text: 'Arch Linux',
         children: [
           '/MON/ArchInstall.md',
           '/MON/ArchInstallPro.md',
           '/MON/ArchIssus.md',
           '/MON/ArchInstallVPS.md',
+        ],
+      },
+      {
+        text: 'Windows',
+        children: [
+          '/MON/WindowsEnv.md',
         ],
       },
       {
@@ -49,7 +48,7 @@ export default defineUserConfig({
     lastUpdated: false,
     contributors: false,
     navbar: false,
-    sidebarDepth: 0
+    sidebarDepth: 0,
   }),
   base: '/',
   title: '_Wiki',
@@ -63,6 +62,6 @@ export default defineUserConfig({
     }),
     googleAnalyticsPlugin({
       id: 'G-770W6J0TQD'
-    })
-  ]
+    }),
+  ],
 })
