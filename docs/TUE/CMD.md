@@ -2,6 +2,46 @@
 
 <br>
 
+<CodeGroup>
+  <CodeGroupItem title="PNPM">
+
+tets
+
+### asd
+
+__dsad__
+
+  </CodeGroupItem>
+
+  <CodeGroupItem title="YARN">
+
+tets
+
+### asd
+
+dsad_tets
+
+### asdsd
+
+__dsad__
+
+  </CodeGroupItem>
+
+  <CodeGroupItem title="NPM" active>
+
+sad
+
+```bash:no-line-numbers
+npm install
+```
+
+asddsdas
+
+  </CodeGroupItem>
+</CodeGroup>
+
+
+
 ::: details 批量压缩 jpeg 图片
 `find -name '*.jpg' | xargs jpegoptim --strip-all --all-progressive -o -f --max=50%`
 :::
