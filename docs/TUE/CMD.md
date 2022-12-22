@@ -2,63 +2,6 @@
 
 <br>
 
-* [@vuepress/plugin-shiki@next](https://v2.vuepress.vuejs.org/reference/plugin/shiki.html)
-* [@vuepress/plugin-google-analytics@next](https://v2.vuepress.vuejs.org/reference/plugin/google-analytics.html)
-* [vuepress-plugin-md-enhance@next](https://vuepress-theme-hope.github.io/v2)
-* [vuepress-plugin-sitemap2@next](https://vuepress-theme-hope.github.io/v2/sitemap)
-* [vuepress-plugin-seo2@next](https://vuepress-theme-hope.github.io/v2/seo)
-
----
-
-* [@vuepress/plugin-shiki@next](https://v2.vuepress.vuejs.org/reference/plugin/shiki.html)
-
-* [@vuepress/plugin-google-analytics@next](https://v2.vuepress.vuejs.org/reference/plugin/google-analytics.html)
-
-* [vuepress-plugin-md-enhance@next](https://vuepress-theme-hope.github.io/v2)
-
-* [vuepress-plugin-sitemap2@next](https://vuepress-theme-hope.github.io/v2/sitemap)
-
-* [vuepress-plugin-seo2@next](https://vuepress-theme-hope.github.io/v2/seo)
-
----
-
-* [@vuepress/plugin-shiki@next](https://v2.vuepress.vuejs.org/reference/plugin/shiki.html)
-
-使用 Shiki 为代码块添加高亮
-
-* [@vuepress/plugin-google-analytics@next](https://v2.vuepress.vuejs.org/reference/plugin/google-analytics.html)
-
-使用 Google Analytics 进行网站统计
-
-* [vuepress-plugin-md-enhance@next](https://vuepress-theme-hope.github.io/v2)
-
-  为 Markdown 添加更多功能
-
-* [vuepress-plugin-sitemap2@next](https://vuepress-theme-hope.github.io/v2/sitemap)
-
-  为网站生成 sitemap
-
-* [vuepress-plugin-seo2@next](https://vuepress-theme-hope.github.io/v2/seo)
-
-  为网站添加 SEO 优化
-
----
-
-* [@vuepress/plugin-shiki@next](https://v2.vuepress.vuejs.org/reference/plugin/shiki.html)
-  使用 Google Analytics 进行网站统计
-* [@vuepress/plugin-google-analytics@next](https://v2.vuepress.vuejs.org/reference/plugin/google-analytics.html)
-  为 Markdown 添加更多功能
-* [vuepress-plugin-md-enhance@next](https://vuepress-theme-hope.github.io/v2)
-  为 Markdown 添加更多功能
-* [vuepress-plugin-sitemap2@next](https://vuepress-theme-hope.github.io/v2/sitemap)
-  为网站生成 sitemap
-* [vuepress-plugin-seo2@next](https://vuepress-theme-hope.github.io/v2/seo)
-
-
-
-
-
-
 ::: details 批量压缩 jpeg 图片
 `find -name '*.jpg' | xargs jpegoptim --strip-all --all-progressive -o -f --max=50%`
 :::

@@ -54,23 +54,22 @@ export default defineUserConfig({
   }),
   base: '/',
   title: '_Wiki',
-  head: [['link', {rel: 'icon', href: '/favicon.ico'}]],
+  head: [['link', {rel: 'icon', href: '/favicon.ico'},]],
   plugins: [
     shikiPlugin({
-      theme: 'github-dark'
+      theme: 'github-dark',
     }),
     googleAnalyticsPlugin({
-      id: 'G-770W6J0TQD'
+      id: 'G-770W6J0TQD',
     }),
     mdEnhancePlugin({
-      container: true,
       tabs: true,
     }),
     sitemapPlugin({
-      hostname: 'https://www.atri.ml'
+      hostname: 'https://www.atri.ml',
     }),
     seoPlugin({
-      hostname: 'https://www.atri.ml'
+      hostname: 'https://www.atri.ml',
     }),
   ],
 })
