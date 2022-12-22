@@ -11,7 +11,7 @@ export default defineUserConfig({
     sidebar: [
       {
         text: '首页',
-        children: ['/'],
+        children: ['/index.md',],
       },
       {
         text: '难以名状的',
@@ -54,7 +54,7 @@ export default defineUserConfig({
   }),
   base: '/',
   title: '_Wiki',
-  head: [['link', {rel: 'icon', href: '/favicon.ico'},]],
+  head: [['link', {rel: 'icon', href: '/favicon.ico',},]],
   plugins: [
     shikiPlugin({
       theme: 'github-dark',

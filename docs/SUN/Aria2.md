@@ -118,7 +118,7 @@ bt-tracker=
 
 ### Linux
 
-Arch 系的 Linux 系统，直接使用包管理器安装 `aria2` 即可，其他请参考各自的安装方法，或前往 [Github Release](https://github.com/aria2/aria2/releases) 下载源码编译安装
+Arch 系的 Linux 系统，直接安装 `aria2` 即可，其他请参考各自的安装方法，或前往 [Github Release](https://github.com/aria2/aria2/releases) 下载源码编译安装
 
 在 `$HOME/.config/aria2` 目录下创建 aria2.conf、aria2.session 文件，其中 aria2.conf 的内容参考 [配置文件](#配置文件)
 
