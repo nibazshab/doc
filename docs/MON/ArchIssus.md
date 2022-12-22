@@ -23,9 +23,9 @@ KMS 通常是在 initramfs stage 之后开始初始化，但是也可以在 init
 
 将视频驱动模块加入 `/etc/mkinitcpio.conf` 的 MODULES= 里，使用 `mkinitcpio -P` 命令重新生成内核
 
-* AMD GPU 加入 `amdgpu`，老的 ATI 驱动加入 `radeon`
-* Intel GPU 加入 `i915`
-* 对于 NVIDIA 驱动的 `nvidia nvidia_modeset nvidia_uvm nvidia_drm`，详见 [NVIDIA#DRM kernel mode setting](https://wiki.archlinux.org/title/NVIDIA#DRM_kernel_mode_setting)
+- AMD GPU 加入 `amdgpu`，老的 ATI 驱动加入 `radeon`
+- Intel GPU 加入 `i915`
+- 对于 NVIDIA 驱动的 `nvidia nvidia_modeset nvidia_uvm nvidia_drm`，详见 [NVIDIA#DRM kernel mode setting](https://wiki.archlinux.org/title/NVIDIA#DRM_kernel_mode_setting)
 
 为了避免更新 NVIDIA 驱动之后忘了更新 initramfs，建议使用 Pacman Hooks 自动生成新内核，将以下内容添加到 `/etc/pacman.d/hooks/nvidia.hook`
 

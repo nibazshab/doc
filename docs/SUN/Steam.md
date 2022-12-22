@@ -28,23 +28,15 @@ Value 公司发行的 Steam Deck 掌机使用基于 Arch Linux 所开发的 Stea
 
 启动使用 Flakpak 安装的 steam 可能会发出警告有关安装 `steam-devices` 软件包的信息，此包暂不存在，可通过安装 Aur 的 `game-devices-udev` 来解决
 
-## 运行非 steam 平台 exe 游戏
+## 非 steam 平台 exe 游戏
 
 1. 点击 Steam 左下角 `添加游戏`
 2. 点击 `添加非 Steam 游戏`
 3. 选择游戏的 exe 文件
 4. 点击 `添加选定的程序`
-5. 在 `属性 - 兼容性` 中勾选 `强制使用特定 Steam Play 兼容性工具`
+5. 在 `属性` - `兼容性` 中勾选 `强制使用特定 Steam Play 兼容性工具`
 
-1. 点击 Steam 左下角 「添加游戏」
-2. 点击 「添加非 Steam 游戏」
-3. 选择游戏的 exe 文件
-4. 点击 「添加选定的程序」
-
-5. 在 「属性 - 兼容性」 中勾选 「强制使用特定 Steam Play 兼容性工具」
-5. 在「属性 - 兼容性」中勾选「强制使用特定 Steam Play 兼容性工具」
-
-## 开启 Steam Deck UI
+## 开启 Steam Deck 界面
 
 1. 打开 Steam 安装目录，找到 package 文件夹
 2. 进入 package 目录，创建一个名为 beta 的文件
@@ -61,13 +53,13 @@ Value 公司发行的 Steam Deck 掌机使用基于 Arch Linux 所开发的 Stea
 
 ## 亚洲字体乱码
 
-### 安装支持的字体
+### 支持的字体
 
 尝试安装 `lib32-fontconfig`，`ttf-liberation` 和 `wqy-zenhei`，然后重新启动 Steam 以查看问题是否已解决
 
 当 Steam 找不到 Arial 字体时，font-config 喜欢回到 Helvetica 位图字体。Steam 无法正确呈现此位图字体以及可能的其他位图字体，因此，删除有问题的字体或禁用位图字体很可能会在不安装 Arial 或 ArialBold 字体的情况下解决问题。用于代替 Arial 的字体可以通过 `fc-match -v Arial` 命令找到
 
-### 使用 fontconfig
+### fontconfig
 
 如上述方法未解决问题，尝试使用 fontconfig 为 Steam 指定字体
 
