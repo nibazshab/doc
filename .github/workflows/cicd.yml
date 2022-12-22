@@ -15,10 +15,12 @@ jobs:
       run: |
         echo
         yarn add -D vuepress@next
-        yarn add -D vuepress-plugin-sitemap2@next
         yarn add -D @vuepress/plugin-shiki@next
         yarn add -D @vuepress/plugin-google-analytics@next
-    - name: Build with VuePress
+        yarn add -D vuepress-plugin-md-enhance@next
+        yarn add -D vuepress-plugin-sitemap2@next
+        yarn add -D vuepress-plugin-seo2@next
+    - name: Build VuePress
       run: yarn docs:build
     - name: Upload Artifact
       uses: actions/upload-artifact@v3

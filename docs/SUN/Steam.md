@@ -6,8 +6,6 @@
 本文适用于 Arch 系的 Linux 系统，其他系统请自行甄别是否适用
 :::
 
-## 是什么
-
 [Steam](https://store.steampowered.com) 是 Valve 公司推出的著名游戏分发平台，对于 Linux 平台，Steam 官方只提供对 Ubuntu LTS 版本的支持
 
 Value 公司发行的 Steam Deck 掌机使用基于 Arch Linux 所开发的 SteamOS 3 系统

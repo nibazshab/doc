@@ -2,43 +2,60 @@
 
 <br>
 
-<CodeGroup>
-  <CodeGroupItem title="PNPM">
+* [@vuepress/plugin-shiki@next](https://v2.vuepress.vuejs.org/reference/plugin/shiki.html)
+* [@vuepress/plugin-google-analytics@next](https://v2.vuepress.vuejs.org/reference/plugin/google-analytics.html)
+* [vuepress-plugin-md-enhance@next](https://vuepress-theme-hope.github.io/v2)
+* [vuepress-plugin-sitemap2@next](https://vuepress-theme-hope.github.io/v2/sitemap)
+* [vuepress-plugin-seo2@next](https://vuepress-theme-hope.github.io/v2/seo)
 
-tets
+---
 
-### asd
+* [@vuepress/plugin-shiki@next](https://v2.vuepress.vuejs.org/reference/plugin/shiki.html)
 
-__dsad__
+* [@vuepress/plugin-google-analytics@next](https://v2.vuepress.vuejs.org/reference/plugin/google-analytics.html)
 
-  </CodeGroupItem>
+* [vuepress-plugin-md-enhance@next](https://vuepress-theme-hope.github.io/v2)
 
-  <CodeGroupItem title="YARN">
+* [vuepress-plugin-sitemap2@next](https://vuepress-theme-hope.github.io/v2/sitemap)
 
-tets
+* [vuepress-plugin-seo2@next](https://vuepress-theme-hope.github.io/v2/seo)
 
-### asd
+---
 
-dsad_tets
+* [@vuepress/plugin-shiki@next](https://v2.vuepress.vuejs.org/reference/plugin/shiki.html)
 
-### asdsd
+使用 Shiki 为代码块添加高亮
 
-__dsad__
+* [@vuepress/plugin-google-analytics@next](https://v2.vuepress.vuejs.org/reference/plugin/google-analytics.html)
 
-  </CodeGroupItem>
+使用 Google Analytics 进行网站统计
 
-  <CodeGroupItem title="NPM" active>
+* [vuepress-plugin-md-enhance@next](https://vuepress-theme-hope.github.io/v2)
 
-sad
+  为 Markdown 添加更多功能
 
-```bash:no-line-numbers
-npm install
-```
+* [vuepress-plugin-sitemap2@next](https://vuepress-theme-hope.github.io/v2/sitemap)
 
-asddsdas
+  为网站生成 sitemap
 
-  </CodeGroupItem>
-</CodeGroup>
+* [vuepress-plugin-seo2@next](https://vuepress-theme-hope.github.io/v2/seo)
+
+  为网站添加 SEO 优化
+
+---
+
+* [@vuepress/plugin-shiki@next](https://v2.vuepress.vuejs.org/reference/plugin/shiki.html)
+  使用 Google Analytics 进行网站统计
+* [@vuepress/plugin-google-analytics@next](https://v2.vuepress.vuejs.org/reference/plugin/google-analytics.html)
+  为 Markdown 添加更多功能
+* [vuepress-plugin-md-enhance@next](https://vuepress-theme-hope.github.io/v2)
+  为 Markdown 添加更多功能
+* [vuepress-plugin-sitemap2@next](https://vuepress-theme-hope.github.io/v2/sitemap)
+  为网站生成 sitemap
+* [vuepress-plugin-seo2@next](https://vuepress-theme-hope.github.io/v2/seo)
+
+
+
 
 
 

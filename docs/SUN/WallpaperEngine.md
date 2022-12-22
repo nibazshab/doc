@@ -2,8 +2,6 @@
 
 <br>
 
-## 是什么
-
 [Wallpaper Engine](https://www.wallpaperengine.io) 使可在 Windows 桌面上使用动态壁纸。它支持各种类型的动画壁纸，包括 3D 和 2D 动画、网站、视频、乃至某些应用程序
 
 ## 解决创意工坊下载问题
