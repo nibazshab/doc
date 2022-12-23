@@ -8,7 +8,7 @@
 
 - [@vuepress/plugin-shiki@next](https://v2.vuepress.vuejs.org/reference/plugin/shiki.html)
 - [@vuepress/plugin-google-analytics@next](https://v2.vuepress.vuejs.org/reference/plugin/google-analytics.html)
-- [vuepress-plugin-md-enhance@next](https://vuepress-theme-hope.github.io/v2)
+- [vuepress-plugin-md-enhance@next](https://vuepress-theme-hope.github.io/v2/md-enhance)
 - [vuepress-plugin-sitemap2@next](https://vuepress-theme-hope.github.io/v2/sitemap)
 - [vuepress-plugin-seo2@next](https://vuepress-theme-hope.github.io/v2/seo)
 
