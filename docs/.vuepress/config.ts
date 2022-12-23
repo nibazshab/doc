@@ -39,7 +39,7 @@ export default defineUserConfig({
         ],
       },
       {
-        text: '热的芝士饼',
+        text: '道路施工中',
         children: [
           '/TUE/CMD.md',
           '/TUE/Note.md',

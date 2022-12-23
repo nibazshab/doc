@@ -4,7 +4,7 @@
 
 [Minecraft](https://www.minecraft.net) 是一个关于破坏和放置方块的游戏。游戏一开始玩家的主要目的是搭建各种结构使自己免遭夜晚出没的怪物的攻击并生存下来，但随着游戏的进行，玩家们可以合作创造出一些不可思议的、富有想象力的东西
 
-该游戏有两个版本，Java 版和基岩版。Java 版是游戏的原始版本，自 2009 年开始开发。该版本可以在 Mac、Windows 和 Linux 上游玩。基岩版原为便携版，但后来被移植到不同的平台上。它当前支持 Windows 10、11 、Amazon FireOS、FireTV、Android、iOS、Xbox One、Playstation 4、Nintendo Switch 和 Samsung Gear VR 设备。基岩版客户端没有 Linux 的官方支持，但是基岩版服务器软件是可用的
+该游戏有两个版本，Java 版和基岩版。Java 版是游戏的原始版本，自 2009 年开始开发。该版本可以在 Mac、Windows 和 Linux 上游玩。基岩版原为便携版，但后来被移植到不同的平台上。它当前支持 Windows 10、11、Amazon FireOS、FireTV、Android、iOS、Xbox One、Playstation 4、Nintendo Switch 和 Samsung Gear VR 设备。基岩版客户端没有 Linux 的官方支持，但是基岩版服务器软件是可用的
 
 ## Java 服务器
 

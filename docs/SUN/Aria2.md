@@ -2,7 +2,7 @@
 
 <br>
 
-[Aria2](https://github.com/aria2/aria2) 是一个自由、开源、轻量级多协议和多源的命令行下载工具。它支持 HTTP/HTTPS、FTP、SFTP、 BitTorrent 和 Metalink 协议。aria2 可以通过内建的 JSON-RPC 和 XML-RPC 接口来操纵。aria2 下载文件的时候，自动验证数据块。它可以通过多个来源或者多个协议下载一个文件，并且会尝试利用你的最大下载带宽
+[Aria2](https://github.com/aria2/aria2) 是一个自由、开源、轻量级多协议和多源的命令行下载工具。它支持 HTTP/HTTPS、FTP、SFTP、BitTorrent 和 Metalink 协议。aria2 可以通过内建的 JSON-RPC 和 XML-RPC 接口来操纵。aria2 下载文件的时候，自动验证数据块。它可以通过多个来源或者多个协议下载一个文件，并且会尝试利用你的最大下载带宽
 
 ## 配置文件
 
@@ -164,4 +164,4 @@ CreateObject("WScript.Shell").Run "%HOMEPATH%\aria2\aria2c.exe --conf-path=%HOME
 2. 点击 `AriaNg 设置` - `RPC`
 3. 在 `Aria2 RPC 地址` 中输入自己的 ip 地址
 4. 在 `Aria2 RPC 密钥` 中输入自己的配置文件中 rpc-secret 的值
-5. 刷新页面即可看到 `Aria2 状态` 显示绿色的已连接
+5. 刷新页面即可看到 `Aria2 状态` 显示已连接
