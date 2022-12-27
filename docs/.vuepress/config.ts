@@ -1,5 +1,4 @@
-import { defineUserConfig } from 'vuepress';
-import { defaultTheme } from '@vuepress/theme-default';
+import { defineUserConfig, defaultTheme } from 'vuepress';
 import { getDirname, path } from '@vuepress/utils';
 import { shikiPlugin } from '@vuepress/plugin-shiki';
 import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics';
