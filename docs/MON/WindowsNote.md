@@ -1,4 +1,4 @@
-# 使用知识记录
+# 使用笔记
 
 <br>
 
@@ -15,14 +15,13 @@
 1. 计算机管理
 2. 服务和应用程序
 3. 禁用 `Connected User Experiences and Telemetry`
+4. 系统
+5. 关于
+6. 高级系统设置
+7. 性能
+8. 启用 `平滑屏幕字体边缘`、`显示缩略图`、`显示亚透明的选择长方形`、`在窗口下显示阴影`
 
-1. 系统
-2. 关于
-3. 高级系统设置
-4. 性能
-5. 启用 `平滑屏幕字体边缘`、`显示缩略图`、`显示亚透明的选择长方形`、`在窗口下显示阴影`
-
-## Win+Shift+S 截图保存路径
+## Win Shift S 截图路径
 
 `%LOCALAPPDATA%\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\TempState\ScreenClip`
 
