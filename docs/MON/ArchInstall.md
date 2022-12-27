@@ -7,9 +7,11 @@ sidebarDepth: 2
 <br>
 
 ::: warning 声明
+
 本文使用 UEFI 启动环境、Btrfs 文件系统、完整的硬盘空间，需要掌握基本的 Linux 知识、了解 VIM 编辑器的简单使用，以及至关重要的自行搜索并解决问题的能力
 
-如有需要请参考 [官方安装指南](https://wiki.archlinux.org/title/Installation_guide)
+需要请参考 [官方安装指南](https://wiki.archlinux.org/title/Installation_guide)
+
 :::
 
 ## 准备阶段

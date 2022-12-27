@@ -7,6 +7,7 @@
 ## 配置文件
 
 ::: details 示例
+
 ```ini
 enable-rpc=true
 rpc-allow-origin-all=true
@@ -112,6 +113,7 @@ summary-interval=0
 
 bt-tracker=
 ```
+
 :::
 
 ## 安装与启动

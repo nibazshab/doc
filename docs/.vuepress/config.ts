@@ -1,13 +1,12 @@
 import { defineUserConfig } from 'vuepress';
 import { defaultTheme } from '@vuepress/theme-default';
+import { getDirname, path } from '@vuepress/utils';
 import { shikiPlugin } from '@vuepress/plugin-shiki';
 import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics';
 import { mdEnhancePlugin } from 'vuepress-plugin-md-enhance';
 import { sitemapPlugin } from 'vuepress-plugin-sitemap2';
 import { seoPlugin } from 'vuepress-plugin-seo2';
 import { commentPlugin } from 'vuepress-plugin-comment2';
-
-import { getDirname, path } from '@vuepress/utils';
 
 const __dirname = getDirname(import.meta.url);
 
@@ -31,6 +30,7 @@ export default defineUserConfig({
       {
         text: 'Arch Linux',
         children: [
+          '/MON/LinuxShellCmd.md',
           '/MON/ArchInstall.md',
           '/MON/ArchInstallPro.md',
           '/MON/ArchIssus.md',
@@ -40,15 +40,14 @@ export default defineUserConfig({
       {
         text: 'Windows',
         children: [
+          '/MON/WindowsNote.md',
           '/MON/WindowsEnv.md',
         ],
       },
       {
         text: '道路施工中',
         children: [
-          '/TUE/CMD.md',
-          '/TUE/Note.md',
-          '/TUE/Trash.md',
+          '/TUE/DonotKnowWhere.md',
           '/TUE/GiscusDiscuss.md',
         ],
       },

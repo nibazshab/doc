@@ -3,7 +3,9 @@
 <br>
 
 ::: warning 声明
+
 本文适用于 Arch 系的 Linux 系统，其他系统请自行甄别是否适用
+
 :::
 
 [Steam](https://store.steampowered.com) 是 Valve 公司推出的著名游戏分发平台，对于 Linux 平台，Steam 官方只提供对 Ubuntu LTS 版本的支持
@@ -20,7 +22,7 @@ Value 公司发行的 Steam Deck 掌机使用基于 Arch Linux 所开发的 Stea
 > flatpak run com.valvesoftware.Steam
 ```
 
-默认情况下通过 Flatpak 安装的 Steam 不会有访问你的家目录的权限，并且由于安全问题，强行忽略此权限限制会导致 Steam 无法运行。不过，你可以自由地在家目录之外添加一个目录。如果你想添加一个外部库，你可以运行如下命令来添加
+默认情况下通过 Flatpak 安装的 Steam 不会有访问你的家目录的权限，并且由于安全问题，强行忽略此权限限制会导致 Steam 无法运行。不过，你可以自由地在家目录之外添加一个目录。如果你想添加一个外部库，你可以运行如下指令来添加
 
 ```shell
 > flatpak --user override com.valvesoftware.Steam --filesystem=/path/to/directory
@@ -55,9 +57,9 @@ Value 公司发行的 Steam Deck 掌机使用基于 Arch Linux 所开发的 Stea
 
 ### 支持的字体
 
-尝试安装 `lib32-fontconfig`，`ttf-liberation` 和 `wqy-zenhei`，然后重新启动 Steam 以查看问题是否已解决
+尝试安装 `lib32-fontconfig`、`ttf-liberation` 和 `wqy-zenhei`，然后重新启动 Steam 以查看问题是否已解决
 
-当 Steam 找不到 Arial 字体时，font-config 喜欢回到 Helvetica 位图字体。Steam 无法正确呈现此位图字体以及可能的其他位图字体，因此，删除有问题的字体或禁用位图字体很可能会在不安装 Arial 或 ArialBold 字体的情况下解决问题。用于代替 Arial 的字体可以通过 `fc-match -v Arial` 命令找到
+当 Steam 找不到 Arial 字体时，font-config 喜欢回到 Helvetica 位图字体。Steam 无法正确呈现此位图字体以及可能的其他位图字体，因此，删除有问题的字体或禁用位图字体很可能会在不安装 Arial 或 ArialBold 字体的情况下解决问题。用于代替 Arial 的字体可以通过 `fc-match -v Arial` 指令找到
 
 ### fontconfig
 

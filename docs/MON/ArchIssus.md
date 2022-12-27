@@ -25,7 +25,7 @@ GNOME Shell 主题被存储为二进制文件 `/usr/share/gnome-shell/gnome-shel
 
 KMS 通常是在 initramfs stage 之后开始初始化，但是也可以在 initramfs 的阶段启用
 
-将视频驱动模块加入 `/etc/mkinitcpio.conf` 的 MODULES= 里，使用 `mkinitcpio -P` 命令重新生成内核
+将视频驱动模块加入 `/etc/mkinitcpio.conf` 的 MODULES= 里，使用 `mkinitcpio -P` 指令重新生成内核
 
 - AMD GPU 加入 `amdgpu`，老的 ATI 驱动加入 `radeon`
 - Intel GPU 加入 `i915`
@@ -52,7 +52,7 @@ Exec=/bin/sh -c 'while read -r trg; do case $trg in linux) exit 0; esac; done; /
 
 [参阅](https://wiki.archlinux.org/title/Kernel_mode_setting#Early_KMS_start)
 
-## GNOME 以 x11 运行在 NVIDIA GPU
+## GDM 以 x11 运行在 NVIDIA GPU
 
 创建一个符号链接来强制使用 wayland 运行桌面环境
 
@@ -64,7 +64,7 @@ Exec=/bin/sh -c 'while read -r trg; do case $trg in linux) exit 0; esac; done; /
 
 使用 Intel CPU 并为触摸板加载了 intel_lpss_pci 模块的电脑，在休眠/睡眠后可能会出现黑屏、无法唤醒的情况
 
-将 `intel_lpss_pci` 添加到 `/etc/mkinitcpio.conf` 的 MODULES= 里，使用 `mkinitcpio -P` 命令重新生成内核
+将 `intel_lpss_pci` 添加到 `/etc/mkinitcpio.conf` 的 MODULES= 里，使用 `mkinitcpio -P` 指令重新生成内核
 
 ## Possibly missing firmware for module XXXX
 

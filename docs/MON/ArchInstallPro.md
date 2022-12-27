@@ -7,7 +7,9 @@ sidebarDepth: 2
 <br>
 
 ::: warning 声明
+
 本文承接 [安装指南 基础篇](ArchInstall.md) 的内容
+
 :::
 
 ## 开机进入系统
