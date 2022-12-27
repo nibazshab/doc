@@ -9,7 +9,7 @@ import { commentPlugin } from 'vuepress-plugin-comment2';
 
 import { getDirname, path } from '@vuepress/utils';
 
-const __dirname = getDirname(import.meta.url),
+const __dirname = getDirname(import.meta.url);
 
 export default defineUserConfig({
   theme: defaultTheme({
