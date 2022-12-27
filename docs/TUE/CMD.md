@@ -15,7 +15,7 @@
 :::
 
 ::: details 搜索文本内容
-`grep -r -n 'abc' /path`
+`grep -rn 'abc' /path`
 :::
 
 ::: details ssh 上传文件

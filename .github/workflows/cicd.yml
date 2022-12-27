@@ -20,6 +20,7 @@ jobs:
         yarn add -D vuepress-plugin-md-enhance@next
         yarn add -D vuepress-plugin-sitemap2@next
         yarn add -D vuepress-plugin-seo2@next
+        yarn add -D vuepress-plugin-comment2@next
     - name: Build VuePress
       run: yarn docs:build
     - name: Upload Artifact

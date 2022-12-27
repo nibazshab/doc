@@ -2,9 +2,10 @@ import { defineUserConfig } from 'vuepress';
 import { defaultTheme } from '@vuepress/theme-default';
 import { shikiPlugin } from '@vuepress/plugin-shiki';
 import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics';
-import { mdEnhancePlugin } from "vuepress-plugin-md-enhance";
+import { mdEnhancePlugin } from 'vuepress-plugin-md-enhance';
 import { sitemapPlugin } from 'vuepress-plugin-sitemap2';
-import { seoPlugin } from "vuepress-plugin-seo2";
+import { seoPlugin } from 'vuepress-plugin-seo2';
+import { commentPlugin } from 'vuepress-plugin-comment2';
 
 export default defineUserConfig({
   theme: defaultTheme({
@@ -70,6 +71,14 @@ export default defineUserConfig({
     }),
     seoPlugin({
       hostname: 'https://www.atri.ml',
+    }),
+    commentPlugin({
+      //comment: false,
+      provider: 'Giscus',
+      repo: 'nibazshab/wiki',
+      repoId: 'MDEwOlJlcG9zaXRvcnkxOTg2NTY0NTU=',
+      category: 'anonymous',
+      categoryId: 'DIC_kwDOC9dBx84CRUCg',
     }),
   ],
 })
