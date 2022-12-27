@@ -9,9 +9,13 @@ jobs:
   build:
     runs-on: macos-latest
     steps:
-    - name: Checkout
+    - name: checkout
       uses: actions/checkout@v3
-    - name: Setup Deps
+    - name: setup pnpm
+      uses: pnpm/action-setup@v2
+      with:
+        version: latest
+    - name: setup vuepress next
       run: |
         echo
         pnpm add -D vuepress@next @vuepress/client@next vue
@@ -21,9 +25,9 @@ jobs:
         pnpm add -D vuepress-plugin-sitemap2@next
         pnpm add -D vuepress-plugin-seo2@next
         pnpm add -D vuepress-plugin-comment2@next
-    - name: Build VuePress
+    - name: build vuepress next
       run: pnpm docs:build
-    - name: Upload Artifact
+    - name: upload artifact
       uses: actions/upload-artifact@v3
       with:
         name: www.atri.ml
@@ -32,12 +36,12 @@ jobs:
     needs: build
     runs-on: macos-latest
     steps:
-    - name: Download Artifact
+    - name: download artifact
       uses: actions/download-artifact@v3
       with:
         name: www.atri.ml
         path: dist
-    - name: Deploy to GitHub Pages
+    - name: deploy to gh-pages
       uses: crazy-max/ghaction-github-pages@v3
       with:
         target_branch: gh-pages
