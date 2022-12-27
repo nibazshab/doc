@@ -14,15 +14,15 @@ jobs:
     - name: Setup Deps
       run: |
         echo
-        yarn add -D vuepress@next
-        yarn add -D @vuepress/plugin-shiki@next
-        yarn add -D @vuepress/plugin-google-analytics@next
-        yarn add -D vuepress-plugin-md-enhance@next
-        yarn add -D vuepress-plugin-sitemap2@next
-        yarn add -D vuepress-plugin-seo2@next
-        yarn add -D vuepress-plugin-comment2@next
+        pnpm add -D vuepress@next @vuepress/client@next vue
+        pnpm add -D @vuepress/plugin-shiki@next
+        pnpm add -D @vuepress/plugin-google-analytics@next
+        pnpm add -D vuepress-plugin-md-enhance@next
+        pnpm add -D vuepress-plugin-sitemap2@next
+        pnpm add -D vuepress-plugin-seo2@next
+        pnpm add -D vuepress-plugin-comment2@next
     - name: Build VuePress
-      run: yarn docs:build
+      run: pnpm docs:build
     - name: Upload Artifact
       uses: actions/upload-artifact@v3
       with:

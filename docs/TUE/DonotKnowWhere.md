@@ -36,15 +36,15 @@ https://pay.qq.com/h5/index.shtml?m=buy&c=game&dialog=0&midasApiVersion=5&transa
 
 ## Web Serice
 
-- nginx 配置站点伪静态
+### nginx 配置站点伪静态
 
 在 nginx 配置文件中站点的 `server` 模块中添加 `location / { try_files $uri $uri/ /index.php?$args; }`
 
-- typecho 上传目录无法写入，将安装目录下的 usr/uploads 目录的权限设置为可写
+### typecho 上传目录无法写入，将安装目录下的 usr/uploads 目录的权限设置为可写
 
 检查 php-fpm 和 nginx 用户是否一致，把 php-fpm.service 的 `ProtectSystem=full` 行删除
 
-- 域名 dns 解析到 github pages
+### 域名 dns 解析到 github pages
 
 ```ini
 @                                   A        3600    185.199.108.153
