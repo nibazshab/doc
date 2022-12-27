@@ -54,6 +54,7 @@ export default defineUserConfig({
     navbar: false,
     sidebarDepth: 0,
   }),
+  lang: 'zh-CN',
   base: '/',
   title: '_Wiki',
   head: [['link', {rel: 'icon', href: '/favicon.ico',},]],

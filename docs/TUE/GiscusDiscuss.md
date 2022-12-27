@@ -1,9 +1,5 @@
----
-comment: true
----
+# comment
 
-# 评论
-
-测试评论
+加载中...
 
 <CommentService />
