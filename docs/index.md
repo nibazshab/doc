@@ -26,5 +26,3 @@
 感谢各位 :heart:
 
 Thank you for everything :heart:
-
-<CommentService />

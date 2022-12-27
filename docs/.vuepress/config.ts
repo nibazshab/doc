@@ -77,7 +77,7 @@ export default defineUserConfig({
       provider: 'Giscus',
       repo: 'nibazshab/wiki',
       repoId: 'MDEwOlJlcG9zaXRvcnkxOTg2NTY0NTU=',
-      category: 'anonymous',
+      category: 'Announcements',
       categoryId: 'DIC_kwDOC9dBx84CRUCg',
     }),
   ],
