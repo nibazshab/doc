@@ -18,7 +18,7 @@ jobs:
     - name: setup vuepress next
       run: |
         echo
-        pnpm add -D vuepress@next @vuepress/client@next vue
+        pnpm add -D vuepress@next @vuepress/client@next vue @vuepress/utils
         pnpm add -D @vuepress/plugin-shiki@next
         pnpm add -D @vuepress/plugin-google-analytics@next
         pnpm add -D vuepress-plugin-md-enhance@next
