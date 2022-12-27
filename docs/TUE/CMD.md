@@ -102,10 +102,6 @@ MBR 分区表 / GPT 分区表
 `rsync -avzhP --bwlimit=500 /path/a /path/b`
 :::
 
-::: details 指定端口运行程序
-`<command> --port 2233`
-:::
-
 ::: details 在文件行首添加内容
 `sed -i s/^/<text>/g file`
 :::

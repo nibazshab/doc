@@ -15,7 +15,11 @@ just-perfection-desktop|修改界面样式
 logomenu|更改左上角活动菜单图标
 user-theme|主题
 
-将主题配置文件 gnome-shell.css 中 #panel 模块里的 `background-color` 的值修改为 `rgba(0,0,0,0.6)` 可以使面板透明，具体的方法见 [GDM](https://wiki.archlinux.org/title/GDM)
+## GNOME 顶栏半透明
+
+GNOME Shell 主题被存储为二进制文件 `/usr/share/gnome-shell/gnome-shell-theme.gresource`，拆包后可得到具体的主题配置文件，将文件 gnome-shell.css 中的 #panel 模块里的 background-color 的值修改为 `rgba(0,0,0,0.6)`，再将其重新打包，替换原来的主题文件，重启 GNOME Shell 即可
+
+[参阅](https://wiki.archlinux.org/title/GDM)
 
 ## 开启内核级显示模式设置
 
@@ -88,6 +92,6 @@ qla2xxx|linux-firmware-qlogic
 wd719x|wd719x-firmware
 xhci_pci|upd72020x-fw
 
-如果消息仅在生成 fallback initramfs 镜像时出现，可以禁止 fallback 镜像的生成，在 `/etc/mkinitcpio.d` 目录下的 linux.preset 文件中，将 PRESETS= 里的 fallback 移除，并重新生成系统引导
+如果消息仅在生成 fallback initramfs 镜像时出现，可以禁止 fallback 镜像的生成，在 `/etc/mkinitcpio.d` 目录下的 preset 文件中，将 PRESETS= 里的 fallback 移除，并重新生成系统引导
 
 [参阅](https://wiki.archlinux.org/title/Mkinitcpio#Possibly_missing_firmware_for_module_XXXX)

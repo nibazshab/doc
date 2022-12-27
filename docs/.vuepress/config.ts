@@ -46,10 +46,10 @@ export default defineUserConfig({
       {
         text: '道路施工中',
         children: [
-          '/TUE/GiscusDiscuss.md',
           '/TUE/CMD.md',
           '/TUE/Note.md',
           '/TUE/Trash.md',
+          '/TUE/GiscusDiscuss.md',
         ],
       },
     ],
