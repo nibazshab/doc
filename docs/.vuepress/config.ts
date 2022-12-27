@@ -42,6 +42,7 @@ export default defineUserConfig({
       {
         text: '道路施工中',
         children: [
+          '/TUE/GiscusDiscuss.md',
           '/TUE/CMD.md',
           '/TUE/Note.md',
           '/TUE/Trash.md',
@@ -73,7 +74,6 @@ export default defineUserConfig({
       hostname: 'https://www.atri.ml',
     }),
     commentPlugin({
-      //comment: false,
       provider: 'Giscus',
       repo: 'nibazshab/wiki',
       repoId: 'MDEwOlJlcG9zaXRvcnkxOTg2NTY0NTU=',

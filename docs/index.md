@@ -11,7 +11,7 @@
 - [vuepress-plugin-md-enhance@next](https://vuepress-theme-hope.github.io/v2/md-enhance)
 - [vuepress-plugin-sitemap2@next](https://vuepress-theme-hope.github.io/v2/sitemap)
 - [vuepress-plugin-seo2@next](https://vuepress-theme-hope.github.io/v2/seo)
-- [vuepress-plugin-comment2@next](https://vuepress-theme-hope.gitee.io/v2/comment)
+- [vuepress-plugin-comment2@next](https://vuepress-theme-hope.github.io/v2/comment)
 
 ---
 
@@ -26,3 +26,5 @@
 感谢各位 :heart:
 
 Thank you for everything :heart:
+
+<CommentService />

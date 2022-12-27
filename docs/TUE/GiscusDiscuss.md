@@ -2,6 +2,8 @@
 comment: true
 ---
 
-# Giscus Discussion
+# 评论
 
 测试评论
+
+<CommentService />
