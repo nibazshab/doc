@@ -19,7 +19,7 @@
 
 - 打开 Github，给 [站长](https://github.com/nibazshab) 点个 Follow
 - 打开 Github，给 [本站点](https://github.com/nibazshab/wiki) 点个 Star
-- 在 [comment](GiscusDiscuss) 区留下你的意见
+- 在 [讨论区](GiscusDiscuss) 留下你的想法
 
 <br>
 

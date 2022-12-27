@@ -7,6 +7,10 @@ import { sitemapPlugin } from 'vuepress-plugin-sitemap2';
 import { seoPlugin } from 'vuepress-plugin-seo2';
 import { commentPlugin } from 'vuepress-plugin-comment2';
 
+import { getDirname, path } from '@vuepress/utils';
+
+const __dirname = getDirname(import.meta.url),
+
 export default defineUserConfig({
   theme: defaultTheme({
     sidebar: [
@@ -58,6 +62,9 @@ export default defineUserConfig({
   base: '/',
   title: '_Wiki',
   head: [['link', {rel: 'icon', href: '/favicon.ico',},]],
+  alias: {
+    '@theme/PageNav.vue': path.resolve(__dirname, './components/PageNav.vue'),
+  },
   plugins: [
     shikiPlugin({
       theme: 'github-dark',
