@@ -27,8 +27,8 @@ jobs:
         pnpm add -D vuepress-plugin-seo2@next
         pnpm add -D vuepress-plugin-comment2@next
     - name: build vuepress next
-      run: pnpm docs:build
-    - name: upload artifact
+      run: yarn docs:build
+    - name: upload package
       uses: actions/upload-artifact@v3
       with:
         name: www.atri.ml
@@ -37,7 +37,7 @@ jobs:
     needs: build
     runs-on: macos-latest
     steps:
-    - name: download artifact
+    - name: download package
       uses: actions/download-artifact@v3
       with:
         name: www.atri.ml
