@@ -11,7 +11,10 @@ jobs:
     steps:
     - name: checkout
       uses: actions/checkout@v3
-
+    - name: setup pnpm
+      uses: pnpm/action-setup@v2
+      with:
+        version: latest
     - name: setup vuepress next
       run: |
         echo
