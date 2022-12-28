@@ -185,8 +185,8 @@ UUID=979aa7ec-8842-4e22-8bfc-4c8aed3de56d    /swap    btrfs    rw,relatime,ssd,s
 输入如下指令，生成中文和英文语言环境
 
 ```shell
-> sed -i 's/#zh_CN.UTF-8/zh_CN.UTF-8/' /etc/locale.gen
-> sed -i 's/#en_US.UTF-8/en_US.UTF-8/' /etc/locale.gen
+> sed -i 's/#zh_CN.UTF-8/zh_CN.UTF-8/g' /etc/locale.gen
+> sed -i 's/#en_US.UTF-8/en_US.UTF-8/g' /etc/locale.gen
 > locale-gen
 ```
 

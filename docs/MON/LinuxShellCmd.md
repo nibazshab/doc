@@ -21,7 +21,7 @@
 - `nohup <command> > log 2>&1 &; disown` 后台运行指令，记录日志
 - `rclone mount name:/path /path --cache-dir /path --vfs-cache-mode writes` rclone 挂载云盘为本地目录，并设置缓存路径
 - `rsync -avzhP --bwlimit=500 /path /path` 文件传输，保留元数据并限制速率 500k
-- `sed -i s/a/b/g file` sed 替换文件内容
+- `sed -i s/a/b/g file` 替换文件内容
 - `LS_COLORS='rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;93'` 设置 ls 颜色
 
 ---

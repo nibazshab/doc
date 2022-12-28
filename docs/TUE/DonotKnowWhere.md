@@ -80,4 +80,15 @@ menuentry 'Gentoo LiveCD' {
 }
 ```
 
-::::
+## Else
+
+[[toc]]
+
+    no toc no edit
+
+::: details a
+
+    look at me
+    look at the sky
+
+:::

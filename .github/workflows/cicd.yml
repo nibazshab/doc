@@ -11,18 +11,23 @@ jobs:
     steps:
     - name: checkout
       uses: actions/checkout@v3
+    
+    - name: setup pnpm
+      uses: pnpm/action-setup@v2
+      with:
+        version: latest
     - name: setup vuepress next
       run: |
         echo
-        yarn add -D vuepress@next
-        yarn add -D @vuepress/plugin-shiki@next
-        yarn add -D @vuepress/plugin-google-analytics@next
-        yarn add -D vuepress-plugin-md-enhance@next
-        yarn add -D vuepress-plugin-sitemap2@next
-        yarn add -D vuepress-plugin-seo2@next
-        yarn add -D vuepress-plugin-comment2@next
+        pnpm add -D vuepress@next @vuepress/client@next @vuepress/utils@next vue
+        pnpm add -D @vuepress/plugin-shiki@next
+        pnpm add -D @vuepress/plugin-google-analytics@next
+        pnpm add -D vuepress-plugin-md-enhance@next
+        pnpm add -D vuepress-plugin-sitemap2@next
+        pnpm add -D vuepress-plugin-seo2@next
+        pnpm add -D vuepress-plugin-comment2@next
     - name: build vuepress next
-      run: yarn docs:build
+      run: pnpm docs:build
     - name: upload artifact
       uses: actions/upload-artifact@v3
       with:

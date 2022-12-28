@@ -27,7 +27,7 @@ sidebarDepth: 2
 输入如下指令为普通用户启用 sudo
 
 ```shell
-> sed -i 's/# %wheel ALL=(ALL:ALL) ALL/%wheel ALL=(ALL:ALL) ALL/' /etc/sudoers
+> sed -i 's/# %wheel ALL=(ALL:ALL) ALL/%wheel ALL=(ALL:ALL) ALL/g' /etc/sudoers
 ```
 
 ## 15. 可选步骤
