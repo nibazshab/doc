@@ -15,7 +15,7 @@ jobs:
     - name: setup vuepress next
       run: |
         echo
-        yarn add -D vuepress@next @vuepress/client@next @vuepress/utils@next vue
+        yarn add -D vuepress@next
         yarn add -D @vuepress/plugin-shiki@next
         yarn add -D @vuepress/plugin-google-analytics@next
         yarn add -D vuepress-plugin-md-enhance@next
