@@ -140,7 +140,7 @@ WantedBy=multi-user.target
 
 启动服务，并设为开机自启
 
-```shell
+```sh
 > systemctl enable --user --now aria2.service
 ```
 

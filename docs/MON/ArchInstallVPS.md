@@ -14,13 +14,13 @@ sidebarDepth: 2
 
 因为是腾讯云的服务器，故直接从腾讯内网下载镜像，减少公网流量消耗
 
-```shell
+```sh
 > wget http://mirrors.tencentyun.com/archlinux/iso/latest/archlinux-x86_64.iso -O /arch.iso
 ```
 
 ## 2. 添加 Grub 引导项
 
-```shell
+```sh
 > vim /boot/grub/grub.cfg
 ```
 
@@ -44,7 +44,7 @@ menuentry 'Arch LiveCD' {
 
 在本地使用 SSH 连接服务器，连接成功后，即可关闭 VNC 连接
 
-```shell
+```sh
 # 设置密码
 > passwd
 
@@ -54,13 +54,13 @@ menuentry 'Arch LiveCD' {
 
 ## 5. 关闭 reflcetor
 
-```shell
+```sh
 > systemctl stop reflector
 ```
 
 ## 6. 硬盘格式化与挂载
 
-```shell
+```sh
 # 格式化硬盘
 > mkfs.ext4 /dev/vda1
 
@@ -70,7 +70,7 @@ menuentry 'Arch LiveCD' {
 
 ## 7. 安装 Arch Linux
 
-```shell
+```sh
 # 配置腾讯内网软件源
 > echo Server = http://mirrors.tencentyun.com/archlinux/$repo/os/$arch > /etc/pacman.d/mirrorlist
 

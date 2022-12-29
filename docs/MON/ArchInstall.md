@@ -22,7 +22,7 @@ sidebarDepth: 2
 
 安装镜像中默认启动的 reflector 服务会自动更新 pacman 软件源，或许它是个很好用的工具，但因为一些特殊的网络原因，它并不能带来更好的体验
 
-```shell
+```sh
 > systemctl stop reflector.service
 ```
 
@@ -32,21 +32,21 @@ sidebarDepth: 2
 
 正常情况下，系统会自动连接有线网络，无线网络使用 iwctl 来进行连接，输入如下指令进入 iwd 模式，并查看无线网卡的名称
 
-```shell
+```sh
 > iwctl
 > device list
 ```
 
 假设查看的无线网卡名称为 `wlan0`，输入如下指令扫描无线网络
 
-```shell
+```sh
 > station wlan0 scan
 > station wlan0 get-networks
 ```
 
 中文名称的网络无法正常显示和连接，请连接英文名称的网络
 
-```shell
+```sh
 > station wlan0 connect <网络名称>
 ```
 
@@ -60,7 +60,7 @@ sidebarDepth: 2
 
 准确的时间是至关重要的，它决定了很多东西能否正常运行，输入如下指令查看
 
-```shell
+```sh
 > timedatectl status
 ```
 
@@ -102,7 +102,7 @@ nvme0n1     259:0    0 953.9G  0 disk
 
 输入如下指令，格式化 efi 分区为 fat32 格式，格式化系统分区为 btrfs 格式
 
-```shell
+```sh
 > mkfs.vfat -F32 /dev/nvme0n1p1
 > mkfs.btrfs /dev/nvm0n1p2
 ```
@@ -111,7 +111,7 @@ nvme0n1     259:0    0 953.9G  0 disk
 
 输入 `mount -t btrfs -o compress=zstd /dev/nvme0n1p2 /mnt` 将 btrfs 分区挂载到 `/mnt` 目录，输入如下指令创建 3 个 btrfs 子卷
 
-```shell
+```sh
 > btrfs subvolume create /mnt/@
 > btrfs subvolume create /mnt/@home
 > btrfs subvolume create /mnt/@swap
@@ -119,13 +119,13 @@ nvme0n1     259:0    0 953.9G  0 disk
 
 输入 `umount /mnt` 取消 btrfs 分区的挂载，并将btrfs @ 子卷挂载为根目录
 
-```shell
+```sh
 > mount -t btrfs -o subvol=/@,compress=zstd /dev/nvme0n1p2 /mnt
 ```
 
 输入 `mkdir -p /mnt/home /mnt/swap /mnt/boot` 创建 home swap boot 目录，将 btrfs @home 子卷挂载为家目录，btrfs @swap 子卷挂载为 swap 目录，将 efi 分区挂载为 boot 目录
 
-```shell
+```sh
 > mount -t btrfs -o subvol=/@home,compress=zstd /dev/nvme0n1p2 /mnt/home
 > mount -t btrfs -o subvol=/@swap /dev/nvme0n1p2 /mnt/swap
 > mount /dev/nvme0n1p1 /mnt/boot
@@ -147,7 +147,7 @@ nvme0n1     259:0    0 953.9G  0 disk
 
 输入如下指令，创建交换文件并启用交换空间，大小设为 2G
 
-```shell
+```sh
 > chattr +C /swap
 > truncate -s 0 /swap/swapfile
 > fallocate -l 2G /swap/swapfile
@@ -184,7 +184,7 @@ UUID=979aa7ec-8842-4e22-8bfc-4c8aed3de56d    /swap    btrfs    rw,relatime,ssd,s
 
 输入如下指令，生成中文和英文语言环境
 
-```shell
+```sh
 > sed -i 's/#zh_CN.UTF-8/zh_CN.UTF-8/g' /etc/locale.gen
 > sed -i 's/#en_US.UTF-8/en_US.UTF-8/g' /etc/locale.gen
 > locale-gen
@@ -240,7 +240,7 @@ Exec = /usr/bin/systemctl restart systemd-boot-update.service
 
 输入以下指令，启用网络服务，退回安装环境，取消所有分区的挂载，重启
 
-```shell
+```sh
 > systemctl enable NetworkManager.service
 > exit
 > umount -R /mnt

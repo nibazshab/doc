@@ -21,7 +21,7 @@ GNOME Shell 主题被存储为二进制文件 `/usr/share/gnome-shell/gnome-shel
 
 ::: details extractgst.sh
 
-```shell
+```sh
 #!/bin/sh
 gst=/usr/share/gnome-shell/gnome-shell-theme.gresource
 workdir=$HOME
@@ -33,15 +33,9 @@ for r in `gresource list $gst`; do
 	fi
 done
 
-> for r in `gresource list $gst`; do
->         gresource extract $gst $r >$workdir/${r#\/org\/gnome\/shell/}
-> done
-```
-
-```sh
-> for r in `gresource list $gst`; do
->        gresource extract $gst $r >$workdir/${r#\/org\/gnome\/shell/}
-> done
+for r in `gresource list $gst`; do
+        gresource extract $gst $r >$workdir/${r#\/org\/gnome\/shell/}
+done
 ```
 
 :::
@@ -143,17 +137,17 @@ Exec=/bin/sh -c 'while read -r trg; do case $trg in linux) exit 0; esac; done; /
 
 ::: details 常见的模块与固件包
 
-- aic94xx `aic94xx-firmware`
-- bfa `linux-firmware-qlogic`
-- bnx2x `linux-firmware-bnx2x`
-- liquidio `linux-firmware-liquidio`
-- mlxsw_spectrum `linux-firmware-mellanox`
-- nfp `linux-firmware-nfp`
-- qed `linux-firmware-qlogic`
-- qla1280 `linux-firmware-qlogic`
-- qla2xxx `linux-firmware-qlogic`
-- wd719x `wd719x-firmware`
-- xhci_pci `upd72020x-fw`
+- aic94xx - `aic94xx-firmware`
+- bfa - `linux-firmware-qlogic`
+- bnx2x - `linux-firmware-bnx2x`
+- liquidio - `linux-firmware-liquidio`
+- mlxsw_spectrum - `linux-firmware-mellanox`
+- nfp - `linux-firmware-nfp`
+- qed - `linux-firmware-qlogic`
+- qla1280 - `linux-firmware-qlogic`
+- qla2xxx - `linux-firmware-qlogic`
+- wd719x - `wd719x-firmware`
+- xhci_pci - `upd72020x-fw`
 
 :::
 

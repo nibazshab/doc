@@ -16,7 +16,7 @@ Value 公司发行的 Steam Deck 掌机使用基于 Arch Linux 所开发的 Stea
 
 使用 Flatpak 安装可避免许多毛病
 
-```shell
+```sh
 > flatpak --user remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 > flatpak --user install flathub com.valvesoftware.Steam
 > flatpak run com.valvesoftware.Steam
@@ -24,7 +24,7 @@ Value 公司发行的 Steam Deck 掌机使用基于 Arch Linux 所开发的 Stea
 
 默认情况下通过 Flatpak 安装的 Steam 不会有访问你的家目录的权限，并且由于安全问题，强行忽略此权限限制会导致 Steam 无法运行。不过，你可以自由地在家目录之外添加一个目录。如果你想添加一个外部库，你可以运行如下指令来添加
 
-```shell
+```sh
 > flatpak --user override com.valvesoftware.Steam --filesystem=/path/to/directory
 ```
 
@@ -49,7 +49,7 @@ Value 公司发行的 Steam Deck 掌机使用基于 Arch Linux 所开发的 Stea
 
 如果使用 Flatpak 安装了 Bottles，你可以在 Steam 中使用它来运行 Windows 游戏，[参阅](https://docs.usebottles.com/flatpak/cant-enable-steam-proton-manager)
 
-```shell
+```sh
 > flatpak override --user com.usebottles.bottles --filesystem=~/.var/app/com.valvesoftware.Steam/data/Steam
 ```
 
