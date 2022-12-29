@@ -17,7 +17,82 @@ user-theme|主题
 
 ## GNOME 顶栏半透明
 
-GNOME Shell 主题被存储为二进制文件 `/usr/share/gnome-shell/gnome-shell-theme.gresource`，拆包后可得到具体的主题配置文件，将文件 gnome-shell.css 中的 #panel 模块里的 background-color 的值修改为 `rgba(0,0,0,0.6)`，再将其重新打包，替换原来的主题文件，重启 GNOME Shell 即可
+GNOME Shell 主题被存储为二进制文件 `/usr/share/gnome-shell/gnome-shell-theme.gresource`，运行拆包脚本后，在 `$HOME` 目录得到主题配置文件
+
+::: details 拆包脚本 extractgst.sh
+
+```shell
+#!/bin/sh
+gst=/usr/share/gnome-shell/gnome-shell-theme.gresource
+workdir=$HOME
+
+for r in `gresource list $gst`; do
+	r=${r#\/org\/gnome\/shell/}
+	if [ ! -d $workdir/${r%/*} ]; then
+	  mkdir -p $workdir/${r%/*}
+	fi
+done
+
+for r in `gresource list $gst`; do
+        gresource extract $gst $r >$workdir/${r#\/org\/gnome\/shell/}
+done
+```
+
+```sh
+#!/bin/sh
+gst=/usr/share/gnome-shell/gnome-shell-theme.gresource
+workdir=${HOME}/shell-theme
+
+for r in `gresource list $gst`; do
+	r=${r#\/org\/gnome\/shell/}
+	if [ ! -d $workdir/${r%/*} ]; then
+	  mkdir -p $workdir/${r%/*}
+	fi
+done
+
+for r in `gresource list $gst`; do
+        gresource extract $gst $r >$workdir/${r#\/org\/gnome\/shell/}
+done
+```
+
+:::
+
+将文件 gnome-shell.css 中的 #panel 模块里的 background-color 的值修改为 `rgba(0,0,0,0.6)`，再输入 `glib-compile-resources gnome-shell-theme.gresource.xml` 指令根据打包配置文件 
+gnome-shell-theme.gresource.xml 将主题重新打包成二进制文件，替换原来的主题，重启 GNOME Shell 即可
+
+::: details 打包配置文件 gnome-shell-theme.gresource.xml
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<gresources>
+  <gresource prefix="/org/gnome/shell/theme">
+    <file>calendar-today.svg</file>
+    <file>calendar-today-light.svg</file>
+    <file>checkbox.svg</file>
+    <file>checkbox-focused.svg</file>
+    <file>checkbox-off-focused-light.svg</file>
+    <file>checkbox-off-focused.svg</file>
+    <file>checkbox-off-light.svg</file>
+    <file>checkbox-off.svg</file>
+    <file>gnome-shell.css</file>
+    <file>gnome-shell-high-contrast.css</file>
+    <file>gnome-shell-start.svg</file>
+    <file>pad-osd.css</file>
+    <file>process-working.svg</file>
+    <file>toggle-off.svg</file>
+    <file>toggle-off-hc.svg</file>
+    <file>toggle-off-light.svg</file>
+    <file>toggle-on.svg</file>
+    <file>toggle-on-hc.svg</file>
+    <file>toggle-on-light.svg</file>
+    <file>workspace-placeholder.svg</file>
+  </gresource>
+</gresources>
+```
+
+:::
+
+```shell
 
 [参阅](https://wiki.archlinux.org/title/GDM)
 
@@ -78,7 +153,9 @@ Exec=/bin/sh -c 'while read -r trg; do case $trg in linux) exit 0; esac; done; /
 
 如果在生成默认 initramfs 镜像时出现这些或类似的消息，则如警告所述，可能需要安装其他固件。大多数常见的固件文件可以通过安装 `linux-firmware` 来获取。对于其他的固件软件包，可以尝试在软件包仓库中搜索固件模块的名字获取。聚合包 `mkinitcpio-firmware` 包括绝大部分的固件，或者手动安装所需的固件包
 
-常见模块|固件包名
+::: details 常见的模块与固件包
+
+模块|固件包
 -|-
 aic94xx|aic94xx-firmware
 bfa|linux-firmware-qlogic
@@ -91,6 +168,8 @@ qla1280|linux-firmware-qlogic
 qla2xxx|linux-firmware-qlogic
 wd719x|wd719x-firmware
 xhci_pci|upd72020x-fw
+
+:::
 
 如果消息仅在生成 fallback initramfs 镜像时出现，可以禁止 fallback 镜像的生成，在 `/etc/mkinitcpio.d` 目录下的 preset 文件中，将 PRESETS= 里的 fallback 移除，并重新生成系统引导
 

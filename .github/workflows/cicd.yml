@@ -19,15 +19,15 @@ jobs:
     - name: setup vuepress next
       run: |
         echo
-        yarn add -D vuepress@next
-        yarn add -D @vuepress/plugin-shiki@next
-        yarn add -D @vuepress/plugin-google-analytics@next
-        yarn add -D vuepress-plugin-md-enhance@next
-        yarn add -D vuepress-plugin-sitemap2@next
-        yarn add -D vuepress-plugin-seo2@next
-        yarn add -D vuepress-plugin-comment2@next
+        pnpm add -D vue vuepress@next @vuepress/client@next @vuepress/utils@next
+        pnpm add -D @vuepress/plugin-shiki@next
+        pnpm add -D @vuepress/plugin-google-analytics@next
+        pnpm add -D vuepress-plugin-md-enhance@next
+        pnpm add -D vuepress-plugin-sitemap2@next
+        pnpm add -D vuepress-plugin-seo2@next
+        pnpm add -D vuepress-plugin-comment2@next
     - name: build vuepress next
-      run: yarn docs:build
+      run: pnpm docs:build
     - name: upload package
       uses: actions/upload-artifact@v3
       with:
