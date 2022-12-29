@@ -40,9 +40,13 @@ https://pay.qq.com/h5/index.shtml?m=buy&c=game&dialog=0&midasApiVersion=5&transa
 
 在 nginx 配置文件中站点的 `server` 模块中添加 `location / { try_files $uri $uri/ /index.php?$args; }`
 
+---
+
 - typecho 上传目录无法写入，将安装目录下的 usr/uploads 目录的权限设置为可写
 
 检查 php-fpm 和 nginx 用户是否一致，把 php-fpm.service 的 `ProtectSystem=full` 行删除
+
+---
 
 - 域名 dns 解析到 github pages
 
