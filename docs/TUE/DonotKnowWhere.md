@@ -90,6 +90,8 @@ menuentry 'Gentoo LiveCD' {
 
     no toc no edit
 
+### ---
+
 ::: details a
 
     look at me

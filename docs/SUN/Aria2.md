@@ -6,7 +6,7 @@
 
 ## 配置文件
 
-::: details 示例
+::: details aria2.conf
 
 ```ini
 enable-rpc=true
