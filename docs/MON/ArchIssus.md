@@ -15,11 +15,11 @@ just-perfection-desktop|修改界面样式
 logomenu|更改左上角活动菜单图标
 user-theme|主题
 
-## GNOME 顶栏半透明
+## GNOME 主题修改，顶栏半透明
 
-GNOME Shell 主题被存储为二进制文件 `/usr/share/gnome-shell/gnome-shell-theme.gresource`，运行拆包脚本后，在 `$HOME` 目录得到主题配置文件
+GNOME Shell 主题被存储为二进制文件 `/usr/share/gnome-shell/gnome-shell-theme.gresource`，运行 extractgst.sh 拆包脚本，在 `$HOME` 目录得到主题配置文件
 
-::: details 拆包脚本 extractgst.sh
+::: details extractgst.sh
 
 ```shell
 #!/bin/sh
@@ -33,34 +33,24 @@ for r in `gresource list $gst`; do
 	fi
 done
 
-for r in `gresource list $gst`; do
-        gresource extract $gst $r >$workdir/${r#\/org\/gnome\/shell/}
-done
+> for r in `gresource list $gst`; do
+>         gresource extract $gst $r >$workdir/${r#\/org\/gnome\/shell/}
+> done
 ```
 
 ```sh
-#!/bin/sh
-gst=/usr/share/gnome-shell/gnome-shell-theme.gresource
-workdir=${HOME}/shell-theme
-
-for r in `gresource list $gst`; do
-	r=${r#\/org\/gnome\/shell/}
-	if [ ! -d $workdir/${r%/*} ]; then
-	  mkdir -p $workdir/${r%/*}
-	fi
-done
-
-for r in `gresource list $gst`; do
-        gresource extract $gst $r >$workdir/${r#\/org\/gnome\/shell/}
-done
+> for r in `gresource list $gst`; do
+>        gresource extract $gst $r >$workdir/${r#\/org\/gnome\/shell/}
+> done
 ```
 
 :::
 
-将文件 gnome-shell.css 中的 #panel 模块里的 background-color 的值修改为 `rgba(0,0,0,0.6)`，再输入 `glib-compile-resources gnome-shell-theme.gresource.xml` 指令根据打包配置文件 
-gnome-shell-theme.gresource.xml 将主题重新打包成二进制文件，替换原来的主题，重启 GNOME Shell 即可
+将主题配置文件 gnome-shell.css 中的 #panel 模块里的 background-color 的值修改为 `rgba(0,0,0,0.6)`
 
-::: details 打包配置文件 gnome-shell-theme.gresource.xml
+输入 `glib-compile-resources gnome-shell-theme.gresource.xml` 指令按照 gnome-shell-theme.gresource.xml 打包配置文件，将主题重新打包成二进制文件，替换原来的主题，重启 GNOME Shell 即可
+
+::: details gnome-shell-theme.gresource.xml
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -92,9 +82,7 @@ gnome-shell-theme.gresource.xml 将主题重新打包成二进制文件，替换
 
 :::
 
-```shell
-
-[参阅](https://wiki.archlinux.org/title/GDM)
+[参阅](https://wiki.archlinux.org/title/GDM#Configuration)
 
 ## 开启内核级显示模式设置
 
@@ -104,7 +92,7 @@ KMS 通常是在 initramfs stage 之后开始初始化，但是也可以在 init
 
 - AMD GPU 加入 `amdgpu`，老的 ATI 驱动加入 `radeon`
 - Intel GPU 加入 `i915`
-- 对于 NVIDIA 驱动的 `nvidia nvidia_modeset nvidia_uvm nvidia_drm`，详见 [NVIDIA#DRM kernel mode setting](https://wiki.archlinux.org/title/NVIDIA#DRM_kernel_mode_setting)
+- NVIDIA 驱动的 `nvidia nvidia_modeset nvidia_uvm nvidia_drm`，详见 [NVIDIA#DRM kernel mode setting](https://wiki.archlinux.org/title/NVIDIA#DRM_kernel_mode_setting)
 
 为了避免更新 NVIDIA 驱动之后忘了更新 initramfs，建议使用 Pacman Hooks 自动生成新内核，将以下内容添加到 `/etc/pacman.d/hooks/nvidia.hook`
 
@@ -145,7 +133,7 @@ Exec=/bin/sh -c 'while read -r trg; do case $trg in linux) exit 0; esac; done; /
 
 当内核更新后，镜像 initramfs 被重新构建时，你可能得到以下警告
 
-```shell
+```ini
 ==> WARNING: Possibly missing firmware for module: xhci_pci
 ==> WARNING: Possibly missing firmware for module: aic94xx
 ==> WARNING: Possibly missing firmware for module: bfa
@@ -155,19 +143,17 @@ Exec=/bin/sh -c 'while read -r trg; do case $trg in linux) exit 0; esac; done; /
 
 ::: details 常见的模块与固件包
 
-模块|固件包
--|-
-aic94xx|aic94xx-firmware
-bfa|linux-firmware-qlogic
-bnx2x|linux-firmware-bnx2x
-liquidio|linux-firmware-liquidio
-mlxsw_spectrum|linux-firmware-mellanox
-nfp|linux-firmware-nfp
-qed|linux-firmware-qlogic
-qla1280|linux-firmware-qlogic
-qla2xxx|linux-firmware-qlogic
-wd719x|wd719x-firmware
-xhci_pci|upd72020x-fw
+- aic94xx `aic94xx-firmware`
+- bfa `linux-firmware-qlogic`
+- bnx2x `linux-firmware-bnx2x`
+- liquidio `linux-firmware-liquidio`
+- mlxsw_spectrum `linux-firmware-mellanox`
+- nfp `linux-firmware-nfp`
+- qed `linux-firmware-qlogic`
+- qla1280 `linux-firmware-qlogic`
+- qla2xxx `linux-firmware-qlogic`
+- wd719x `wd719x-firmware`
+- xhci_pci `upd72020x-fw`
 
 :::
 
