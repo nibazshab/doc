@@ -2,6 +2,11 @@
 
 <br>
 
+## 建立软连接
+
+1. 管理员权限打开 PowerShell
+2. 输入 `mklink /d d:\link d:\target`
+
 ## 开启 UTF-8 语言环境
 
 1. 时间和语言
@@ -27,7 +32,7 @@
 
 ## 将硬件时间视为 UTC 时间
 
-1. 打开 PowerShell
+1. 管理员权限打开 PowerShell
 2. 输入 `Reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsUniversal /t REG_DWORD /d 1`
 
 ## NVIDIA 控制面板闪退
