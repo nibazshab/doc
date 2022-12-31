@@ -8,7 +8,7 @@
 
 ## Java 服务器
 
-使用 [spigot](https://www.spigotmc.org) 作为 Minecraft Java 服务器软件，在此不多作介绍
+使用 [spigot](https://www.spigotmc.org) 作为 Minecraft Java 服务器软件，此处不多作介绍
 
 - 配置文件 `server.properties`
   - 地图种子参数 `level-seed=`

@@ -24,6 +24,7 @@ export default defineUserConfig({
           '/SUN/Minecraft.md',
           '/SUN/Steam.md',
           '/SUN/WallpaperEngine.md',
+          '/SUN/KiwixTools.md',
         ],
       },
       {
