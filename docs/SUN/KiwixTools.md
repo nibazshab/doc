@@ -42,3 +42,7 @@ WantedBy=multi-user.target
 ```
 
 添加新的 ZIM 文件时，请重新生成索引文件，并重启服务
+
+## 访问网页
+
+在浏览器打开 http://localhost:11400 即可
