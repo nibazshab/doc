@@ -19,6 +19,7 @@ export default defineUserConfig({
       {
         text: '难以名状的',
         children: [
+          '/sun/qianmo.md',
           '/sun/aria2.md',
           '/sun/visualstudiocode.md',
           '/sun/minecraft.md',
