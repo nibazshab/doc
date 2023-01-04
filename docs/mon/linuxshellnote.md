@@ -2,12 +2,14 @@
 
 <br>
 
+- `openssl enc -aes-256-cbc -pbkdf2 -salt -in file.base64 -out file.base64.enc.aes256cbc` 加密文件
+- `openssl enc -aes-256-cbc -pbkdf2 -salt -d -in file.base64.enc.aes256cbc -out file.base64` 解密文件
 - `find -name '*.jpg'   xargs jpegoptim --strip-all --all-progressive -o -f --max=50%` 批量压缩 jpeg 图片
 - `ffmpeg -i input.avi -c:v copy -c:a copy output.mp4` ffmpeg 快速转换格式
 - `grep -rn 'abc' /path` 搜索文本内容
 - `scp /file user@host:/path` ssh 上传文件
-- `flac -d <file>.flac` flac 转 wav
-- `flac -s --compression-level-5 <file>.wav` wav 转 flac
+- `flac -d file.flac` flac 转 wav
+- `flac -s --compression-level-5 file.wav` wav 转 flac
 - `screen -dmS <session_name> <command>` 创建 screen 后台运行会话
 - `screen -ls` 查看 screen 会话
 - `screen -r <session_name>` 进入 screen 会话
