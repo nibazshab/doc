@@ -19,7 +19,7 @@
 - `sfdisk /dev/sdb < sdb.bkp` 导入分区表文件
 - `i=1; for file in $(find -name "*.c"); do mv $file $(printf "%0.2d.c" $i); i=$(($i+1)); done` 查找 c 文件，重命名为 01.c、02.c
 - `while true; do <command>; done` 无限重复指令
-- `IFS_old=$IFS;IFS=$"\n"; for file in $(ls); do echo $file; done; IFS=$IFS_old` 读取带空格的文件名
+- `IFS_old=$IFS;IFS=$'\n'; for file in $(ls); do echo $file; done; IFS=$IFS_old` 读取带空格的文件名
 - `nohup <command> > log 2>&1 &; disown` 后台运行指令，记录日志
 - `rclone mount name:/path /path --cache-dir /path --vfs-cache-mode writes` rclone 挂载云盘为本地目录，并设置缓存路径
 - `rsync -avzhP --bwlimit=500 /path /path` 文件传输，保留元数据并限制速率 500k
