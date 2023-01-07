@@ -50,8 +50,8 @@ Value 公司发行的 Steam Deck 掌机使用基于 Arch Linux 所开发的 Stea
 
 1. 打开 Steam 安装目录，找到 package 文件夹
 2. 进入 package 目录，创建一个名为 beta 的文件
-3. 在 beta 文件中写入 `steampal_stable_9a24a2bf68596b860cb6710d9ea307a76c29a04d`，保存退出
-4. 在 Steam 的启动指令后面添加 `-gamepadui` 参数
+3. 在 beta 文件中写入 `steampal_stable_9a24a2bf68596b860cb6710d9ea307a76c29a04d`
+4. 在 Steam 的启动指令后面添加 `-gamepadui`
 
 ## 亚洲字体乱码
 
@@ -67,7 +67,7 @@ Value 公司发行的 Steam Deck 掌机使用基于 Arch Linux 所开发的 Stea
 
 找到系统中的字体目录，一般为 `/usr/share/fonts`，输入 `ls` 查看有哪些字体，假设存在 `/usr/share/fonts/win` 目录，其中包含的是 Windows 平台的字体
 
-创建 `/usr/share/fonts/steam_fonts.conf` 文件，写入如下内容
+创建 `/usr/share/fonts/steam.conf` 文件，写入如下内容
 
 ```xml
 <?xml version="1.0"?>
@@ -77,7 +77,7 @@ Value 公司发行的 Steam Deck 掌机使用基于 Arch Linux 所开发的 Stea
 </fontconfig>
 ```
 
-打开 Steam.desktop，为每个 Exec 项添加参数 `env FONTCONFIG_FILE=/usr/share/fonts/steam_fonts.conf`
+编辑 Steam.desktop，在所有 Exec= 后添加 `env FONTCONFIG_FILE=/usr/share/fonts/steam.conf`
 
 ## 跳正版分流验证
 
