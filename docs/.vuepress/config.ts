@@ -48,7 +48,7 @@ export default defineUserConfig({
       {
         text: '道路施工中',
         children: [
-          '/tue/donotknowwhere.md',
+          '/tue/donotknowhat.md',
           '/tue/giscusdiscuss.md',
         ],
       },

@@ -83,18 +83,3 @@ menuentry 'Gentoo LiveCD' {
   initrd (loop)/boot/gentoo.igz
 }
 ```
-
-## Else
-
-[[toc]]
-
-    no toc no edit
-
-### ---
-
-::: details a
-
-    look at me
-    look at the sky
-
-:::

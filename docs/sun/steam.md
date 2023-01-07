@@ -30,7 +30,15 @@ Value 公司发行的 Steam Deck 掌机使用基于 Arch Linux 所开发的 Stea
 
 启动使用 Flakpak 安装的 steam 可能会发出警告有关安装 `steam-devices` 软件包的信息，此包暂不存在，可通过安装 Aur 的 `game-devices-udev` 来解决
 
-## 非 steam 平台 exe 游戏
+### Bottles 集成
+
+如果使用 Flatpak 安装了 Bottles，你可以在 Steam 中使用它来运行 Windows 游戏，[参阅](https://docs.usebottles.com/flatpak/cant-enable-steam-proton-manager)
+
+```sh
+> flatpak override --user com.usebottles.bottles --filesystem=~/.var/app/com.valvesoftware.Steam/data/Steam
+```
+
+## 运行非 steam 平台 exe 游戏
 
 1. 点击 Steam 左下角 `添加游戏`
 2. 点击 `添加非 Steam 游戏`
@@ -44,14 +52,6 @@ Value 公司发行的 Steam Deck 掌机使用基于 Arch Linux 所开发的 Stea
 2. 进入 package 目录，创建一个名为 beta 的文件
 3. 在 beta 文件中写入 `steampal_stable_9a24a2bf68596b860cb6710d9ea307a76c29a04d`，保存退出
 4. 在 Steam 的启动指令后面添加 `-gamepadui` 参数
-
-## Bottles 集成
-
-如果使用 Flatpak 安装了 Bottles，你可以在 Steam 中使用它来运行 Windows 游戏，[参阅](https://docs.usebottles.com/flatpak/cant-enable-steam-proton-manager)
-
-```sh
-> flatpak override --user com.usebottles.bottles --filesystem=~/.var/app/com.valvesoftware.Steam/data/Steam
-```
 
 ## 亚洲字体乱码
 
@@ -77,6 +77,8 @@ Value 公司发行的 Steam Deck 掌机使用基于 Arch Linux 所开发的 Stea
 </fontconfig>
 ```
 
-打开 Steam.desktop，为每个 Exec 项添加参数
+打开 Steam.desktop，为每个 Exec 项添加参数 `env FONTCONFIG_FILE=/usr/share/fonts/steam_fonts.conf`
 
-`env FONTCONFIG_FILE=/usr/share/fonts/steam_fonts.conf`
+## 跳正版分流验证
+
+打开 Steam 安装目录，将 Steam 启动程序移动到其他目录，然后直接运行下载的正版分流游戏即可跳过 Steam 验证
