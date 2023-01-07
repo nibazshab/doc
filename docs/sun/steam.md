@@ -42,7 +42,7 @@ Value 公司发行的 Steam Deck 掌机使用基于 Arch Linux 所开发的 Stea
 
 1. 点击 Steam 左下角 `添加游戏`
 2. 点击 `添加非 Steam 游戏`
-3. 选择游戏的 exe 文件
+3. 选择游戏的 exe 启动程序
 4. 点击 `添加选定的程序`
 5. 在 `属性` - `兼容性` 中勾选 `强制使用特定 Steam Play 兼容性工具`
 
@@ -65,7 +65,7 @@ Value 公司发行的 Steam Deck 掌机使用基于 Arch Linux 所开发的 Stea
 
 如上述方法未解决问题，尝试使用 fontconfig 为 Steam 指定字体
 
-找到系统中的字体目录，一般为 `/usr/share/fonts`，输入 `ls` 查看有哪些字体，假设存在 `/usr/share/fonts/win` 目录，其中包含的是 Windows 平台的字体
+找到系统中的字体目录，一般为 `/usr/share/fonts`，假设存在 `/usr/share/fonts/win` 目录，其中包含的是 Windows 平台的字体
 
 创建 `/usr/share/fonts/steam.conf` 文件，写入如下内容
 
