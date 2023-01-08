@@ -55,7 +55,7 @@ menuentry 'Arch LiveCD' {
 ## 5. 关闭 reflcetor
 
 ```sh
-> systemctl stop reflector
+> systemctl stop reflector.service
 ```
 
 ## 6. 硬盘格式化与挂载
@@ -111,7 +111,7 @@ Name=ens5
 DHCP=ipv4
 
 # 开启 ssh 和 net 服务
-> systemctl enable sshd systemd-networkd
+> systemctl enable sshd systemd-networkd.service
 
 # 生成 GRUB 引导
 > grub-install --target=i386-pc /dev/vda

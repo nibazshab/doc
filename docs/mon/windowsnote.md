@@ -20,7 +20,7 @@
 1. 管理员权限打开 PowerShell
 2. 输入
 
-```shell
+```powershell
 mklink /d %LOCALAPPDATA%\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\TempState\ScreenClip %HOMEPATH%\Pictures\screenshot
 ```
 
@@ -50,13 +50,13 @@ mklink /d %LOCALAPPDATA%\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\Temp
 1. 管理员权限打开 PowerShell
 2. 输入
 
-```shell
+```powershell
 Reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsUniversal /t REG_DWORD /d 1
 ```
 
 ### NVIDIA 控制面板闪退
 
-1. 打开 `C:\ProgramData\NVIDIA Corporation\Drs`
+1. 打开 C:\ProgramData\NVIDIA Corporation\Drs
 2. 将 nvdrsdb0.bin 和 nvdrsdb1.bin 文件删除
 
 ### Win Shift S 截图路径
