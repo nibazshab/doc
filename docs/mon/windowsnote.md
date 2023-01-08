@@ -20,7 +20,7 @@
 1. 管理员权限打开 PowerShell
 2. 输入
 
-```powershell
+```shell
 mklink /d %LOCALAPPDATA%\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\TempState\ScreenClip %HOMEPATH%\Pictures\screenshot
 ```
 
@@ -50,7 +50,7 @@ mklink /d %LOCALAPPDATA%\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\Temp
 1. 管理员权限打开 PowerShell
 2. 输入
 
-```powershell
+```shell
 Reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsUniversal /t REG_DWORD /d 1
 ```
 

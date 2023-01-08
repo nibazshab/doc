@@ -152,7 +152,7 @@ WantedBy=multi-user.target
 
 在 `C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp` 目录下创建 aira2.vbs 文件，写入如下内容，即可实现开机自启
 
-```powershell
+```shell
 CreateObject("WScript.Shell").Run "%HOMEPATH%\aria2\aria2c.exe --conf-path=%HOMEPATH%\aria2\aria2.conf -D",0
 ```
 
