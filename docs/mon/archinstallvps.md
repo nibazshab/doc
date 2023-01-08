@@ -52,7 +52,7 @@ menuentry 'Arch LiveCD' {
 > ssh root@<ip>
 ```
 
-## 5. 关闭 reflcetor
+## 5. 关闭 reflcetor 服务
 
 ```sh
 > systemctl stop reflector.service

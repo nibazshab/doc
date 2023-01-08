@@ -141,7 +141,7 @@ nvme0n1     259:0    0 953.9G  0 disk
 
 输入 `genfstab -U /mnt >> /mnt/etc/fstab` 生成 fstab 文件，输入 `echo os > /mnt/etc/hostname` 设置主机名，此处设为 `os`
 
-输入 `arch-chroot /mnt` 进入 chroot 环境
+输入 `arch-chroot /mnt` 进入 chroot 环境，输入 `systemctl enable NetworkManager.service` 启用网络管理工具
 
 ### 8.1. 交换空间支持
 
@@ -200,7 +200,7 @@ UUID=979aa7ec-8842-4e22-8bfc-4c8aed3de56d    /swap    btrfs    rw,relatime,ssd,s
 
 使用 Intel CPU 的用户输入 `pacman -S intel-ucode`，使用 AMD CPU 的用户输入 `pacman -S amd-ucode`
 
-## 11. 开机引导
+## 11. 添加开机引导
 
 输入 `bootctl --path=/boot install` 将 systemd-boot 引导安装到 `/boot` 目录
 
@@ -236,12 +236,11 @@ When = PostTransaction
 Exec = /usr/bin/systemctl restart systemd-boot-update.service
 ```
 
-## 12. 完成安装
+## 12. 安装结束
 
-输入以下指令，启用网络服务，退回安装环境，取消所有分区的挂载，重启
+输入以下指令，退回安装环境，取消所有分区的挂载，重启
 
 ```sh
-> systemctl enable NetworkManager.service
 > exit
 > umount -R /mnt
 > reboot
