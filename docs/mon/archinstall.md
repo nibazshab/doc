@@ -141,7 +141,9 @@ nvme0n1     259:0    0 953.9G  0 disk
 
 输入 `genfstab -U /mnt >> /mnt/etc/fstab` 生成 fstab 文件，输入 `echo os > /mnt/etc/hostname` 设置主机名，此处设为 `os`
 
-输入 `arch-chroot /mnt` 进入 chroot 环境，输入 `systemctl enable NetworkManager.service` 启用网络管理工具
+输入 `arch-chroot /mnt` 进入 chroot 环境
+
+输入 `systemctl enable NetworkManager.service` 启用网络服务
 
 ### 8.1. 交换空间支持
 
