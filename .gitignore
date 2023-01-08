@@ -1,7 +1,4 @@
-node_modules
+.git
 .temp
 .cache
-.DS_Store
-yarn-error.log
-.git
 *.code-workspace
