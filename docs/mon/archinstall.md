@@ -194,7 +194,7 @@ UUID=979aa7ec-8842-4e22-8bfc-4c8aed3de56d    /swap    btrfs    rw,relatime,ssd,s
 
 ## 9. 设置 root 用户密码
 
-输入 `passwd root` 为 root 超级用户设置密码，输入密码时无回显
+输入 `passwd` 为 root 超级用户设置密码，输入密码时无回显
 
 ## 10. 安装微码文件
 

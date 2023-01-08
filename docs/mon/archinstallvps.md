@@ -93,9 +93,6 @@ menuentry 'Arch LiveCD' {
 > echo zh_CN.UTF-8 UTF-8 > /etc/locale.gen
 > locale-gen
 
-# 设置系统语言
-> echo LANG=zh_CN.UTF-8 > /etc/locale.conf
-
 # 设置主机名
 > echo vps > /etc/hostname
 
@@ -111,7 +108,7 @@ Name=ens5
 DHCP=ipv4
 
 # 开启 ssh 和 net 服务
-> systemctl enable sshd systemd-networkd.service
+> systemctl enable sshd.service systemd-networkd.service
 
 # 生成 GRUB 引导
 > grub-install --target=i386-pc /dev/vda
