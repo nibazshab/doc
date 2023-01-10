@@ -113,7 +113,9 @@ Exec=/bin/sh -c 'while read -r trg; do case $trg in linux) exit 0; esac; done; /
 
 创建一个符号链接来强制使用 wayland 运行桌面环境
 
-`ln -s /dev/null /etc/udev/rules.d/61-gdm.rules`
+```sh
+> ln -s /dev/null /etc/udev/rules.d/61-gdm.rules`
+```
 
 [参阅](https://wiki.archlinux.org/title/GDM#Wayland_and_the_proprietary_NVIDIA_driver)
 
