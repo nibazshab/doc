@@ -14,14 +14,13 @@ export default defineUserConfig({
     sidebar: [
       {
         text: '首页',
-        children: ['/index.md',],
+        children: ['/index.md'],
       },
       {
         text: '难以名状的',
         children: [
-          '/sun/qianmo.md',
-          '/sun/aria2.md',
           '/sun/visualstudiocode.md',
+          '/sun/aria2.md',
           '/sun/minecraft.md',
           '/sun/steam.md',
           '/sun/wallpaperengine.md',

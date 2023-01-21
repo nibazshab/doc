@@ -2,13 +2,13 @@
 sidebarDepth: 2
 ---
 
-# 安装指南 进阶篇
+# 安装指南 进阶
 
 <br>
 
 ::: warning 声明
 
-本文承接 [安装指南 基础篇](archinstall.md) 的内容
+本文承接 [安装指南 基础](archinstall.md) 的内容
 
 :::
 

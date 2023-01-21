@@ -4,6 +4,46 @@
 
 [Aria2](https://github.com/aria2/aria2) 是一个自由、开源、轻量级多协议和多源的命令行下载工具。它支持 HTTP/HTTPS、FTP、SFTP、BitTorrent 和 Metalink 协议。aria2 可以通过内建的 JSON-RPC 和 XML-RPC 接口来操纵。aria2 下载文件的时候，自动验证数据块。它可以通过多个来源或者多个协议下载一个文件，并且会尝试利用你的最大下载带宽
 
+## 安装与启动
+
+### Linux
+
+Arch 系的 Linux 系统，直接安装 `aria2` 即可，其他请参考各自的安装方法，或前往 [Github Release](https://github.com/aria2/aria2/releases) 下载源码编译安装
+
+在 `$HOME/.config/aria2` 目录下创建 aria2.conf、aria2.session 文件，其中 aria2.conf 的内容参考 [配置文件](#配置文件)
+
+在 `/etc/systemd/user` 目录下创建 aria2.service 文件，写入如下内容
+
+```ini
+[Unit]
+Description=Aria2 RPC Daemon
+After=network.target
+[Service]
+ExecStart=/usr/bin/aria2c --conf-path=%h/.config/aria2/aria2.conf
+ExecStop=/bin/kill $MAINPID
+RestartSec=on-abort
+[Install]
+WantedBy=multi-user.target
+```
+
+启动服务，并设为开机自启
+
+```sh
+> systemctl enable --user --now aria2.service
+```
+
+### Windows
+
+请前往 [Github Release](https://github.com/aria2/aria2/releases) 下载 win-64bit-build 压缩包
+
+在 `%HOMEPATH%` 目录下创建 aria2 文件夹，将压缩包内的 aria2c.exe 文件解压到此处，并创建 aria2.conf、aria2.session 文件，其中 aria2.conf 的内容参考 [配置文件](#配置文件)
+
+在 `C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp` 目录下创建 aira2.vbs 文件，写入如下内容，即可实现开机自启
+
+```powershell
+CreateObject("WScript.Shell").Run "%HOMEPATH%\aria2\aria2c.exe --conf-path=%HOMEPATH%\aria2\aria2.conf -D",0
+```
+
 ## 配置文件
 
 ::: details aria2.conf
@@ -115,46 +155,6 @@ bt-tracker=
 ```
 
 :::
-
-## 安装与启动
-
-### Linux
-
-Arch 系的 Linux 系统，直接安装 `aria2` 即可，其他请参考各自的安装方法，或前往 [Github Release](https://github.com/aria2/aria2/releases) 下载源码编译安装
-
-在 `$HOME/.config/aria2` 目录下创建 aria2.conf、aria2.session 文件，其中 aria2.conf 的内容参考 [配置文件](#配置文件)
-
-在 `/etc/systemd/user` 目录下创建 aria2.service 文件，写入如下内容
-
-```ini
-[Unit]
-Description=Aria2 RPC Daemon
-After=network.target
-[Service]
-ExecStart=/usr/bin/aria2c --conf-path=%h/.config/aria2/aria2.conf
-ExecStop=/bin/kill $MAINPID
-RestartSec=on-abort
-[Install]
-WantedBy=multi-user.target
-```
-
-启动服务，并设为开机自启
-
-```sh
-> systemctl enable --user --now aria2.service
-```
-
-### Windows
-
-请前往 [Github Release](https://github.com/aria2/aria2/releases) 下载 win-64bit-build 压缩包
-
-在 `%HOMEPATH%` 目录下创建 aria2 文件夹，将压缩包内的 aria2c.exe 文件解压到此处，并创建 aria2.conf、aria2.session 文件，其中 aria2.conf 的内容参考 [配置文件](#配置文件)
-
-在 `C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp` 目录下创建 aira2.vbs 文件，写入如下内容，即可实现开机自启
-
-```powershell
-CreateObject("WScript.Shell").Run "%HOMEPATH%\aria2\aria2c.exe --conf-path=%HOMEPATH%\aria2\aria2.conf -D",0
-```
 
 ## AriaNg
 
