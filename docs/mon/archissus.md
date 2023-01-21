@@ -1,19 +1,8 @@
-# 自我的救赎
+# 问题记录
 
 <br>
 
 本文记录一些在安装 / 使用过程中遇到的问题和一些有助于提高体验的东西。内容收集自网络和 Arch Wiki，请自行甄别是否适用
-
-## GNOME Desktop Extension
-
-扩展|介绍
--|-
-appindicatorsupport|任务栏应用托盘
-dash-to-dock|DOCK 栏
-drive-menu|在任务栏提供一个快捷卸载外接设备的图标
-just-perfection-desktop|修改界面样式
-logomenu|更改左上角活动菜单图标
-user-theme|主题
 
 ## GNOME 主题修改，顶栏半透明
 

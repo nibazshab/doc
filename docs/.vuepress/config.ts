@@ -33,8 +33,8 @@ export default defineUserConfig({
           '/mon/linuxshellnote.md',
           '/mon/archinstall.md',
           '/mon/archinstallpro.md',
-          '/mon/archissus.md',
           '/mon/archinstallvps.md',
+          '/mon/archissus.md',
         ],
       },
       {
