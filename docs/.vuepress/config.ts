@@ -31,17 +31,17 @@ export default defineUserConfig({
         text: 'Arch Linux',
         children: [
           '/mon/linuxshellnote.md',
+          '/mon/archissus.md',
           '/mon/archinstall.md',
           '/mon/archinstallpro.md',
           '/mon/archinstallvps.md',
-          '/mon/archissus.md',
         ],
       },
       {
         text: 'Windows',
         children: [
-          '/mon/windowsnote.md',
           '/mon/windowsenv.md',
+          '/mon/windowsissus.md',
         ],
       },
       {
