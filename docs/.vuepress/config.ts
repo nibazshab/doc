@@ -49,8 +49,8 @@ export default defineUserConfig({
       {
         text: '巽',
         children: [
-          '/mon/windowsenv.md',
           '/mon/windowsissus.md',
+          '/mon/windowsenv.md',
         ],
       },
     ],

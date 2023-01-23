@@ -17,7 +17,7 @@
 
 如果对本站感觉良好，不妨
 
-- 在 [讨论区](/tue/giscusdiscuss.md) 分享一下你的想法
+- 在 [讨论区](giscus.md) 分享一下你的想法
 - 在 Github 上给 [网站](https://github.com/nibazshab/wiki) 点个 Star
 - 在 Github 上给 [站长](https://github.com/nibazshab) 点个 Follow
 
