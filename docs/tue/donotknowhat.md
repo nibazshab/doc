@@ -25,7 +25,6 @@ __本站模板__
 > 介绍：离即流火，余烬皆焚  
 > 图片：https://avatars.githubusercontent.com/u/44338441
 
-
 ## Mobile Game
 
 ::: details 仅供测试或交流学习使用，内容来自网络
