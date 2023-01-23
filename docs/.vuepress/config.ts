@@ -13,11 +13,14 @@ export default defineUserConfig({
   theme: defaultTheme({
     sidebar: [
       {
-        text: '首页',
-        children: ['/index.md'],
+        text: '乾',
+        children: [
+          '/index.md',
+          '/giscus.md',
+        ],
       },
       {
-        text: '难以名状的',
+        text: '兑',
         children: [
           '/sun/visualstudiocode.md',
           '/sun/aria2.md',
@@ -28,9 +31,15 @@ export default defineUserConfig({
         ],
       },
       {
-        text: 'Arch Linux',
+        text: '离',
         children: [
-          '/mon/linuxshellnote.md',
+          '/tue/linuxshellnote.md',
+          '/tue/donotknowhat.md',
+        ],
+      },
+      {
+        text: '震',
+        children: [
           '/mon/archissus.md',
           '/mon/archinstall.md',
           '/mon/archinstallpro.md',
@@ -38,17 +47,10 @@ export default defineUserConfig({
         ],
       },
       {
-        text: 'Windows',
+        text: '巽',
         children: [
           '/mon/windowsenv.md',
           '/mon/windowsissus.md',
-        ],
-      },
-      {
-        text: '道路施工中',
-        children: [
-          '/tue/donotknowhat.md',
-          '/tue/giscusdiscuss.md',
         ],
       },
     ],
