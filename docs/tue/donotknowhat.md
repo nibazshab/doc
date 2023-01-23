@@ -6,24 +6,25 @@
 
 <SiteInfo
   name="Zexin's Blog"
-  preview="https://zezin.netlify.app/avatar.jpg"
-  desc="晒饱太阳，远道而来"
   url="https://zexin.eu.org"
+  desc="晒饱太阳，远道而来"
+  preview="https://zezin.netlify.app/avatar.jpg"
 />
 
 <SiteInfo
   name="不可视之线"
-  preview="https://fukashinosen.club/usr/uploads/2023/01/1176107121.jpg"
-  desc="若知是梦何须醒 难比真如一相会"
   url="https://fukashinosen.club"
+  desc="若知是梦何须醒 难比真如一相会"
+  preview="https://fukashinosen.club/usr/uploads/2023/01/1176107121.jpg"
 />
 
 __本站模板__
 
-> 名称：nibazshab
-> 介绍：离即流火，余烬皆焚
-> 链接：https://www.atri.ml
-> 头像：https://avatars.githubusercontent.com/u/44338441
+> 名称：nibazshab  
+> 链接：https://www.atri.ml  
+> 介绍：离即流火，余烬皆焚  
+> 图片：https://avatars.githubusercontent.com/u/44338441
+
 
 ## Mobile Game
 
