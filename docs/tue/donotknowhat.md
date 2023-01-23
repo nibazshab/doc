@@ -2,6 +2,24 @@
 
 <br>
 
+::: details 友链
+
+<SiteInfo
+  name="Zexin's Blog"
+  preview="https://zezin.netlify.app/avatar.jpg"
+  desc="晒饱太阳，远道而来"
+  url="http://zexin.eu.org"
+/>
+
+<SiteInfo
+  name="不可视之线"
+  preview="https://fukashinosen.club/usr/uploads/2023/01/1973958354.png"
+  desc="若知是梦何须醒 难比真如一相会"
+  url="https://fukashinosen.club"
+/>
+
+:::
+
 ## Mobile Game
 
 ::: details 仅供测试或交流学习使用，内容来自网络
@@ -83,12 +101,3 @@ menuentry 'Gentoo LiveCD' {
   initrd (loop)/boot/gentoo.igz
 }
 ```
-
-<SiteInfo
-  name="Mr.Hope’s Blog"
-  desc="Where there is light, there is hope"
-  url="https://mrhope.site"
-  logo="https://mrhope.site/logo.svg"
-  repo="https://github.com/Mister-Hope/Mister-Hope.github.io"
-  preview="https://theme-hope.vuejs.press/assets/image/mrhope.jpg"
-/>
