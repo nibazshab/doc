@@ -20,7 +20,7 @@
 
 __本站模板__
 
-> 名称：nibazshab  
+> 名称：ATRI WIKI  
 > 链接：https://www.atri.ml  
 > 介绍：离即流火，余烬皆焚  
 > 图片：https://avatars.githubusercontent.com/u/44338441
