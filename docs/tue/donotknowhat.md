@@ -2,23 +2,28 @@
 
 <br>
 
-::: details 友链
+## 友链
 
 <SiteInfo
   name="Zexin's Blog"
   preview="https://zezin.netlify.app/avatar.jpg"
   desc="晒饱太阳，远道而来"
-  url="http://zexin.eu.org"
+  url="https://zexin.eu.org"
 />
 
 <SiteInfo
   name="不可视之线"
-  preview="https://fukashinosen.club/usr/uploads/2023/01/1973958354.png"
+  preview="https://fukashinosen.club/usr/uploads/2023/01/1176107121.jpg"
   desc="若知是梦何须醒 难比真如一相会"
   url="https://fukashinosen.club"
 />
 
-:::
+__本站模板__
+
+> 名称：nibazshab
+> 介绍：离即流火，余烬皆焚
+> 链接：https://www.atri.ml
+> 头像：https://avatars.githubusercontent.com/u/44338441
 
 ## Mobile Game
 
@@ -68,14 +73,14 @@ https://pay.qq.com/h5/index.shtml?m=buy&c=game&dialog=0&midasApiVersion=5&transa
 
 - 域名 dns 解析到 github pages
 
-```ini
-@                                   A        3600    185.199.108.153
-@                                   A        3600    185.199.109.153
-@                                   A        3600    185.199.110.153
-@                                   A        3600    185.199.111.153
-www                                 CNAME    3600    username.github.io
-_GITHUB-PAGES-CHALLENGE-USERNAME    TXT      3600    xxxxxxxxxxxxxxxxxx
-```
+域|记录类型|TTL|记录值
+-|-|-|-
+@|A|3600|185.199.108.153
+@|A|3600|185.199.109.153
+@|A|3600|185.199.110.153
+@|A|3600|185.199.111.153
+www|CNAME|600|username.github.io
+_GITHUB-PAGES-CHALLENGE-USERNAME|TXT|3600|xxxxxxxxxxxxxxxxxx
 
 ## Grub ISO
 
