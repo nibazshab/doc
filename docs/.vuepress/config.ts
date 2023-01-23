@@ -6,6 +6,7 @@ import { mdEnhancePlugin } from 'vuepress-plugin-md-enhance';
 import { sitemapPlugin } from 'vuepress-plugin-sitemap2';
 import { seoPlugin } from 'vuepress-plugin-seo2';
 import { commentPlugin } from 'vuepress-plugin-comment2';
+import { componentsPlugin } from "vuepress-plugin-components";
 
 const __dirname = getDirname(import.meta.url);
 
@@ -30,15 +31,9 @@ export default defineUserConfig({
           '/sun/kiwixtools.md',
         ],
       },
+ 
       {
         text: '离',
-        children: [
-          '/tue/linuxshellnote.md',
-          '/tue/donotknowhat.md',
-        ],
-      },
-      {
-        text: '震',
         children: [
           '/mon/archissus.md',
           '/mon/archinstall.md',
@@ -47,10 +42,17 @@ export default defineUserConfig({
         ],
       },
       {
-        text: '巽',
+        text: '震',
         children: [
           '/mon/windowsissus.md',
           '/mon/windowsenv.md',
+        ],
+      },
+      {
+        text: '巽',
+        children: [
+          '/tue/linuxshellnote.md',
+          '/tue/donotknowhat.md',
         ],
       },
     ],
@@ -88,6 +90,11 @@ export default defineUserConfig({
       repoId: 'MDEwOlJlcG9zaXRvcnkxOTg2NTY0NTU=',
       category: 'Announcements',
       categoryId: 'DIC_kwDOC9dBx84CRUCg',
+    }),
+    componentsPlugin({
+      components: [
+        "SiteInfo",
+      ],
     }),
   ],
 })

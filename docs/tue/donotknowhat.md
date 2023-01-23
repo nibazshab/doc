@@ -83,3 +83,12 @@ menuentry 'Gentoo LiveCD' {
   initrd (loop)/boot/gentoo.igz
 }
 ```
+
+<SiteInfo
+  name="Mr.Hope’s Blog"
+  desc="Where there is light, there is hope"
+  url="https://mrhope.site"
+  logo="https://mrhope.site/logo.svg"
+  repo="https://github.com/Mister-Hope/Mister-Hope.github.io"
+  preview="https://theme-hope.vuejs.press/assets/image/mrhope.jpg"
+/>

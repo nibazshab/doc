@@ -12,6 +12,7 @@
 - [vuepress-plugin-sitemap2@next](https://plugin-sitemap2.vuejs.press)
 - [vuepress-plugin-seo2@next](https://plugin-seo2.vuejs.press)
 - [vuepress-plugin-comment2@next](https://plugin-comment2.vuejs.press)
+- [vuepress-plugin-components@next](https://plugin-components.vuejs.press)
 
 ---
 
