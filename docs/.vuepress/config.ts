@@ -2,10 +2,10 @@ import { defineUserConfig, defaultTheme } from 'vuepress';
 import { getDirname, path } from '@vuepress/utils';
 import { shikiPlugin } from '@vuepress/plugin-shiki';
 import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics';
-import { mdEnhancePlugin } from 'vuepress-plugin-md-enhance';
-import { sitemapPlugin } from 'vuepress-plugin-sitemap2';
-import { seoPlugin } from 'vuepress-plugin-seo2';
 import { commentPlugin } from 'vuepress-plugin-comment2';
+import { seoPlugin } from 'vuepress-plugin-seo2';
+import { sitemapPlugin } from 'vuepress-plugin-sitemap2';
+import { mdEnhancePlugin } from 'vuepress-plugin-md-enhance';
 import { componentsPlugin } from "vuepress-plugin-components";
 
 const __dirname = getDirname(import.meta.url);
@@ -31,7 +31,6 @@ export default defineUserConfig({
           '/sun/kiwixtools.md',
         ],
       },
- 
       {
         text: '离',
         children: [
@@ -75,21 +74,20 @@ export default defineUserConfig({
     googleAnalyticsPlugin({
       id: 'G-770W6J0TQD',
     }),
-    mdEnhancePlugin({
-      include: true,
-    }),
-    sitemapPlugin({
-      hostname: 'https://www.atri.ml',
-    }),
-    seoPlugin({
-      hostname: 'https://www.atri.ml',
-    }),
     commentPlugin({
       provider: 'Giscus',
       repo: 'nibazshab/wiki',
       repoId: 'MDEwOlJlcG9zaXRvcnkxOTg2NTY0NTU=',
       category: 'Announcements',
       categoryId: 'DIC_kwDOC9dBx84CRUCg',
+    }),
+    seoPlugin({
+      hostname: 'https://www.atri.ml',
+    }),
+    sitemapPlugin({
+      hostname: 'https://www.atri.ml',
+    }),
+    mdEnhancePlugin({
     }),
     componentsPlugin({
       components: [

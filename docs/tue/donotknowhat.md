@@ -20,9 +20,9 @@
 
 __本站模板__
 
-> 名称：ATRI  
+> 名称：ATRI WIKI  
 > 链接：https://www.atri.ml  
-> 介绍：盲目吃鱼之神  
+> 介绍：盲目吃鱼  
 > 图片：https://avatars.githubusercontent.com/u/44338441
 
 ## Mobile Game
@@ -106,9 +106,3 @@ menuentry 'Gentoo LiveCD' {
   initrd (loop)/boot/gentoo.igz
 }
 ```
-
-https://anilist.co/user/nibazshab/animelist
-
----
-
-@include(https://raw.githubusercontent.com/nibazshab/shu/main/local/aria2.conf)
