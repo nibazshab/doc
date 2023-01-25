@@ -2,7 +2,7 @@
 sidebarDepth: 2
 ---
 
-# 安装指南 腾讯云
+# 安装指南 腾讯云 <Badge text="arch linux" />
 
 <br>
 

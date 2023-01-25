@@ -15,31 +15,8 @@
   name="不可视之线"
   url="https://fukashinosen.club"
   desc="若知是梦何须醒 难比真如一相会"
-  preview="https://fukashinosen.club/usr/uploads/2023/01/1176107121.jpg"
+  preview="https://en.gravatar.com/userimage/181950729/7efcb96ab6b5f5282871bd1236aaca88.jpg"
 />
-
-<div class="friends">
-    <a class="brick mdui-ripple mdui-ripple-white" href="https://nibazshab.github.io/">
-        <img class="blog-avatar" src="https://fukashinosen.club/usr/uploads/2023/01/1176107121.jpg">
-        <div class="container">
-            <div class="name">不可视之线</div>
-            <div class="motto">若知是梦何须醒 难比真如一相会</div>
-        </div>
-    </a>
-    <a class="brick mdui-ripple mdui-ripple-white" href="https://nibazshab.github.io/">
-        <img class="blog-avatar" src="https://zezin.netlify.app/avatar.jpg">
-        <div class="container">
-            <div class="name">Zexin's Blog</div>
-            <div class="motto">晒饱太阳，远道而来</div>
-        </div>
-    </a>
-</div>
-
-<style>
-.friends{display:flex;flex-wrap:wrap;}.friends .brick{-webkit-transition:all .3s ease;transition:all .3s ease;}.friends .brick{display:flex;margin:10px 10px 0 0;text-decoration:none;font-weight:300;padding:10px;background-color:#fff0;border:solid 1px #659eb929;color:#659eb9;text-align:center;border-radius:4px;overflow:hidden}.friends .brick:hover{background-color:#659eb9;color:#fff;border:solid 1px #659eb9;box-shadow:0 6px 16px 0 rgba(80, 178, 243, 0.35);}.blog-avatar:hover{animation:whirl 0.5s;}
-@keyframes whirl{0%{transform:rotate(0deg);}100%{transform:rotate(360deg);}}.friends .brick:active{-webkit-transform:scale(0.95);-moz-transform:scale(0.95);-ms-transform:scale(0.95);-o-transform:scale(0.95);transform:scale(0.95);}.friends .brick .blog-avatar{background-color:#fff0;color:#fff;border:solid 1px #dbdbdb;border-radius:50%;width:50px;height:50px;}.friends .brick .container{margin-left:10px;}.friends .brick .container .name{font-size:14px;}.friends .brick .container .motto{font-size:12px;margin-top:5px;-webkit-box-orient:vertical;-webkit-line-clamp:1;}
-@media(max-width:450px){.friends .brick{width:100%;}.friends .brick .container{margin-left:0;width:100%;}.motto{width: 100% !important;}}.motto.long{width:100px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}.mdui-panel-item[open] .mdui-panel-item-arrow{transform:rotate(180deg);}.mdui-panel-item-body {height:auto!important;}
-</style>
 
 __本站模板__
 

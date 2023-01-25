@@ -76,7 +76,7 @@ export default defineUserConfig({
       id: 'G-770W6J0TQD',
     }),
     mdEnhancePlugin({
-      tabs: true,
+      include: true,
     }),
     sitemapPlugin({
       hostname: 'https://www.atri.ml',

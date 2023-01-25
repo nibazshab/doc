@@ -1,4 +1,4 @@
-# 问题记录 <Badge text="arch" />
+# 问题记录 <Badge text="arch linux" />
 
 <br>
 

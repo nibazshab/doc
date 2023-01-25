@@ -1,4 +1,4 @@
-# 常用系统变量
+# 常用系统变量 <Badge text="windows 10" />
 
 <br>
 
