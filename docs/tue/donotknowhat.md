@@ -15,14 +15,14 @@
   name="不可视之线"
   url="https://fukashinosen.club"
   desc="若知是梦何须醒 难比真如一相会"
-  preview="https://en.gravatar.com/userimage/181950729/7efcb96ab6b5f5282871bd1236aaca88.jpg"
+  preview="https://avatars.githubusercontent.com/u/49967926"
 />
 
 __本站模板__
 
 > 名称：ATRI WIKI  
 > 链接：https://www.atri.ml  
-> 介绍：盲目吃鱼  
+> 介绍：那永恒长眠的并非亡者，在奇妙的万古之中即便死亡亦会消逝  
 > 图片：https://avatars.githubusercontent.com/u/44338441
 
 ## Mobile Game
