@@ -14,16 +14,14 @@ GNOME Shell 主题被存储为二进制文件 `/usr/share/gnome-shell/gnome-shel
 #!/bin/sh
 gst=/usr/share/gnome-shell/gnome-shell-theme.gresource
 workdir=$HOME
-
 for r in `gresource list $gst`; do
-	r=${r#\/org\/gnome\/shell/}
-	if [ ! -d $workdir/${r%/*} ]; then
-	  mkdir -p $workdir/${r%/*}
-	fi
+  r=${r#\/org\/gnome\/shell/}
+  if [ ! -d $workdir/${r%/*} ]; then
+    mkdir -p $workdir/${r%/*}
+  fi
 done
-
 for r in `gresource list $gst`; do
-        gresource extract $gst $r >$workdir/${r#\/org\/gnome\/shell/}
+  gresource extract $gst $r >$workdir/${r#\/org\/gnome\/shell/}
 done
 ```
 
