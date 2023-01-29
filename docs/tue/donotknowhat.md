@@ -2,7 +2,7 @@
 
 <br>
 
-## 友链
+## 友情链接
 
 <SiteInfo
   name="Zexin's Blog"
