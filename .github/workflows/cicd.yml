@@ -18,7 +18,7 @@ jobs:
         version: latest
     - name: setup vuepress next
       run: |
-        ls
+        echo
         pnpm add -D vue vuepress@next @vuepress/client@next @vuepress/utils@next
         pnpm add -D @vuepress/plugin-shiki@next
         pnpm add -D @vuepress/plugin-google-analytics@next
