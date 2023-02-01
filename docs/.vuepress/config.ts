@@ -3,13 +3,10 @@ import { getDirname, path } from '@vuepress/utils';
 import { shikiPlugin } from '@vuepress/plugin-shiki';
 import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics';
 import { commentPlugin } from 'vuepress-plugin-comment2';
-import { seoPlugin } from 'vuepress-plugin-seo2';
-import { sitemapPlugin } from 'vuepress-plugin-sitemap2';
-import { mdEnhancePlugin } from 'vuepress-plugin-md-enhance';
 import { componentsPlugin } from "vuepress-plugin-components";
-
+import { sitemapPlugin } from 'vuepress-plugin-sitemap2';
+import { seoPlugin } from 'vuepress-plugin-seo2';
 const __dirname = getDirname(import.meta.url);
-
 export default defineUserConfig({
   theme: defaultTheme({
     sidebar: [
@@ -81,18 +78,16 @@ export default defineUserConfig({
       category: 'Announcements',
       categoryId: 'DIC_kwDOC9dBx84CRUCg',
     }),
-    seoPlugin({
-      hostname: 'https://www.atri.ml',
-    }),
-    sitemapPlugin({
-      hostname: 'https://www.atri.ml',
-    }),
-    mdEnhancePlugin({
-    }),
     componentsPlugin({
       components: [
         "SiteInfo",
       ],
+    }),
+    sitemapPlugin({
+      hostname: 'https://www.atri.ml',
+    }),
+    seoPlugin({
+      hostname: 'https://www.atri.ml',
     }),
   ],
 })
