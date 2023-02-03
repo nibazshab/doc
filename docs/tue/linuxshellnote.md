@@ -4,7 +4,7 @@
 
 - `sed -n "5 p" file` 读取文件的第 5 行
 - `b=${a%)*}` 去除 a 变量中 ) 右边所有内容
-- `b=${a#(*}` 去除 a 变量中 ( 左边所有内容
+- `b=${a#*(}` 去除 a 变量中 ( 左边所有内容
 - `openssl enc -aes-256-cbc -pbkdf2 -salt -in a.base64 -out a.base64.enc.aes256cbc` 加密文件
 - `openssl enc -aes-256-cbc -pbkdf2 -salt -d -in a.base64.enc.aes256cbc -out a.base64` 解密文件
 - `find -name '*.jpg' | xargs jpegoptim --strip-all --all-progressive -o -f --max=50%` 压缩 jpg 图片大小
