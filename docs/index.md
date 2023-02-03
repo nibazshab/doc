@@ -15,14 +15,11 @@
 
 ---
 
-如果对本站感觉良好，不妨
+如果对本站感觉良好，不妨在 [讨论区](giscus.md) 留下一些看法，或者更进一步的：
 
-- 在 [讨论区](giscus.md) 分享一下你的想法
 - 在 Github 上给 [网站](https://github.com/nibazshab/wiki) 点个 Star
 - 在 Github 上给 [站长](https://github.com/nibazshab) 点个 Follow
 
 <br>
 
 感谢各位 :heart:
-
-Thank you for everything :heart:

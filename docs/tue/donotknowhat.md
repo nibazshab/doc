@@ -5,17 +5,17 @@
 ## 友情链接
 
 <SiteInfo
-  name="Zexin's Blog"
-  url="https://zezin.netlify.app"
-  desc="晒饱太阳，远道而来"
-  preview="https://zezin.netlify.app/avatar.jpg"
-/>
-
-<SiteInfo
   name="不可视之线"
   url="https://fukashinosen.club"
   desc="若知是梦何须醒 难比真如一相会"
   preview="https://avatars.githubusercontent.com/u/49967926"
+/>
+
+<SiteInfo
+  name="Zexin's Blog"
+  url="https://zezin.netlify.app"
+  desc="晒饱太阳，远道而来"
+  preview="https://zezin.netlify.app/avatar.jpg"
 />
 
 __本站模板__
@@ -82,9 +82,9 @@ https://pay.qq.com/h5/index.shtml?m=buy&c=game&dialog=0&midasApiVersion=5&transa
 www|CNAME|600|username.github.io
 _GITHUB-PAGES-CHALLENGE-USERNAME|TXT|3600|xxxxxxxxxxxxxxxxxx
 
-## Grub ISO
+## Grub 引导 iso
 
-引导 arch.iso
+::: details arch.iso
 
 ```ini
 menuentry 'Arch LiveCD' {
@@ -96,7 +96,9 @@ menuentry 'Arch LiveCD' {
 }
 ```
 
-引导 gentoo.iso
+:::
+
+::: details gentoo.iso
 
 ```ini
 menuentry 'Gentoo LiveCD' {
@@ -106,3 +108,5 @@ menuentry 'Gentoo LiveCD' {
   initrd (loop)/boot/gentoo.igz
 }
 ```
+
+:::
