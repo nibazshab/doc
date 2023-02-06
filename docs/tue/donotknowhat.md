@@ -7,7 +7,7 @@
 <SiteInfo
   name="不可视之线"
   url="https://fukashinosen.club"
-  desc="若知是梦何须醒 难比真如一相会"
+  desc="若知是梦何须醒，难比真如一相会"
   preview="https://avatars.githubusercontent.com/u/49967926"
 />
 
@@ -18,7 +18,7 @@
   preview="https://zezin.netlify.app/avatar.jpg"
 />
 
-__本站模板__
+__本站__
 
 > 名称：ATRI WIKI  
 > 链接：https://www.atri.ml  
