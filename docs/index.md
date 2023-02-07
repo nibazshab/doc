@@ -20,6 +20,4 @@
 - 在 Github 上给 [网站](https://github.com/nibazshab/wiki) 点个 Star
 - 在 Github 上给 [站长](https://github.com/nibazshab) 点个 Follow
 
-<br>
-
 感谢各位 :heart:
