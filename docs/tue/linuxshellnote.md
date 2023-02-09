@@ -22,10 +22,11 @@
 
 ---
 
-- `find -name '*.jpg' | xargs jpegoptim --strip-all --all-progressive -o -f --max=50%` 压缩 jpg 图片大小
-- `find -name '*.png' | xargs optipng` 压缩 png 图片大小
+- `jpegoptim --strip-all --all-progressive -o -f --max=50% a.jpg` 压缩 jpg 图片大小
+- `optipng a.png` 压缩 png 图片大小
 - `flac -d a.flac` flac 转 wav
 - `flac -s --compression-level-5 a.wav` wav 转 flac
+- `flac a.flac -V -s --best --no-error-on-compression-fail -o b.flac` flac 重新编码
 - `ffmpeg -i input.avi -c:v copy -c:a copy output.mp4` ffmpeg 快速转换格式
 - `screen -dmS <session_name> <command>` 创建 screen 后台运行会话
 - `screen -ls` 查看 screen 会话
