@@ -36,6 +36,12 @@
 
 ---
 
+- `adb shell pm disable-user <package_name>` 冻结应用
+- `adb shell pm enable <package_name>` 解冻应用
+- `adb shell pm list packages -s -d` 列出已冻结的应用
+
+---
+
 正则表达式
 
 - `.*(a b).*` 包含 a 或 b 的行
