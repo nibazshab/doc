@@ -35,7 +35,9 @@ __本站__
 
 ---
 
-跳 4399 防沉迷登录认证，在地址栏输入 `javascript:try{Anti_close();alert("Success");}catch(e){alert("Failed");}`
+跳 4399 防沉迷登录认证，在地址栏输入
+
+> javascript:try{Anti_close();alert("Success");}catch(e){alert("Failed");}
 
 ---
 
