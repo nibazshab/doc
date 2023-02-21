@@ -25,13 +25,17 @@ __本站__
 > 介绍：那永恒长眠的并非亡者，在奇妙的万古之中即便死亡亦会消逝  
 > 图片：https://avatars.githubusercontent.com/u/44338441
 
-## Mobile Game
+## Fun
 
 ::: details 仅供测试或交流学习使用，内容来自网络
 
 张民 110105197001137135
 
 :::
+
+---
+
+跳 4399 防沉迷登录认证，在地址栏输入 `javascript:try{Anti_close();alert("Success");}catch(e){alert("Failed");}`
 
 ---
 
