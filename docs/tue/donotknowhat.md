@@ -54,7 +54,7 @@ _GITHUB-PAGES-CHALLENGE-USERNAME|TXT|3600|xxxxxxxxxxxxxxxxxx
 
 跳 4399 账号登录验证，在地址栏输入
 
-> javascript: try{Anti_close();alert("Success");} catch(e){alert("Failed");}
+> javascript: try{ Anti_close(); alert( "Success"); } catch(e){ alert("Failed"); }
 
 ---
 
