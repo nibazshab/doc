@@ -20,24 +20,41 @@
 
 __本站__
 
-> 名称：ATRI WIKI  
-> 链接：https://www.atri.ml  
-> 介绍：那永恒长眠的并非亡者，在奇妙的万古之中即便死亡亦会消逝  
-> 图片：https://avatars.githubusercontent.com/u/44338441
+> 名称：萝卜子  
+> 链接：_https://www.atri.ml_  
+> 介绍：萝卜子的小站  
+> 图片：_https://avatars.githubusercontent.com/u/44338441_
 
-## Fun
+## Web
 
-::: details 仅供测试或交流学习使用，内容来自网络
+- nginx 配置站点伪静态
 
-张民 110105197001137135
-
-:::
+在 nginx 配置文件中站点的 `server` 模块中添加 `location / { try_files $uri $uri/ /index.php?$args; }`
 
 ---
 
-跳 4399 防沉迷登录认证，在地址栏输入
+- typecho 上传目录无法写入，将安装目录下的 usr/uploads 目录的权限设置为可写
 
-> javascript:try{Anti_close();alert("Success");}catch(e){alert("Failed");}
+检查 php-fpm 和 nginx 用户是否一致，把 php-fpm.service 的 `ProtectSystem=full` 行删除
+
+---
+
+- 域名 dns 解析到 github pages
+
+域|记录类型|TTL|记录值
+-|-|-|-
+@|A|3600|185.199.108.153
+@|A|3600|185.199.109.153
+@|A|3600|185.199.110.153
+@|A|3600|185.199.111.153
+www|CNAME|600|username.github.io
+_GITHUB-PAGES-CHALLENGE-USERNAME|TXT|3600|xxxxxxxxxxxxxxxxxx
+
+## Fun
+
+跳 4399 账号登录验证，在地址栏输入
+
+> javascript: try{Anti_close();alert("Success");} catch(e){alert("Failed");}
 
 ---
 
@@ -63,42 +80,23 @@ https://pay.qq.com/h5/index.shtml?m=buy&c=game&dialog=0&midasApiVersion=5&transa
 
 填完相关信息后，把括号删除，充值人在 qq 内点击该链接，即可使用 q 币为被充值人的游戏账号充值点券
 
-## Web Service
-
-- nginx 配置站点伪静态
-
-在 nginx 配置文件中站点的 `server` 模块中添加 `location / { try_files $uri $uri/ /index.php?$args; }`
-
 ---
 
-- typecho 上传目录无法写入，将安装目录下的 usr/uploads 目录的权限设置为可写
+实名认证
 
-检查 php-fpm 和 nginx 用户是否一致，把 php-fpm.service 的 `ProtectSystem=full` 行删除
+> 张民 110105197001137135
 
----
-
-- 域名 dns 解析到 github pages
-
-域|记录类型|TTL|记录值
--|-|-|-
-@|A|3600|185.199.108.153
-@|A|3600|185.199.109.153
-@|A|3600|185.199.110.153
-@|A|3600|185.199.111.153
-www|CNAME|600|username.github.io
-_GITHUB-PAGES-CHALLENGE-USERNAME|TXT|3600|xxxxxxxxxxxxxxxxxx
-
-## Grub 引导 iso
+## grub 引导 iso 系统镜像
 
 ::: details arch.iso
 
 ```ini
 menuentry 'Arch LiveCD' {
-    set isofile=/arch.iso
-    set imgdevpath=/dev/sda1
-    loopback lo0 $isofile
-    linux (lo0)/arch/boot/x86_64/vmlinuz-linux img_dev=$imgdevpath img_loop=$isofile
-    initrd (lo0)/arch/boot/x86_64/initramfs-linux.img
+  set isofile=/arch.iso
+  set imgdevpath=/dev/sda1
+  loopback lo0 $isofile
+  linux (lo0)/arch/boot/x86_64/vmlinuz-linux img_dev=$imgdevpath img_loop=$isofile
+  initrd (lo0)/arch/boot/x86_64/initramfs-linux.img
 }
 ```
 
