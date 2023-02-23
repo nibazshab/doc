@@ -62,9 +62,9 @@ _GITHUB-PAGES-CHALLENGE-USERNAME|TXT|3600|xxxxxxxxxxxxxxxxxx
 
 > https://pay.qq.com/h5/index.shtml?m=buy&c=game&dialog=0&midasApiVersion=5&transactionid=CC8E5656-EEC9-4ADD-865E-D4D81C258D691558348901265&dh=1&pf=mds_storeopen_qb-_mds_default_v1_0_0.navgame_v1.0-android&appid=1450002258&zoneid=(区号+1010)&n=(点卷数量)&as=1&aid=&wxAppid2=wx951bdcac522929b6&u=(游戏qq号)
 
-- `区号+1010` 填写游戏账号所在的大区号 + 1010 所得到的数字，例如游戏账号在 153 区，则填写 1163
-- `点卷数量` 填写要充值的点卷数量，例如 10 点券，则填写 10
-- `游戏 qq 号` 填写游戏账号拥有人的 qq 号，例如游戏账号是用张三的 qq 号 66600000 注册的，则填写 66600000
+- `(区号+1010)` 填写游戏账号所在的大区号 + 1010 所得到的数字，例如游戏账号在 153 区，则填写 `1163`
+- `(点卷数量)` 填写要充值的点卷数量，例如 10 点券，则填写 `10`
+- `(游戏 qq 号)` 填写游戏账号拥有人的 qq 号，例如游戏账号是用张三的 qq 号 66600000 注册的，则填写 `66600000`
 
 ::: details 示例
 
