@@ -27,6 +27,15 @@ __本站__
 
 ## Web
 
+- 阅读器界面设置
+
+配色|白天模式|夜间模式
+-|-|-
+文字|#321309|#a0a0a0
+背景|#f4e9de|#121212
+
+---
+
 - nginx 配置站点伪静态
 
 在 nginx 配置文件中站点的 `server` 模块中添加 `location / { try_files $uri $uri/ /index.php?$args; }`
