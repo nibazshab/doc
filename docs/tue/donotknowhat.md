@@ -57,7 +57,7 @@ __本站__
 @|A|3600|185.199.110.153
 @|A|3600|185.199.111.153
 www|CNAME|600|username.github.io
-_GITHUB-PAGES-CHALLENGE-USERNAME|TXT|3600|xxxxxxxxxxxxxxxxxx
+_GITHUB-PAGES-CHALLENGE-USERNAME|TXT|3600|xxxxxxxxx
 
 ## Fun
 
@@ -73,7 +73,7 @@ _GITHUB-PAGES-CHALLENGE-USERNAME|TXT|3600|xxxxxxxxxxxxxxxxxx
 
 - `(区号+1010)` 填写账号所在的大区号 + 1010 所得到的数字，例如账号在 153 区，则填写 `1163`
 - `(点卷数量)` 填写要充值的点卷数量，例如 10 点券，则填写 `10`
-- `(游戏 qq 号)` 填写账号拥有人的 qq 号，例如账号是用张三的 qq 号 66600000 注册的，则填写 `66600000`
+- `(游戏qq号)` 填写账号的 qq 号，例如账号是用 qq 号 66600000 登录的，则填写 `66600000`
 
 ::: details 示例
 
@@ -86,8 +86,6 @@ https://pay.qq.com/h5/index.shtml?m=buy&c=game&dialog=0&midasApiVersion=5&transa
 ```
 
 :::
-
-填完相关信息后，把括号删除，充值人在 qq 内点击该链接，即可使用 q 币为被充值人的游戏账号充值点券
 
 ---
 
