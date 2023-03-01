@@ -9,52 +9,36 @@ import { seoPlugin } from 'vuepress-plugin-seo2';
 const __dirname = getDirname(import.meta.url);
 export default defineUserConfig({
   theme: defaultTheme({
-    sidebar: [
-      {
-        text: '乾',
-        children: [
+    sidebar: [{
+        text: '乾',children: [
           '/index.md',
           '/giscus.md',
-        ],
-      },
-      {
-        text: '兑',
-        children: [
+        ],},{
+        text: '兑',children: [
           '/sun/visualstudiocode.md',
           '/sun/aria2.md',
           '/sun/minecraft.md',
           '/sun/steam.md',
           '/sun/wallpaperengine.md',
           '/sun/kiwixtools.md',
-        ],
-      },
-      {
-        text: '离',
-        children: [
+        ],},{
+        text: '离',children: [
           '/mon/archissus.md',
           '/mon/archinstall.md',
           '/mon/archinstallpro.md',
           '/mon/archinstallvps.md',
-        ],
-      },
-      {
-        text: '震',
-        children: [
+        ],},{
+        text: '震',children: [
           '/mon/windowsissus.md',
           '/mon/windowsenv.md',
-        ],
-      },
-      {
-        text: '巽',
-        children: [
+        ],},{
+        text: '巽',children: [
           '/tue/linuxshellnote.md',
           '/tue/donotknowhat.md',
-        ],
-      },
-    ],
+        ],},],
     lastUpdated: false,
     contributors: false,
-    navbar: false,
+    //navbar: false,
     sidebarDepth: 0,
   }),
   lang: 'zh-CN',
