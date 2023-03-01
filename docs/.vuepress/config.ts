@@ -54,7 +54,7 @@ export default defineUserConfig({
     ],
     lastUpdated: false,
     contributors: false,
-    navbar: false,
+    navbar: true,
     sidebarDepth: 0,
   }),
   lang: 'zh-CN',
