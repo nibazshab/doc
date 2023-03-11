@@ -18,11 +18,11 @@
   preview="https://zezin.netlify.app/avatar.jpg"
 />
 
-__本站__
+__- 本站__
 
-> 名称：萝卜子  
+> 名称：萝卜子 ATRI  
 > 链接：_https://www.atri.ml_  
-> 介绍：萝卜子的小站  
+> 介绍：萝卜子 ATRI 挚爱的时光  
 > 图片：_https://avatars.githubusercontent.com/u/44338441_
 
 ## Web
