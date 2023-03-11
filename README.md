@@ -1,7 +1,5 @@
 # README
 
-[![](https://img.shields.io/badge/nibazshab-wiki-9cf?style=flat-square&logo=appveyor)](https://github.com/nibazshab/wiki)
-
 这是一个使用 VuePress 2 搭建的 Wiki，用于记录个人的学习笔记
 
 本仓库包含以下分支：
