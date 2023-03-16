@@ -2,37 +2,14 @@
 
 <br>
 
-## 友情链接
-
-<SiteInfo
-  name="不可视之线"
-  url="https://fukashinosen.club"
-  desc="若知是梦何须醒，难比真如一相会"
-  preview="https://avatars.githubusercontent.com/u/49967926"
-/>
-
-<SiteInfo
-  name="Zexin's Blog"
-  url="https://zezin.netlify.app"
-  desc="晒饱太阳，远道而来"
-  preview="https://zezin.netlify.app/avatar.jpg"
-/>
-
-__- 本站__
-
-> 名称：萝卜子 ATRI  
-> 链接：_https://www.atri.ml_  
-> 介绍：萝卜子 ATRI 挚爱的时光  
-> 图片：_https://avatars.githubusercontent.com/u/44338441_
-
 ## Web
 
 - 阅读器界面设置
 
 配色|白天模式|夜间模式
 -|-|-
-文字|#321309|#a3a3a3
-背景|#f4e9de|#060606
+文字|`#321309`|`#a3a3a3`
+背景|`#f4e9de`|`#060606`
 
 ---
 
