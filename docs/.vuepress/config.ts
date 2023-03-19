@@ -57,7 +57,7 @@ export default defineUserConfig({
     }),
     commentPlugin({
       provider: 'Giscus',
-      repo: 'nibazshab/wiki',
+      repo: 'nibazshab/doc',
       repoId: 'MDEwOlJlcG9zaXRvcnkxOTg2NTY0NTU=',
       category: 'Announcements',
       categoryId: 'DIC_kwDOC9dBx84CRUCg',
