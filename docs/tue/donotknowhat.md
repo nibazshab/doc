@@ -13,6 +13,10 @@
 
 ---
 
+- cloudflare 开启 cdn 导致 gh-pages 重定向次数过多
+
+在 Edge Certficates 开启 `Always Use Https` 和 `Opportunistic Encryption`，在 Origin Server 开启 `Authenticated Origin Pulls`，在 SSL/TLS 设置中，将 Encryption Mode 设置为 `Full (strict)`
+
 - nginx 配置站点伪静态
 
 在 nginx 配置文件中站点的 `server` 模块中添加 `location / { try_files $uri $uri/ /index.php?$args; }`
