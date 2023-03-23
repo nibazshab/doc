@@ -12,7 +12,7 @@
 
 - nginx 配置站点伪静态
 
-在 nginx 配置文件中站点的 `server` 模块中添加 `location / { try_files $uri $uri/ /index.php?$args; }`
+在 nginx 配置文件中站点的 server 模块中添加 `location / { try_files $uri $uri/ /index.php?$args; }`
 
 ---
 
