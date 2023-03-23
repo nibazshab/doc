@@ -8,10 +8,10 @@
 
 - [@vuepress/plugin-shiki@next](https://v2.vuepress.vuejs.org/reference/plugin/shiki.html)
 - [@vuepress/plugin-google-analytics@next](https://v2.vuepress.vuejs.org/reference/plugin/google-analytics.html)
-- [vuepress-plugin-comment2@next](https://plugin-comment2.vuejs.press)
-- [vuepress-plugin-components@next](https://plugin-components.vuejs.press)
-- [vuepress-plugin-sitemap2@next](https://plugin-sitemap2.vuejs.press)
-- [vuepress-plugin-seo2@next](https://plugin-seo2.vuejs.press)
+- [vuepress-plugin-comment2](https://plugin-comment2.vuejs.press)
+- [vuepress-plugin-components](https://plugin-components.vuejs.press)
+- [vuepress-plugin-sitemap2](https://plugin-sitemap2.vuejs.press)
+- [vuepress-plugin-seo2](https://plugin-seo2.vuejs.press)
 
 ---
 
