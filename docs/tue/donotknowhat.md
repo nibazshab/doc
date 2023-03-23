@@ -4,18 +4,11 @@
 
 ## Web
 
-- 阅读器界面设置
-
-配色|白天模式|夜间模式
--|-|-
-文字|`#321309`|`#a3a3a3`
-背景|`#f4e9de`|`#060606`
-
----
-
 - cloudflare 开启 cdn 导致 gh-pages 重定向次数过多
 
 在 Edge Certficates 开启 `Always Use Https` 和 `Opportunistic Encryption`，在 Origin Server 开启 `Authenticated Origin Pulls`，在 SSL/TLS 设置中，将 Encryption Mode 设置为 `Full (strict)`
+
+---
 
 - nginx 配置站点伪静态
 
@@ -39,6 +32,15 @@
 @|A|3600|185.199.111.153
 www|CNAME|600|username.github.io
 _GITHUB-PAGES-CHALLENGE-USERNAME|TXT|3600|xxxxxxxxx
+
+---
+
+- 阅读器界面设置
+
+配色|白天模式|夜间模式
+-|-|-
+文字|`#321309`|`#a3a3a3`
+背景|`#f4e9de`|`#060606`
 
 ## Fun
 
