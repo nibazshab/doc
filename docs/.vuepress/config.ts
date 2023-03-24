@@ -33,7 +33,7 @@ export default defineUserConfig({
           '/mon/windowsenv.md',
         ],},{
         text: '巽',children: [
-          '/tue/linuxshellnote.md',
+          '/tue/clinote.md',
           '/tue/donotknowhat.md',
         ],},],
     lastUpdated: false,
