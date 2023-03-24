@@ -12,7 +12,7 @@ export default defineUserConfig({
     sidebar: [{
         text: '乾',children: [
           '/index.md',
-          '/giscus.md',
+          '/chat.md',
         ],},{
         text: '兑',children: [
           '/sun/visualstudiocode.md',
