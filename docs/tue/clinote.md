@@ -22,6 +22,8 @@
 
 ---
 
+- `git log --grep=<comment>` 搜索提交记录的版本号
+- `git reset --hard <commit_id>` 回退到指定版本
 - `jpegoptim --strip-all --all-progressive -o -f --max=50% a.jpg` 压缩 jpg 图片大小
 - `optipng a.png` 压缩 png 图片大小
 - `flac -d a.flac` flac 转 wav
