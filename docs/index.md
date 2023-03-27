@@ -2,7 +2,7 @@
 
 <br>
 
-本站使用 [VuePress Next](https://v2.vuepress.vuejs.org) 构建，[Giscus](https://giscus.app) 作为评论系统，托管在 [Github Pages](https://pages.github.com) 上
+本站使用 NodeJS 项目 [VuePress Next](https://v2.vuepress.vuejs.org) 构建，GitHub Discussion 驱动的 [Giscus](https://giscus.app) 作为评论系统，托管在静态站点托管服务 [Github Pages](https://pages.github.com) 上
 
 本站使用的插件：
 
