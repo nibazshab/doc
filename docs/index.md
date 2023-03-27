@@ -28,7 +28,7 @@
 
 <br>
 
-__- 友情链接 -__
+__[友情链接]__
 
 <SiteInfo
   name="不可视之线"
@@ -44,7 +44,7 @@ __- 友情链接 -__
   preview="https://zezin.netlify.app/avatar.jpg"
 />
 
-__- 本站 -__
+__[本站信息]__
 
 > 名称：萝卜子 ATRI  
 > 链接：_https://www.atri.ml_  
