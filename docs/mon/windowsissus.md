@@ -4,9 +4,9 @@
 
 ## 开机自启目录
 
-系统级自启「%PROGRAMDATA%\Microsoft\Windows\Start Menu\Programs\StartUp」
+系统级自启 %PROGRAMDATA%\Microsoft\Windows\Start Menu\Programs\StartUp
 
-用户级自启「%APPDATA%\Microsoft\Windows\Start Menu\Programs\Startup」
+用户级自启 %APPDATA%\Microsoft\Windows\Start Menu\Programs\Startup
 
 ## PATH 环境变量
 
@@ -21,12 +21,12 @@
 3. 更改当前不可用的设置
 4. 取消勾选「睡眠」「锁定」
 
-## 软连接系统截图到图片目录
+## 软连接系统截图目录
 
 将 Win+Shift+S 截图链接到「图片」目录
 
 1. 管理员权限打开 PowerShell
-2. 输入「mklink /d %LOCALAPPDATA%\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\TempState\ScreenClip %HOMEPATH%\Pictures\screenshot」
+2. 输入 mklink /d %LOCALAPPDATA%\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\TempState\ScreenClip %HOMEPATH%\Pictures\screenshot
 
 ## 开启 UTF-8 语言环境
 
@@ -52,11 +52,9 @@
 ## 将硬件时间视为 UTC 时间
 
 1. 管理员权限打开 PowerShell
-2. 输入
-
-「Reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsUniversal /t REG_DWORD /d 1」
+2. 输入 Reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsUniversal /t REG_DWORD /d 1
 
 ## NVIDIA 控制面板闪退
 
 1. 打开 C:\ProgramData\NVIDIA Corporation\Drs
-2. 将「nvdrsdb0.bin」和「nvdrsdb1.bin」文件删除
+2. 将 nvdrsdb0.bin 和 nvdrsdb1.bin 文件删除
