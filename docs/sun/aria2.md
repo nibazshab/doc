@@ -38,7 +38,7 @@ WantedBy=multi-user.target
 
 在 `%HOMEPATH%` 目录下创建 aria2 文件夹，将压缩包内的 aria2c.exe 文件解压到此处，并创建 aria2.conf、aria2.session 文件，其中 aria2.conf 的内容参考 [配置文件](#配置文件)
 
-在 `C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp` 目录下创建 aira2.vbs 文件，写入如下内容，即可实现开机自启
+在 `%APPDATA%\Microsoft\Windows\Start Menu\Programs\Startup` 目录下创建 aira2.vbs 文件，写入如下内容，即可实现开机自启
 
 ```powershell
 CreateObject("WScript.Shell").Run "%HOMEPATH%\aria2\aria2c.exe --conf-path=%HOMEPATH%\aria2\aria2.conf -D",0
