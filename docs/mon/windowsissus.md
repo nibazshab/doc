@@ -57,4 +57,4 @@
 ## NVIDIA 控制面板闪退
 
 1. 打开 C:\ProgramData\NVIDIA Corporation\Drs
-2. 将 nvdrsdb0.bin 和 nvdrsdb1.bin 文件删除
+2. 删除 nvdrsdb0.bin 和 nvdrsdb1.bin
