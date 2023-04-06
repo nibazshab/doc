@@ -12,6 +12,7 @@
 - [vuepress-plugin-components](https://plugin-components.vuejs.press)
 - [vuepress-plugin-sitemap2](https://plugin-sitemap2.vuejs.press)
 - [vuepress-plugin-seo2](https://plugin-seo2.vuejs.press)
+- [vuepress-plugin-md-enhance](https://plugin-md-enhance.vuejs.press)
 
 ---
 

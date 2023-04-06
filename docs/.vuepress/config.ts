@@ -6,6 +6,7 @@ import { commentPlugin } from 'vuepress-plugin-comment2';
 import { componentsPlugin } from "vuepress-plugin-components";
 import { sitemapPlugin } from 'vuepress-plugin-sitemap2';
 import { seoPlugin } from 'vuepress-plugin-seo2';
+import { mdEnhancePlugin } from "vuepress-plugin-md-enhance";
 const __dirname = getDirname(import.meta.url);
 export default defineUserConfig({
   theme: defaultTheme({
@@ -72,6 +73,8 @@ export default defineUserConfig({
     }),
     seoPlugin({
       hostname: 'https://www.atri.ml',
+    }),
+    mdEnhancePlugin({
     }),
   ],
 })

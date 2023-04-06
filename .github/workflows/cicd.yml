@@ -26,6 +26,7 @@ jobs:
         pnpm add -D vuepress-plugin-components
         pnpm add -D vuepress-plugin-sitemap2
         pnpm add -D vuepress-plugin-seo2
+        pnpm add -D vuepress-plugin-md-enhance
     - name: build vuepress next
       run: pnpm docs:build
     - name: upload package
