@@ -26,7 +26,7 @@
 将 Win+Shift+S 截图链接到「图片」目录
 
 1. 管理员权限打开 PowerShell
-2. 输入 mklink /d %LOCALAPPDATA%\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\TempState\ScreenClip %HOMEPATH%\Pictures\screenshot
+2. 输入 mklink /d %HOMEPATH%\Pictures\screenshot %LOCALAPPDATA%\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\TempState\ScreenClip
 
 ## 开启 UTF-8 语言环境
 
