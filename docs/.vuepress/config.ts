@@ -18,7 +18,6 @@ export default defineUserConfig({
         text: '兑',children: [
           '/sun/visualstudiocode.md',
           '/sun/aria2.md',
-          '/sun/minecraft.md',
           '/sun/steam.md',
           '/sun/wallpaperengine.md',
           '/sun/kiwixtools.md',
