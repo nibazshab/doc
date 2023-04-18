@@ -30,7 +30,7 @@ __[友情链接]__
 ```card
 title: 不可视之线
 desc: 若知是梦何须醒，难比真如一相会
-logo: https://fukashinosen.club/static/img/c1eb047e950ab7ddde7b61986d97fb7d.head.jpg
+logo: https://fukashinosen.club/static/img/d538c82673782f56e6ac4a9db8fc4930.head.webp
 link: https://fukashinosen.club
 ```
 
