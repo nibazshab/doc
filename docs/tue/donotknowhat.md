@@ -4,9 +4,17 @@
 
 ## Web
 
+- 利用 cloudflare 实现域名 URL 301 重定向
+
+选择 DNS 列，在 Records 中添加一条记录，Type 为 `A`，Content 随便填一个可靠的IP地址 `8.8.8.8`
+
+选择 Rules 列，在 Page Rules 中添加一条规则，URL 为重定向的域名 `www.a.com/*`，Setting 设为 `Forwarding URL`，Status Code 设为 `301`，Destination URL 为重定向的目标域名 `https://www.b.com/$1`
+
+--
+
 - cloudflare 开启 cdn 导致 gh-pages 重定向次数过多
 
-在 Edge Certficates 开启 `Always Use Https` 和 `Opportunistic Encryption`，在 Origin Server 开启 `Authenticated Origin Pulls`，在 SSL/TLS 设置中，将 Encryption Mode 设置为 `Full (strict)`
+选择 SSL/TLS 列，在 Edge Certficates 开启 `Always Use Https` 和 `Opportunistic Encryption`，在 Origin Server 开启 `Authenticated Origin Pulls`，在 SSL/TLS 设置中，将 Encryption Mode 设置为 `Full (strict)`
 
 ---
 
@@ -31,7 +39,6 @@
 @|A|3600|185.199.110.153
 @|A|3600|185.199.111.153
 www|CNAME|600|username.github.io
-_GITHUB-PAGES-CHALLENGE-USERNAME|TXT|3600|xxxxxxxxx
 
 ---
 
