@@ -4,6 +4,8 @@
 
 本站使用 NodeJS 项目 [VuePress Next](https://v2.vuepress.vuejs.org) 构建，GitHub Discussion 驱动的 [Giscus](https://giscus.app) 作为评论系统，托管在静态站点托管服务 [Github Pages](https://pages.github.com) 上
 
+本站使用 [Cloudflare](https://www.cloudflare.com) 作 DNS 解析及 CDN 加速，域名由 [EU.org](https://nic.eu.org) 提供
+
 本站使用的插件：
 
 - [@vuepress/plugin-shiki@next](https://v2.vuepress.vuejs.org/reference/plugin/shiki.html)
@@ -44,6 +46,6 @@ link: https://zezin.netlify.app
 __[本站信息]__
 
 > 名称：萝卜子 ATRI  
-> 链接：_https://www.lblb.eu.org_  
-> 介绍：萝卜子 ATRI 挚爱的时光  
-> 图片：_https://avatars.githubusercontent.com/u/44338441_
+> 简介：萝卜子，我挚爱的时光  
+> 地址：_https://www.lblb.eu.org_  
+> 头像：_https://avatars.githubusercontent.com/u/44338441_
