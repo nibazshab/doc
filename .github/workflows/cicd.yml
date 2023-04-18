@@ -32,7 +32,7 @@ jobs:
     - name: upload package
       uses: actions/upload-artifact@v3
       with:
-        name: www.atri.ml
+        name: www.lblb.eu.org
         path: docs/.vuepress/dist
   deploy:
     needs: build
@@ -41,7 +41,7 @@ jobs:
     - name: download package
       uses: actions/download-artifact@v3
       with:
-        name: www.atri.ml
+        name: www.lblb.eu.org
         path: dist
     - name: deploy to gh-pages
       uses: crazy-max/ghaction-github-pages@v3

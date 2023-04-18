@@ -48,6 +48,6 @@ __[友情链接]__
 __[本站信息]__
 
 > 名称：萝卜子 ATRI  
-> 链接：_https://www.atri.ml_  
+> 链接：_https://www.lblb.eu.org_  
 > 介绍：萝卜子 ATRI 挚爱的时光  
 > 图片：_https://avatars.githubusercontent.com/u/44338441_

@@ -53,7 +53,7 @@ export default defineUserConfig({
       theme: 'github-dark',
     }),
     googleAnalyticsPlugin({
-      id: 'G-770W6J0TQD',
+      id: 'G-TFJZ33CMXM',
     }),
     commentPlugin({
       provider: 'Giscus',
@@ -68,10 +68,10 @@ export default defineUserConfig({
       ],
     }),
     sitemapPlugin({
-      hostname: 'https://www.atri.ml',
+      hostname: 'https://www.lblb.eu.org',
     }),
     seoPlugin({
-      hostname: 'https://www.atri.ml',
+      hostname: 'https://www.lblb.eu.org',
     }),
     mdEnhancePlugin({
     }),
