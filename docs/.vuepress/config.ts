@@ -1,11 +1,7 @@
 import { defineUserConfig, defaultTheme } from 'vuepress';
 import { getDirname, path } from '@vuepress/utils';
 import { shikiPlugin } from '@vuepress/plugin-shiki';
-import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics';
 import { commentPlugin } from 'vuepress-plugin-comment2';
-import { componentsPlugin } from "vuepress-plugin-components";
-import { sitemapPlugin } from 'vuepress-plugin-sitemap2';
-import { seoPlugin } from 'vuepress-plugin-seo2';
 import { mdEnhancePlugin } from "vuepress-plugin-md-enhance";
 const __dirname = getDirname(import.meta.url);
 export default defineUserConfig({
@@ -43,7 +39,7 @@ export default defineUserConfig({
   }),
   lang: 'zh-CN',
   base: '/',
-  title: '_Wiki',
+  title: 'ATRI Doc',
   head: [['link', {rel: 'icon', href: '/favicon.ico',},]],
   alias: {
     '@theme/PageNav.vue': path.resolve(__dirname, './components/PageNav.vue'),
@@ -52,9 +48,6 @@ export default defineUserConfig({
     shikiPlugin({
       theme: 'github-dark',
     }),
-    googleAnalyticsPlugin({
-      id: 'G-TFJZ33CMXM',
-    }),
     commentPlugin({
       provider: 'Giscus',
       repo: 'nibazshab/doc',
@@ -62,18 +55,8 @@ export default defineUserConfig({
       category: 'Announcements',
       categoryId: 'DIC_kwDOC9dBx84CRUCg',
     }),
-    componentsPlugin({
-      components: [
-        "SiteInfo",
-      ],
-    }),
-    sitemapPlugin({
-      hostname: 'https://www.lblb.eu.org',
-    }),
-    seoPlugin({
-      hostname: 'https://www.lblb.eu.org',
-    }),
     mdEnhancePlugin({
+      card: true,
     }),
   ],
 })

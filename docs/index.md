@@ -7,11 +7,7 @@
 本站使用的插件：
 
 - [@vuepress/plugin-shiki@next](https://v2.vuepress.vuejs.org/reference/plugin/shiki.html)
-- [@vuepress/plugin-google-analytics@next](https://v2.vuepress.vuejs.org/reference/plugin/google-analytics.html)
 - [vuepress-plugin-comment2](https://plugin-comment2.vuejs.press)
-- [vuepress-plugin-components](https://plugin-components.vuejs.press)
-- [vuepress-plugin-sitemap2](https://plugin-sitemap2.vuejs.press)
-- [vuepress-plugin-seo2](https://plugin-seo2.vuejs.press)
 - [vuepress-plugin-md-enhance](https://plugin-md-enhance.vuejs.press)
 
 ---
@@ -31,19 +27,19 @@
 
 __[友情链接]__
 
-<SiteInfo
-  name="不可视之线"
-  url="https://fukashinosen.club"
-  desc="若知是梦何须醒，难比真如一相会"
-  preview="https://avatars.githubusercontent.com/u/49967926"
-/>
+```card
+title: 不可视之线
+desc: 若知是梦何须醒，难比真如一相会
+logo: https://avatars.githubusercontent.com/u/49967926
+link: https://fukashinosen.club
+```
 
-<SiteInfo
-  name="Zexin's Blog"
-  url="https://zezin.netlify.app"
-  desc="晒饱太阳，远道而来"
-  preview="https://zezin.netlify.app/avatar.jpg"
-/>
+```card
+title: Zexin's Blog
+desc: 晒饱太阳，远道而来
+logo: https://zezin.netlify.app/avatar.jpg
+link: https://zezin.netlify.app
+```
 
 __[本站信息]__
 
