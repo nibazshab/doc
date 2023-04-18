@@ -16,7 +16,6 @@ export default defineUserConfig({
           '/sun/aria2.md',
           '/sun/steam.md',
           '/sun/wallpaperengine.md',
-          '/sun/kiwixtools.md',
           '/sun/worldwideweb.md',
         ],},{
         text: '离',children: [
