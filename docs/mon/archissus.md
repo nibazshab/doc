@@ -139,3 +139,32 @@ Exec=/bin/sh -c 'while read -r trg; do case $trg in linux) exit 0; esac; done; /
 如果消息仅在生成 fallback initramfs 镜像时出现，可以禁止 fallback 镜像的生成，在 `/etc/mkinitcpio.d` 目录下的 preset 文件中，将 PRESETS= 里的 fallback 移除，并重新生成系统引导
 
 [参阅](https://wiki.archlinux.org/title/Mkinitcpio#Possibly_missing_firmware_for_module_XXXX)
+
+## Grub 引导 ISO 文件
+
+::: details arch.iso
+
+```ini
+menuentry 'Arch LiveCD' {
+  set isofile=/arch.iso
+  set imgdevpath=/dev/sda1
+  loopback lo0 $isofile
+  linux (lo0)/arch/boot/x86_64/vmlinuz-linux img_dev=$imgdevpath img_loop=$isofile
+  initrd (lo0)/arch/boot/x86_64/initramfs-linux.img
+}
+```
+
+:::
+
+::: details gentoo.iso
+
+```ini
+menuentry 'Gentoo LiveCD' {
+  set isofile=/gentoo.iso
+  loopback loop $isofile
+  linux (loop)/boot/gentoo init=/linuxrc dokeymap docache dosshd looptype=squashfs loop=/image.squashfs cdroot isoboot=$isofile
+  initrd (loop)/boot/gentoo.igz
+}
+```
+
+:::

@@ -17,6 +17,7 @@ export default defineUserConfig({
           '/sun/steam.md',
           '/sun/wallpaperengine.md',
           '/sun/kiwixtools.md',
+          '/sun/worldwideweb.md',
         ],},{
         text: '离',children: [
           '/mon/archissus.md',
