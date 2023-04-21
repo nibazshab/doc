@@ -14,10 +14,10 @@
 - [vuepress-plugin-comment2](https://plugin-comment2.vuejs.press)
 - [vuepress-plugin-md-enhance](https://plugin-md-enhance.vuejs.press)
 
-如果对本站感觉良好，不妨在 [讨论区](chat.md) 留下一些文字，或者更进一步
+如果对本站感觉良好，不妨在 [讨论区](chat.md) 留下一些文字，或者
 
-- 在 Github 上给 [本站](https://github.com/nibazshab/doc) 点个免费的 Star
-- 在 Github 上给 [在下](https://github.com/nibazshab) 点个免费的 Follow
+- 在 Github 上给 [本站](https://github.com/nibazshab/doc) 点个的 Star 收藏一下
+- 在 Github 上给 [在下](https://github.com/nibazshab) 点个 Follow 关注一下
 
 感谢各位 :heart:
 
