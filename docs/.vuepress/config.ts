@@ -22,7 +22,6 @@ export default defineUserConfig({
           '/mon/archissus.md',
           '/mon/archinstall.md',
           '/mon/archinstallpro.md',
-          '/mon/archinstallvps.md',
         ],},{
         text: '震',children: [
           '/mon/windowsissus.md',
