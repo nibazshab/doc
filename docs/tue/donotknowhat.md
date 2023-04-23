@@ -2,38 +2,7 @@
 
 <br>
 
-- __markdown__ 语法
-
-> Markdown 语法说明 https://www.appinn.com/markdown/
-
-- __git__ 命令
-
-> Git 常用命令 https://www.runoob.com/git/git-quick-start.html
-
-- __github__ 使用
-
-> GitHub 简明教程 https://www.runoob.com/w3cnote/git-guide.html
-
-- __docker__ 命令
-
-> Docker 命令大全 https://www.runoob.com/docker/docker-command-manual.html
-
-- __docker-compose__ 命令
-
-> Docker Compose 命令大全 https://www.runoob.com/docker/docker-compose.html
-
-- __dockerfile__ 语法
-
-> Dockerfile 语法说明 https://www.runoob.com/docker/docker-dockerfile.html
-
-- __nginx__ 配置
-
-> Nginx 配置详解 https://www.runoob.com/w3cnote/nginx-setup-intro.html
-
-
----
-
-- 阅读器界面设置
+阅读器界面样式设置
 
 配色|白天模式|夜间模式
 -|-|-
