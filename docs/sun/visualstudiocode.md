@@ -28,6 +28,7 @@ Github Light Theme|亮色主题
 One Dark Pro|暗色主题
 Cdoe Runner|右上角添加一个运行代码的按钮
 GitHub Copilot|GitHub AI 助手
+C/C++|C/C++ 语言支持
 
 ## 快捷键记录
 
