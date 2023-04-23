@@ -14,6 +14,7 @@ export default defineUserConfig({
         text: '兑',children: [
           '/sun/visualstudiocode.md',
           '/sun/aria2.md',
+          '/sun/minecraft.md',
           '/sun/steam.md',
           '/sun/wallpaperengine.md',
           '/sun/worldwideweb.md',
@@ -30,6 +31,9 @@ export default defineUserConfig({
         text: '巽',children: [
           '/tue/clinote.md',
           '/tue/donotknowhat.md',
+        ],},{
+        text: '坎',children: [
+          '/note.md',
         ],},],
     lastUpdated: false,
     contributors: false,

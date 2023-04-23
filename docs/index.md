@@ -16,7 +16,7 @@
 
 如果对本站感觉良好，不妨在 [讨论区](chat.md) 留下一些文字，或者
 
-- 在 Github 上给 [本站](https://github.com/nibazshab/doc) 点个的 Star 收藏一下
+- 在 Github 上给 [本站](https://github.com/nibazshab/doc) 点个 Star 收藏一下
 - 在 Github 上给 [在下](https://github.com/nibazshab) 点个 Follow 关注一下
 
 感谢各位 :heart:
@@ -45,6 +45,6 @@ link: https://zezin.netlify.app
 
 __[本站信息]__
 
-> 名称：萝卜子的小站 | 萝卜子，我挚爱的时光  
+> 名称：萝卜子的小站 | 我挚爱的时光  
 > 头像：_https://avatars.githubusercontent.com/u/44338441_  
 > 地址：_https://www.lblb.eu.org_
