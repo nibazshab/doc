@@ -45,6 +45,6 @@ link: https://zezin.netlify.app
 
 __[本站信息]__
 
-> 名称：萝卜子的小站 | 我挚爱的时光  
+> 名称：_萝卜子的小站 | 我挚爱的时光_  
 > 头像：_https://avatars.githubusercontent.com/u/44338441_  
 > 地址：_https://www.lblb.eu.org_

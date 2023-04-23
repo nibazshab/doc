@@ -28,3 +28,9 @@ Github Light Theme|亮色主题
 One Dark Pro|暗色主题
 Cdoe Runner|右上角添加一个运行代码的按钮
 GitHub Copilot|GitHub AI 助手
+
+## 快捷键记录
+
+快捷键|介绍
+-|-
+Shift+Alt+F|格式化代码
