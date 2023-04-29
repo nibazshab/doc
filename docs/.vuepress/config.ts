@@ -40,7 +40,7 @@ export default defineUserConfig({
     //navbar: false,
     sidebarDepth: 0,
   }),
-  lang: 'zh-CN',
+  lang: 'en-US',
   base: '/',
   title: 'ATRI Doc',
   head: [['link', {rel: 'icon', href: '/favicon.ico',},]],
