@@ -27,6 +27,7 @@ export default defineUserConfig({
         text: '震',children: [
           '/mon/windowsissus.md',
           '/mon/windowsenv.md',
+          '/mon/windowsapp.md',
         ],},{
         text: '巽',children: [
           '/tue/clinote.md',
