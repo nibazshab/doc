@@ -13,6 +13,6 @@
 
 一款免费、开源的跨平台电脑直播和录屏软件。可以用于直播游戏、教育、演讲、活动等多种场景，同时也支持录制桌面、摄像头和麦克风等音视频设备。用户可以自定义窗口大小、分辨率、比特率等参数，并支持输出到多个流媒体平台
 
-- 传送门：[https://obsproject.com](https://obsproject.com)
+- 传送门：[https://github.com/obsproject/obs-studio](https://github.com/obsproject/obs-studio)
 
 ## 未完待续...
