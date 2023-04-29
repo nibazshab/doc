@@ -2,7 +2,7 @@
 
 <br>
 
-- -e file 判断 file 是否存在
+- `-e file` 判断 file 是否存在
 - `sed -n "5 p" file` 读取文件的第 5 行
 - `sed -i s/a/b/g a` 替换文件内容
 - `grep -rn 'abc' /a` 搜索文本内容
