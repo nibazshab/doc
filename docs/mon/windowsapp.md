@@ -15,7 +15,7 @@
 
 - 传送门：[https://github.com/obsproject/obs-studio](https://github.com/obsproject/obs-studio)
 
-## 雷神加速器
+## LeiGod
 
 游戏加速器，支持多个平台。拥有全球节点，支持多种加速模式，能够有效降低游戏延迟，提升游戏体验
 
