@@ -2,7 +2,7 @@
 
 <br>
 
-- `ls -vl` 按自然顺序列出文件
+- `ls -v` 按自然顺序列出文件
 - `for i in {1..10}` 取 i 值为 1 到 10
 - `-e file` 判断 file 是否存在
 - `sed -n "5 p" file` 读取文件的第 5 行
@@ -12,15 +12,13 @@
 - `b=${a#*(}` 去除 a 变量中 ( 左边所有内容
 - `openssl enc -aes-256-cbc -pbkdf2 -salt -in a.base64 -out a.base64.enc.aes256cbc` 加密文件
 - `openssl enc -aes-256-cbc -pbkdf2 -salt -d -in a.base64.enc.aes256cbc -out a.base64` 解密文件
-- `i=1; for a in $(find -name '*.c'); do mv $a $(printf "%0.2d.c" $i); i=$(($i+1)); done` 查找 c 文件，重命名为 01.c、02.c
+- `i=1; for a in `find -name '*.c'`; do mv $a $(printf "%0.2d.c" $i); i=$(($i+1)); done` 查找 c 文件，重命名为 01.c、02.c
 - `while true; do <command>; done` 无限重复指令
 - `IFS_old=$IFS;IFS=$'\n'; <command>; IFS=$IFS_old` 读取带空格的文件名
 - `nohup <command> &; disown` 后台运行指令，记录日志
-- `scp /a user@host:/a` 使用 ssh 通道上传文件
+- `scp <-r> /a user@host:/a` 使用 ssh 通道上传文件/文件夹
 - `ssh-keygen -t ed25519` 生成 ed25519 加密的 ssh 密钥
 - `su nobody -s /bin/bash -c '<command>'` 以 nobody 用户的身份运行指令
-- `sfdisk -d /dev/sdb > sdb.bkp` 导出分区表文件
-- `sfdisk /dev/sdb < sdb.bkp` 导入分区表文件
 - `LS_COLORS='rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;93'` 设置 ls 的颜色
 
 ---
@@ -39,6 +37,8 @@
 - `screen -r <session_name>` 进入 screen 会话
 - `rclone mount name:/a /b --cache-dir /c --vfs-cache-mode writes` rclone 挂载云盘为本地目录，并设置缓存路径
 - `rsync -avzhP --bwlimit=500 /a /b` 文件传输，保留元数据并限制速率 500k
+- `sfdisk -d /dev/sdb > sdb.bkp` 导出分区表文件
+- `sfdisk /dev/sdb < sdb.bkp` 导入分区表文件
 
 ---
 
