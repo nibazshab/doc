@@ -12,7 +12,7 @@
 - `b=${a#*(}` 去除 a 变量中 ( 左边所有内容
 - `openssl enc -aes-256-cbc -pbkdf2 -salt -in a.base64 -out a.base64.enc.aes256cbc` 加密文件
 - `openssl enc -aes-256-cbc -pbkdf2 -salt -d -in a.base64.enc.aes256cbc -out a.base64` 解密文件
-- `i=1; for a in `find -name '*.c'`; do mv $a $(printf "%0.2d.c" $i); i=$(($i+1)); done` 查找 c 文件，重命名为 01.c、02.c
+- `i=1; for a in $(find -name '*.c'); do mv $a $(printf "%0.2d.c" $i); i=$(($i+1)); done` 查找 c 文件，重命名为 01.c、02.c
 - `while true; do <command>; done` 无限重复指令
 - `IFS_old=$IFS;IFS=$'\n'; <command>; IFS=$IFS_old` 读取带空格的文件名
 - `nohup <command> &; disown` 后台运行指令，记录日志
