@@ -2,6 +2,7 @@
 
 <br>
 
+- `ls -vl` 按自然顺序列出文件
 - `for i in {1..10}` 取 i 值为 1 到 10
 - `-e file` 判断 file 是否存在
 - `sed -n "5 p" file` 读取文件的第 5 行
