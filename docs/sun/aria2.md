@@ -129,7 +129,7 @@ bt-remove-unselected-file=true
 bt-force-encryption=true
 bt-detach-seed-only=true
 
-user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36
+user-agent=
 peer-agent=Deluge 1.3.15
 peer-id-prefix=-DE13F0-
 
