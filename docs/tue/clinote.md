@@ -2,6 +2,30 @@
 
 <br>
 
+[[toc]]
+
+## 正则表达式
+
+式|说明|式|说明
+-|-|-|-
+`.*(a\|b).*`|包含 a 或 b 的行|`[^\x00-\x7F]`|非 ASCII 字符
+`^.{5}`|行首 5 个字符|`.{5}$`|行末 5 个字符
+`\d`|数字|`^[ \t]*$`|空行
+`^`|行首|`$`|行末
+`(\d+)`|数字|`$1`|替换中第 1 个 () 匹配的项
+
+---
+
+## 特殊字符
+
+字符|说明|Unicode
+-|-|-
+`　`|空白字符|\u3000
+
+---
+
+## Shell
+
 - `ls -v` 按自然顺序列出文件
 - `for i in {1..10}` 取 i 值为 1 到 10
 - `-e file` 判断 file 是否存在
@@ -21,9 +45,6 @@
 - `ssh-keygen -t ed25519` 生成 ed25519 加密的 ssh 密钥
 - `su nobody -s /bin/bash -c '<command>'` 以 nobody 用户的身份运行指令
 - `LS_COLORS='rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;93'` 设置 ls 的颜色
-
----
-
 - `curl -F file=@name file.io` 上传文件并获取链接
 - `git log --grep=<comment>` 搜索提交记录的版本号
 - `git reset --hard <commit_id>` 回退到指定版本
@@ -43,7 +64,17 @@
 
 ---
 
-Android Debug Bridge 
+## Docker
+
+- `docker compose logs -f` 查看 docker 容器日志
+- `docker compose up -d` 启动 docker 容器
+- `docker compose down` 移除 docker 容器
+- `docker compose pull` 更新 docker 容器
+- `docker system prune -a` 清理所有不在使用的 docker 容器/镜像/网络
+
+---
+
+## Android
 
 - `adb shell pm disable-user <package_name>` 冻结应用
 - `adb shell pm enable <package_name>` 解冻应用
@@ -51,7 +82,7 @@ Android Debug Bridge
 
 ---
 
-VIM 编辑器
+## VIM
 
 - `sort` 字母表顺序排列每一行
 - `set pastetoggle=<F9>` 设置 f9 为开关自动缩进的快捷键
@@ -59,23 +90,3 @@ VIM 编辑器
 - `set nopaste` 开启自动缩进
 - `:%!xxd` 开启十六进制模式
 - `%!xxd -r` 关闭十六进制模式
-
----
-
-正则表达式
-
-式|说明|式|说明
--|-|-|-
-`.*(a\|b).*`|包含 a 或 b 的行|`[^\x00-\x7F]`|非 ASCII 字符
-`^.{5}`|行首 5 个字符|`.{5}$`|行末 5 个字符
-`\d`|数字|`^[ \t]*$`|空行
-`^`|行首|`$`|行末
-`(\d+)`|数字|`$1`|替换中()匹配的项
-
----
-
-特殊字符
-
-字符|说明|Unicode
--|-|-
-`　`|空白字符|\u3000
