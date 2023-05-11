@@ -14,7 +14,7 @@
 - [vuepress-plugin-comment2](https://plugin-comment2.vuejs.press)
 - [vuepress-plugin-md-enhance](https://plugin-md-enhance.vuejs.press)
 
-如果对本站感觉良好，不妨在 [讨论区](chat.md) 留下一些文字，或者在 Github 上给 [本站](https://github.com/nibazshab/doc) 和 [在下](https://github.com/nibazshab) 点个 Star 和 Follow
+如果对本站感觉良好，不妨在 [讨论区](chat.md) 留下一些文字，在 Github 上给 [本站](https://github.com/nibazshab/doc) 和 [在下](https://github.com/nibazshab) 点个 Star 和 Follow
 
 感谢各位 :heart:
 
@@ -42,5 +42,5 @@ link: https://zezin.netlify.app
 
 > 名称：_萝卜子的小站_  
 > 头像：_https://avatars.githubusercontent.com/u/44338441_  
-> 地址：_https://www.lblb.eu.org_
+> 地址：_https://www.lblb.eu.org_  
 > 描述：_我挚爱的时光_
