@@ -40,7 +40,6 @@ logo: https://zezin.netlify.app/avatar.jpg
 link: https://zezin.netlify.app
 ```
 
-> 名称：_萝卜子的小站_  
+> 名称：_萝卜子的小站，我挚爱的时光_  
 > 头像：_https://avatars.githubusercontent.com/u/44338441_  
-> 地址：_https://www.lblb.eu.org_  
-> 描述：_我挚爱的时光_
+> 地址：_https://www.lblb.eu.org_
