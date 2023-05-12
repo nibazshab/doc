@@ -17,34 +17,30 @@ concurrency:
   group: "pages"
   cancel-in-progress: false
 
-# 环境变量
-env:
-  GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-
 jobs:
 
   # 从 Markdown 构建 HTML
   build:
     runs-on: ubuntu-latest
     steps:
-      # 获取仓库代码
-      - name: checkout
-        uses: actions/checkout@v3
       # 准备 pnpm 环境
-      - name: setup pnpm
+      - name: Setup pnpm env
         uses: pnpm/action-setup@v2
         with:
           version: latest
       # 准备 VuePress Next 环境
-      - name: setup vuepress next
+      - name: Setup VuePressNext env
         run: |
           echo
           pnpm add -D vue vuepress@next @vuepress/client@next @vuepress/utils@next
           pnpm add -D @vuepress/plugin-shiki@next
           pnpm add -D vuepress-plugin-comment2
           pnpm add -D vuepress-plugin-md-enhance
+      # 获取仓库代码
+      - name: Checkout
+        uses: actions/checkout@v3
       # 生成静态文件
-      - name: build vuepress next
+      - name: Build with VuePressNext
         run: pnpm docs:build
       # 上传静态文件 github-pages
       - name: Upload artifact
@@ -62,13 +58,7 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - name: setup vuepress next
-        run: |
-          ls
       # 部署 Github Pages
-      - name: Deploy to GitHub Pages
+      - name: Deploy to Github Pages
         id: deployment
         uses: actions/deploy-pages@v2
-      - name: setup vuepress next
-        run: |
-          ls
