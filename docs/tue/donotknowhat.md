@@ -2,6 +2,16 @@
 
 <br>
 
+java 要设置 classpath
+
+java -classpath “C:\Users\elaina\Documents\idea\out\production\idea" game.YuanShen.Main
+
+---
+
+magnet:?xt=urn:btih:
+
+---
+
 Sigil RegEx 替换，正则表达式匹配不是 `$1` 而是 `\1`
 
 ---
@@ -17,7 +27,7 @@ Sigil RegEx 替换，正则表达式匹配不是 `$1` 而是 `\1`
 
 跳 4399 账号登录验证，在地址栏输入
 
-> javascript: try{ Anti_close(); alert( "Success"); } catch(e){ alert("Failed"); }
+> javascript: try{ Anti_close(); alert("Success"); } catch(e){ alert("Failed"); }
 
 ---
 
