@@ -1,21 +1,41 @@
 name: CI/CD
+
 on:
+  # 在 main 分支被更改时自动运行
   push:
     branches:
     - main
+  # 允许手动运行
   workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+# 环境变量
 env:
   GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+
 jobs:
+
+  # 从 Markdown 构建 HTML
   build:
     runs-on: ubuntu-latest
     steps:
+    # 获取仓库代码
     - name: checkout
       uses: actions/checkout@v3
+    # 准备 pnpm 环境
     - name: setup pnpm
       uses: pnpm/action-setup@v2
       with:
         version: latest
+    # 准备 VuePress Next 环境
     - name: setup vuepress next
       run: |
         echo
@@ -23,24 +43,31 @@ jobs:
         pnpm add -D @vuepress/plugin-shiki@next
         pnpm add -D vuepress-plugin-comment2
         pnpm add -D vuepress-plugin-md-enhance
+    # 生成静态文件
     - name: build vuepress next
       run: pnpm docs:build
-    - name: upload package
-      uses: actions/upload-artifact@v3
-      with:
-        name: www.lblb.eu.org
-        path: docs/.vuepress/dist
+
+    # 上传静态文件 github-pages
+    - name: Upload artifact
+      uses: actions/upload-pages-artifact@v1
+
+  # 部署 Github Pages
   deploy:
+    # 环境变量
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    # 在 'build' 步骤完成后才进行
     needs: build
     runs-on: ubuntu-latest
     steps:
-    - name: download package
-      uses: actions/download-artifact@v3
-      with:
-        name: www.lblb.eu.org
-        path: dist
-    - name: deploy to gh-pages
-      uses: crazy-max/ghaction-github-pages@v3
-      with:
-        target_branch: gh-pages
-        build_dir: dist
+    - name: setup vuepress next
+      run: |
+        ls
+    # 部署 Github Pages
+    - name: Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v2
+    - name: setup vuepress next
+      run: |
+        ls
