@@ -1,4 +1,4 @@
-name: CI/CD
+name: gh-pages
 
 on:
   # 在 main 分支被更改时自动运行

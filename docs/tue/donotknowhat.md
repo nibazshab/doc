@@ -4,7 +4,7 @@
 
 java 要设置 classpath
 
-java -classpath “C:\Users\elaina\Documents\idea\out\production\idea" game.YuanShen.Main
+java -classpath “/opt/idea/out/production/idea" game.YuanShen.Main
 
 ---
 
