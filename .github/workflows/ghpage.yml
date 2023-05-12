@@ -36,6 +36,7 @@ jobs:
       - name: Setup VuePressNext env
         run: |
           echo
+          mv docs/.vuepress/package.json .
           pnpm add -D vue vuepress@next @vuepress/client@next @vuepress/utils@next
           pnpm add -D @vuepress/plugin-shiki@next
           pnpm add -D vuepress-plugin-comment2
