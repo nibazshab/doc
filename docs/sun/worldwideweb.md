@@ -4,6 +4,24 @@
 
 World Wide Web 即全球广域网，也称为万维网，它是一种基于超文本和 HTTP 的、全球性的、动态交互的、跨平台的分布式图形信息系统。是建立在 Internet 上的一种网络服务，为浏览者在 Internet 上查找和浏览信息提供了图形化的、易于访问的直观界面，其中的文档及超级链接将 Internet 上的信息节点组织成一个互为关联的网状结构
 
+## 美化
+
+### 字体
+
+标准字体：[思源黑体 source-han-sans](https://github.com/adobe-fonts/source-han-sans)，「Language Specific OTFs Simplified Chinese (简体中文)」
+
+衬线字体：[思源宋体 source-han-serif](https://github.com/adobe-fonts/source-han-serif)，「Language Specific OTFs Simplified Chinese (简体中文)」
+
+等宽字体：[source-code-pro](https://github.com/adobe-fonts/source-code-pro)
+
+阅读字体：[霞鹜文楷 LXGW WenKai](https://github.com/lxgw/LxgwWenKai)
+
+### 界面
+
+小说阅读器，白天模式：文字 #321309，背景 #f4e9de
+
+小说阅读器，夜间模式：文字 #a3a3a3，背景 #060606
+
 ## 学习记录
 
 - 爬取网站图片时解决防盗链问题

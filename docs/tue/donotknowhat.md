@@ -16,15 +16,6 @@ Sigil RegEx 替换，正则表达式匹配不是 `$1` 而是 `\1`
 
 ---
 
-阅读器界面样式设置
-
-配色|白天模式|夜间模式
--|-|-
-文字|`#321309`|`#a3a3a3`
-背景|`#f4e9de`|`#060606`
-
----
-
 跳 4399 账号登录验证，在地址栏输入
 
 > javascript: try{ Anti_close(); alert("Success"); } catch(e){ alert("Failed"); }
