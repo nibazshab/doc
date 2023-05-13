@@ -19,7 +19,7 @@ export default defineUserConfig({
         '/sun/wallpaperengine.md',
       ],},{
       text: '离', children: [
-        '/sun/worldwideweb.md',
+        '/tue/worldwideweb.md',
         '/tue/clinote.md',
         '/tue/donotknowhat.md',
       ],},{
@@ -36,7 +36,7 @@ export default defineUserConfig({
       text: '坎', children: [
         '/note.md',
       ],},],
-    lastUpdated: true,
+    lastUpdated: false,
     contributors: false,
     navbar: [],
     sidebarDepth: 0,

@@ -1,7 +1,3 @@
----
-lastUpdated: false
----
-
 # 写在前面
 
 <br>
@@ -17,6 +13,10 @@ lastUpdated: false
 - [@vuepress/plugin-shiki@next](https://v2.vuepress.vuejs.org/reference/plugin/shiki.html)
 - [vuepress-plugin-comment2](https://plugin-comment2.vuejs.press)
 - [vuepress-plugin-md-enhance](https://plugin-md-enhance.vuejs.press)
+
+本站源代码采用 [MIT 许可证](https://github.com/nibazshab/doc/blob/main/LICENSE) 进行许可
+
+未经特殊说明，本站作品采用 [知识共享署名 4.0 国际许可协议](http://creativecommons.org/licenses/by/4.0) 进行许可
 
 如果对本站感觉良好，不妨在 [讨论区](chat.md) 留下一些文字，在 Github 上给 [本站](https://github.com/nibazshab/doc) 和 [在下](https://github.com/nibazshab) 点个 Star 和 Follow
 
