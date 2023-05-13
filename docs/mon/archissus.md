@@ -29,7 +29,7 @@ done
 
 将主题配置文件 gnome-shell.css 中的 #panel 模块里的 background-color 的值修改为 `rgba(0,0,0,0.6)`
 
-输入 `glib-compile-resources gnome-shell-theme.gresource.xml` 指令按照 gnome-shell-theme.gresource.xml 打包配置文件，将主题重新打包成二进制文件，替换原来的主题，重启 GNOME Shell 即可
+输入 `glib-compile-resources gnome-shell-theme.gresource.xml` 指令按照 gnome-shell-theme.gresource.xml 打包配置文件，将主题重新打包成二进制文件，替换原来的主题，重启 GNOME Shell
 
 ::: details gnome-shell-theme.gresource.xml
 
@@ -104,7 +104,7 @@ Exec=/bin/sh -c 'while read -r trg; do case $trg in linux) exit 0; esac; done; /
 
 ## 桌面环境挂起后无法唤醒
 
-使用 Intel CPU 并为触摸板加载了 intel_lpss_pci 模块的电脑，在休眠/睡眠后可能会出现黑屏、无法唤醒的情况
+为触摸板加载了 intel_lpss_pci 模块的 Intel CPU 的电脑，在休眠后可能会出现黑屏无法唤醒的情况
 
 将 `intel_lpss_pci` 添加到 `/etc/mkinitcpio.conf` 的 MODULES= 里，使用 `mkinitcpio -P` 指令重新生成内核
 
@@ -118,7 +118,7 @@ Exec=/bin/sh -c 'while read -r trg; do case $trg in linux) exit 0; esac; done; /
 ==> WARNING: Possibly missing firmware for module: bfa
 ```
 
-如果在生成默认 initramfs 镜像时出现这些或类似的消息，则如警告所述，可能需要安装其他固件。大多数常见的固件文件可以通过安装 `linux-firmware` 来获取。对于其他的固件软件包，可以尝试在软件包仓库中搜索固件模块的名字获取。聚合包 `mkinitcpio-firmware` 包括绝大部分的固件，或者手动安装所需的固件包
+如果在生成默认 initramfs 镜像时出现这些或类似的消息，如警告所述，可能需要安装其他固件。大多数常见的固件文件可以通过安装 `linux-firmware` 来获取。对于其他的固件软件包，可以尝试在软件包仓库中搜索固件模块的名字获取。聚合包 `mkinitcpio-firmware` 包括绝大部分的固件，或者手动安装所需的固件包
 
 ::: details 常见的模块与固件包
 
@@ -136,7 +136,7 @@ Exec=/bin/sh -c 'while read -r trg; do case $trg in linux) exit 0; esac; done; /
 
 :::
 
-如果消息仅在生成 fallback initramfs 镜像时出现，可以禁止 fallback 镜像的生成，在 `/etc/mkinitcpio.d` 目录下的 preset 文件中，将 PRESETS= 里的 fallback 移除，并重新生成系统引导
+如果消息仅在生成 fallback initramfs 镜像时出现，可以禁止 fallback 镜像的生成，在 `/etc/mkinitcpio.d` 目录下的 preset 文件中，将 PRESETS= 里的 fallback 移除，重新生成系统引导
 
 [参阅](https://wiki.archlinux.org/title/Mkinitcpio#Possibly_missing_firmware_for_module_XXXX)
 

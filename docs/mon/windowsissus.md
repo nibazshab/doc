@@ -2,6 +2,8 @@
 
 <br>
 
+本文记录一些在安装 / 使用过程中遇到的问题和一些有助于提高体验的东西。内容收集自网络，请自行甄别是否适用
+
 ## 开机自启目录
 
 系统级自启 %PROGRAMDATA%\Microsoft\Windows\Start Menu\Programs\StartUp
