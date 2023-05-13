@@ -2,7 +2,7 @@
 
 <br>
 
-本站使用 NodeJS 项目 [VuePress Next](https://v2.vuepress.vuejs.org) 构建，GitHub Discussion 驱动的 [Giscus](https://giscus.app) 作评论系统
+本站使用 NodeJS 项目 [VuePress Next](https://v2.vuepress.vuejs.org) 构建，Github Discussion 驱动的 [Giscus](https://giscus.app) 作评论系统
 
 本站使用 [Cloudflare](https://www.cloudflare.com) 作 DNS 解析及 CDN 加速，[Github Pages](https://pages.github.com) 作静态站点托管
 
