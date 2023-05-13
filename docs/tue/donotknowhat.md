@@ -4,15 +4,23 @@
 
 java 要设置 classpath
 
-java -classpath “/opt/idea/out/production/idea" game.YuanShen.Main
-
----
-
-magnet:?xt=urn:btih:
+java -classpath /opt/idea/out/production/idea game.YuanShen.Main
 
 ---
 
 Sigil RegEx 替换，正则表达式匹配不是 `$1` 而是 `\1`
+
+---
+
+知乎网页版，在地址栏后面加上 ?theme= 即可切换显示模式
+
+- 深色模式 ?theme=dark
+
+- 浅色模式 ?theme=light
+
+---
+
+磁力链接前缀 magnet:?xt=urn:btih:
 
 ---
 
