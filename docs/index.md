@@ -18,7 +18,7 @@
 
 未经特殊说明，本站作品采用 [知识共享署名 4.0 国际许可协议](http://creativecommons.org/licenses/by/4.0) 进行许可
 
-关于本站的任何建议和意见，都可以在 [讨论](chat.md) 中留言，关于本人的相关信息，可以在 [info.lblb.eu.org](https://info.lblb.eu.org) 中查看。如果对本站感觉良好，能在 Github 上给 [这个网站](https://github.com/nibazshab/doc) 点个 Star，或者给 [在下](https://github.com/nibazshab) 点个 Follow 就再好不过了
+关于本站的任何建议和意见，都可以在 [讨论](chat.md) 中留言，关于本人的相关信息，可以在 [INFO](https://info.lblb.eu.org) 中查看。如果对本站感觉良好，能在 Github 上给 [此网站](https://github.com/nibazshab/doc) 点个 Star，或者给 [在下](https://github.com/nibazshab) 点个 Follow 就再好不过了
 
 感谢各位 :heart:
 
