@@ -2,10 +2,6 @@
 
 <br>
 
-如果在本地 Git 库中创建了一个新的 a.txt 文件，内容与远程库中的 a.txt 文件相同，但日期不同，当你执行 push 操作将本地的修改推送到远程库时，Git 会根据文件的内容判断它们是否相同。由于内容相同，Git 不会替换远程库中的 a.txt 文件，只会创建一个新的提交记录来表示你在本地做出的修改。
-
----
-
 java 要设置 classpath
 
 java -classpath /opt/idea/out/production/idea game.YuanShen.Main
