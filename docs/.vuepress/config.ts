@@ -55,6 +55,7 @@ export default defineUserConfig({
       theme: 'github-dark',
     }),
     commentPlugin({
+      comment: false,
       provider: 'Giscus',
       repo: 'nibazshab/doc',
       repoId: 'MDEwOlJlcG9zaXRvcnkxOTg2NTY0NTU=',
