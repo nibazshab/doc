@@ -32,14 +32,13 @@ jobs:
         uses: pnpm/action-setup@v2
         with:
           version: latest
-      # 准备 VuePress Next 环境
+      # 准备 VuePress Next 依赖
       - name: Setup VuePressNext env
         run: |
           echo
           mv docs/.vuepress/package.json .
           pnpm add -D vue vuepress@next @vuepress/client@next @vuepress/utils@next
           pnpm add -D @vuepress/plugin-shiki@next
-          pnpm add -D vuepress-plugin-comment2
           pnpm add -D vuepress-plugin-md-enhance
       # 生成静态文件
       - name: Build with VuePressNext
