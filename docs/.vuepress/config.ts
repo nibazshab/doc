@@ -1,7 +1,6 @@
 import { defineUserConfig, defaultTheme } from 'vuepress';
 import { getDirname, path } from '@vuepress/utils';
 import { shikiPlugin } from '@vuepress/plugin-shiki';
-import { commentPlugin } from 'vuepress-plugin-comment2';
 import { mdEnhancePlugin } from "vuepress-plugin-md-enhance";
 const __dirname = getDirname(import.meta.url);
 export default defineUserConfig({
@@ -9,7 +8,6 @@ export default defineUserConfig({
     sidebar: [{
       text: '乾', children: [
         '/index.md',
-        '/chat.md',
       ],},{
       text: '兑', children: [
         '/dui/visualstudiocode.md',
@@ -53,14 +51,6 @@ export default defineUserConfig({
   plugins: [
     shikiPlugin({
       theme: 'github-dark',
-    }),
-    commentPlugin({
-      comment: false,
-      provider: 'Giscus',
-      repo: 'nibazshab/doc',
-      repoId: 'MDEwOlJlcG9zaXRvcnkxOTg2NTY0NTU=',
-      category: 'Announcements',
-      categoryId: 'DIC_kwDOC9dBx84CRUCg',
     }),
     mdEnhancePlugin({
       card: true,
