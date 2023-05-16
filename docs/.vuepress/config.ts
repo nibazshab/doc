@@ -12,28 +12,30 @@ export default defineUserConfig({
         '/chat.md',
       ],},{
       text: '兑', children: [
-        '/sun/visualstudiocode.md',
-        '/sun/aria2.md',
-        '/sun/minecraft.md',
-        '/sun/steam.md',
-        '/sun/wallpaperengine.md',
+        '/dui/visualstudiocode.md',
+        '/dui/aria2.md',
+        '/dui/minecraft.md',
+        '/dui/steam.md',
+        '/dui/wallpaperengine.md',
       ],},{
       text: '离', children: [
-        '/tue/worldwideweb.md',
-        '/tue/clinote.md',
-        '/tue/donotknowhat.md',
+        '/li/worldwideweb.md',
+        '/li/clinote.md',
       ],},{
       text: '震', children: [
-        '/mon/windowsissus.md',
-        '/mon/windowsenv.md',
-        '/mon/windowsapp.md',
+        '/zhen/windowsissus.md',
+        '/zhen/windowsenv.md',
+        '/zhen/windowsapp.md',
       ],},{
       text: '巽', children: [
-        '/mon/archissus.md',
-        '/mon/archinstall.md',
-        '/mon/archinstallpro.md',
+        '/xun/archissus.md',
+        '/xun/archinstall.md',
+        '/xun/archinstallpro.md',
       ],},{
       text: '坎', children: [
+        '/kan/donotknowhat.md',
+      ],},{
+      text: '艮', children: [
         '/note.md',
       ],},],
     lastUpdated: false,
