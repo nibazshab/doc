@@ -9,7 +9,7 @@
 域名|注册商|作用|续期时间
 -|-|-|-
 lblb.eu.org|eu.org|Github Pages
-atri.ml|freenom|跳转 lblb.eu.org|2023-08-15
+atri.ml|freenom|-> lblb.eu.org|2023-08-15
 2144.ga|freenom|测试用|2023-09-05
 
 ## 会员 / 订阅
@@ -17,10 +17,10 @@ atri.ml|freenom|跳转 lblb.eu.org|2023-08-15
 平台|期限|状态
 -|-|-
 哔哩哔哩大会员|2024-02-16|✓
-腾讯视频 VIP|2021-06-30|✗
+Apple Music|2023-05-31|✓
 同程黑鲸|2023-06-23|✓
 京东 Plus|2024-06-16|✓
-Apple Music|2023-05-31|✓
+腾讯视频 VIP|2021-06-30|✗
 苏宁 SUPER|2021-06-29|✗
 
 ## 数码产品 / 家用电器
