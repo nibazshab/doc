@@ -1,4 +1,4 @@
-import { defineUserConfig, defaultTheme } from 'vuepress';
+import { defineUserConfig, defaultTheme, themePlugins } from 'vuepress';
 import { getDirname, path } from '@vuepress/utils';
 import { shikiPlugin } from '@vuepress/plugin-shiki';
 import { mdEnhancePlugin } from "vuepress-plugin-md-enhance";
@@ -48,6 +48,7 @@ export default defineUserConfig({
   alias: {
     '@theme/PageNav.vue': path.resolve(__dirname, './components/PageNav.vue'),
   },
+  themePlugins.externalLinkIcon: false,
   plugins: [
     shikiPlugin({
       theme: 'github-dark',
