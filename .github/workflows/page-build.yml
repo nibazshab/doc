@@ -32,13 +32,6 @@ jobs:
         uses: pnpm/action-setup@v2
         with:
           version: latest
-      # 优化目录结构
-      - name: Change structure
-        working-directory: src/docs/content
-        run: |
-          echo
-          mv index.md ..
-          for i in *.md; do f="${i%.*}"; mkdir "../$f"; mv "$i" "../$f/index.md"; done
       # 准备 VuePress Next 依赖
       - name: Setup VuePressNext env
         working-directory: src
@@ -47,6 +40,13 @@ jobs:
           pnpm add -D vue vuepress@next @vuepress/client@next @vuepress/utils@next
           pnpm add -D @vuepress/plugin-shiki@next
           pnpm add -D vuepress-plugin-md-enhance
+      # 优化目录结构
+      - name: Change structure
+        working-directory: src/docs/content
+        run: |
+          echo
+          mv index.md ..
+          for i in *.md; do f="${i%.*}"; mkdir "../$f"; mv "$i" "../$f/index.md"; done
       # 生成静态文件
       - name: Build with VuePressNext
         working-directory: src
