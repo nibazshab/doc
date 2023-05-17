@@ -4,13 +4,13 @@
 
 本仓库包含以下分支：
 
-- `main` 仓库的主分支，用于存放文档等原始文件，通过 Github Actions 自动构建静态资源并部署 Github Pages
+- `main` 仓库的主分支
 
 本仓库分支包含以下内容：
 
-- `.github/workflows` 用于 Github Actions 的配置文件
-- `docs` 存放 VuePress Next 资源的目录
-- `.gitignore` 用于 Git 忽略的文件
+- `.github/workflows` 存放 Github Actions 的配置文件
+- `src` 本站点源代码的目录
+- `.gitignore` 指定 Git 忽略特定文件或文件夹的文件
 - `LICENSE` 本仓库使用的许可证
 - `README.md` 本仓库的说明文件
 

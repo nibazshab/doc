@@ -1,4 +1,4 @@
-name: gh-pages
+name: pages-build
 
 on:
   # 在 main 分支被更改时自动运行
@@ -32,22 +32,30 @@ jobs:
         uses: pnpm/action-setup@v2
         with:
           version: latest
-      # 准备 VuePress Next 依赖
-      - name: Setup VuePressNext env
+      # 优化目录结构
+      - name: Change structure
+        working-directory: src/docs
         run: |
           echo
-          mv docs/.vuepress/package.json .
+          mv content/index.md .
+          for i in content/*.md; do f="${i%.*}"; mkdir "$f"; mv "$i" "$f/index.md"; done
+      # 准备 VuePress Next 依赖
+      - name: Setup VuePressNext env
+        working-directory: src
+        run: |
+          echo
           pnpm add -D vue vuepress@next @vuepress/client@next @vuepress/utils@next
           pnpm add -D @vuepress/plugin-shiki@next
           pnpm add -D vuepress-plugin-md-enhance
       # 生成静态文件
       - name: Build with VuePressNext
+        working-directory: src
         run: pnpm docs:build
       # 打包静态文件并上传
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
-           path: 'docs/.vuepress/dist'
+           path: 'src/docs/.vuepress/dist'
 
   # 部署 Github Pages
   deploy:

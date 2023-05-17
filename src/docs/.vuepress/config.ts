@@ -7,34 +7,34 @@ export default defineUserConfig({
   theme: defaultTheme({
     sidebar: [{
       text: '乾', children: [
-        '/index.md',
+        '/',
       ],},{
       text: '兑', children: [
-        '/dui/visualstudiocode.md',
-        '/dui/aria2.md',
-        '/dui/minecraft.md',
-        '/dui/steam.md',
-        '/dui/wallpaperengine.md',
+        '/visualstudiocode',
+        '/aria2',
+        '/minecraft',
+        '/steam',
+        '/wallpaperengine',
       ],},{
       text: '离', children: [
-        '/li/worldwideweb.md',
-        '/li/clinote.md',
+        '/worldwideweb',
+        '/clinote',
       ],},{
       text: '震', children: [
-        '/zhen/windowsissus.md',
-        '/zhen/windowsenv.md',
-        '/zhen/windowsapp.md',
+        '/windowsissus',
+        '/windowsenv',
+        '/windowsapp',
       ],},{
       text: '巽', children: [
-        '/xun/archissus.md',
-        '/xun/archinstall.md',
-        '/xun/archinstallpro.md',
+        '/archissus',
+        '/archinstall',
+        '/archinstallpro',
       ],},{
       text: '坎', children: [
-        '/kan/donotknowhat.md',
+        '/donotknowhat',
       ],},{
       text: '艮', children: [
-        '/note.md',
+        '/note',
       ],},],
     lastUpdated: false,
     contributors: false,
