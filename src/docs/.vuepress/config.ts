@@ -40,6 +40,9 @@ export default defineUserConfig({
     contributors: false,
     navbar: [{ text: 'INFO', link: 'https://info.lblb.eu.org'},],
     sidebarDepth: 0,
+    themePlugins:{
+      externalLinkIcon: false,
+    },
   }),
   lang: 'en-US',
   base: '/',
@@ -47,9 +50,6 @@ export default defineUserConfig({
   head: [['link', { rel: 'icon', href: '/favicon.ico'},]],
   alias: {
     '@theme/PageNav.vue': path.resolve(__dirname, './components/PageNav.vue'),
-  },
-  themePlugins:{
-    externalLinkIcon: false,
   },
   plugins: [
     shikiPlugin({
