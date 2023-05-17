@@ -10,31 +10,31 @@ export default defineUserConfig({
         '/',
       ],},{
       text: '兑', children: [
-        '/visualstudiocode',
-        '/aria2',
-        '/minecraft',
-        '/steam',
-        '/wallpaperengine',
+        '/visualstudiocode/',
+        '/aria2/',
+        '/minecraft/',
+        '/steam/',
+        '/wallpaperengine/',
       ],},{
       text: '离', children: [
-        '/worldwideweb',
-        '/clinote',
+        '/worldwideweb/',
+        '/clinote/',
       ],},{
       text: '震', children: [
-        '/windowsissus',
-        '/windowsenv',
-        '/windowsapp',
+        '/windowsissus/',
+        '/windowsenv/',
+        '/windowsapp/',
       ],},{
       text: '巽', children: [
-        '/archissus',
-        '/archinstall',
-        '/archinstallpro',
+        '/archissus/',
+        '/archinstall/',
+        '/archinstallpro/',
       ],},{
       text: '坎', children: [
-        '/donotknowhat',
+        '/donotknowhat/',
       ],},{
       text: '艮', children: [
-        '/note',
+        '/note/',
       ],},],
     lastUpdated: false,
     contributors: false,

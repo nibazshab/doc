@@ -34,11 +34,11 @@ jobs:
           version: latest
       # 优化目录结构
       - name: Change structure
-        working-directory: src/docs
+        working-directory: src/docs/content
         run: |
           echo
-          mv content/index.md .
-          for i in content/*.md; do f="${i%.*}"; mkdir "$f"; mv "$i" "$f/index.md"; done
+          mv index.md ..
+          for i in *.md; do f="${i%.*}"; mkdir "../$f"; mv "$i" "../$f/index.md"; done
       # 准备 VuePress Next 依赖
       - name: Setup VuePressNext env
         working-directory: src
