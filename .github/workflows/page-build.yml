@@ -35,11 +35,11 @@ jobs:
       # 运行先前脚本
       - name: do Shell
         working-directory: src
-        run: bash structure.sh
+        run: sh structure.sh
       # 生成静态文件
       - name: Build with VuePressNext
         working-directory: src
-        run: pnpm docs:build
+        run: pnpm docs:build; ls docs/.vuepress/dist
       # 打包静态文件并上传
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
