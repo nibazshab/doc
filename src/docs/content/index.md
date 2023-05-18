@@ -2,11 +2,9 @@
 
 <br>
 
-本站使用 NodeJS 项目 [VuePress Next](https://v2.vuepress.vuejs.org) 构建
+本站使用 NodeJS 项目 [VuePress Next](https://v2.vuepress.vuejs.org) 构建，[Vercel](https://vercel.com) 作静态站点托管
 
-本站使用 [Cloudflare](https://www.cloudflare.com) 作 DNS 解析，[Vercel](https://vercel.com) 作静态站点托管
-
-本站域名由 [EU.org](https://nic.eu.org) 提供
+本站域名由 [EU.org](https://nic.eu.org) 提供，使用 [Cloudflare](https://www.cloudflare.com) 作 DNS 解析
 
 本站使用的插件：
 
