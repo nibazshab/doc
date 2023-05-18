@@ -35,7 +35,7 @@ jobs:
       # 运行先前脚本
       - name: do Shell
         working-directory: src
-        run: ./structure.sh
+        run: bash structure.sh
       # 生成静态文件
       - name: Build with VuePressNext
         working-directory: src
