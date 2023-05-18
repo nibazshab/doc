@@ -142,7 +142,7 @@ Exec=/bin/sh -c 'while read -r trg; do case $trg in linux) exit 0; esac; done; /
 
 ## Grub 引导 ISO 文件
 
-::: details arch.iso
+::: details grub.cfg - arch.iso
 
 ```ini
 menuentry 'Arch LiveCD' {
@@ -156,7 +156,7 @@ menuentry 'Arch LiveCD' {
 
 :::
 
-::: details gentoo.iso
+::: details grub.cfg - gentoo.iso
 
 ```ini
 menuentry 'Gentoo LiveCD' {

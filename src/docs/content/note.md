@@ -6,11 +6,11 @@
 
 ## 域名
 
-域名|注册商|作用|续期时间
--|-|-|-
-lblb.eu.org|eu.org|Github Pages
-atri.ml|freenom|-> lblb.eu.org|2023-08-15
-2144.ga|freenom|测试用|2023-09-05
+域名|注册商|续期时间
+-|-|-
+lblb.eu.org|eu.org|
+atri.ml|freenom|2023-08-15
+2144.ga|freenom|2023-09-05
 
 ## 会员 / 订阅
 

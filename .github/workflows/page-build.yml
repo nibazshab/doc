@@ -32,21 +32,10 @@ jobs:
         uses: pnpm/action-setup@v2
         with:
           version: latest
-      # 准备 VuePress Next 依赖
-      - name: Setup VuePressNext env
+      # 运行先前脚本
+      - name: do Shell
         working-directory: src
-        run: |
-          echo
-          pnpm add -D vue vuepress@next @vuepress/client@next @vuepress/utils@next
-          pnpm add -D @vuepress/plugin-shiki@next
-          pnpm add -D vuepress-plugin-md-enhance
-      # 优化目录结构
-      - name: Change structure
-        working-directory: src/docs/content
-        run: |
-          echo
-          mv index.md ..
-          for i in *.md; do f="${i%.*}"; mkdir "../$f"; mv "$i" "../$f/index.md"; done
+        run: ./structure.sh
       # 生成静态文件
       - name: Build with VuePressNext
         working-directory: src
@@ -57,20 +46,20 @@ jobs:
         with:
            path: 'src/docs/.vuepress/dist'
 
-  # 部署 Github Pages
-  deploy:
-    runs-on: ubuntu-latest
-
-    # 在 'build' 步骤完成后才进行
-    needs: build
-
-    # 环境变量
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-
-    steps:
-      # 部署 Github Pages
-      - name: Deploy to Github Pages
-        id: deployment
-        uses: actions/deploy-pages@v2
+#  # 部署 Github Pages
+#  deploy:
+#    runs-on: ubuntu-latest
+#
+#    # 在 'build' 步骤完成后才进行
+#    needs: build
+#
+#    # 环境变量
+#    environment:
+#      name: github-pages
+#      url: ${{ steps.deployment.outputs.page_url }}
+#
+#    steps:
+#      # 部署 Github Pages
+#      - name: Deploy to Github Pages
+#        id: deployment
+#        uses: actions/deploy-pages@v2
