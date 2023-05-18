@@ -33,7 +33,7 @@
 ```sh
 > git clone https://github.com/nibazshab/doc.git
 > cd doc/src
-> bash structure.sh
+> sh structure.sh
 > pnpm docs:dev
 ```
 

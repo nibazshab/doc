@@ -39,7 +39,7 @@ jobs:
       # 生成静态文件
       - name: Build with VuePressNext
         working-directory: src
-        run: pnpm docs:build; ls docs/.vuepress/dist
+        run: pnpm docs:build
       # 打包静态文件并上传
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
