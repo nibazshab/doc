@@ -40,11 +40,11 @@ Value 公司发行的 Steam Deck 掌机使用基于 Arch Linux 所开发的 Stea
 
 ## 运行非 steam 平台 exe 游戏
 
-1. 点击 Steam 左下角 `添加游戏`
-2. 点击 `添加非 Steam 游戏`
+1. 点击 Steam 左下角「添加游戏」
+2. 点击「添加非 Steam 游戏」
 3. 选择游戏的 exe 启动程序
-4. 点击 `添加选定的程序`
-5. 在 `属性` - `兼容性` 中勾选 `强制使用特定 Steam Play 兼容性工具`
+4. 点击「添加选定的程序」
+5. 在「属性」-「兼容性」中勾选「强制使用特定 Steam Play 兼容性工具」
 
 ## 开启 Steam Deck 界面
 

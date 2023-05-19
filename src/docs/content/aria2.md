@@ -163,7 +163,7 @@ bt-tracker=
 提供三种版本，[单文件版](https://github.com/mayswind/AriaNg/releases)、[标准版](https://github.com/mayswind/AriaNg-DailyBuild)、[桌面版](https://github.com/mayswind/AriaNg-Native/releases)
 
 1. 打开 AriaNg 页面
-2. 点击 `AriaNg 设置` - `RPC`
-3. 在 `Aria2 RPC 地址` 中输入自己的 ip 地址
-4. 在 `Aria2 RPC 密钥` 中输入自己的配置文件中 rpc-secret 的值
-5. 刷新页面即可看到 `Aria2 状态` 显示已连接
+2. 点击「AriaNg 设置」-「RPC」
+3. 在「Aria2 RPC 地址」中输入自己的 ip 地址
+4. 在「Aria2 RPC 密钥」中输入自己的配置文件中 `rpc-secret` 的值
+5. 刷新页面，状态显示为已连接
