@@ -2,27 +2,9 @@
 
 <br>
 
-  <h1>文件列表</h1>
-  <ul id="file-list"></ul>
-  <script>
-    var fileList = document.getElementById("file-list");
-    var xhr = new XMLHttpRequest();
-    xhr.open('GET', '.', true);
-    xhr.onload = function () {
-      if (xhr.status === 200) {
-        var files = xhr.responseText.split('\n');
-        for (var i = 0; i < files.length; i++) {
-          var file = files[i].trim();
-          if (file !== '') {
-            var li = document.createElement('li');
-            li.textContent = file;
-            fileList.appendChild(li);
-          }
-        }
-      }
-    };
-    xhr.send();
-  </script>
+shu.lblb.eu.org  
+shu.lblb.eu.org/zhihu  
+shu.lblb.eu.org/
 
 java 要设置 classpath
 
