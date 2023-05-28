@@ -25,7 +25,7 @@
 
 <br>
 
-::: details 复制本站点
+::: details 复现本站点
 
 1. 安装 Node.js 以及 pnpm
 2. 运行以下指令
