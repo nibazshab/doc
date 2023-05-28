@@ -18,12 +18,12 @@ export default defineUserConfig({
       ],},{
       text: '离', children: [
         '/worldwideweb/',
-        '/clinote/',
+        '/cliscript/',
       ],},{
       text: '震', children: [
-        '/windowsissus/',
-        '/windowsenv/',
-        '/windowsapp/',
+        '/winissus/',
+        '/winenv/',
+        '/winapp/',
       ],},{
       text: '巽', children: [
         '/archissus/',
