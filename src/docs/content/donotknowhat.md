@@ -1,10 +1,12 @@
-# Don't Know What <Badge type="warning" text="此页面内容仅供测试与临时记录" vertical="bottom" />
+# Don't Know What
 
 <br>
 
-shu.lblb.eu.org  
-shu.lblb.eu.org/zhihu  
-shu.lblb.eu.org/
+::: warning 声明
+
+此页面内容仅供测试与临时记录
+
+:::
 
 java 要设置 classpath
 
