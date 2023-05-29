@@ -3,9 +3,16 @@ div[class*='language-']::before {
 }
 
 :root {
-  --c-brand: #4b88bc;
-  --c-brand-light: #2c6291;
-  --c-text-lighter: #c62f58;
-  --c-tip: #2c6291;
+  --c-brand: #f07c82;
+  --c-brand-light: #ef475d;
+  --c-text-lighter: #048e50;
   --c-bg-light: #f6f8fa;
+  --c-badge-tip: #308191;
+}
+
+html.dark {
+  --c-brand: #567691;
+  --c-brand-light: #4c5d8d;
+  --c-text-lighter: #6dac90;
+  --c-badge-tip: #308191;
 }
