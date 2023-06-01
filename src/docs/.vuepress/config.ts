@@ -53,7 +53,7 @@ export default defineUserConfig({
   },
   plugins: [
     shikiPlugin({
-      theme: 'github-dark',
+      theme: 'nord',
     }),
     mdEnhancePlugin({
       card: true,
