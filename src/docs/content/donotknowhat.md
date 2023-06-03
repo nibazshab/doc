@@ -8,22 +8,6 @@
 
 :::
 
-`<!-- @include: index.md -->`
-
-<!-- @include: index.md -->
-
-`<!-- @include: ../../README.md -->`
-
-<!-- @include: ../../README.md -->
-
-`<!-- @include: ../../LICENSE -->`
-
-<!-- @include: ../../LICENSE -->
-
-`<!-- @include: https://raw.githubusercontent.com/nibazshab/shu/main/c.md -->`
-
-<!-- @include: https://raw.githubusercontent.com/nibazshab/shu/main/c.md -->
-
 Sigil RegEx 替换，正则表达式匹配不是 `$1` 而是 `\1`
 
 ---

@@ -57,7 +57,6 @@ export default defineUserConfig({
     }),
     mdEnhancePlugin({
       card: true,
-      include: true,
     }),
   ],
 })
