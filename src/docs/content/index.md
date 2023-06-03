@@ -61,6 +61,13 @@ logo: https://zezin.netlify.app/avatar.jpg
 link: https://zezin.netlify.app
 ```
 
+```card
+title: 李先生的个人网站
+desc: 春暖花开，来日方长
+logo: https://avatars.githubusercontent.com/u/118822516
+link: https://www.liyaorui.cloud
+```
+
 > 名称：_萝卜子的小站，我挚爱的时光_  
 > 头像：_https://avatars.githubusercontent.com/u/44338441_  
 > 地址：_https://www.lblb.eu.org_

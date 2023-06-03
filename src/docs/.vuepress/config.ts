@@ -38,7 +38,7 @@ export default defineUserConfig({
       ],},],
     lastUpdated: false,
     contributors: false,
-    navbar: [{ text: 'INFO', link: 'https://info.lblb.eu.org'},],
+    navbar: [{ text: 'SHU', link: 'https://shu.lblb.eu.org'},{ text: 'INFO', link: 'https://info.lblb.eu.org'},],
     sidebarDepth: 0,
     themePlugins:{
       externalLinkIcon: false,
