@@ -26,6 +26,6 @@ link: https://www.liyaorui.cloud
 ```
 
 > 名称：_萝卜子的小站_  
-> 介绍：_挚爱的时光_
+> 介绍：_挚爱的时光_  
 > 头像：_https://avatars.githubusercontent.com/u/44338441_  
 > 地址：_https://www.lblb.eu.org_
