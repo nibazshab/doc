@@ -8,6 +8,7 @@
 
 :::
 
+```sh
 $$
 \begin{rcases}
 \begin{aligned}
@@ -19,6 +20,7 @@ G=\quad3\underbrace{\uparrow\uparrow...........................\uparrow}3\\
 \end{aligned}\quad
 \end{rcases}64\quad layers
 $$
+```
 
 Sigil RegEx 替换，正则表达式匹配不是 `$1` 而是 `\1`
 
