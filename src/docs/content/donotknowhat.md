@@ -2,11 +2,27 @@
 
 <br>
 
-::: tips 声明
+::: tip 声明
 
 此页面内容仅供测试与临时记录
 
 :::
+
+`<!-- @include: index.md -->`
+
+<!-- @include: index.md -->
+
+`<!-- @include: ../../README.md -->`
+
+<!-- @include: ../../README.md -->
+
+`<!-- @include: ../../LICENSE -->`
+
+<!-- @include: ../../LICENSE -->
+
+`<!-- @include: https://raw.githubusercontent.com/nibazshab/shu/main/c.md -->`
+
+<!-- @include: https://raw.githubusercontent.com/nibazshab/shu/main/c.md -->
 
 Sigil RegEx 替换，正则表达式匹配不是 `$1` 而是 `\1`
 

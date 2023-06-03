@@ -45,7 +45,7 @@ export default defineUserConfig({
     },
   }),
   lang: 'en-US',
-  base: '.',
+  base: '/',
   title: 'ATRI Doc',
   head: [['link', { rel: 'icon', href: '/favicon.ico'},]],
   alias: {
@@ -57,6 +57,7 @@ export default defineUserConfig({
     }),
     mdEnhancePlugin({
       card: true,
+      include: true,
     }),
   ],
 })
