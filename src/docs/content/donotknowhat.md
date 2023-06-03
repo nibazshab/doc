@@ -2,17 +2,11 @@
 
 <br>
 
-::: warning 声明
+::: tips 声明
 
 此页面内容仅供测试与临时记录
 
 :::
-
-java 要设置 classpath
-
-java -classpath /opt/idea/out/production/idea game.YuanShen.Main
-
----
 
 Sigil RegEx 替换，正则表达式匹配不是 `$1` 而是 `\1`
 
