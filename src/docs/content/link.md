@@ -25,7 +25,9 @@ logo: https://avatars.githubusercontent.com/u/118822516
 link: https://www.liyaorui.cloud
 ```
 
-> 名称：_萝卜子的小站_  
-> 介绍：_挚爱的时光_  
-> 头像：_https://avatars.githubusercontent.com/u/44338441_  
-> 地址：_https://www.lblb.eu.org_
+本站信息
+
+> 名称：萝卜子的小站  
+> 介绍：挚爱的时光  
+> 头像：https://avatars.githubusercontent.com/u/44338441  
+> 地址：https://www.lblb.eu.org

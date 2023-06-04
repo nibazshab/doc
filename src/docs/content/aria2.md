@@ -163,10 +163,10 @@ bt-tracker=
 提供三种版本，[单文件版](https://github.com/mayswind/AriaNg/releases)、[标准版](https://github.com/mayswind/AriaNg-DailyBuild)、[桌面版](https://github.com/mayswind/AriaNg-Native/releases)
 
 1. 打开 AriaNg 页面
-2. 点击「AriaNg 设置」-「RPC」
-3. 在「Aria2 RPC 地址」输入自己的 ip 地址
-4. 在「Aria2 RPC 密钥」输入自己的配置文件中 `rpc-secret` 的值
-5. 刷新页面，状态显示为已连接
+2. 点击 __AriaNg 设置 - RPC__
+3. 在 __Aria2 RPC 地址__ 输入自己的 ip 地址
+4. 在 __Aria2 RPC 密钥__ 输入自己的配置文件中 `rpc-secret` 的值
+5. 刷新页面
 
 或者使用 Api 设置 RPC 参数
 
@@ -179,4 +179,4 @@ bt-tracker=
 - `${rpcInterface}` 为 Aria2 RPC 的路径，默认 `jsonrpc`
 - `${secret}` 为 base64 URL 安全编码后的 Aria2 RPC 密钥
 
-示例：`http://ariang.mayswind.net/latest/#!/settings/rpc/set/http/localhost/6800/jsonrpc/`
+示例 `http://ariang.mayswind.net/latest/#!/settings/rpc/set/http/localhost/6800/jsonrpc/cGFzc3dvcmQ`

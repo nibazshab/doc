@@ -21,11 +21,11 @@
 1. 电源选项
 2. 选择电源按钮功能
 3. 更改当前不可用的设置
-4. 取消勾选「睡眠」「锁定」
+4. 取消勾选 __睡眠__，__锁定__
 
 ## 软连接系统截图目录
 
-将 Win+Shift+S 截图链接到「图片」目录
+将 Win+Shift+S 截图链接到 __图片__ 目录
 
 1. 管理员权限打开 PowerShell
 2. 输入 mklink /d %HOMEPATH%\Pictures\screenshot %LOCALAPPDATA%\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\TempState\ScreenClip
@@ -36,20 +36,20 @@
 2. 语言
 3. 管理语言设置
 4. 更改系统区域设置
-5. 勾选「Bate 版: 使用 Unicode UTF-8 提供全球语言支持」
+5. 勾选 __Bate 版: 使用 Unicode UTF-8 提供全球语言支持__
 
 ## 禁用收集体验信息服务
 
 1. 计算机管理
 2. 服务和应用程序
-3. 禁用「Connected User Experiences and Telemetry」
+3. 禁用 __Connected User Experiences and Telemetry__
 
 ## 修改动画效果
 
 1. 系统
 2. 高级系统设置
 3. 性能
-4. 勾选「平滑屏幕字体边缘」「显示缩略图」「显示亚透明的选择长方形」「在窗口下显示阴影」
+4. 勾选 __平滑屏幕字体边缘__，__显示缩略图__，__显示亚透明的选择长方形__，__在窗口下显示阴影__
 
 ## 将硬件时间视为 UTC 时间
 

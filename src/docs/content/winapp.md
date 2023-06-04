@@ -6,14 +6,14 @@
 
 微软公司开发的一款办公软件套件。它包括了常用的文字处理软件 Microsoft Word、电子表格软件 Microsoft Excel、演示文稿软件 Microsoft PowerPoint 以及邮件客户端软件 Microsoft Outlook 等多个工具。Microsoft Office 使得用户可以更加高效地完成文档编辑、数据分析、信息共享、邮件管理等各种日常办公任务。该软件在全球范围内广泛应用于家庭、企业和学校等场景
 
-- 推荐使用第三方工具 Office Tool Plus 安装
+- 推荐安装方式，第三方工具：Office Tool Plus
 - 第三方传送门：[https://otp.landian.vip](https://otp.landian.vip)
 
 ## Adobe
 
 美国跨国软件公司 Adobe 以其创造卓越的数字体验而闻名，其产品包括 Photoshop、Illustrator、InDesign、Acrobat、Dreamweaver、Premiere Pro、After Effects、Lightroom 等。Adobe 于 1982 年 12 月由 John Warnock 和 Charles Geschke 创立，是世界上最大的软件公司之一
 
-- 推荐浏览器搜索「嬴政天下 vposy」获取安装
+- 推荐安装方式，微博搜索：嬴政天下 vposy
 
 ## Google Chrome
 
