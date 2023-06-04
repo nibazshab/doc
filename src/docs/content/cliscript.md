@@ -14,6 +14,7 @@
 
 ## Shell
 
+- `ldd file` 检测 file 文件的依赖情况
 - `exec ls` 执行完 ls 命令后退出当前 shell
 - `ls -v` 按自然顺序列出文件
 - `for i in {1..10}` 取 i 值为 1 到 10
