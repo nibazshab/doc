@@ -21,9 +21,8 @@ sidebarDepth: 2
 ### go 编译 / 运行命令
 
 ```sh
-go build app.go -o app
-
-go run app.go
+> go run app.go
+> go build app.go -o app
 ```
 
 ### go 关闭动态依赖
