@@ -17,7 +17,7 @@ export default defineUserConfig({
         '/wallpaperengine/',
       ],},{
       text: '离', children: [
-        '/worldwideweb/',
+        '/gistslist/',
         '/cliscript/',
       ],},{
       text: '震', children: [

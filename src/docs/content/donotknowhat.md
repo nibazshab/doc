@@ -8,14 +8,6 @@
 
 :::
 
-golang 关闭动态依赖 CGO_ENABLED=0
-
----
-
-systemd 代替 crontab 实现定时任务
-
----
-
 Sigil RegEx 替换，正则表达式匹配不是 `$1` 而是 `\1`
 
 ---
