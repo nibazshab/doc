@@ -10,15 +10,15 @@ export default defineUserConfig({
         '/',
       ],},{
       text: '兑', children: [
+        '/gistslist/',
+        '/cliscript/',
+      ],},{
+      text: '离', children: [
         '/visualstudiocode/',
         '/aria2/',
         '/minecraft/',
         '/steam/',
         '/wallpaperengine/',
-      ],},{
-      text: '离', children: [
-        '/gistslist/',
-        '/cliscript/',
       ],},{
       text: '震', children: [
         '/winissus/',
@@ -35,7 +35,7 @@ export default defineUserConfig({
         '/donotknowhat/',
       ],},{
       text: '艮', children: [
-        '/note/',
+        '/own/',
       ],},],
     lastUpdated: false,
     contributors: false,
