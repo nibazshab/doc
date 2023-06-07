@@ -51,6 +51,7 @@ sidebarDepth: 1
 - `docker compose down` 移除 docker 容器
 - `docker compose pull` 更新 docker 容器
 - `docker system prune -a` 清理所有不在使用的 docker 容器/镜像/网络
+- `docker inspect <id> --format "{{.Path}} {{.Args}}"` 查看 docker 容器启动后执行的命令
 
 ## Git
 
