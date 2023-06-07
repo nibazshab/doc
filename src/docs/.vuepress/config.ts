@@ -31,8 +31,8 @@ export default defineUserConfig({
         '/archinstallpro/',
       ],},{
       text: '坎', children: [
-        '/link/',
         '/donotknowhat/',
+        '/link/',
       ],},{
       text: '艮', children: [
         '/own/',
