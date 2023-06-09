@@ -4,11 +4,13 @@
 
 本文记录一些在安装 / 使用过程中遇到的问题和一些有助于提高体验的东西。内容收集自网络，请自行甄别是否适用
 
-## 开机自启目录
+## 特殊目录信息
 
-系统级自启 %PROGRAMDATA%\Microsoft\Windows\Start Menu\Programs\StartUp
+User 程序目录 %LOCALAPPDATA%\Programs
 
-用户级自启 %APPDATA%\Microsoft\Windows\Start Menu\Programs\Startup
+用户级开机自启 %APPDATA%\Microsoft\Windows\Start Menu\Programs\Startup
+
+系统级开机自启 %PROGRAMDATA%\Microsoft\Windows\Start Menu\Programs\StartUp
 
 ## PATH 环境变量
 
