@@ -59,6 +59,7 @@ sidebarDepth: 1
 - `git log --grep=<comment>` 搜索提交记录的版本号
 - `git reset --hard <commit_id>` 回退到指定版本
 - `git log -S "查找的文本内容" -p` 查找历史中的文本内容
+- `git push -f` 强制推送
 
 ## Android
 

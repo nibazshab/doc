@@ -130,8 +130,8 @@ bt-force-encryption=true
 bt-detach-seed-only=true
 
 user-agent=
-peer-agent=Deluge 1.3.15
-peer-id-prefix=-DE13F0-
+#peer-agent=Deluge 1.3.15
+#peer-id-prefix=-DE13F0-
 
 #log=
 #log-level=warn

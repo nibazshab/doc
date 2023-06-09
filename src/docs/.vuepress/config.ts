@@ -21,9 +21,9 @@ export default defineUserConfig({
         '/wallpaperengine/',
       ],},{
       text: '震', children: [
+        '/winapp/',
         '/winissus/',
         '/winenv/',
-        '/winapp/',
       ],},{
       text: '巽', children: [
         '/archissus/',
