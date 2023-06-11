@@ -6,9 +6,9 @@
 
 - `main` 仓库的主分支
 
-本仓库分支包含以下内容：
+本分支包含以下内容：
 
-- `.github/workflows` 存放 Github Actions 的配置文件
+- `.github` Github Actions 相关文件
 - `src` 本站点源代码的目录
 - `.gitignore` 指定 Git 忽略特定文件或文件夹的文件
 - `LICENSE` 本仓库使用的许可证
