@@ -52,6 +52,9 @@ sidebarDepth: 1
 - `docker compose pull` 更新 docker 容器
 - `docker system prune -a` 清理所有不在使用的 docker 容器/镜像/网络
 - `docker inspect <id> --format "{{.Path}} {{.Args}}"` 查看 docker 容器启动后执行的命令
+- `docker save <id> -o <id>.tar` 导出 docker 镜像
+- `docker build -t <id> .` 构建 docker 镜像
+- `docker login/logout` 登录/登出 dockerhub 账号
 
 ## Git
 

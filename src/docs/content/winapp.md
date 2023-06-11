@@ -38,6 +38,7 @@
 开源的跨平台终端模拟器，使用 Rust 编写，基于 GPU 加速，具有高性能和低资源占用的特点
 
 - 传送门：[https://github.com/alacritty/alacritty](https://github.com/alacritty/alacritty)
+- 主题推荐：[https://github.com/alacritty/alacritty-theme/blob/master/themes/material_theme.yaml](https://github.com/alacritty/alacritty-theme/blob/master/themes/material_theme.yaml)
 
 ## Git
 
