@@ -62,7 +62,7 @@ sidebarDepth: 1
 
 ### 自制容器镜像
 
-新建镜像目录，在其中创建 data 文件夹，将容器需要运行的文件放入其中
+新建镜像目录，创建 data 文件夹，将容器需要运行的文件放入
 
 编写 Dockerfile 和 entrypoint.sh 文件，并与 data 位于同一级目录
 

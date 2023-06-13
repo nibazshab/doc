@@ -10,8 +10,9 @@ export default defineUserConfig({
         '/',
       ],},{
       text: '兑', children: [
-        '/gistslist/',
         '/cliscript/',
+        '/gistslist/',
+        '/donotknowhat/',
       ],},{
       text: '离', children: [
         '/visualstudiocode/',
@@ -31,7 +32,6 @@ export default defineUserConfig({
         '/archinstallpro/',
       ],},{
       text: '坎', children: [
-        '/donotknowhat/',
         '/link/',
       ],},{
       text: '艮', children: [
