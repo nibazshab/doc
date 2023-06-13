@@ -58,13 +58,53 @@ sidebarDepth: 1
 
 在配置文件中 server 模块的 location / 添加 `proxy_pass $forward_scheme://$server:$port/;`
 
+## Docker
+
+### 自制容器镜像
+
+新建镜像目录，在其中创建 data 文件夹，将容器需要运行的文件放入其中
+
+编写 Dockerfile 和 entrypoint.sh 文件，并与 data 位于同一级目录
+
+输入 `docker build -t <id> .` 构建 docker 镜像
+
+::: details Dockerfile
+
+```dockerfile
+FROM frolvlad/alpine-glibc
+
+COPY data /data
+COPY entrypoint.sh /
+
+ENTRYPOINT ["/entrypoint.sh"]
+
+RUN chmod +x /entrypoint.sh \
+    && chmod -R +x /data
+
+VOLUME ["/data/tmp" "/data/conf"]
+```
+
+:::
+
+::: details entrypoint.sh
+
+```sh
+#!/bin/sh
+
+cd /data
+exec ./dorun-one &
+exec ./dorun-two
+```
+
+:::
+
 ## Linux
 
 ### systemd 实现定时任务
 
-通过 systemd timer 服务定时运行 systemd service 服务，实现定时任务
+通过 systemd timer 服务定时运行 systemd service 服务，实现定时任务，模板如下
 
-定时任务的 systemd.service 模板
+::: details systemd.service
 
 ```ini
 [Unit]
@@ -73,7 +113,9 @@ Description=CronDo
 ExecStart=/bin/sh /path/to/crondo.sh
 ```
 
-定时任务的 systemd.timer 模板
+:::
+
+::: details systemd.timer
 
 ```ini
 [Unit]
@@ -85,11 +127,13 @@ Unit=crondo.service
 WantedBy=multi-user.target
 ```
 
+:::
+
 [参阅](https://www.ruanyifeng.com/blog/2018/03/systemd-timer.html)
 
 ### grub 引导 iso 文件
 
-引导 arch.iso
+::: details grub.cfg arch.iso
 
 ```ini
 menuentry 'Arch LiveCD' {
@@ -101,7 +145,9 @@ menuentry 'Arch LiveCD' {
 }
 ```
 
-引导 gentoo.iso
+:::
+
+::: details grub.cfg gentoo.iso
 
 ```ini
 menuentry 'Gentoo LiveCD' {
@@ -111,6 +157,8 @@ menuentry 'Gentoo LiveCD' {
   initrd (loop)/boot/gentoo.igz
 }
 ```
+
+:::
 
 ## Markdown
 
