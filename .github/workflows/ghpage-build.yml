@@ -80,5 +80,5 @@ jobs:
       - name: Upload Static Resource
         uses: actions/upload-artifact@v3
         with:
-          name: static-resource
+          name: static
           path: 'src/docs/.vuepress/dist'
