@@ -1,4 +1,4 @@
-name: pages-build
+name: ghpages-build
 
 on:
   # 在 main 分支被更改时自动运行
@@ -19,7 +19,43 @@ concurrency:
 
 jobs:
 
-  # 从 Markdown 构建 HTML
+  # 预部署 Github Pages
+  page:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 获取储存库源码
+      - name: Checkout
+        uses: actions/checkout@v3
+      # 网站主页文件
+      - name: index.html
+        working-directory: .github/static
+        run: mv ghpage.html index.html
+      # 打包网站文件并上传
+      - name: Upload to Github Pages
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: '.github/static'
+
+  # 部署 Github Pages
+  deploy:
+    runs-on: ubuntu-latest
+
+    # 在 'build' 步骤完成后才进行
+    needs: page
+
+    # 环境变量
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      # 部署 Github Pages
+      - name: Deploy to Github Pages
+        id: deployment
+        uses: actions/deploy-pages@v2
+
+  # 构建静态资源
   build:
     runs-on: ubuntu-latest
 
@@ -46,39 +82,3 @@ jobs:
         with:
           name: static-resource
           path: 'src/docs/.vuepress/dist'
-
-  # 预部署 Github Pages
-  page:
-    runs-on: ubuntu-latest
-
-    steps:
-      # 获取储存库源码
-      - name: Checkout
-        uses: actions/checkout@v3
-      # 网站主页文件
-      - name: index.html
-        working-directory: .github/resource
-        run: mv ghpage.html index.html
-      # 打包网站文件并上传
-      - name: Upload to Github Pages
-        uses: actions/upload-pages-artifact@v1
-        with:
-          path: '.github/resource'
-
-  # 部署 Github Pages
-  deploy:
-    runs-on: ubuntu-latest
-
-    # 在 'build' 步骤完成后才进行
-    needs: page
-
-    # 环境变量
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-
-    steps:
-      # 部署 Github Pages
-      - name: Deploy to Github Pages
-        id: deployment
-        uses: actions/deploy-pages@v2
