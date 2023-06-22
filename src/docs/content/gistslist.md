@@ -50,13 +50,17 @@ sidebarDepth: 1
 
 ## Nginx
 
+### 无法访问
+
+由于 `127.0.0.1` 是本地回环地址，只能在本机上访问，改为 `0.0.0.0` 通配符地址，将监听所有可用的网络接口，即可以从本地网络中的其他计算机访问该服务
+
 ### 站点伪静态
 
-在配置文件中 server 模块的 location / 添加 `try_files $uri $uri/ /index.php?$args;`
+在 server 模块的 location / 添加 `try_files $uri $uri/ /index.php?$args;`
 
 ### 反向代理
 
-在配置文件中 server 模块的 location / 添加 `proxy_pass $forward_scheme://$server:$port/;`
+在 server 模块的 location / 添加 `proxy_pass $forward_scheme://$server:$port/;`
 
 ## Docker
 
