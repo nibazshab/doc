@@ -10,9 +10,9 @@ export default defineUserConfig({
         '/',
       ],},{
       text: '兑', children: [
+        '/donotknowhat/',
         '/cliscript/',
         '/gistslist/',
-        '/donotknowhat/',
       ],},{
       text: '离', children: [
         '/visualstudiocode/',

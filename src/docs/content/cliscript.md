@@ -1,13 +1,11 @@
----
-sidebarDepth: 1
----
-
 # 命令行笔记
 
 <br>
 
 ## Shell
 
+- `export all_proxy=http://ip:port` 设置代理
+- `find -type f ! -name "*.*" -exec sh -c 'file "{}" | grep executable >/dev/null' \; -print` 查找可执行文件
 - `ldd file` 检测 file 文件的依赖情况
 - `exec ls` 执行完 ls 命令后退出当前 shell
 - `ls -v` 按自然顺序列出文件

@@ -1,7 +1,3 @@
----
-sidebarDepth: 2
----
-
 # 安装指南 进阶 <Badge text="arch linux" />
 
 <br>
