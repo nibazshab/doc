@@ -12,6 +12,13 @@ User 程序目录 %LOCALAPPDATA%\Programs
 
 系统级开机自启 %PROGRAMDATA%\Microsoft\Windows\Start Menu\Programs\StartUp
 
+## 强制删除脚本
+
+```bat
+DEL /F /A /Q \\?\%1
+RD /S /Q \\?\%1
+```
+
 ## 启用 PDF 虚拟打印机
 
 1. 控制面板

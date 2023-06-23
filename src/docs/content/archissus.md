@@ -4,6 +4,12 @@
 
 本文记录一些在安装 / 使用过程中遇到的问题和一些有助于提高体验的东西。内容收集自网络和 Arch Wiki，请自行甄别是否适用
 
+## SSH pty 的 ls 命令没有颜色
+
+由于 SSH 的连接不会自动检测远程服务器的终端类型，因此导致没有设置 LS_COLORS 环境变量，从而导致 `ls` 命令输出不带颜色
+
+手动 `export LS_COLORS=` 来设置环境变量即可
+
 ## GNOME 主题修改，顶栏半透明
 
 GNOME Shell 主题被存储为二进制文件 `/usr/share/gnome-shell/gnome-shell-theme.gresource`，运行 extractgst.sh 拆包脚本，在 `$HOME` 目录得到主题配置文件
@@ -141,3 +147,65 @@ xhci_pci        -  upd72020x-fw
 如果消息仅在生成 fallback initramfs 镜像时出现，可以禁止 fallback 镜像的生成，在 `/etc/mkinitcpio.d` 目录下的 preset 文件中，将 PRESETS= 里的 fallback 移除，重新生成系统引导
 
 [参阅](https://wiki.archlinux.org/title/Mkinitcpio#Possibly_missing_firmware_for_module_XXXX)
+
+## systemd 定时任务
+
+通过 systemd timer 服务定时运行 systemd service 服务，实现定时任务，模板如下
+
+::: details systemd.service
+
+```ini
+[Unit]
+Description=CronDo
+[Service]
+ExecStart=/bin/sh /path/to/crondo.sh
+```
+
+:::
+
+::: details systemd.timer
+
+```ini
+[Unit]
+Description=Runs CronDo every hour
+[Timer]
+OnUnitActiveSec=1h
+Unit=crondo.service
+[Install]
+WantedBy=multi-user.target
+```
+
+:::
+
+[参阅](https://www.ruanyifeng.com/blog/2018/03/systemd-timer.html)
+
+## GRUB 引导 iso 系统镜像
+
+编辑 GRUB 配置文件 `/boot/grub/grub.cfg`，在末尾处添加相应的内容
+
+::: details arch.iso
+
+```ini
+menuentry 'Arch LiveCD' {
+  set isofile=/arch.iso
+  set imgdevpath=/dev/sda1
+  loopback lo0 $isofile
+  linux (lo0)/arch/boot/x86_64/vmlinuz-linux img_dev=$imgdevpath img_loop=$isofile
+  initrd (lo0)/arch/boot/x86_64/initramfs-linux.img
+}
+```
+
+:::
+
+::: details gentoo.iso
+
+```ini
+menuentry 'Gentoo LiveCD' {
+  set isofile=/gentoo.iso
+  loopback loop $isofile
+  linux (loop)/boot/gentoo init=/linuxrc dokeymap docache dosshd looptype=squashfs loop=/image.squashfs cdroot isoboot=$isofile
+  initrd (loop)/boot/gentoo.igz
+}
+```
+
+:::

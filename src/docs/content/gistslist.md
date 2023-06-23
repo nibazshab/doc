@@ -98,68 +98,6 @@ exec ./dorun-two
 
 :::
 
-## Linux
-
-### systemd 实现定时任务
-
-通过 systemd timer 服务定时运行 systemd service 服务，实现定时任务，模板如下
-
-::: details systemd.service
-
-```ini
-[Unit]
-Description=CronDo
-[Service]
-ExecStart=/bin/sh /path/to/crondo.sh
-```
-
-:::
-
-::: details systemd.timer
-
-```ini
-[Unit]
-Description=Runs CronDo every hour
-[Timer]
-OnUnitActiveSec=1h
-Unit=crondo.service
-[Install]
-WantedBy=multi-user.target
-```
-
-:::
-
-[参阅](https://www.ruanyifeng.com/blog/2018/03/systemd-timer.html)
-
-### grub 引导 iso 文件
-
-::: details grub.cfg arch.iso
-
-```ini
-menuentry 'Arch LiveCD' {
-  set isofile=/arch.iso
-  set imgdevpath=/dev/sda1
-  loopback lo0 $isofile
-  linux (lo0)/arch/boot/x86_64/vmlinuz-linux img_dev=$imgdevpath img_loop=$isofile
-  initrd (lo0)/arch/boot/x86_64/initramfs-linux.img
-}
-```
-
-:::
-
-::: details grub.cfg gentoo.iso
-
-```ini
-menuentry 'Gentoo LiveCD' {
-  set isofile=/gentoo.iso
-  loopback loop $isofile
-  linux (loop)/boot/gentoo init=/linuxrc dokeymap docache dosshd looptype=squashfs loop=/image.squashfs cdroot isoboot=$isofile
-  initrd (loop)/boot/gentoo.igz
-}
-```
-
-:::
-
 ## Markdown
 
 ### 在 Md 文档中插入 css 样式

@@ -26,7 +26,6 @@
 - `scp <-r> /a user@host:/a` 使用 ssh 通道上传文件/文件夹
 - `ssh-keygen -t ed25519` 生成 ed25519 加密的 ssh 密钥
 - `su nobody -s /bin/bash -c '<command>'` 以 nobody 用户的身份运行指令
-- `LS_COLORS='rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;93'` 设置 ls 的颜色
 - `curl -F file=@name file.io` 上传文件并获取链接
 - `jpegoptim --strip-all --all-progressive -o -f --max=50% a.jpg` 压缩 jpg 图片大小
 - `optipng a.png` 压缩 png 图片大小
@@ -71,9 +70,11 @@
 
 ## VIM
 
-- `sort` 字母表顺序排列每一行
+- `sort` 按字母表顺序排列
 - `set pastetoggle=<F9>` 设置 f9 为开关自动缩进的快捷键
 - `set paste` 关闭自动缩进
 - `set nopaste` 开启自动缩进
-- `:%!xxd` 开启十六进制模式
-- `%!xxd -r` 关闭十六进制模式
+- `set nu` 显示行号
+- `set nowrap` 关闭折行显示
+- `set expandtab` 将 tab 转换为空格
+- `set ts=4` 设置 tab 为 4 个空格
