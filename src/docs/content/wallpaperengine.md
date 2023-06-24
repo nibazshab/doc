@@ -11,6 +11,7 @@
 通过修改 Steam Wallpaper Engine 配置文件可解决此问题，编辑 `steam\steamapps\workshop\appworkshop_431960.acf`，找到以下两个配置项
 
 ```json
+"AppWorkshop"
 { ...
   "WorkshopItemsInstalled"
   { ... }
