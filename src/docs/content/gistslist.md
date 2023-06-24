@@ -48,7 +48,7 @@
 
 ### 无法访问
 
-由于 `127.0.0.1` 是本地回环地址，只能在本机上访问，改为 `0.0.0.0` 通配符地址，将监听所有可用的网络接口，即可以从本地网络中的其他计算机访问该服务
+由于 `127.0.0.1` 是本地回环地址，只能在本机上访问，改为 `0.0.0.0` 将监听所有可用的网络接口，即可以从本地网络中的其他计算机访问该服务
 
 ### 站点伪静态
 
@@ -59,6 +59,20 @@
 在 server 模块的 location / 添加 `proxy_pass $forward_scheme://$server:$port/;`
 
 ## Docker
+
+### 换源
+
+创建 `/etc/docker/daemon.json` 文件，并写入以下内容
+
+```json
+{
+  "registry-mirrors": [
+    "https://hub-mirror.c.163.com"
+  ]
+}
+```
+
+输入 `systemctl daemon-reload` 重新加载配置文件，输入 `systemctl restart docker` 重启 docker 服务
 
 ### 自制容器镜像
 
