@@ -58,60 +58,6 @@
 
 在 server 模块的 location / 添加 `proxy_pass $forward_scheme://$server:$port/;`
 
-## Docker
-
-### 换源
-
-创建 `/etc/docker/daemon.json` 文件，并写入以下内容
-
-```json
-{
-  "registry-mirrors": [
-    "https://hub-mirror.c.163.com"
-  ]
-}
-```
-
-输入 `systemctl daemon-reload` 重新加载配置文件，输入 `systemctl restart docker` 重启 docker 服务
-
-### 自制容器镜像
-
-新建镜像目录，创建 data 文件夹，将容器需要运行的文件放入
-
-编写 Dockerfile 和 entrypoint.sh 文件，并与 data 位于同一级目录
-
-输入 `docker build -t <id> .` 构建 docker 镜像
-
-::: details Dockerfile
-
-```dockerfile
-FROM frolvlad/alpine-glibc
-
-COPY data /data
-COPY entrypoint.sh /
-
-ENTRYPOINT ["/entrypoint.sh"]
-
-RUN chmod +x /entrypoint.sh \
-    && chmod -R +x /data
-
-VOLUME ["/data/tmp" "/data/conf"]
-```
-
-:::
-
-::: details entrypoint.sh
-
-```sh
-#!/bin/sh
-
-cd /data
-exec ./dorun-one &
-exec ./dorun-two
-```
-
-:::
-
 ## Markdown
 
 ### 在 Md 文档中插入 css 样式

@@ -15,6 +15,7 @@ export default defineUserConfig({
         '/gistslist/',
       ],},{
       text: '离', children: [
+        '/docker/',
         '/visualstudiocode/',
         '/aria2/',
         '/minecraft/',

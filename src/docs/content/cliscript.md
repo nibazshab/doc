@@ -41,19 +41,6 @@
 - `sfdisk -d /dev/sdb > sdb.bkp` 导出分区表文件
 - `sfdisk /dev/sdb < sdb.bkp` 导入分区表文件
 
-## Docker
-
-- `docker compose logs -f` 查看 docker 容器日志
-- `docker compose up -d` 启动 docker 容器
-- `docker compose down` 移除 docker 容器
-- `docker compose pull` 更新 docker 容器
-- `docker system prune -a` 清理所有不在使用的 docker 容器/镜像/网络
-- `docker inspect <id> --format "{{.Path}} {{.Args}}"` 查看 docker 容器启动后执行的命令
-- `docker save <id> -o <id>.tar` 导出 docker 镜像
-- `docker login/logout` 登录/登出 dockerhub 账号
-- `docker build -t <id> .` 构建 docker 镜像
-- `docker push <id>` 推送 docker 镜像到 dockerhub
-
 ## Git
 
 - `git update-index --chmod=+x a.sh` 为 git 仓库中的文件添加可执行权限
