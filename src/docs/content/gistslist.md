@@ -69,3 +69,7 @@
 ### 网站图片时解决防盗链问题
 
 在请求头中添加 `Referer` 字段，值为请求的网站地址
+
+## iOS
+
+Apple Music 缓存路径：`/var/mobile/Media/CloudAssets`
