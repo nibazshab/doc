@@ -12,6 +12,16 @@ User 程序目录 %LOCALAPPDATA%\Programs
 
 系统级开机自启 %PROGRAMDATA%\Microsoft\Windows\Start Menu\Programs\StartUp
 
+## 加载驱动程序
+
+1. 打开设备管理器
+2. 更新驱动程序
+3. 浏览我的电脑以查找驱动程序
+4. 让我从计算机上的可用驱动程序列表中选取
+5. 显示所有设备，下一步
+6. 从磁盘中选择，找到 inf 文件
+7. 确定
+
 ## 删除文件管理器类型关联
 
 1. 打开注册表编辑器
