@@ -12,13 +12,16 @@ User 程序目录 %LOCALAPPDATA%\Programs
 
 系统级开机自启 %PROGRAMDATA%\Microsoft\Windows\Start Menu\Programs\StartUp
 
-## 删除文件管理器文件关联
+## 删除文件管理器类型关联
 
 1. 打开注册表编辑器
-2. 删除 __计算机\HKEY_CLASSES_ROOT__，__计算机\HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\FileExts__ 下对应的关联键值
+2. 删除 HKEY_CLASSES_ROOT，HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\FileExts 下对应的键值
 3. 重启资源管理器
 
 ## 强制删除脚本
+
+1. 创建一个 bat 文件，写入如下内容
+2. 将要删除的文件拖到该文件上
 
 ```bat
 DEL /F /A /Q \\?\%1
