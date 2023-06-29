@@ -12,6 +12,12 @@ User 程序目录 %LOCALAPPDATA%\Programs
 
 系统级开机自启 %PROGRAMDATA%\Microsoft\Windows\Start Menu\Programs\StartUp
 
+## 删除文件管理器文件关联
+
+1. 打开注册表编辑器
+2. 删除 __计算机\HKEY_CLASSES_ROOT__，__计算机\HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\FileExts__ 下对应的关联键值
+3. 重启资源管理器
+
 ## 强制删除脚本
 
 ```bat
