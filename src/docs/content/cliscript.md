@@ -54,6 +54,9 @@
 - `adb shell pm disable-user <package_name>` 冻结应用
 - `adb shell pm enable <package_name>` 解冻应用
 - `adb shell pm list packages -s -d` 列出已冻结的应用
+- `adb install <apk>` 安装应用
+- `adb reboot bootloader/recovery` 重启到指定模式
+- `fastboot flash <partition> <img>` 刷写分区镜像
 
 ## VIM
 
