@@ -12,6 +12,11 @@ User 程序目录 %LOCALAPPDATA%\Programs
 
 系统级开机自启 %PROGRAMDATA%\Microsoft\Windows\Start Menu\Programs\StartUp
 
+## 系统处于测试签名模式
+
+1. 管理员权限打开 PowerShell
+2. 输入 bcdedit /set testsigning off
+
 ## 加载驱动程序
 
 1. 打开设备管理器
