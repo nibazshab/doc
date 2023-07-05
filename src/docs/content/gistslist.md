@@ -58,12 +58,6 @@
 
 在 server 模块的 location / 添加 `proxy_pass $forward_scheme://$server:$port/;`
 
-## Markdown
-
-### 在 Md 文档中插入 css 样式
-
-插入 `<style>` 和 `</style>` 标签，直接把 css 样式代码写在两个标签之间
-
 ## 爬虫
 
 ### 网站图片时解决防盗链问题
