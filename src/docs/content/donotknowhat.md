@@ -6,7 +6,7 @@
 
 ct8.pl 免费虚拟主机
 
-ssh <username>@s1.ct8.pl，然后输入用户密码
+ssh username@s1.ct8.pl，然后输入用户密码
 
 ---
 
