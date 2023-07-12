@@ -1,4 +1,4 @@
-# Docker 容器
+# Docker
 
 <br>
 
@@ -64,11 +64,15 @@ exec /app
 
 ## 命令
 
+- `docker ps -a` 查看所有的容器及状态
 - `docker compose logs -f` 查看 docker 容器日志
 - `docker compose up -d` 启动 docker 容器
 - `docker compose down` 移除 docker 容器
 - `docker compose pull` 更新 docker 镜像
 - `docker system prune -a` 清理所有不在使用的 docker 镜像
+
+构建相关
+
 - `docker inspect <id> --format "{{.Path}} {{.Args}}"` 查看 docker 容器启动后执行的命令
 - `docker save <id> -o <id>.tar` 导出 docker 镜像
 - `docker login/logout` 登录/登出 dockerhub 账号

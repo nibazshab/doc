@@ -10,10 +10,10 @@ export default defineUserConfig({
         '/',
       ],},{
       text: '兑', children: [
+        '/gistslist/',
+        '/cliscript/',
         '/network/',
         '/docker/',
-        '/cliscript/',
-        '/gistslist/',
       ],},{
       text: '离', children: [
         '/visualstudiocode/',
@@ -30,7 +30,6 @@ export default defineUserConfig({
       text: '巽', children: [
         '/archissus/',
         '/archinstall/',
-        '/archinstallpro/',
       ],},{
       text: '坎', children: [
         '/donotknowhat/',
