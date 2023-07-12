@@ -15,27 +15,30 @@ export default defineUserConfig({
         '/gistslist/',
       ],},{
       text: '离', children: [
+        '/network/',
         '/docker/',
+      ],},{
+      text: '震', children: [
         '/visualstudiocode/',
         '/aria2/',
         '/minecraft/',
         '/steam/',
         '/wallpaperengine/',
       ],},{
-      text: '震', children: [
+      text: '巽', children: [
         '/winapp/',
         '/winissus/',
         '/winenv/',
       ],},{
-      text: '巽', children: [
+      text: '坎', children: [
         '/archissus/',
         '/archinstall/',
         '/archinstallpro/',
       ],},{
-      text: '坎', children: [
-        '/link/',
-      ],},{
       text: '艮', children: [
+        '/link/',
+        ],},{
+      text: '坤', children: [
         '/own/',
       ],},],
     lastUpdated: false,
