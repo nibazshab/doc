@@ -10,30 +10,30 @@ export default defineUserConfig({
         '/',
       ],},{
       text: '兑', children: [
-        '/donotknowhat/',
+        '/network/',
+        '/docker/',
         '/cliscript/',
         '/gistslist/',
       ],},{
       text: '离', children: [
-        '/network/',
-        '/docker/',
-      ],},{
-      text: '震', children: [
         '/visualstudiocode/',
         '/aria2/',
         '/minecraft/',
         '/steam/',
         '/wallpaperengine/',
       ],},{
-      text: '巽', children: [
+      text: '震', children: [
         '/winapp/',
         '/winissus/',
         '/winenv/',
       ],},{
-      text: '坎', children: [
+      text: '巽', children: [
         '/archissus/',
         '/archinstall/',
         '/archinstallpro/',
+      ],},{
+      text: '坎', children: [
+        '/donotknowhat/',
       ],},{
       text: '艮', children: [
         '/link/',
