@@ -42,7 +42,7 @@ export default defineUserConfig({
       ],},],
     lastUpdated: false,
     contributors: false,
-    navbar: [{ text: 'SHU', link: 'https://shu.lblb.eu.org'},{ text: 'INFO', link: 'https://info.lblb.eu.org'},],
+    navbar: [{ text: '说书人叹天下旧事如潮，听书人悲欢不过一壶新茶'},],
     sidebarDepth: 0,
     themePlugins:{
       externalLinkIcon: false,
