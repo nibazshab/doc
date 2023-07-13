@@ -33,3 +33,5 @@
 ## iOS
 
 Apple Music 缓存路径：`/var/mobile/Media/CloudAssets`
+
+图片路径：`/var/mobile/Media/DCIM`
