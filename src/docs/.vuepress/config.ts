@@ -42,7 +42,7 @@ export default defineUserConfig({
       ],},],
     lastUpdated: false,
     contributors: false,
-    navbar: [{ text: '说书人叹天下旧事如潮，听书人悲欢不过一壶新茶'},],
+    navbar: [{ text: '说书人叹天下旧事如潮，听书人悲欢不过一壶新茶', link: ''},],
     sidebarDepth: 0,
     themePlugins:{
       externalLinkIcon: false,
