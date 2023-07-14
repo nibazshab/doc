@@ -10,10 +10,11 @@ export default defineUserConfig({
         '/',
       ],},{
       text: '兑', children: [
-        '/gistslist/',
         '/cliscript/',
-        '/network/',
+        '/phoneos/',
+        '/webnet/',
         '/docker/',
+        '/donotknowhat/',
       ],},{
       text: '离', children: [
         '/visualstudiocode/',
@@ -32,17 +33,14 @@ export default defineUserConfig({
         '/archinstall/',
       ],},{
       text: '坎', children: [
-        '/donotknowhat/',
+        '/link/',
       ],},{
       text: '艮', children: [
-        '/link/',
-        ],},{
-      text: '坤', children: [
         '/own/',
       ],},],
     lastUpdated: false,
     contributors: false,
-    navbar: [{ text: '说书人叹天下旧事如潮，听书人悲欢不过一壶新茶', link: ''},],
+    navbar: [{ text: '说书人叹天下旧事如潮，听书人悲欢不过一壶新茶', link: '.'},],
     sidebarDepth: 0,
     themePlugins:{
       externalLinkIcon: false,

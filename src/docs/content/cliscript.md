@@ -1,6 +1,16 @@
-# 命令行
+# 命令
 
 <br>
+
+## 正则表达式
+
+式|说明|式|说明
+-|-|-|-
+`.*(a\|b).*`|包含 a 或 b 的行|`[^\x00-\x7F]`|非 ASCII 字符
+`^.{5}`|行首 5 个字符|`.{5}$`|行末 5 个字符
+`\u3000`|空白 `　` 字符|`^[ \t]*$`|空行
+`^`|行首|`$`|行末
+`(\d+)`|数字|`$1`|替换时，第 1 个括号内匹配的内容
 
 ## Shell
 
@@ -49,15 +59,6 @@
 - `git reset --hard <commit_id>` 回退到指定版本
 - `git log -S "查找的文本内容" -p` 查找历史中的文本内容
 - `git push -f` 强制推送
-
-## Android
-
-- `adb shell pm disable-user <package_name>` 冻结应用
-- `adb shell pm enable <package_name>` 解冻应用
-- `adb shell pm list packages -s -d` 列出已冻结的应用
-- `adb install <apk>` 安装应用
-- `adb reboot bootloader/recovery` 重启到指定模式
-- `fastboot flash <partition> <img>` 刷写分区镜像
 
 ## VIM
 
