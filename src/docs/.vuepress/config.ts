@@ -10,11 +10,11 @@ export default defineUserConfig({
         '/',
       ],},{
       text: '兑', children: [
+        '/donotknowhat/',
         '/cliscript/',
-        '/phoneos/',
+        '/idroidos/',
         '/webnet/',
         '/docker/',
-        '/donotknowhat/',
       ],},{
       text: '离', children: [
         '/visualstudiocode/',
