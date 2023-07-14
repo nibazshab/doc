@@ -14,6 +14,7 @@
 
 ## Shell
 
+- `cat /var/log/btml | more` 分页显示内容
 - `sync && echo 3 | sudo tee /proc/sys/vm/drop_caches` 清理内存缓存
 - `export all_proxy=http://ip:port` 设置代理
 - `find -type f ! -name "*.*" -exec sh -c 'file "{}" | grep executable >/dev/null' \; -print` 查找可执行文件
