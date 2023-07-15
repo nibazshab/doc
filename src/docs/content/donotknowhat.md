@@ -4,6 +4,10 @@
 
 <br>
 
+Docusaurus 2
+
+---
+
 ct8.pl 免费虚拟主机
 
 ssh username@s1.ct8.pl，然后输入后台的用户密码
