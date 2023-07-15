@@ -30,8 +30,8 @@
 
 在 server 模块的 location / 添加 `proxy_pass $forward_scheme://$server:$port/;`
 
-## 爬虫
+## URL 请求
 
-### 网站图片时解决防盗链问题
+### 解决防盗链问题
 
 在请求头中添加 `Referer` 字段，值为请求的网站地址

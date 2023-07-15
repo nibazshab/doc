@@ -10,7 +10,6 @@ export default defineUserConfig({
         '/',
       ],},{
       text: '兑', children: [
-        '/donotknowhat/',
         '/cmdline/',
         '/idroidos/',
         '/webnetwork/',
