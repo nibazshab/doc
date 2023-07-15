@@ -13,7 +13,7 @@ export default defineUserConfig({
         '/donotknowhat/',
         '/cmdline/',
         '/idroidos/',
-        '/webnetork/',
+        '/webnetwork/',
         '/docker/',
       ],},{
       text: '离', children: [
