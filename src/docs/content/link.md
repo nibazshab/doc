@@ -27,7 +27,7 @@ link: https://www.liyaorui.cloud
 
 本站信息
 
-> 名称：萝卜子的小站  
-> 介绍：挚爱的时光  
+> 名称：吃货的小站  
+> 介绍：世界第一吃货殿下  
 > 头像：https://avatars.githubusercontent.com/u/44338441  
 > 地址：https://www.lblb.eu.org
