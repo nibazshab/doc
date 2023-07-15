@@ -11,13 +11,13 @@ export default defineUserConfig({
       ],},{
       text: '兑', children: [
         '/donotknowhat/',
-        '/cliscript/',
+        '/cmdline/',
         '/idroidos/',
-        '/webnet/',
+        '/webnetork/',
         '/docker/',
       ],},{
       text: '离', children: [
-        '/visualstudiocode/',
+        '/vscode/',
         '/aria2/',
         '/minecraft/',
         '/steam/',
