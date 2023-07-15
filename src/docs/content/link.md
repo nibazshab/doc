@@ -5,6 +5,13 @@
 友情链接，排名不分先后
 
 ```card
+title: 吃货殿下二站
+desc: 本站的二站
+logo: https://avatars.githubusercontent.com/u/139463317
+link: http://lblb.link
+```
+
+```card
 title: 不可视之线
 desc: 若知是梦何须醒，难比真如一相会
 logo: https://fukashinosen.club/static/img/d538c82673782f56e6ac4a9db8fc4930.head.webp
@@ -27,7 +34,7 @@ link: https://www.liyaorui.cloud
 
 本站信息
 
-> 名称：吃货的小站  
+> 名称：吃货殿下
 > 介绍：世界第一吃货殿下  
 > 头像：https://avatars.githubusercontent.com/u/44338441  
 > 地址：https://www.lblb.eu.org
