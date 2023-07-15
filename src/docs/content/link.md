@@ -34,7 +34,7 @@ link: https://www.liyaorui.cloud
 
 本站信息
 
-> 名称：吃货殿下
+> 名称：吃货殿下  
 > 介绍：世界第一吃货殿下  
 > 头像：https://avatars.githubusercontent.com/u/44338441  
 > 地址：https://www.lblb.eu.org
