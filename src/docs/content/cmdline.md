@@ -55,6 +55,7 @@
 
 ## Git
 
+- `git reset HEAD~1` 撤销上一次的 commit
 - `git update-index --chmod=+x a.sh` 为 git 仓库中的文件添加可执行权限
 - `git log --grep=<comment>` 搜索提交记录的版本号
 - `git reset --hard <commit_id>` 回退到指定版本
