@@ -13,9 +13,9 @@ export default defineUserConfig({
         '/cmdline/',
         '/idroidos/',
         '/webnetwork/',
-        '/docker/',
       ],},{
       text: '离', children: [
+        '/docker/',
         '/vscode/',
         '/aria2/',
         '/minecraft/',

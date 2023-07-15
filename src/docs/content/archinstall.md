@@ -1,4 +1,4 @@
-# 安装指南 <Badge text="arch linux" />
+# 系统安装指南 <Badge text="arch linux" />
 
 <br>
 
