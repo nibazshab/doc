@@ -28,7 +28,7 @@ Apple Music 缓存路径：`/var/mobile/Media/CloudAssets`，`/var/mobile/Media/
 
 ### 常见问题
 
-#### 关闭自动爱思助手移动版
+#### 关闭爱思助手自动安装移动版
 
 删掉 C 盘 `Program Files (x86)\i4Tools7\files\ipa\` 内的文件
 
