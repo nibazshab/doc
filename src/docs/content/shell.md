@@ -74,7 +74,7 @@ mysql -h SQLHOST -u USER -pPASSWORD SQLNAME # 连接 MySQL 数据库
 mysqldump -h SQLHOST -u USER -pPASSWORD SQLNAME --no-tablespaces > $(date).sql # 导出 MySQL 数据库为 sql 语句
 ffmpeg -i a.webp $(basename a.webp .webp).png # 转换 webp 为 png
 jpegoptim --strip-all --all-progressive -o -f --max=50% a.jpg # 压缩 jpg 图片大小
-optipng a.png # 压缩 png 图片大小
+optipng -o3 a.png # 压缩 png 图片大小， 压缩等级设为 3，可选 1-7
 flac -d a.flac # flac 转 wav
 flac -s --compression-level-5 a.wav # wav 转 flac，指定压缩级别为 5
 flac a.flac -V -s --best --no-error-on-compression-fail -o b.flac # 重新编码 flac 文件
