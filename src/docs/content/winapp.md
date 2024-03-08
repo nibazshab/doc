@@ -1,5 +1,11 @@
 # Windows 10 软件
 
+## Advanced Renamer
+
+批量重命名工具
+
+- 传送门：[https://advancedrenamer.com](https://advancedrenamer.com)
+
 ## Locale Emulator
 
 转区工具，以指定的语言编码打开文件
