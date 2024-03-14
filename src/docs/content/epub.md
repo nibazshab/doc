@@ -98,9 +98,9 @@ application/epub+zip
 <body>
   <img src="../Images/00100.jpg"/>
 
-  <h2>第一话</h2>
+  <h3>第一话</h3>
 
-  <h3>与天使大人的相遇</h3>
+  <h2>与天使大人的相遇</h2>
 
   <p>...</p>
 

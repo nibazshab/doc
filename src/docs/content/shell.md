@@ -40,7 +40,7 @@ shuf a.txt # 随机打乱文件的行，-i 1-10 随机抽取数字
 sort -u a.txt # 删除重复行，会打乱顺序
 sed /key/s/.*/key=123/ a.txt # 把包含 key 的行替换成 key=123
 sed -i /ABC/d a.txt # 删除包含 ABC 的行，-i 修改文件
-sed 3d a.txt # 删除第 3 行
+sed 3,7d a.txt # 删除 3-7 行
 sed 3iabc a.txt # 在第 3 行前插入 abc
 sed s/a/b/g a.txt # 替换文件内容中的 a 为 b，也可以使用 @ 替换 / 作为分隔符，正则表达式使用 \1 而非 $1
 sed -n 1~2p a.txt # 输出文件奇数行，1~2p 从第 1 行开始，每 2 行输出一次，1,4p 从第 1 行到第 4 行
@@ -67,19 +67,20 @@ sfdisk /dev/sdb < sdb.bkp # 导入分区表文件
 ```
 
 ```sh
-avifenc cover.jpg cover.avif # 转换 avif 图片格式
+iconv -f gbk -t utf-8 gbk.txt > utf-8.txt # 文件编码 gbk 转换 utf-8
+dwebp a.webp -o a.png # 转换 webp 为 png
+avifenc cover.jpg cover.avif # 转换 jpg 为 avif
 fastfetch # 查看系统信息，其他 neofetch
 genact # 假装进行非常专业的活动
 mysql -h SQLHOST -u USER -pPASSWORD SQLNAME # 连接 MySQL 数据库
 mysqldump -h SQLHOST -u USER -pPASSWORD SQLNAME --no-tablespaces > $(date).sql # 导出 MySQL 数据库为 sql 语句
-ffmpeg -i a.webp $(basename a.webp .webp).png # 转换 webp 为 png
 jpegoptim --strip-all --all-progressive -o -f --max=50% a.jpg # 压缩 jpg 图片大小
 optipng -o3 a.png # 压缩 png 图片大小， 压缩等级设为 3，可选 1-7
 flac -d a.flac # flac 转 wav
 flac -s --compression-level-5 a.wav # wav 转 flac，指定压缩级别为 5
 flac a.flac -V -s --best --no-error-on-compression-fail -o b.flac # 重新编码 flac 文件
 ffmpeg -i input.avi -c:v copy -c:a copy output.mp4 # 快速转换格式，直接复制视频流和音频流，-threads 4 -preset ultrafast 加快速度
-ffmpeg -ss 00:00:00 -i a.mp4 -t 00:00:00 -c:v copy -c:a copy b.mp4 # 切割视频
+ffmpeg -ss 00:00:00 -i a.mp4 -t 00:00:00 -c:v copy -c:a copy b.mp4 # 切割视频，不加 -t 参数即为直到视频结束
 ffmpeg -f concat -i list.txt -c copy all.mp4 # 从文件读取列表，合并成 all.mp4，列表格式：file '1.mp4'
 rclone mount name:/a /b --cache-dir /c --vfs-cache-mode writes # 使用 rclone 挂载云盘为本地目录，并设置缓存路径
 ```

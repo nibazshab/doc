@@ -2,6 +2,13 @@
 
 本文记录一些在安装 / 使用过程中遇到的问题和一些有助于提高体验的东西。内容收集自网络，请自行甄别是否适用
 
+## 关闭 Microsoft Edge 自动更新
+
+1. 计算机管理
+2. 服务和应用程序
+3. 禁用 ___Microsoft Edge Update Service (edgeupdate)___
+4. 禁用 ___Microsoft Edge Update Service (edgeupdatem)___
+
 ## 降低 Win 杀毒的占用
 
 1. win+r 输入 gpedit.msc
@@ -37,8 +44,9 @@
 ## 删除文件管理器类型关联
 
 1. 打开注册表编辑器
-2. 删除 HKEY_CLASSES_ROOT 和 HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\FileExts 下对应的键值
-3. 重启资源管理器
+2. 删除 HKEY_CLASSES_ROOT 的键值
+3. 删除 HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\FileExts 的键值
+4. 重启资源管理器
 
 ## 强制删除脚本
 
