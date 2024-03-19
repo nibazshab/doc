@@ -5,7 +5,7 @@
 ```html
 <details>
 <summary>more</summary>
-<p>haha</p>
+<p>text</p>
 </details>
 ```
 
@@ -35,7 +35,39 @@
 
 ---
 
-rustup 换源
+go 响应 WebHook 并保存文件到本地
+
+```go
+func main() {
+    http.HandleFunc("/0gxFztNrJBeBsCcwuTBdQbxchPDcVEyL", handleWebhook)
+    http.ListenAndServe(":10000", nil)
+}
+
+func handleWebhook(w http.ResponseWriter, r *http.Request) {
+    if r.Method == "POST" {
+        resp, _ := http.Get("https://example.com/index.html")
+        defer resp.Body.Close()
+        file, _ := os.OpenFile("/srv/http/index.html", os.O_WRONLY|os.O_CREATE|os.O_TRUNC, 0666)
+        defer file.Close()
+        io.Copy(file, resp.Body)
+        fmt.Fprint(w, "OK")
+    }
+}
+```
+
+go 生成随机字符
+
+```go
+a := "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
+var s string
+for i := 0; i < 5; i++ {
+    s += string(a[rand.New(rand.NewSource(time.Now().UnixNano())).Intn(len(a))])
+}
+```
+
+---
+
+rustup 换源安装
 
 ```sh
 RUSTUP_DIST_SERVER=https://mirrors.tuna.tsinghua.edu.cn/rustup rustup install stable
@@ -53,16 +85,6 @@ replace-with = 'mirror'
 [source.mirror]
 registry = "https://mirrors.tuna.tsinghua.edu.cn/git/crates.io-index.git"
 EOF
-```
-
-go 生成随机字符
-
-```go
-a := "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
-var s string
-for i := 0; i < 5; i++ {
-    s += string(a[rand.New(rand.NewSource(time.Now().UnixNano())).Intn(len(a))])
-}
 ```
 
 npm 换源阿里
