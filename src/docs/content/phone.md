@@ -82,3 +82,5 @@ Magisk 模块：no storage restrict
 ## 其他
 
 鸿蒙系统：鸿蒙工具箱
+
+VIVO 手机：suu

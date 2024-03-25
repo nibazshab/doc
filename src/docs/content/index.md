@@ -1,8 +1,8 @@
 # 写在前面
 
-本站使用 NodeJS 项目 [VuePress Next](https://v2.vuepress.vuejs.org) 在 GitHub Action 中构建，并推送到 [Vercel](https://vercel.com) 作站点托管
+本站使用 NodeJS 项目 [VuePress](https://v2.vuepress.vuejs.org) 在 GitHub Action 中构建，并推送到 [Vercel](https://vercel.com) 作站点托管
 
-留言板功能由 [giscus](https://giscus.app) 提供支持
+留言板功能由 GitHub Discussions 实现的 [giscus](https://giscus.app) 提供支持
 
 本站域名由 [EU.org](https://nic.eu.org) 提供，使用 [Cloudflare](https://www.cloudflare.com) 作 DNS 解析
 
@@ -15,7 +15,7 @@
 
 本站源代码采用 [MIT 许可证](https://github.com/nibazshab/doc/blob/main/LICENSE) 进行许可
 
-如果对本站感觉良好，还望在 GitHub 里给点个 [Star](https://github.com/nibazshab/doc) 或 [Follow](https://github.com/nibazshab)
+如果对本站感觉良好，还望在 [GitHub 仓库](https://github.com/nibazshab/doc) 给小站点个 Star
 
 感谢各位 :heart:
 
