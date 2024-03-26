@@ -26,3 +26,9 @@ environment:
 仓库分支存档的下载链接：github.com/USER/REPO/archive/refs/heads/BRANCH.tar.gz
 
 Release 最新版本的下载链接：github.com/USER/REPO/releases/latest/download/ASSETS.tar.gz
+
+## Action Repository 机密
+
+```console
+${{ secrets.REPOSITORY_SECRET_NAME }}
+```
